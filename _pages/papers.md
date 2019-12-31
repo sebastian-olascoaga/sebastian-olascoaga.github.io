@@ -9,7 +9,7 @@ author_profile: true
 
 **Sandoval, S.** (2015). The Distribution of Top Incomes in Mexico: How rich are the richest? In: *MSc Thesis*, [Paris School of Economics](https://www.parisschoolofeconomics.eu/en/) & [Ecole Normale Superieure](http://www.ens.fr/en). [[Link](https://sebastian-olascoaga.github.io/files/inequality_mexico_2015.pdf)]
 
-  + I recently updated my MSc thesis with additional content and analyses. [[Link](https://sebastian-olascoaga.github.io/files/inequality_mexico_2017.pdf)] 
+  + I recently updated my *MSc thesis* with additional content and analyses. [[Link](https://sebastian-olascoaga.github.io/files/inequality_mexico_2017.pdf)] 
 
 ## 2014
 
