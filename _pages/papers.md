@@ -1,6 +1,8 @@
 ---
 layout: page
-title: ''
+title: 'Papers'
+permalink: /papers/
+author_profile: true
 ---
 
 
