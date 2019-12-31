@@ -16,7 +16,7 @@ Vilar, M., **Sandoval, S.**, Bernal, A., & Perez, A. (2014). Mexico: A complex m
 
 ## 2013
 
-Vilar, M., **Sandoval, S.**, Bernal, A., & Perez, A. (2014). The Effect of Mexican Household Food Security Status and Income Distribution on Food Access. In: *Food Studies: An Interdisciplinary Journal*, Volume 3, Issue 2. 
+Vilar, M., **Sandoval, S.**, Bernal, A., & Perez, A. (2014). The Effect of Mexican Household Food Security Status and Income Distribution on Food Access. In: *Food Studies: An Interdisciplinary Journal*, Volume 3, Issue 2. [[Link](https://sebastian-olascoaga.github.io/files/FoodStudies.pdf)]
 
 ## Other
 While I was at the Treasury Department, I was in charge of designing and writing sections of the annual report of the Stability Council of the Financial System [(CESF)](https://www.cesf.gob.mx/) for years [2018](https://sebastian-olascoaga.github.io/files/2018_informe_anual_cesf.pdf), [2017](https://sebastian-olascoaga.github.io/files/2017_informe_anual_cesf.pdf), and [2016](https://sebastian-olascoaga.github.io/files/2016_informe_anual_cesf.pdf).
