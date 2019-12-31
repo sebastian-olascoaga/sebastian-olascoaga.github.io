@@ -5,6 +5,7 @@ permalink: /papers/
 author_profile: true
 ---
 
+{% include base_path %}
 
 ## Submitted / under review
 **Dablander, F.<sup>&#8902;</sup>**, Ryan, O.<sup>**&#8902;**</sup>, & Haslbeck, J.M.B.<sup>**&#8902;**</sup> (under revision). Choosing between AR(1) and VAR(1) Models in Typical Psychological Applications. [[Link](https://psyarxiv.com/qgewy/)]
