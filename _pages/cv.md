@@ -48,3 +48,8 @@ redirect_from:
 
 * Research Assistant, Centro de Investigación y Docencia Económicas [(CIDE)](https://www.cide.edu/de/){:target="_blank"}, Mexico City, Mexico, *2010 - 2011*.
 <p></p>
+
+# Academic Service
+
+* **Undergraduate Mentoring and Advising**. Mentored, advised and established a research internship program at the Treasury Department for Undergraduate Students.
+:   Institutions and programs involved: National University of Mexico (UNAM), Economics; National Polytechnic Institute (IPN), Economics; El Colegio de México (COLMEX), Public Policy; and ITAM, Economics.
