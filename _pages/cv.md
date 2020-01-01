@@ -51,5 +51,5 @@ redirect_from:
 
 # Academic Service
 
-* **Undergraduate Mentoring and Advising**. Mentored, advised and established a research internship program at the Treasury Department for Undergraduate Students.
+* *Undergraduate Mentoring and Advising*. Mentored, advised and established a research internship program at the Treasury Department for Undergraduate Students.
 :   Institutions and programs involved: National University of Mexico (UNAM), Economics; National Polytechnic Institute (IPN), Economics; El Colegio de México (COLMEX), Public Policy; and ITAM, Economics.
