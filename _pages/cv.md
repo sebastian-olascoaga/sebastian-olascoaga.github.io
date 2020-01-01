@@ -42,3 +42,9 @@ redirect_from:
 
 * Consultant, National Council for the Evaluation of Social Development Policy [(CONEVAL)](https://www.coneval.org.mx/Paginas/principal.aspx){:target="_blank"}, Mexico City, Mexico, *2012 - 2013*.
 <p></p>
+
+* Research Assistant, Colegio de Mexico [(COLMEX)](https://www.colmex.mx/){:target="_blank"}, Mexico City, Mexico, *2012*.
+<p></p>
+
+* Research Assistant, Centro de Investigación y Docencia Económicas [(CIDE)](https://www.cide.edu/de/){:target="_blank"}, Mexico City, Mexico, *2010 - 2011*.
+<p></p>
