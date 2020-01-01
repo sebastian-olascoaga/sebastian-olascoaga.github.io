@@ -25,4 +25,11 @@ redirect_from:
 
 # Academic and Professional Experience
 
-* Director of Economic Policy, Treasury Department [(SHCP)](https://www.gob.mx/hacienda){:target="_blank"}, Mexico City, Mexico, *2015 - 2018*.
+* Director of Economic Policy, Treasury Department [(SHCP)](https://www.gob.mx/hacienda){:target="_blank"} - Economic Planning Unit, Mexico City, Mexico, *2015 - 2018*.
+<p></p>
+
+* Research Assistant, Paris School of Economics [(PSE)](https://www.parisschoolofeconomics.eu/en/){:target="_blank"} - Economics Department, Paris, France, *2014*.
+<p></p>
+
+* Junior Researcher, Organisation for Economic Cooperation and Development [(OECD)](http://www.oecd.org/){:target="_blank"} - Directorate for Employment, Labor and Social Affairs [ELS](https://www.oecd.org/els/){:target="_blank"}, Paris, France, *2014 - 2015*.
+<p></p>
