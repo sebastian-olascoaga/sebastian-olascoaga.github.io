@@ -13,7 +13,7 @@ redirect_from:
 
 Ph.D. Student in Urban Economics & Statistics, [Massachusetts Institute of Technology (MIT)](https://www.mit.edu/), Cambridge, US, 2018 - Present.
 :   Awarded the [**MIT Presidential Fellowship**](https://web.mit.edu/provost/presfellow/).  
-<p>&nbsp;</p>
+<p></p>
 
 Master of Science (MSc) in Public Policy and Development, [Paris School of Economics (PSE)](https://www.parisschoolofeconomics.eu/en/)/[École Normale Supérieure (ENS, Paris)](http://www.ens.fr/en), Paris, France, 2013 - 2015.
 :   Graduated **Magna Cum Laude**
