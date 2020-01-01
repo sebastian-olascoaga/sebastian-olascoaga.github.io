@@ -8,4 +8,4 @@ redirect_from:
   - /about.html
 ---
 
-You can follow me on [Twitter](https://twitter.com/S_Olascoaga), [Instagram](https://www.instagram.com/sebascoaga/), or [ResearchGate](https://www.researchgate.net/profile/Sebastian_Sandoval-Olascoaga).
+You can follow me on [Twitter](https://twitter.com/S_Olascoaga){:target="_blank"}, [Instagram](https://www.instagram.com/sebascoaga/){:target="_blank"}, or [ResearchGate](https://www.researchgate.net/profile/Sebastian_Sandoval-Olascoaga){:target="_blank"}.
