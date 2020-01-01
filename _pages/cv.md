@@ -33,3 +33,12 @@ redirect_from:
 
 * Junior Researcher, Organisation for Economic Cooperation and Development [(OECD)](http://www.oecd.org/){:target="_blank"} - Directorate for Employment, Labor and Social Affairs [ELS](https://www.oecd.org/els/){:target="_blank"}, Paris, France, *2014 - 2015*.
 <p></p>
+
+* Consultant, Innovations for Poverty Action [(IPA)](https://www.poverty-action.org/){:target="_blank"}, Paris, France & Monrovia, Liberia, *2014*.
+<p></p>
+
+* Junior Researcher, [Universidad Iberoamericana](https://ibero.mx/){:target="_blank"} - [UCLA](http://www.ucla.edu/){:target="_blank"}, Mexico City, Mexico & Los Angeles, US, *2013*.
+<p></p>
+
+* Consultant, National Council for the Evaluation of Social Development Policy [(CONEVAL)](https://www.coneval.org.mx/Paginas/principal.aspx){:target="_blank"}, Mexico City, Mexico, *2012 - 2013*.
+<p></p>
