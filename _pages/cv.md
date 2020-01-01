@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-## Education
+# Education
 
 * Ph.D. Student in Urban Economics & Statistics, [Massachusetts Institute of Technology (MIT)](https://www.mit.edu/), Cambridge, US, *2018 - Present*.
 :   Awarded the [*MIT Presidential Fellowship*](https://web.mit.edu/provost/presfellow/).  
