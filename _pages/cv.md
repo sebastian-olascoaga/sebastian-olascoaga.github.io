@@ -89,5 +89,17 @@ redirect_from:
 * Emerging Leaders in the Americas Program [(ELAP)](https://www.educanada.ca/scholarships-bourses/can/institutions/elap-pfla.aspx?lang=eng){:target="_blank"} Scholarship (*2011*) The scholarship is given by the Canadian Government to support the development of human capital and the next generation of leaders in the Americas.
 <p></p>
 
-* [CIDE](https://www.cide.edu/de/){:target="_blank"} merit-based Scholarship (*2008-2012*). 
+* [CIDE](https://www.cide.edu/de/){:target="_blank"} merit-based Scholarship (*2008-2012*).
 <p></p>
+
+# Community Service
+
+* Un Techo para mi País [(TECHO)](https://www.techo.org/mexico/){:target="_blank"}, Mexico City, Mexico, (*2015 - 2018*).
+<p></p>
+
+* Paris School of Economics Students’ Association [(SYNAPSE)](https://www.parisschoolofeconomics.eu/en/teaching/associations-synapse-and-alumni/){:target="_blank"} Board Member, Paris, France, (*2013 - 2015*).
+<p></p>
+
+# Languages
+
+*	English, French, and Spanish.
