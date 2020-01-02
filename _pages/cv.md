@@ -70,3 +70,24 @@ redirect_from:
 <p></p>
 
 # Awards and Honors
+
+* [*MIT Presidential Fellowship*](https://web.mit.edu/provost/presfellow/){:target="_blank"} (*2018*). MIT established a prestigious program of Presidential Fellowships in 1999 in order to recruit the most outstanding students worldwide to pursue graduate studies at the Institute.
+<p></p>
+
+* Graduated Magna Cum Laude from the Paris School of Economics [(PSE)](https://www.parisschoolofeconomics.eu/en/){:target="_blank"}/École Normale Supérieure [(ENS)](http://www.ens.fr/en){:target="_blank"} (*2015*).
+<p></p>
+
+* National Council of Science and Technology [(CONACYT)](https://www.conacyt.gob.mx/){:target="_blank"} Fellowship (*2014*).
+<p></p>
+
+* Institute of Research for Development [(IRD)](https://en.ird.fr/){:target="_blank"} and Agence Française de Developpement [(AFD)](https://www.afd.fr/en){:target="_blank"} Fellowship (*2013*).
+<p></p>
+
+* [CENEVAL](http://www.ceneval.edu.mx/){:target="_blank"} award for Top National Score for Economics Graduation Exam (*2012*). The award is given to the highest score in Mexico on the mandatory bachelors’ graduation examination of economics. The CENEVAL-EGEL-Economics exam is a national coverage test that evaluates the level of knowledge and academic abilities of the recent graduates of the bachelor's degree in Economics.
+<p></p>
+
+* Emerging Leaders in the Americas Program [(ELAP)](https://www.educanada.ca/scholarships-bourses/can/institutions/elap-pfla.aspx?lang=eng){:target="_blank"} Scholarship (*2011*) The scholarship is given by the Canadian Government to support the development of human capital and the next generation of leaders in the Americas.
+<p></p>
+
+* [CIDE](https://www.cide.edu/de/){:target="_blank"} merit-based Scholarship (*2008-2012*). 
+<p></p>
