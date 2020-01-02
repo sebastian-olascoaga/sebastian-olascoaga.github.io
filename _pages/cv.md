@@ -100,6 +100,10 @@ redirect_from:
 * Paris School of Economics Students’ Association [(SYNAPSE)](https://www.parisschoolofeconomics.eu/en/teaching/associations-synapse-and-alumni/){:target="_blank"} Board Member, Paris, France, (*2013 - 2015*).
 <p></p>
 
+# Software
+
+* `R`, Python, SQL, Stata, EViews, LaTeX, Git, and ArcGIS.
+
 # Languages
 
 *	English, French, and Spanish.
