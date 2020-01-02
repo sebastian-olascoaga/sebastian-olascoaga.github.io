@@ -74,6 +74,9 @@ redirect_from:
 * [*MIT Presidential Fellowship*](https://web.mit.edu/provost/presfellow/){:target="_blank"} (*2018*). MIT established a prestigious program of Presidential Fellowships in 1999 in order to recruit the most outstanding students worldwide to pursue graduate studies at the Institute.
 <p></p>
 
+* Lloyd and Nadine Rodwin International Travel Fellowship (*2018*).
+<p></p>
+
 * Graduated Magna Cum Laude from the Paris School of Economics [(PSE)](https://www.parisschoolofeconomics.eu/en/){:target="_blank"}/École Normale Supérieure [(ENS)](http://www.ens.fr/en){:target="_blank"} (*2015*).
 <p></p>
 
