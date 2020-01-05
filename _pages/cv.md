@@ -68,7 +68,7 @@ redirect_from:
 
 **Quantitative Reasoning and Statistical Methods**
 
- :   *Head Teaching Assistant*, (2019): The course provides an introduction to statistical theory and regression analysis - including interpretation, finite sample results, and large sample properties. The students are introduced to causal inference. Topics include: randomized trials, regression, instrumental variables and Wald estimators, differences-in-differences, regression discontinuity design, and logistic regression. *Overall rating*: 7.0/7.0
+ :   *Head Teaching Assistant*, (2019): The course provides an introduction to statistical theory and regression analysis - including interpretation, finite sample results, and large sample properties. The students are introduced to causal inference. Topics include: randomized trials, regression, instrumental variables and Wald estimators, differences-in-differences, regression discontinuity design, and logistic regression. [*Overall rating*](https://eduapps.mit.edu/ose-rpt/instructorEvaluationReport.htm?va=&instructorId=916465000&instructorRoleId=3739&subjectId=11.220&surveyId=847&subjectGroupId=846D37A8F7453B69E0533D2F09120698){:target="_blank"}: 7.0/7.0
  <p></p>
 
 # Academic Service
