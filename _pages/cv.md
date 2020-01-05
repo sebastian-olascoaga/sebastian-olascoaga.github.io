@@ -49,13 +49,6 @@ redirect_from:
 * Research Assistant, Centro de Investigación y Docencia Económicas [(CIDE)](https://www.cide.edu/de/){:target="_blank"}, Mexico City, Mexico, (*2010 - 2011*).
 <p></p>
 
-# Academic Service
-
-* Referee for [*The Journal of Development Economics*](https://www.journals.elsevier.com/journal-of-development-economics){:target="_blank"} and [*Habitat International*](https://www.journals.elsevier.com/habitat-international){:target="_blank"}.
-
-* *Undergraduate Mentoring and Advising*. Mentored, advised and established a research internship program at the Treasury Department for Undergraduate Students.
-:   Institutions and programs involved: National University of Mexico [(UNAM)](https://www.unam.mx/){:target="_blank"}, Economics; National Polytechnic Institute [(IPN)](https://www.ipn.mx/){:target="_blank"}, Economics; El Colegio de México [(COLMEX)](https://www.colmex.mx/){:target="_blank"}, Public Policy; and [ITAM](https://www.itam.mx/){:target="_blank"}, Economics.
-
 # Publications
 
 * **Sandoval, S.** (2015). The Distribution of Top Incomes in Mexico: How rich are the richest? In: *MS.c. Thesis*, [Paris School of Economics](https://www.parisschoolofeconomics.eu/en/){:target="_blank"} & [Ecole Normale Superieure](http://www.ens.fr/en){:target="_blank"}. [[Link](https://sebastian-olascoaga.github.io/files/inequality_mexico_2015.pdf){:target="_blank"}]
@@ -70,6 +63,20 @@ redirect_from:
 
 * While working at the [Treasury Department](https://www.gob.mx/hacienda){:target="_blank"}, I was in charge of designing and writing sections of the annual report of the Stability Council of the Financial System [(CESF)](https://www.cesf.gob.mx/){:target="_blank"} for years [2018](https://sebastian-olascoaga.github.io/files/2018_informe_anual_cesf.pdf){:target="_blank"}, [2017](https://sebastian-olascoaga.github.io/files/2017_informe_anual_cesf.pdf){:target="_blank"}, and [2016](https://sebastian-olascoaga.github.io/files/2016_informe_anual_cesf.pdf){:target="_blank"}.
 <p></p>
+
+# Teaching
+
+**Quantitative Reasoning and Statistical Methods**
+
+ :   *Head Teaching Assistant*, (2019): The course provides an introduction to statistical theory and regression analysis - including interpretation, finite sample results, and large sample properties. The students are introduced to causal inference. Topics include: randomized trials, regression, instrumental variables and Wald estimators, differences-in-differences, regression discontinuity design, and logistic regression. Overall rating: 7.0/7.0
+ <p></p>
+
+# Academic Service
+
+* Referee for [*The Journal of Development Economics*](https://www.journals.elsevier.com/journal-of-development-economics){:target="_blank"} and [*Habitat International*](https://www.journals.elsevier.com/habitat-international){:target="_blank"}.
+
+* *Undergraduate Mentoring and Advising*. Mentored, advised and established a research internship program at the Treasury Department for Undergraduate Students.
+:   Institutions and programs involved: National University of Mexico [(UNAM)](https://www.unam.mx/){:target="_blank"}, Economics; National Polytechnic Institute [(IPN)](https://www.ipn.mx/){:target="_blank"}, Economics; El Colegio de México [(COLMEX)](https://www.colmex.mx/){:target="_blank"}, Public Policy; and [ITAM](https://www.itam.mx/){:target="_blank"}, Economics.
 
 # Awards and Honors
 
