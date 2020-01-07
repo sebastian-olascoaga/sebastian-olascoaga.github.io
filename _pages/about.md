@@ -12,4 +12,6 @@ I am an [MIT Presidential Fellow](https://web.mit.edu/provost/presfellow/){:targ
 
 While pursuing my Master's degree, I worked at the Organisation for Economic Cooperation and Development [(OECD)](http://www.oecd.org/){:target="_blank"}, analyzing the deep connections between public economics and health care. During these years, I also worked with Innovations for Poverty Action [(IPA)](https://www.poverty-action.org/){:target="_blank"}, learning how to design and conduct a Randomized Contol Trial. During my Master's degree, I got interested in income inequality and big data, and I decided to write my [thesis](https://sebastian-olascoaga.github.io/files/inequality_mexico_2015.pdf){:target="_blank"} about top incomes in Mexico.  
 
+---
+
 Shoot me an email to <sebastian.olascoaga@gmail.com> or <olascoag@mit.edu> - I am always happy to meet new people! You can also follow me on [Twitter](https://twitter.com/S_Olascoaga){:target="_blank"} or [Instagram](https://www.instagram.com/sebascoaga/){:target="_blank"}.
