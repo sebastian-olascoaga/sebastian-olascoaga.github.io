@@ -8,6 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-I am an [*MIT Presidential Fellow*](https://web.mit.edu/provost/presfellow/){:target="_blank"} studying a Ph.D. in Urban Economics & Statistics at [(MIT)](https://www.mit.edu/). 
+I am an [*MIT Presidential Fellow*](https://web.mit.edu/provost/presfellow/){:target="_blank"} studying a Ph.D. in Urban Economics & Statistics at [(MIT)](https://www.mit.edu/).
 
-You can follow me on [Twitter](https://twitter.com/S_Olascoaga){:target="_blank"}, [Instagram](https://www.instagram.com/sebascoaga/){:target="_blank"}, or [ResearchGate](https://www.researchgate.net/profile/Sebastian_Sandoval-Olascoaga){:target="_blank"}.
+You can follow me on [Twitter](https://twitter.com/S_Olascoaga){:target="_blank"} or [Instagram](https://www.instagram.com/sebascoaga/){:target="_blank"}.
