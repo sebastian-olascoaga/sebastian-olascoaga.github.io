@@ -72,7 +72,7 @@ redirect_from:
 
 # Academic Service
 
-* Referee for [*The Journal of Development Economics*](https://www.journals.elsevier.com/journal-of-development-economics){:target="_blank"}, [*Habitat International*](https://www.journals.elsevier.com/habitat-international){:target="_blank"}, and [*Latin American Economic Review*](https://latinaer.springeropen.com/articles){:target="_blank"}.
+* Referee for [*The Journal of Development Economics*](https://www.journals.elsevier.com/journal-of-development-economics){:target="_blank"}, [*Habitat International*](https://www.journals.elsevier.com/habitat-international){:target="_blank"}, and [*The Latin American Economic Review*](https://latinaer.springeropen.com/articles){:target="_blank"}.
 
 * *Undergraduate Mentoring and Advising*. Mentored, advised and established a research internship program at the Treasury Department for Undergraduate Students.
 :   Institutions and programs involved: National University of Mexico [(UNAM)](https://www.unam.mx/){:target="_blank"}, Economics; National Polytechnic Institute [(IPN)](https://www.ipn.mx/){:target="_blank"}, Economics; El Colegio de México [(COLMEX)](https://www.colmex.mx/){:target="_blank"}, Public Policy; and [ITAM](https://www.itam.mx/){:target="_blank"}, Economics.
