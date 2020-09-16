@@ -115,7 +115,7 @@ redirect_from:
 
 # Software
 
-* R, Python, SQL, Stata, EViews, LaTeX, Git, and ArcGIS.
+* R, Python, SQL, Stata, EViews, LaTeX, Git, and QGIS.
 <p></p>
 
 # Languages
