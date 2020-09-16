@@ -79,6 +79,8 @@ redirect_from:
 
 # Awards and Honors
 
+* [*Boston Area Research Initiative*](https://cssh.northeastern.edu/bari/research-projects/research-seed-grants-overview/){:target="_blank"} Research Seed Grant, (*2020*).
+
 * [*MIT Presidential Fellowship*](https://web.mit.edu/provost/presfellow/){:target="_blank"}, (*2018*). MIT established a prestigious program of Presidential Fellowships in 1999 in order to recruit the most outstanding students worldwide to pursue graduate studies at the Institute.
 <p></p>
 
