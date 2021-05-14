@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Sebastian Olascoaga"
+title                    : "Sebastián Olascoaga"
 title_separator          : "-"
 name                     : &name "Sebastian Olascoaga"
 description              : &description "Ph.D. Candidate at MIT"
