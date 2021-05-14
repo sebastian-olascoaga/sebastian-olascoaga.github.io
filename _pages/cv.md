@@ -11,7 +11,7 @@ redirect_from:
 
 # Education
 
-* Ph.D. Student in Urban Economics & Statistics, Massachusetts Institute of Technology [(MIT)](https://www.mit.edu/), Cambridge, US, (*2018 - Present*).
+* Ph.D. Student in Urban Economics & Policy Analysis, Massachusetts Institute of Technology [(MIT)](https://www.mit.edu/), Cambridge, US, (*2018 - Present*).
 :   Awarded the [*MIT Presidential Fellowship*](https://web.mit.edu/provost/presfellow/){:target="_blank"}.  
 <p></p>
 
@@ -79,7 +79,11 @@ redirect_from:
 
 # Awards and Honors
 
-* [*Boston Area Research Initiative*](https://cssh.northeastern.edu/bari/research-projects/research-seed-grants-overview/){:target="_blank"} [(BARI)](https://cssh.northeastern.edu/bari/){:target="_blank"} Research Seed Grant, (*2020*).
+* [*PKG Center*][https://pkgcenter.mit.edu/]{:target="_blank"}, (*2021*). Summer Fellow.
+
+* [*Boston Area Research Initiative*](https://cssh.northeastern.edu/bari/research-projects/research-seed-grants-overview/){:target="_blank"} [(BARI)](https://cssh.northeastern.edu/bari/){:target="_blank"} Research Seed Grant, (*2020-2021*).
+
+* [*PKG Center*][https://pkgcenter.mit.edu/]{:target="_blank"}, (*2021*). IAP Fellow.
 
 * [*MIT Presidential Fellowship*](https://web.mit.edu/provost/presfellow/){:target="_blank"}, (*2018*). MIT established a prestigious program of Presidential Fellowships in 1999 in order to recruit the most outstanding students worldwide to pursue graduate studies at the Institute.
 <p></p>
