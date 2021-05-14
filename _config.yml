@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Sebastian Olascoaga"
 title_separator          : "-"
 name                     : &name "Sebastian Olascoaga"
-description              : &description "Ph.D. Student at MIT"
+description              : &description "Ph.D. Candidate at MIT"
 url                      : https://sebastian-olascoaga.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "sebastian-olascoaga.github.io"
@@ -80,9 +80,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Sebastian Olascoaga"
+  name             : "Sebastián Olascoaga"
   avatar           : "profile.png"
-  bio              : "Ph.D. Student at MIT in Urban Economics & Statistics"
+  bio              : "Ph.D. Candidate at MIT in Urban Economics & Policy Analysis"
   location         : "Cambridge, MA"
   employer         :
   pubmed           :
