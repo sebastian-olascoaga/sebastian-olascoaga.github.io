@@ -11,7 +11,7 @@ redirect_from:
 I am an [MIT Presidential Fellow](https://web.mit.edu/provost/presfellow/){:target="_blank"} studying a Ph.D. in Urban Economics & Policy Analysis at [MIT](https://www.mit.edu/) and the Summer ’21 Economist
 Intern at [Redfin](https://www.redfin.com/){:target="_blank"}.
 
-My work focuses on understanding how the materialization of common or rare intense risks —-i.e., shocks —- affect the wellbeing of people, communities, and cities. I am interested in exploring what makes certain countries, groups, and individuals more susceptible to shocks and how policies can help mitigate or absorb their consequences.
+My work focuses on understanding how the materialization of common or rare intense risks — i.e., shocks — affect the wellbeing of people, communities, and cities. I am interested in exploring what makes certain countries, groups, and individuals more susceptible to shocks and how policies can help mitigate or absorb their consequences.
 
 *About me*
 
