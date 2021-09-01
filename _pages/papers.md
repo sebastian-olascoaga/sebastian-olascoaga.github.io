@@ -9,10 +9,8 @@ author_profile: true
 
 **Sandoval-Olascoaga, S.**, Venkataramani A., Arcaya M. (2021). Eviction Moratoria Expiration and COVID-19 Infection Risk Across Strata of Health and Socioeconomic Status in the United States. In: *JAMA Netw Open*, 4(8):e2129041. doi:10.1001/jamanetworkopen.2021.29041
 
-  + Link to the article [[here](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2783612){:target="_blank"}].
-  + Covered by [[MIT News](https://news.mit.edu/2021/eviction-moratorium-ending-covid-19-0830){:target="_blank"}].
-
-andoval-Olascoaga S, Venkataramani AS, Arcaya MC. Eviction Moratoria Expiration and COVID-19 Infection Risk Across Strata of Health and Socioeconomic Status in the United States. JAMA Netw Open. 2021;4(8):e2129041. doi:10.1001/jamanetworkopen.2021.29041
+  + Link to the article [[**here**](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2783612){:target="_blank"}].
+  + Covered by [[**MIT News**](https://news.mit.edu/2021/eviction-moratorium-ending-covid-19-0830){:target="_blank"}].
 
 ## 2015
 
