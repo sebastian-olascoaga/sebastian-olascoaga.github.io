@@ -25,6 +25,9 @@ redirect_from:
 
 # Academic and Professional Experience
 
+* Economist Intern, [Redfin](https://www.redfin.com/){:target="_blank"} - Research Department and Analytics, Seattle, Washington, (*2021*).
+<p></p>
+
 * Director of Economic Policy, Treasury Department [(SHCP)](https://www.gob.mx/hacienda){:target="_blank"} - Economic Planning Unit, Mexico City, Mexico, (*2015 - 2018*).
 <p></p>
 
@@ -72,7 +75,7 @@ redirect_from:
 
 # Academic Service
 
-* Referee for the [*Journal of Development Economics*](https://www.journals.elsevier.com/journal-of-development-economics){:target="_blank"}, [*Latin American Economic Review*](https://www.latinaer.org/){:target="_blank"}, and [*Habitat International*](https://www.journals.elsevier.com/habitat-international){:target="_blank"}.
+* Referee for the [*Journal of Development Economics*](https://www.journals.elsevier.com/journal-of-development-economics){:target="_blank"}, [*Latin American Economic Review*](https://www.latinaer.org/){:target="_blank"}, [*ClinicoEconomics and Outcomes Research*](https://www.dovepress.com/clinicoeconomics-and-outcomes-research-journal){:target="_blank"} and [*Habitat International*](https://www.journals.elsevier.com/habitat-international){:target="_blank"}.
 
 * *Undergraduate Mentoring and Advising*. Mentored, advised and established a research internship program at the Treasury Department for Undergraduate Students.
 :   Institutions and programs involved: National University of Mexico [(UNAM)](https://www.unam.mx/){:target="_blank"}, Economics; National Polytechnic Institute [(IPN)](https://www.ipn.mx/){:target="_blank"}, Economics; El Colegio de México [(COLMEX)](https://www.colmex.mx/){:target="_blank"}, Public Policy; and [ITAM](https://www.itam.mx/){:target="_blank"}, Economics.
@@ -119,7 +122,7 @@ redirect_from:
 
 # Software
 
-* R, Python, SQL, Stata, EViews, LaTeX, Git, and QGIS.
+* R, Python, Julia, SQL, Stata, EViews, LaTeX, Git, and QGIS.
 <p></p>
 
 # Languages
