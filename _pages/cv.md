@@ -54,6 +54,11 @@ redirect_from:
 
 # Publications
 
+**Sandoval-Olascoaga, S.**, Venkataramani A., Arcaya M. (2021). Eviction Moratoria Expiration and COVID-19 Infection Risk Across Strata of Health and Socioeconomic Status in the United States. In: *JAMA Netw Open*, 4(8):e2129041. doi:10.1001/jamanetworkopen.2021.29041
+
+  + Link to the article [**here**](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2783612){:target="_blank"}.
+  + Covered by [**MIT News**](https://news.mit.edu/2021/eviction-moratorium-ending-covid-19-0830){:target="_blank"}, [**NPR (Marketplace)**](https://www.marketplace.org/2021/09/01/where-eviction-bans-end-risk-of-covid-increases/){:target="_blank"}.
+
 * **Sandoval, S.** (2015). The Distribution of Top Incomes in Mexico: How rich are the richest? In: *MS.c. Thesis*, [Paris School of Economics](https://www.parisschoolofeconomics.eu/en/){:target="_blank"} & [Ecole Normale Superieure](http://www.ens.fr/en){:target="_blank"}. [[Link](https://sebastian-olascoaga.github.io/files/inequality_mexico_2015.pdf){:target="_blank"}]
 
   + I recently updated my *MS.c. thesis* with additional content and analyses. [[Link](https://sebastian-olascoaga.github.io/files/inequality_mexico_2017.pdf){:target="_blank"}]
