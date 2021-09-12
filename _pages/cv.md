@@ -25,7 +25,7 @@ redirect_from:
 
 # Academic and Professional Experience
 
-* Economist Intern, [Redfin](https://www.redfin.com/){:target="_blank"} - Research Department and Analytics, Seattle, Washington, (*2021*).
+* Economist Intern, [Redfin](https://www.redfin.com/){:target="_blank"} - Research Department and Analytics, Seattle, Washington, US, (*2021*).
 <p></p>
 
 * Director of Economic Policy, Treasury Department [(SHCP)](https://www.gob.mx/hacienda){:target="_blank"} - Economic Planning Unit, Mexico City, Mexico, (*2015 - 2018*).
