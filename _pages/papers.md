@@ -10,7 +10,7 @@ author_profile: true
 **Sandoval-Olascoaga, S.**, Venkataramani A., Arcaya M. (2021). Eviction Moratoria Expiration and COVID-19 Infection Risk Across Strata of Health and Socioeconomic Status in the United States. In: *JAMA Netw Open*, 4(8):e2129041. doi:10.1001/jamanetworkopen.2021.29041
 
   + Link to the article [**here**](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2783612){:target="_blank"}.
-  + Covered by [**MIT News**](https://news.mit.edu/2021/eviction-moratorium-ending-covid-19-0830){:target="_blank"}, [**NPR (Marketplace)**](https://www.marketplace.org/2021/09/01/where-eviction-bans-end-risk-of-covid-increases/){:target="_blank"}.
+  + Covered by [**MIT News**](https://news.mit.edu/2021/eviction-moratorium-ending-covid-19-0830){:target="_blank"}, [**NPR (Marketplace)**](https://www.marketplace.org/2021/09/01/where-eviction-bans-end-risk-of-covid-increases/){:target="_blank"}, [**CIDRAP**](https://www.cidrap.umn.edu/news-perspective/2021/08/study-lifting-state-eviction-bans-puts-residents-risk-covid){:target="_blank"}, [**Medical Xpress**](https://medicalxpress.com/news/2021-08-eviction-moratorium-covid-hazard.html){:target="_blank"}, [**AJMC**](https://www.ajmc.com/view/what-we-re-reading-doj-to-protect-abortion-access-pfizer-booster-distribution-announced-eviction-covid-19-risk-linked){:target="_blank"}, [**Physician's Weekly**](https://www.physiciansweekly.com/covid-19-evictions-possible-culprit-in-latest-outbreak-wave){:target="_blank"}.
 
 ## 2015
 
