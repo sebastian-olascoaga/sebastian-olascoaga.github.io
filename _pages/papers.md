@@ -32,7 +32,11 @@ Vilar, M., **Sandoval-Olascoaga, S.**, Bernal, A., & Perez, A. (2014). The Effec
 
 During my time at Redfin ([link](https://www.redfin.com/news/wildfire-real-estate-risk-2021/){:target="_blank"} to my profile), I was involved in the following projects:
 
-* [More Than a Third of Utah Homes Face High Fire Risk—A Bigger Share Than Other Western States](https://www.redfin.com/news/wildfire-real-estate-risk-2021/){:target="_blank"}.
+* [Migration to areas facing high risk from climate change](https://www.redfin.com/news/climate-migration-real-estate-2021/){:target="_blank"}.
+
+  + Covered by [CNN](https://edition.cnn.com/2021/08/25/success/climate-risk-home-buying/index.html){:target="_blank"}, [Fast Company](https://www.fastcompany.com/90668484/people-keep-moving-to-the-worst-places-for-climate-risk){:target="_blank"}, [The Hill](https://thehill.com/policy/energy-environment/569457-populations-in-high-risk-climate-areas-grow-redfin){:target="_blank"}, [SFGATE](https://www.sfgate.com/realestate/article/paradise-climate-change-migration-redfin-report-16411161.php){:target="_blank"}, [Mansion Global](https://www.mansionglobal.com/articles/amid-climate-change-concerns-the-most-at-risk-u-s-counties-are-seeing-their-population-grow-01629924953){:target="_blank"}, [GlobeSt](https://www.globest.com/2021/08/27/people-unconcerned-about-climate-change-when-deciding-where-to-live/?slreturn=20210813183741){:target="_blank"}, [Insurance Journal](https://www.insurancejournal.com/news/national/2021/08/26/629007.htm){:target="_blank"}.
+
+* [Homes facing future high fire risk in the US](https://www.redfin.com/news/wildfire-real-estate-risk-2021/){:target="_blank"}.
 
   + Covered by [Yahoo Finance](https://finance.yahoo.com/news/more-third-utahs-homes-face-120000115.html){:target="_blank"} and [Fox Business](https://www.foxbusiness.com/real-estate/homes-utah-fire-danger-redfin){:target="_blank"}.
 
