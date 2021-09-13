@@ -34,7 +34,7 @@ During my time at Redfin ([link](https://www.redfin.com/news/wildfire-real-estat
 
 * [More Than a Third of Utah Homes Face High Fire Risk—A Bigger Share Than Other Western States](https://www.redfin.com/news/wildfire-real-estate-risk-2021/){:target="_blank"}.
 
-+ Covered by [Yahoo Finance](https://finance.yahoo.com/news/more-third-utahs-homes-face-120000115.html){:target="_blank"} and [Fox Business](https://www.foxbusiness.com/real-estate/homes-utah-fire-danger-redfin){:target="_blank"}.
+  + Covered by [Yahoo Finance](https://finance.yahoo.com/news/more-third-utahs-homes-face-120000115.html){:target="_blank"} and [Fox Business](https://www.foxbusiness.com/real-estate/homes-utah-fire-danger-redfin){:target="_blank"}.
 
 ### Pre Doctoral Studies
 While working at the [Treasury Department](https://www.gob.mx/hacienda){:target="_blank"}, I was in charge of designing and writing sections of the annual report of the Stability Council of the Financial System [(CESF)](https://www.cesf.gob.mx/){:target="_blank"} for years [2018](https://sebastian-olascoaga.github.io/files/2018_informe_anual_cesf.pdf){:target="_blank"}, [2017](https://sebastian-olascoaga.github.io/files/2017_informe_anual_cesf.pdf){:target="_blank"}, and [2016](https://sebastian-olascoaga.github.io/files/2016_informe_anual_cesf.pdf){:target="_blank"}.
