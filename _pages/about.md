@@ -24,4 +24,4 @@ During the Summer 2021, I was an Economist Intern at [Redfin](https://www.redfin
 
 ---
 
-Shoot me an email to <sebastian.olascoaga@gmail.com> or <olascoag@mit.edu> - I am always happy to meet new people! You can also follow me on [Twitter](https://twitter.com/S_Olascoaga){:target="_blank"} or [Instagram](https://www.instagram.com/olascoaga.sebastian/){:target="_blank"}.
+Shoot me an email to <sebastian.olascoaga@gmail.com> or <olascoag@mit.edu> - I am always happy to meet new people! You can also follow me on [Twitter](https://twitter.com/S_Olascoaga){:target="_blank"}, [Instagram](https://www.instagram.com/olascoaga.sebastian/){:target="_blank"}, or [Linkedin](https://www.linkedin.com/in/sebastianolascoaga/){:target="_blank"}.
