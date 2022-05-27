@@ -20,7 +20,7 @@ While pursuing my Master's degree, I worked at the Organisation for Economic Coo
 
 While that was fun, I decided to start my Ph.D. at [MIT](https://www.mit.edu/). My applied and theoretical work lies at the intersection of housing, climate change, health, and inequality. Methodologically, I use causal inference, bayesian techniques, and machine learning to understand better how shocks and policies affect people's economic opportunities, neighborhoods, and cities.
 
-During the Summer 2021, I was an Economist Intern at [Redfin](https://www.redfin.com/){:target="_blank"}.
+During the Summers of 2021 and 2022, I was fortunate to intern as an Economist at [Redfin](https://www.redfin.com/){:target="_blank"}.
 
 ---
 
