@@ -25,6 +25,9 @@ redirect_from:
 
 # Academic and Professional Experience
 
+* Economist Intern, [Redfin](https://www.redfin.com/){:target="_blank"} - Research Department and Analytics, Seattle, Washington, US, (*2022*).
+<p></p>
+
 * Economist Intern, [Redfin](https://www.redfin.com/){:target="_blank"} - Research Department and Analytics, Seattle, Washington, US, (*2021*).
 <p></p>
 
