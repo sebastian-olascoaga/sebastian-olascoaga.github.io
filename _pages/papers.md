@@ -11,6 +11,8 @@ author_profile: true
 
   + Covered by [**MIT News**](https://news.mit.edu/2021/eviction-moratorium-ending-covid-19-0830){:target="_blank"}, [**NPR (Marketplace)**](https://www.marketplace.org/2021/09/01/where-eviction-bans-end-risk-of-covid-increases/){:target="_blank"}, [**Brookings**](https://www.brookings.edu/blog/the-avenue/2021/09/14/in-overturning-the-eviction-moratorium-the-supreme-court-continues-its-history-of-harming-black-households/){:target="_blank"}, [**CIDRAP**](https://www.cidrap.umn.edu/news-perspective/2021/08/study-lifting-state-eviction-bans-puts-residents-risk-covid){:target="_blank"}, [**Medical Xpress**](https://medicalxpress.com/news/2021-08-eviction-moratorium-covid-hazard.html){:target="_blank"}, [**AJMC**](https://www.ajmc.com/view/what-we-re-reading-doj-to-protect-abortion-access-pfizer-booster-distribution-announced-eviction-covid-19-risk-linked){:target="_blank"}, [**Physician's Weekly**](https://www.physiciansweekly.com/covid-19-evictions-possible-culprit-in-latest-outbreak-wave){:target="_blank"}.
 
+  + [Twitter thread](https://twitter.com/S_Olascoaga/status/1432442002981986307){:target="_blank"}.
+
 ## 2015
 
 **Sandoval-Olascoaga, S.** (2015). The Distribution of Top Incomes in Mexico: How rich are the richest? In: *MS.c. Thesis*, [Paris School of Economics](https://www.parisschoolofeconomics.eu/en/){:target="_blank"} & [Ecole Normale Superieure](http://www.ens.fr/en){:target="_blank"}. [[Link](https://sebastian-olascoaga.github.io/files/inequality_mexico_2015.pdf){:target="_blank"}]
