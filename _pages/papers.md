@@ -31,6 +31,17 @@ Vilar, M., **Sandoval-Olascoaga, S.**, Bernal, A., & Perez, A. (2014). The Effec
 
 During my time at Redfin ([link](https://www.redfin.com/news/wildfire-real-estate-risk-2021/){:target="_blank"} to my profile), I was involved in the following projects:
 
+* [Homebuyers With Access to Flood-Risk Data Bid on Lower-Risk Homes](https://www.redfin.com/news/redfin-users-interact-with-flood-risk-data/){:target="_blank"}.
+
+  + Exclusively covered by [Bloomberg](https://www.bloomberg.com/news/articles/2022-09-12/real-estate-listings-with-flood-scores-shift-home-shopper-habits?srnd=premium&sref=fRZXrT1O){:target="_blank"}.
+  + [Twitter thread](https://twitter.com/S_Olascoaga/status/1569332943604125696){:target="_blank"}.
+
+* [More People Are Moving in Than Out of Places Experiencing Intense Drought](https://www.redfin.com/news/drought-migration-2022/){:target="_blank"}.
+
+* [Homebuyers Are Increasingly Backing Out of Deals as Slowing Market Boosts Negotiating Power](https://www.redfin.com/news/home-purchases-fall-through-july-2022/){:target="_blank"}.
+
+* [A Growing Share of Home Listings Are Stale As Market Cools](https://www.redfin.com/news/homes-stale-housing-inventory-july-2022/){:target="_blank"}.
+
 * [Migration to areas facing high risk from climate change](https://www.redfin.com/news/climate-migration-real-estate-2021/){:target="_blank"}.
 
   + Covered by [CNN](https://edition.cnn.com/2021/08/25/success/climate-risk-home-buying/index.html){:target="_blank"}, [Fast Company](https://www.fastcompany.com/90668484/people-keep-moving-to-the-worst-places-for-climate-risk){:target="_blank"}, [CNBC](https://www.cnbc.com/2021/09/16/homeowners-relocating-because-of-climate-change-wildfires-flooding.html){:target="_blank"}, [The Hill](https://thehill.com/policy/energy-environment/569457-populations-in-high-risk-climate-areas-grow-redfin){:target="_blank"}, [SFGATE](https://www.sfgate.com/realestate/article/paradise-climate-change-migration-redfin-report-16411161.php){:target="_blank"}, [Mansion Global](https://www.mansionglobal.com/articles/amid-climate-change-concerns-the-most-at-risk-u-s-counties-are-seeing-their-population-grow-01629924953){:target="_blank"}, [GlobeSt](https://www.globest.com/2021/08/27/people-unconcerned-about-climate-change-when-deciding-where-to-live/?slreturn=20210813183741){:target="_blank"}, and [Insurance Journal](https://www.insurancejournal.com/news/national/2021/08/26/629007.htm){:target="_blank"}.
