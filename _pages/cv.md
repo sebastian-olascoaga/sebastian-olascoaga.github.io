@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[**Here**](https://sebastian-olascoaga.github.io/files/CV_SSO.pdf){:target="_blank"} you can find a short version of my CV.
+[**In this link**](https://sebastian-olascoaga.github.io/files/CV_SSO.pdf){:target="_blank"}, you can find a short version of my CV.
 
 # Education
 
