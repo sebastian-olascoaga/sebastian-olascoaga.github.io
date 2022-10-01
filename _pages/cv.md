@@ -38,9 +38,9 @@ redirect_from:
   * My research reports were picked up by CNN, Fast Company, CNBC, Inman, and Fox Business. My contributions helped make reporters come to Redfin first for comments on how climate events will impact housing. During my time at Redfin, the chief economist explained that more than 80% of her interviews are about climate change.
 <p></p>
 
- * Health Economist/Data Science *Visiting Fellow* at [OptumLabs](https://www.optumlabs.com/){:target="_blank"} (*2019 - 2021*).
-  + Explored the relationship between health care policies and clinical outcomes using claims data, electronic health records, and laboratory test results.
-  + My research was published in one of the best medical journals (i.e., JAMA), and it was covered by MIT News, and NPR (I was interviewed for NPR’s Marketplace), among others. My research helped Maryland’s General Assembly Joint Committee on Ending Homelessness draft policies to create the Emergency Rental Assistance Program.
+* Health Economist/Data Science *Visiting Fellow* at [OptumLabs](https://www.optumlabs.com/){:target="_blank"} (*2019 - 2021*).
+  * Explored the relationship between health care policies and clinical outcomes using claims data, electronic health records, and laboratory test results.
+  * My research was published in one of the best medical journals (i.e., JAMA), and it was covered by MIT News, and NPR (I was interviewed for NPR’s Marketplace), among others. My research helped Maryland’s General Assembly Joint Committee on Ending Homelessness draft policies to create the Emergency Rental Assistance Program.
 <p></p>
 
 * Director of Economic Policy at Mexico's Treasury Department [(SHCP)](https://www.gob.mx/hacienda){:target="_blank"} (*2015 - 2018*).
