@@ -9,11 +9,13 @@ redirect_from:
 
 {% include base_path %}
 
+[**Here**](https://sebastian-olascoaga.github.io/files/CV_SSO.pdf){:target="_blank"}] you can find a short version of my CV. 
+
 # Education
 
 * **Massachusetts Institute of Technology** [(MIT)](https://www.mit.edu/), *2018 - 2023*
   * Ph.D. Candidate in Urban Economics & Policy Analysis
-  * *Honors*: Awarded the [*MIT Presidential*](https://web.mit.edu/provost/presfellow/){:target="_blank"} (2018 - 2019) and Departmental (2019 – 2023) Fellowships.  
+  * *Honors*: Awarded the [MIT Presidential](https://web.mit.edu/provost/presfellow/){:target="_blank"} (2018 - 2019) and Departmental (2019 – 2023) Fellowships.  
 <p></p>
 
 * **École Normale Supérieure** [(ENS)](http://www.ens.fr/en){:target="_blank"} / **Paris School of Economics** [(PSE)](https://www.parisschoolofeconomics.eu/en/){:target="_blank"}, *2013 - 2015*
