@@ -9,6 +9,7 @@ author_profile: true
 
 **Sandoval-Olascoaga**, S., Metcalfe, R., Kahn, M., Fairweather, D., (2022). The Impact of Flooding Information on the Property Market: Evidence from a Nationwide Field Experiment. Redfin News.
   * Covered by [**Bloomberg**](https://www.bloomberg.com/news/articles/2022-09-12/real-estate-listings-with-flood-scores-shift-home-shopper-habits){:target="_blank"}, [**The Weather Channel**](https://weather.com/news/weather/video/home-buyers-reject-listings-with-high-flood-risk-according-to-redfin){:target="_blank"}, [**Yale Environment 360**](https://e360.yale.edu/digest/flood-risk-homebuyers){:target="_blank"}, [**The Real Deal**](https://therealdeal.com/2022/09/14/flood-risk-data-shifted-homebuyers-searches-bids/){:target="_blank"}.
+  + [Twitter thread](https://twitter.com/S_Olascoaga/status/1569332943604125696){:target="_blank"}.
 
 **Sandoval-Olascoaga, S.**, Venkataramani A., Arcaya M. (2021). Eviction Moratoria Expiration and COVID-19 Infection Risk Across Strata of Health and Socioeconomic Status in the United States. In: *JAMA Netw Open*, 4(8):e2129041. doi:10.1001/jamanetworkopen.2021.29041. [**Link**](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2783612){:target="_blank"} to the article.
 
