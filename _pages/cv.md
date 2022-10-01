@@ -13,17 +13,17 @@ redirect_from:
 
 * **Massachusetts Institute of Technology** [(MIT)](https://www.mit.edu/) *2018 - 2023*
   : Ph.D. Candidate in Urban Economics & Policy Analysis
-  * *Honors*: Awarded the [*MIT Presidential*](https://web.mit.edu/provost/presfellow/){:target="_blank"} (2018 - 2019) and Departmental (2019 – 2023) Fellowships.  
+  : *Honors*: Awarded the [*MIT Presidential*](https://web.mit.edu/provost/presfellow/){:target="_blank"} (2018 - 2019) and Departmental (2019 – 2023) Fellowships.  
 <p></p>
 
 * **École Normale Supérieure** [(ENS)](http://www.ens.fr/en){:target="_blank"} / **Paris School of Economics** [(PSE)](https://www.parisschoolofeconomics.eu/en/){:target="_blank"} *2013 - 2015*
   : M.Sc. in Applied Economics: Public Policy and Development
-  * *Honors*: Graduated *Summa Cum Laude*
+  : *Honors*: Graduated *Summa Cum Laude*
 <p></p>
 
 * **Centro de Investigación y Docencia Económicas** [(CIDE)](https://www.cide.edu/de/){:target="_blank"} *2008 - 2012*
   : BA in Economics
-  * *Honors*: Highest score at the national level on the mandatory economics exit examination (CENEVAL).
+  : *Honors*: Highest score at the national level on the mandatory economics exit examination (CENEVAL).
 <p></p>
 
 # Professional Experience
