@@ -9,13 +9,9 @@ redirect_from:
 
 {% include base_path %}
 
-# Short Version
-
 [**Here**](https://sebastian-olascoaga.github.io/files/CV_SSO.pdf){:target="_blank"}] you can find a short version of my CV.
 
-# Long Version
-
-## Education
+# Education
 
 * **Massachusetts Institute of Technology** [(MIT)](https://www.mit.edu/), *2018 - 2023*
   * Ph.D. Candidate in Urban Economics & Policy Analysis
@@ -32,7 +28,7 @@ redirect_from:
   * *Honors*: Highest score at the national level on the mandatory economics exit examination (CENEVAL).
 <p></p>
 
-## Professional Experience
+# Professional Experience
 
 * Economist/Data Science *Intern* at [Redfin](https://www.redfin.com/){:target="_blank"} (*Summer 2022*).
   * Designed and analyzed two randomized controlled trials to understand the impact of showing a home’s extreme weather event risk score on users’ online behavior, home bidding, and decision-making. My research allowed Redfin to conduct its first formal academic-industry partnership.
@@ -65,7 +61,7 @@ redirect_from:
 * Consultant at Innovations for Poverty Action [(IPA)](https://www.poverty-action.org/){:target="_blank"}, Paris, France & Monrovia, Liberia, (*2014*).
 <p></p>
 
-## Publications
+# Publications
 
 * **Sandoval-Olascoaga**, S., Garcia, C., Arcaya, M. (2023). Housing Conditions in the COVID-19 Pandemic. In book: The Social Epidemiology of the COVID-19 Pandemic. Publisher: Oxford University Press. Editors: Duncan, D., Kawachi, I., Morse, S.
 
@@ -89,13 +85,13 @@ redirect_from:
 * While working at the [Treasury Department](https://www.gob.mx/hacienda){:target="_blank"}, I was in charge of designing and writing sections of the annual report of the Stability Council of the Financial System [(CESF)](https://www.cesf.gob.mx/){:target="_blank"} for years [2018](https://sebastian-olascoaga.github.io/files/2018_informe_anual_cesf.pdf){:target="_blank"}, [2017](https://sebastian-olascoaga.github.io/files/2017_informe_anual_cesf.pdf){:target="_blank"}, and [2016](https://sebastian-olascoaga.github.io/files/2016_informe_anual_cesf.pdf){:target="_blank"}.
 <p></p>
 
-## Teaching
+# Teaching
 
 * **Quantitative Reasoning and Statistical Methods**
  :   *Head Teaching Assistant*, (2019, 2022): The course provides an introduction to statistical theory and regression analysis - including interpretation, finite sample results, and large sample properties. The students are introduced to causal inference. Topics include: randomized trials, regression, instrumental variables and Wald estimators, differences-in-differences, regression discontinuity design, and logistic regression. **Overall rating**: 7.0/7.0
  <p></p>
 
-## Academic Service
+# Academic Service
 
 * Referee for the [*Journal of Development Economics*](https://www.journals.elsevier.com/journal-of-development-economics){:target="_blank"}, [*Latin American Economic Review*](https://www.latinaer.org/){:target="_blank"}, [*ClinicoEconomics and Outcomes Research*](https://www.dovepress.com/clinicoeconomics-and-outcomes-research-journal){:target="_blank"} and [*Habitat International*](https://www.journals.elsevier.com/habitat-international){:target="_blank"}.
 
@@ -104,7 +100,7 @@ redirect_from:
 * *Undergraduate Mentoring and Advising*. Mentored, advised and established a research internship program at the Treasury Department for Undergraduate Students.
 :   Institutions and programs involved: National University of Mexico [(UNAM)](https://www.unam.mx/){:target="_blank"}, Economics; National Polytechnic Institute [(IPN)](https://www.ipn.mx/){:target="_blank"}, Economics; El Colegio de México [(COLMEX)](https://www.colmex.mx/){:target="_blank"}, Public Policy; and [ITAM](https://www.itam.mx/){:target="_blank"}, Economics.
 
-## Awards and Honors
+# Awards and Honors
 
 * [MIT Presidential](https://web.mit.edu/provost/presfellow/){:target="_blank"} and Departmental Fellowships (2018 - 2023). MIT established a prestigious program of Presidential Fellowships in 1999 in order to recruit the most outstanding students worldwide to pursue graduate studies at the Institute.
 <p></p>
@@ -139,7 +135,7 @@ redirect_from:
 * Center for Research and Teaching of Economics [(CIDE)](https://www.cide.edu/de/){:target="_blank"} Fellowship (2008-2012).
 <p></p>
 
-## Community Service
+# Community Service
 
 * Member of MIT’s Graduate Student Council (2020 – 2022).
 <p></p>
@@ -153,11 +149,11 @@ redirect_from:
 * Paris School of Economics Students’ Association [(SYNAPSE)](https://www.parisschoolofeconomics.eu/en/teaching/associations-synapse-and-alumni/){:target="_blank"} Board Member (2013 - 2015).
 <p></p>
 
-## Software
+# Software
 
 * R, Python, SQL, Stata, AWS (S3 and Redshift), Git, and QGIS.
 <p></p>
 
-## Languages
+# Languages
 
 *	English, French, and Spanish.
