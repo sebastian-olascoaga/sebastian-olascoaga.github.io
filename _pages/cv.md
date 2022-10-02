@@ -30,28 +30,26 @@ redirect_from:
 
 # Professional Experience
 
-* Economist/Data Science *Intern* at [Redfin](https://www.redfin.com/){:target="_blank"} (*Summer 2022*).
-  * Designed and analyzed two randomized controlled trials to understand the impact of showing a home’s extreme weather event risk score on users’ online behavior, home bidding, and decision-making. My research allowed Redfin to conduct its first formal academic-industry partnership.
-  * My research reports were picked up by Bloomberg, The Weather Channel, Yale Environment, Forbes, NBC News, and CNBC, allowing me to improve Redfin’s brand and SEO.
-<p></p>
+* Economist/Data Science *Intern* at [Redfin](https://www.redfin.com/){:target="_blank"} (*May–Sep. 2022; May–Sep. 2021*).
+  * Designed and analyzed two randomized controlled trials (A/B testing) to understand the impact of a home’s extreme weather event risk score on users’ behavior, home bidding, and decision-making. My research allowed Redfin to conduct its first academic-industry partnership.
+  * Conducted research with real-time housing big data on the impact of climate change on housing and migration, spatial effects of weather events on the housing market, and on the COVID-19-related eviction moratorium.
+  * My research was covered by [Bloomberg](https://www.bloomberg.com/news/articles/2022-09-12/real-estate-listings-with-flood-scores-shift-home-shopper-habits){:target="_blank"}, [CNN](https://edition.cnn.com/2021/08/25/success/climate-risk-home-buying/index.html){:target="_blank"}, [The Weather Channel](https://weather.com/news/weather/video/home-buyers-reject-listings-with-high-flood-risk-according-to-redfin){:target="_blank"}, [Forbes](https://www.forbes.com/sites/brendarichardson/2022/09/01/more-people-are-moving-in-rather-than-out-of-places-up-against-intense-drought/?sh=6a74ad781bcb){:target="_blank"}, [NBC News](https://www.nbcnews.com/business/consumer/best-time-to-buy-a-house-in-years-why-rcna44413){:target="_blank"}, [CNBC](https://www.cnbc.com/2021/09/16/homeowners-relocating-because-of-climate-change-wildfires-flooding.html){:target="_blank"}, [Yale Environment 360](https://e360.yale.edu/digest/flood-risk-homebuyers){:target="_blank"}, [Fast Company](https://www.fastcompany.com/90668484/people-keep-moving-to-the-worst-places-for-climate-risk){:target="_blank"}, [Inman](https://www.inman.com/2021/10/11/despite-risk-california-fire-zones-still-see-rising-home-prices/){:target="_blank"}, and [Fox Business](https://www.foxbusiness.com/real-estate/homes-utah-fire-danger-redfin){:target="_blank"}. In total, my research brought around 553 press mentions and improved Redfin’s SEO (approximately 13% improvement in rankings).
+  * My contributions helped make reporters come to Redfin first for comments on how climate events will impact housing. More than 80% of the chief economist’s interviews are about climate change.
 
-* Economist/Data Science *Intern* at [Redfin](https://www.redfin.com/){:target="_blank"} (*Summer 2021*).
-  * Conducted research projects with real-time housing big data on the impact of climate change on housing and migration and the eviction moratorium.
-  * My research reports were picked up by CNN, Fast Company, CNBC, Inman, and Fox Business. My contributions helped make reporters come to Redfin first for comments on how climate events will impact housing. During my time at Redfin, the chief economist explained that more than 80% of her interviews are about climate change.
 <p></p>
 
 * Health Economist/Data Science *Visiting Fellow* at [OptumLabs](https://www.optumlabs.com/){:target="_blank"} (*2019 - 2021*).
 
-  * Explored the relationship between health care policies and clinical outcomes using claims data, electronic health records, and laboratory test results.
-
-  * My research was published in one of the best medical journals (i.e., JAMA), and it was covered by MIT News, and NPR (I was interviewed for NPR’s Marketplace), among others. My research helped Maryland’s General Assembly Joint Committee on Ending Homelessness draft policies to create the Emergency Rental Assistance Program.
+  *	Researched the relationship between health care policies and clinical outcomes using claims data, electronic health records, and laboratory test results.
+  * My paper was published in [JAMA](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2783612){:target="_blank"}, one of the country’s best medical journals, and was covered by [MIT News](https://news.mit.edu/2021/eviction-moratorium-ending-covid-19-0830){:target="_blank"}, and [NPR](https://www.marketplace.org/2021/09/01/where-eviction-bans-end-risk-of-covid-increases/){:target="_blank"} (I was interviewed for NPR’s Marketplace), among other outlets.
+  * My research helped Maryland’s General Assembly Joint Committee on Ending Homelessness draft policies to create the Emergency Rental Assistance Program.
 
 <p></p>
 
 * Director of Economic Policy at Mexico's Treasury Department [(SHCP)](https://www.gob.mx/hacienda){:target="_blank"} (*2015 - 2018*).
-  * I helped the Chief Economist design and oversee the implementation of the Mexican fiscal consolidation process from 2015-2018, allowing Mexico’s government to achieve its first primary surplus in 9 years and reducing the debt-to-GDP ratio for the first time in 10 years. During this process, two of the world’s top rating agencies stabilized their rating perspective for Mexico’s government.
-  * I was part of the team that renegotiated the North American Free Trade Agreement (NAFTA) with the US and Canadian governments. In September 2018, the United States, Mexico, and Canada agreed to replace NAFTA.
-  * I was in charge of providing and identifying potential economic and financial threats to economic and financial markets discussed during the interdepartmental Financial Stability Oversight Council (CESF). Mexico’s government still uses my metrics and presentations to prepare its budget and create new policies.
+  * Conducted research, drafted policies, prepared forecasts and scenarios, drafted the budget, and otherwise supported the Chief Economist to design and oversee the implementation of the Mexican fiscal consolidation process from 2015–2018, allowing Mexico’s government to achieve its first primary surplus in 9 years and reducing the debt-to-GDP ratio for the first time in 10 years. During this process, two of the world’s top rating agencies stabilized their rating perspective for Mexico’s government.
+  * Successfully renegotiated the North American Free Trade Agreement (NAFTA) between the Mexican, US, and Canadian governments with a team of economists, diplomats, and lawyers.
+  * Identified potential economic and financial threats to economic and financial markets, which were then discussed during the interdepartmental Financial Stability Oversight Council (CESF). Mexico’s government still uses my metrics and presentations to prepare its budget and create new policies.
 
 <p></p>
 

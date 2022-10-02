@@ -52,7 +52,7 @@ During my time at Redfin ([link](https://www.redfin.com/news/wildfire-real-estat
 
 * [Homes facing future high fire risk in the US](https://www.redfin.com/news/wildfire-real-estate-risk-2021/){:target="_blank"}.
 
-  + Covered by [Yahoo Finance](https://finance.yahoo.com/news/more-third-utahs-homes-face-120000115.html){:target="_blank"} and [Fox Business](https://www.foxbusiness.com/real-estate/homes-utah-fire-danger-redfin){:target="_blank"}.
+  + Covered by Yahoo Finance and [Fox Business](https://www.foxbusiness.com/real-estate/homes-utah-fire-danger-redfin){:target="_blank"}.
 
 * [Eviction Moratorium and the Real Estate Market](https://www.redfin.com/news/end-of-eviction-moratorium/){:target="_blank"}.
 
