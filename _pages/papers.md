@@ -56,5 +56,5 @@ During my time at Redfin ([link](https://www.redfin.com/news/wildfire-real-estat
 
 * [Eviction Moratorium and the Real Estate Market](https://www.redfin.com/news/end-of-eviction-moratorium/){:target="_blank"}.
 
-### Pre Doctoral Studies
+## Pre Doctoral Studies
 While working at the [Treasury Department](https://www.gob.mx/hacienda){:target="_blank"}, I was in charge of designing and writing sections of the annual report of the Stability Council of the Financial System [(CESF)](https://www.cesf.gob.mx/){:target="_blank"} for years [2018](https://sebastian-olascoaga.github.io/files/2018_informe_anual_cesf.pdf){:target="_blank"}, [2017](https://sebastian-olascoaga.github.io/files/2017_informe_anual_cesf.pdf){:target="_blank"}, and [2016](https://sebastian-olascoaga.github.io/files/2016_informe_anual_cesf.pdf){:target="_blank"}.
