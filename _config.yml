@@ -88,7 +88,7 @@ author:
   pubmed           :
   googlescholar    :
   email            :
-  researchgate     : "https://www.researchgate.net/profile/Sebastian_Sandoval-Olascoaga"
+  researchgate     :
   uri              :
   bitbucket        :
   codepen          :
@@ -96,13 +96,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "sebastian-olascoaga"
+  github           :
   google_plus      :
   keybase          :
   instagram        : "olascoaga.sebastian"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "sebastianolascoaga"
   orcid            :
   pinterest        :
   soundcloud       :
