@@ -14,6 +14,8 @@ I am an [MIT Presidential Fellow](https://web.mit.edu/provost/presfellow/){:targ
 
 My work focuses on understanding how the materialization of common or rare intense risks — i.e., shocks — affect the wellbeing of people, communities, and cities. I am interested in exploring what makes certain countries, groups, and individuals more susceptible to shocks and how policies can help mitigate them.
 
+[In this link](https://sebastian-olascoaga.github.io/files/CV_SSO.pdf){:target="_blank"}, you can find a short version of my CV.
+
 **About me**
 
 I began my studies at Centro de Investigación y Docencia Económicas [(CIDE)](https://www.cide.edu/de/){:target="_blank"}, where I earned a BA in Economics. I decided to get a more profound training in Economics, so I embarked on a journey to earn a Masters in Quantitative Economics at the Paris School of Economics [(PSE)](https://www.parisschoolofeconomics.eu/en/){:target="_blank"} and the École Normale Supérieure [(ENS)](http://www.ens.fr/en){:target="_blank"}.
