@@ -12,7 +12,9 @@ redirect_from:
 
 I am an [MIT Presidential Fellow](https://web.mit.edu/provost/presfellow/){:target="_blank"} studying a Ph.D. in Urban Economics & Policy Analysis at [MIT](https://www.mit.edu/).
 
-My work focuses on understanding how the materialization of common or rare intense risks — i.e., shocks — affect the wellbeing of people, communities, and cities. I am interested in exploring what makes certain countries, groups, and individuals more susceptible to shocks and how policies can help mitigate them.
+My work explores dynamic relationships between housing, information, public policies, health, and environmental forces, and I use experimental field methods, quasi-experimental methods, and machine learning to understand human behavior and decision-making.
+
+I am also interested in understanding how the materialization of common or rare intense risks — i.e., shocks — affects the well-being of people, communities, and cities. I am interested in exploring what makes certain countries, groups, and individuals more susceptible to shocks and how policies can help mitigate them.
 
 [In this link](https://sebastian-olascoaga.github.io/files/CV_SSO.pdf){:target="_blank"}, you can find a short version of my CV.
 
