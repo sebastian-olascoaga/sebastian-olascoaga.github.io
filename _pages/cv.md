@@ -103,7 +103,7 @@ redirect_from:
 * [MIT Presidential](https://web.mit.edu/provost/presfellow/){:target="_blank"} and Departmental Fellowships (2018 - 2023). MIT established a prestigious program of Presidential Fellowships in 1999 in order to recruit the most outstanding students worldwide to pursue graduate studies at the Institute.
 <p></p>
 
-* Harold Horowitz Research Fund (2022).
+* Harold Horowitz Research (MIT) Fund (2022).
 
 * National Council of Science and Technology [(CONACYT)](https://www.conacyt.gob.mx/){:target="_blank"} Fellowship (2018 - 2022).
 <p></p>
