@@ -7,6 +7,10 @@ author_profile: true
 
 **Sandoval-Olascoaga**, S., Garcia, C., Arcaya, M. (2023). Housing Conditions in the COVID-19 Pandemic. In book: The Social Epidemiology of the COVID-19 Pandemic. Publisher: Oxford University Press. Editors: Duncan, D., Kawachi, I., Morse, S.
 
+**Sandoval-Olascoaga**, S. (2022). Climate Risk Communication, Decision-Making, and Housing Choice. *Draft comming soon*
+
+**Sandoval-Olascoaga**, S. (2022). The Effects of Localized Climate Shocks on Places and People. *Draft comming soon*
+
 [**Sandoval-Olascoaga**, S., Metcalfe, R., Kahn, M., Fairweather, D., (2022). The Impact of Flooding Information on the Property Market: Evidence from a Nationwide Field Experiment. Redfin News.](https://www.redfin.com/news/redfin-users-interact-with-flood-risk-data/){:target="_blank"}
   * Covered by [Bloomberg](https://www.bloomberg.com/news/articles/2022-09-12/real-estate-listings-with-flood-scores-shift-home-shopper-habits){:target="_blank"}, [The Weather Channel](https://weather.com/news/weather/video/home-buyers-reject-listings-with-high-flood-risk-according-to-redfin){:target="_blank"}, [Yale Environment 360](https://e360.yale.edu/digest/flood-risk-homebuyers){:target="_blank"}, [The Real Deal](https://therealdeal.com/2022/09/14/flood-risk-data-shifted-homebuyers-searches-bids/){:target="_blank"}.
   + [Twitter thread](https://twitter.com/S_Olascoaga/status/1569332943604125696){:target="_blank"}.
