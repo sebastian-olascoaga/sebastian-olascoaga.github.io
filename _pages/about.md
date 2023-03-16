@@ -8,8 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-**On the Job Market 2022 - 2023**
-
 I am an [MIT Presidential Fellow](https://web.mit.edu/provost/presfellow/){:target="_blank"} studying a Ph.D. in Urban Economics & Policy Analysis at [MIT](https://www.mit.edu/).
 
 My work explores dynamic relationships between housing, information, public policies, health, and environmental forces, and I use field experimental methods, quasi-experimental methods, and machine learning to understand human behavior and decision-making.
