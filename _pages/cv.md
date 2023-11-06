@@ -48,7 +48,7 @@ redirect_from:
 
 * Director of Economic Policy at Mexico's Treasury Department [(SHCP)](https://www.gob.mx/hacienda){:target="_blank"} (*2015 - 2018*).
   * Conducted research, drafted policies, prepared forecasts and scenarios, drafted the budget, and otherwise supported the Chief Economist to design and oversee the implementation of the Mexican fiscal consolidation process from 2015–2018, allowing Mexico’s government to achieve its first primary surplus in 9 years and reducing the debt-to-GDP ratio for the first time in 10 years. During this process, two of the world’s top rating agencies stabilized their rating perspective for Mexico’s government.
-  * Successfully renegotiated the North American Free Trade Agreement (NAFTA) between the Mexican, US, and Canadian governments with a team of economists, diplomats, and lawyers.
+  * Part of the Treasury Department's team that successfully renegotiated the North American Free Trade Agreement (NAFTA) between the Mexican, US, and Canadian governments.
   * Identified potential economic and financial threats to economic and financial markets, which were then discussed during the interdepartmental Financial Stability Oversight Council (CESF). Mexico’s government still uses my metrics and presentations to prepare its budget and create new policies.
 
 <p></p>
