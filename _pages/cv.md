@@ -14,7 +14,7 @@ redirect_from:
 # Education
 
 * **Massachusetts Institute of Technology** [(MIT)](https://www.mit.edu/), *2018 - 2023*
-  * Ph.D. Candidate in Urban Economics & Policy Analysis
+  * Ph.D. Candidate in Urban Economics & Policy
   * *Honors*: Awarded the [MIT Presidential](https://web.mit.edu/provost/presfellow/){:target="_blank"} (2018 - 2019) and Departmental (2019 – 2023) Fellowships.  
 <p></p>
 
