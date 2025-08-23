@@ -8,24 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-I am an [MIT Presidential Fellow](https://web.mit.edu/provost/presfellow/){:target="_blank"} studying a Ph.D. in Urban Economics & Policy at [MIT](https://www.mit.edu/).
+Sebastian Olascoaga is the [Director of Research and Evaluation for the City of Boston](https://www.boston.gov/departments/analytics-team/sebastian-olascoaga){:target="_blank"} and a Lecturer at [Department of Urban Studies and Planning](https://dusp.mit.edu/){:target="_blank"} at MIT. He established and now leads the City’s evaluation unit, which conducts impact evaluations, representative surveys, and economic analyses that inform budget and policy decisions across major city programs and services. His team also develops predictive and causal research tools to support departments on challenges ranging from housing and public health to climate resilience and city operations.
 
-My work explores dynamic relationships between housing, information, public policies, health, and environmental forces, and I use field experimental methods, quasi-experimental methods, and machine learning to understand human behavior and decision-making.
+Sebastian’s research uses field experiments, causal inference, and applied econometrics to study how households, markets, and governments respond to shocks and policy change. His published and ongoing work spans housing, climate, health, and inequality, and appears in journals including the National Bureau of Economic Research (NBER), Nature Communications, JAMA Network Open, among other outlets. His findings have also been covered in Bloomberg, NPR Marketplace, Forbes, MIT News, and The Washington Post.
 
-I am also interested in understanding how the materialization of common or rare intense risks — i.e., shocks — affects the well-being of people, communities, and cities. I am interested in exploring what makes certain countries, groups, and individuals more susceptible to shocks and how policies can help mitigate them.
+Previously, he served as Director of Economic Policy at Mexico’s Treasury Department, where he led research that contributed to the country’s first fiscal surplus in nearly a decade and informed national fiscal and trade policy. He also worked at the OECD on labor and inequality issues, and later partnered with technology companies such as Redfin and OptumLabs to conduct field experiments and causal analyses on housing markets, climate risks, and health outcomes. Sebastian holds a Ph.D. in Urban Economics and Policy from MIT, an M.Sc. in Applied Economics from the Paris School of Economics, and a B.A. in Economics from CIDE in Mexico City.
 
-[In this link](https://sebastian-olascoaga.github.io/files/CV_SSO.pdf){:target="_blank"}, you can find a short version of my CV.
-
-**About me**
-
-I began my studies at Centro de Investigación y Docencia Económicas [(CIDE)](https://www.cide.edu/de/){:target="_blank"}, where I earned a BA in Economics. I decided to get a more profound training in Economics, so I embarked on a journey to earn a Masters in Quantitative Economics at the Paris School of Economics [(PSE)](https://www.parisschoolofeconomics.eu/en/){:target="_blank"} and the École Normale Supérieure [(ENS)](http://www.ens.fr/en){:target="_blank"}.
-
-While pursuing my Master's degree, I worked at the Organisation for Economic Cooperation and Development [(OECD)](http://www.oecd.org/){:target="_blank"}, analyzing the connections between public economics, policy, and health care. During these years, I also worked with Innovations for Poverty Action [(IPA)](https://www.poverty-action.org/){:target="_blank"}, learning how to design and conduct a Randomized Controlled  Trial. During my Master's degree, I got interested in income inequality and big data, and I decided to write my [thesis](https://sebastian-olascoaga.github.io/files/inequality_mexico_2015.pdf){:target="_blank"} about top incomes in Mexico. Afterward, I decided to work for the government of Mexico at the [Treasury Department](https://www.gob.mx/hacienda){:target="_blank"}. Over there, I was the Director of Economic Policy, where I provided analyses and advice on international and national economic policies, economic and financial risks, and potential public policies to the Chief Economist.
-
-While that was fun, I decided to start my Ph.D. at [MIT](https://www.mit.edu/). My applied and theoretical work lies at the intersection of housing, information, public policies, health, environmental forces, and inequality. Methodologically, I use field experimental methods, causal inference, bayesian techniques, and machine learning to understand human behavior and decision-making.
-
-During the Summers of 2021 and 2022, I was fortunate to intern as an Economist at [Redfin](https://www.redfin.com/){:target="_blank"}. Please browse the papers section to read the projects I was involved during my stay at Redfin.
+In his free time, Sebastian can be found at Fenway rooting for the Red Sox, rock climbing in New England, or searching for fresh waves in the Atlantic Ocean.
 
 ---
 
-Shoot me an email to <sebastian.olascoaga@gmail.com> or <olascoag@mit.edu> - I am always happy to meet new people! You can also follow me on [Twitter](https://twitter.com/S_Olascoaga){:target="_blank"}, [Instagram](https://www.instagram.com/olascoaga.sebastian/){:target="_blank"}, or [Linkedin](https://www.linkedin.com/in/sebastianolascoaga/){:target="_blank"}.
+Shoot me an email to <sebastian.olascoaga@gmail.com>, <sebastian.olascoaga@boston.gov>, or <olascoag@mit.edu> - I am always happy to meet new people! You can also follow me on [Linkedin](https://www.linkedin.com/in/sebastianolascoaga/){:target="_blank"}.
