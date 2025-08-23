@@ -24,7 +24,7 @@ redirect_from:
 <p></p>
 
 * **Centro de Investigación y Docencia Económicas** [(CIDE)](https://www.cide.edu/de/){:target="_blank"}, *2008 - 2012*
-  * BA in Economics
+  * B.A. in Economics
   * *Honors*: Highest score at the national level on the mandatory economics exit examination (CENEVAL).
 <p></p>
 
