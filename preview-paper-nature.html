@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Integrating flood risk into future population projections — Sebastian Olascoaga</title>
+<meta name="description" content="When you integrate high-resolution flood risk into U.S. population projections, neighborhoods that look like growth stories on the standard map flip to decline." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#FFFFFF;--paper-tint:#F4F6FA;--paper-deep:#E5E9F0;--ink:#0A0F1F;--text:#1F2937;--muted:#64748B;--hint:#94A3B8;--hair:rgba(15,23,42,0.10);--rule:rgba(15,23,42,0.18);--counter:#94A3B8;--accent:#1E3A8A;--accent-soft:rgba(30,58,138,0.12);--serif:"Bodoni Moda","Bodoni MT","Didot",Georgia,serif;--sans:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+  @media (prefers-color-scheme: dark){:root{--paper:#0F172A;--paper-tint:#1E293B;--paper-deep:#334155;--ink:#F8FAFC;--text:#E2E8F0;--muted:#94A3B8;--hint:#64748B;--hair:rgba(248,250,252,0.10);--rule:rgba(248,250,252,0.18);--counter:#475569;--accent:#93C5FD;--accent-soft:rgba(147,197,253,0.18);}}
+  *{box-sizing:border-box;}html{-webkit-text-size-adjust:100%;}
+  body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;}.num{font-variant-numeric:tabular-nums;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px;}
+  header.site{padding:40px 0 32px;border-bottom:1px solid var(--hair);}
+  .head-grid{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start;}
+  .name-block{min-width:0;}
+  .name{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:clamp(22px,2.8vw,26px);line-height:1.06;font-variation-settings:"opsz" 96;letter-spacing:-0.005em;margin:0 0 6px;}
+  .name a{text-decoration:none;}
+  .role{font-family:var(--sans);font-size:12.5px;color:var(--muted);letter-spacing:0.04em;margin:0;}
+  .role .dot{color:var(--hint);margin:0 6px;}.role strong{color:var(--ink);font-weight:500;}
+  .nav{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 24px;font-family:var(--sans);font-size:13px;color:var(--muted);grid-column:1 / -1;}
+  .nav a{text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:color .15s ease,border-color .15s ease;}
+  .nav a:hover,.nav a.here{color:var(--ink);border-bottom-color:var(--accent);}
+  .paper-hero{padding:64px 0 40px;}
+  .breadcrumb{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:0.04em;margin:0 0 28px;}
+  .breadcrumb a{text-decoration:none;border-bottom:1px solid var(--hair);transition:border-color .15s ease,color .15s ease;}
+  .breadcrumb a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+  .breadcrumb .dot{color:var(--hint);margin:0 6px;}
+  .paper-eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 22px;}
+  .paper-eyebrow .sep{color:var(--hint);font-weight:400;margin:0 8px;}
+  .paper-eyebrow .year{color:var(--ink);font-variant-numeric:tabular-nums;}
+  .paper-q{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:clamp(38px,5.5vw,62px);line-height:1.04;font-variation-settings:"opsz" 96;letter-spacing:-0.015em;margin:0 0 32px;max-width:22ch;}
+  .paper-q em{font-style:italic;font-variation-settings:"opsz" 96;}
+  .paper-byline{font-family:var(--sans);font-size:14.5px;color:var(--text);line-height:1.55;margin:0 0 18px;max-width:60ch;}
+  .paper-byline strong{color:var(--ink);font-weight:500;}
+  .paper-status{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:0.06em;color:var(--accent);padding:6px 12px;border:1px solid var(--accent);border-radius:2px;}
+  .paper-status .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;}
+  .paper-body{display:grid;grid-template-columns:1fr 280px;gap:80px;padding:32px 0 64px;border-top:1px solid var(--hair);}
+  .paper-main{min-width:0;}
+  .lead{font-family:var(--serif);font-size:clamp(22px,2.4vw,26px);line-height:1.38;font-variation-settings:"opsz" 36;color:var(--ink);font-weight:400;margin:40px 0 44px;max-width:32ch;letter-spacing:-0.005em;}
+  .lead strong{font-weight:600;color:var(--accent);}
+  .hero-chart{margin:0 0 64px;padding:40px 36px 28px;background:var(--paper-tint);border:1px solid var(--hair);border-radius:2px;}
+  .hero-chart-eye{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;}
+  .hero-chart-title{font-family:var(--serif);font-size:clamp(20px,2.2vw,24px);line-height:1.18;font-weight:500;color:var(--ink);font-variation-settings:"opsz" 48;letter-spacing:-0.005em;margin:0 0 8px;max-width:34ch;}
+  .hero-chart-sub{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 28px;max-width:62ch;}
+  .hero-chart svg{width:100%;height:auto;display:block;overflow:visible;}
+  .hero-chart-source{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair);font-family:var(--sans);font-size:11.5px;color:var(--hint);letter-spacing:0.02em;}
+  .hero-chart-source strong{color:var(--muted);font-weight:500;}
+  .stat-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin:32px 0 8px;padding:24px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);}
+  .stat-strip .s-num{font-family:var(--serif);font-size:clamp(26px,3vw,34px);font-weight:600;color:var(--accent);line-height:1.05;font-variation-settings:"opsz" 72;font-variant-numeric:tabular-nums;letter-spacing:-0.005em;margin:0 0 6px;}
+  .stat-strip .s-lbl{font-family:var(--sans);font-size:12px;color:var(--muted);line-height:1.4;}
+  .stat-strip .s-lbl strong{color:var(--ink);font-weight:500;}
+  .sec{margin:56px 0 0;}
+  .sec h2{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:clamp(24px,2.8vw,32px);line-height:1.16;font-variation-settings:"opsz" 72;letter-spacing:-0.008em;margin:0 0 8px;}
+  .sec h2 em{font-style:italic;font-variation-settings:"opsz" 72;}
+  .sec .kicker{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;}
+  .sec p{font-size:16.5px;line-height:1.7;color:var(--text);max-width:62ch;margin:0 0 18px;}
+  .sec p:last-child{margin-bottom:0;}.sec p em{font-style:italic;color:var(--ink);}.sec p strong{font-weight:600;color:var(--ink);}
+  .pull-quote{font-family:var(--serif);font-style:italic;font-variation-settings:"opsz" 36;font-size:clamp(20px,2.2vw,24px);line-height:1.4;color:var(--ink);padding:24px 0 24px 24px;border-left:3px solid var(--accent);margin:32px 0;max-width:50ch;}
+  .pull-quote-cite{display:block;font-family:var(--sans);font-style:normal;font-size:12px;color:var(--muted);letter-spacing:0.04em;margin-top:14px;}
+  .cite{margin:48px 0 0;padding:24px 26px;background:var(--paper-tint);border:1px solid var(--hair);border-radius:2px;}
+  .cite-label{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;display:flex;align-items:center;justify-content:space-between;}
+  .cite-copy{font-family:var(--sans);font-size:11px;color:var(--accent);background:none;cursor:pointer;padding:4px 10px;border:1px solid var(--accent-soft);border-radius:2px;transition:background .15s ease,color .15s ease;font-weight:600;letter-spacing:0.06em;}
+  .cite-copy:hover{background:var(--accent);color:var(--paper);}
+  .cite-text{font-family:var(--serif);font-size:15px;line-height:1.6;color:var(--ink);margin:0;font-variation-settings:"opsz" 16;}
+  .cite-text em{font-style:italic;}
+  .paper-side{position:sticky;top:32px;align-self:start;margin-top:40px;padding:24px 24px;border:1px solid var(--hair);border-radius:2px;background:var(--paper);}
+  .side-group{padding:14px 0;border-top:1px solid var(--hair);}
+  .side-group:first-child{padding-top:0;border-top:none;}
+  .side-label{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;}
+  .side-list{list-style:none;padding:0;margin:0;}
+  .side-list li{font-family:var(--sans);font-size:13px;color:var(--text);line-height:1.5;padding:3px 0;}
+  .side-list li strong{color:var(--ink);font-weight:500;}
+  .side-list li .aff{color:var(--muted);font-size:12px;}
+  .side-list li em{font-style:italic;color:var(--ink);}
+  .side-pill{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.06em;color:var(--accent);padding:3px 8px;border:1px solid var(--accent-soft);border-radius:2px;margin-top:6px;}
+  .side-link{display:flex;align-items:baseline;gap:8px;font-family:var(--sans);font-size:13px;padding:6px 0;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--hair);}
+  .side-link:last-of-type{border-bottom:none;}
+  .side-link .arrow{color:var(--accent);font-size:12px;}
+  .side-link:hover{color:var(--accent);}.side-link .ext{color:var(--muted);font-size:11px;margin-left:auto;}
+  .related{padding:56px 0 0;margin-top:24px;border-top:1px solid var(--ink);}
+  .related-head{display:flex;align-items:baseline;gap:16px;margin:0 0 32px;}
+  .related-label{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink);}
+  .related-sub{font-family:var(--sans);font-size:12.5px;color:var(--muted);letter-spacing:0.04em;}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .rel-card{display:block;text-decoration:none;color:inherit;padding:20px 22px;border:1px solid var(--hair);border-radius:2px;background:var(--paper);transition:border-color .2s ease,transform .2s ease;}
+  .rel-card:hover{border-color:var(--accent);transform:translateY(-2px);}
+  .rel-eye{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin:0 0 10px;}
+  .rel-q{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:17px;line-height:1.25;font-variation-settings:"opsz" 36;margin:0 0 12px;letter-spacing:-0.005em;}
+  .rel-q em{font-style:italic;}.rel-meta{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:0.04em;}
+  .rel-meta em{font-style:italic;color:var(--text);}
+  footer{margin-top:80px;padding:48px 0 96px;border-top:1px solid var(--hair);}
+  .foot-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;}
+  .foot-note{font-size:14px;color:var(--muted);max-width:48ch;line-height:1.55;font-style:italic;font-family:var(--serif);font-variation-settings:"opsz" 16;}
+  .footlinks{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--sans);font-size:13px;color:var(--muted);}
+  .footlinks a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s ease,color .15s ease;}
+  .footlinks a:hover{color:var(--ink);border-bottom-color:var(--accent);}
+  .copy{font-family:var(--sans);font-size:11.5px;color:var(--hint);margin-top:30px;letter-spacing:0.06em;text-align:center;}
+  @media (max-width:980px){.paper-body{grid-template-columns:1fr;gap:32px;}.paper-side{position:static;margin-top:0;}.related-grid{grid-template-columns:1fr;gap:16px;}}
+  @media (max-width:640px){.wrap{padding:0 22px;}.head-grid{grid-template-columns:1fr;gap:18px;}header.site{padding-top:32px;}.paper-hero{padding:40px 0 28px;}.hero-chart{padding:24px 18px 18px;}.foot-grid{grid-template-columns:1fr;gap:22px;}.stat-strip{grid-template-columns:1fr;gap:16px;}}
+
+  /* slope chart specific styles */
+  .sc-axis-lbl{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;fill:var(--muted);}
+  .sc-row-lbl{font-family:var(--sans);font-size:13px;font-weight:500;fill:var(--ink);}
+  .sc-row-sub{font-family:var(--sans);font-size:11px;fill:var(--muted);}
+  .sc-val{font-family:var(--serif);font-size:18px;font-weight:600;fill:var(--ink);font-variant-numeric:tabular-nums;font-variation-settings:"opsz" 24;}
+  .sc-val.pos{fill:var(--muted);}
+  .sc-val.neg{fill:var(--accent);}
+  .sc-line{stroke:var(--counter);stroke-width:1.5;fill:none;stroke-linecap:round;}
+  .sc-line.heavy{stroke:var(--accent);stroke-width:3;}
+  .sc-dot{fill:var(--counter);}
+  .sc-dot.heavy{fill:var(--accent);}
+  .sc-swing{font-family:var(--serif);font-size:14px;font-weight:600;fill:var(--accent);font-variant-numeric:tabular-nums;font-variation-settings:"opsz" 24;}
+  .sc-swing-lbl{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;fill:var(--accent);}
+  .sc-axis{stroke:rgba(15,23,42,0.20);stroke-width:1;}
+  .sc-grid{stroke:rgba(15,23,42,0.06);stroke-width:1;}
+  .sc-zero{stroke:rgba(15,23,42,0.30);stroke-width:1;}
+  .sc-y-lbl{font-family:var(--sans);font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums;}
+  .sc-y-lbl.zero{font-weight:600;fill:var(--ink);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <div class="head-grid">
+      <div class="name-block">
+        <h1 class="name"><a href="preview.html">Sebastian Olascoaga</a></h1>
+        <p class="role">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong></p>
+      </div>
+      <nav class="nav">
+        <a href="preview.html">Home</a><a href="preview-papers.html">Papers</a><a href="#">Threads</a><a href="#">Notes</a><a href="#">About</a><a href="#">CV</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="paper-hero">
+    <p class="breadcrumb"><a href="preview-papers.html">Papers</a><span class="dot">·</span><a href="#">Housing &amp; climate</a></p>
+    <p class="paper-eyebrow">Demographic projection <span class="sep">·</span> <span class="year">2023</span></p>
+    <h2 class="paper-q">When flood risk drives migration, the demographic map <em>doesn't just blur — it flips.</em></h2>
+    <p class="paper-byline"><strong>Evelyn G. Shu</strong> · <strong>Jeremy R. Porter</strong> · <strong>Mathew E. Hauer</strong> · <strong>Sebastian Sandoval Olascoaga</strong> · and the First Street Foundation team</p>
+    <span class="paper-status"><span class="dot"></span>Published · Nature Communications · December 2023</span>
+  </section>
+
+  <div class="paper-body">
+    <main class="paper-main">
+
+      <p class="lead">When you integrate <strong>high-resolution flood risk</strong> into U.S. population projections, the blocks most exposed to <em>frequent</em> flooding flip from a <strong>+5.76% projected growth</strong> to a <strong>−1.42% loss</strong> over 30 years. The blocks that look like growth on the standard demographic map turn out, once climate is on the map too, to be among the country's emerging hollow-outs.</p>
+
+      <!-- HERO CHART: Slope chart - baseline vs adjusted growth by return period -->
+      <figure class="hero-chart">
+        <p class="hero-chart-eye">The swing nobody is forecasting for</p>
+        <h3 class="hero-chart-title">Standard population projections expect every flood-exposed block to grow. Climate-adjusted projections disagree most sharply where flooding is most frequent.</h3>
+        <p class="hero-chart-sub">Each line connects the same set of relatively flood-exposed U.S. Census blocks under two scenarios: the SSP2 baseline (left, the official forecast) and the climate-adjusted forecast (right) integrating empirically estimated flood-population responses. The 5-year return period — the most frequent flooding — produces the largest demographic swing.</p>
+
+        <svg viewBox="0 0 920 460" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="nc-title">
+          <title id="nc-title">Slope chart of cumulative population growth in flood-exposed Census blocks under SSP2 baseline vs climate-adjusted projections, by flood return period</title>
+
+          <!-- column headers -->
+          <text class="sc-axis-lbl" x="280" y="36" text-anchor="middle">SSP2 baseline</text>
+          <text class="sc-axis-lbl" x="640" y="36" text-anchor="middle">Climate-adjusted</text>
+          <text class="sc-row-sub" x="280" y="54" text-anchor="middle">Official projection · 2023→2053</text>
+          <text class="sc-row-sub" x="640" y="54" text-anchor="middle">Integrating flood-population responses</text>
+
+          <!-- y-axis: cumulative % growth -->
+          <text class="sc-y-lbl" x="232" y="92" text-anchor="end">+15%</text>
+          <text class="sc-y-lbl" x="232" y="152" text-anchor="end">+10%</text>
+          <text class="sc-y-lbl" x="232" y="212" text-anchor="end">+5%</text>
+          <text class="sc-y-lbl zero" x="232" y="272" text-anchor="end">0</text>
+          <text class="sc-y-lbl" x="232" y="332" text-anchor="end">−5%</text>
+
+          <!-- grid lines -->
+          <line class="sc-grid" x1="240" y1="88"  x2="680" y2="88"/>
+          <line class="sc-grid" x1="240" y1="148" x2="680" y2="148"/>
+          <line class="sc-grid" x1="240" y1="208" x2="680" y2="208"/>
+          <line class="sc-zero" x1="240" y1="268" x2="680" y2="268"/>
+          <line class="sc-grid" x1="240" y1="328" x2="680" y2="328"/>
+
+          <!-- vertical axes (light) -->
+          <line class="sc-axis" x1="280" y1="80" x2="280" y2="350"/>
+          <line class="sc-axis" x1="640" y1="80" x2="640" y2="350"/>
+
+          <!-- =========== 100-year RP =========== -->
+          <!-- baseline +14.02% → adjusted +12.47%, swing -1.54pp -->
+          <line class="sc-line" x1="280" y1="100" x2="640" y2="118"/>
+          <circle class="sc-dot" cx="280" cy="100" r="5"/>
+          <circle class="sc-dot" cx="640" cy="118" r="5"/>
+          <text class="sc-val pos" x="270" y="105" text-anchor="end">+14.02%</text>
+          <text class="sc-val pos" x="650" y="123">+12.47%</text>
+          <text class="sc-row-sub" x="685" y="123" font-size="10.5">100-yr RP</text>
+          <text class="sc-row-sub" x="685" y="137" font-size="10.5" fill="var(--accent)">−1.54pp</text>
+
+          <!-- =========== 20-year RP =========== -->
+          <!-- baseline +9.95% → adjusted +8.55%, swing -1.40pp -->
+          <line class="sc-line" x1="280" y1="148" x2="640" y2="165"/>
+          <circle class="sc-dot" cx="280" cy="148" r="5"/>
+          <circle class="sc-dot" cx="640" cy="165" r="5"/>
+          <text class="sc-val pos" x="270" y="152" text-anchor="end">+9.95%</text>
+          <text class="sc-val pos" x="650" y="170">+8.55%</text>
+          <text class="sc-row-sub" x="685" y="170" font-size="10.5">20-yr RP</text>
+          <text class="sc-row-sub" x="685" y="184" font-size="10.5" fill="var(--accent)">−1.40pp</text>
+
+          <!-- =========== 5-year RP — THE WOW =========== -->
+          <!-- baseline +5.76% → adjusted -1.42%, swing -7.19pp -->
+          <line class="sc-line heavy" x1="280" y1="200" x2="640" y2="285"/>
+          <circle class="sc-dot heavy" cx="280" cy="200" r="6.5"/>
+          <circle class="sc-dot heavy" cx="640" cy="285" r="7"/>
+          <circle cx="640" cy="285" r="14" fill="none" stroke="#1E3A8A" stroke-width="1.2" opacity="0.4"/>
+          <text class="sc-val pos" x="270" y="205" text-anchor="end" font-weight="600" fill="#1E3A8A">+5.76%</text>
+          <text class="sc-val neg" x="650" y="290">−1.42%</text>
+          <text class="sc-row-sub" x="685" y="290" font-size="11" fill="var(--accent)" font-weight="600">5-yr RP</text>
+          <text class="sc-row-sub" x="685" y="304" font-size="11" fill="var(--accent)" font-weight="600">most frequent flooding</text>
+
+          <!-- big swing callout below -->
+          <text class="sc-swing" x="460" y="252" text-anchor="middle">−7.19 pp</text>
+          <text class="sc-swing-lbl" x="460" y="240" text-anchor="middle">SWING</text>
+
+          <!-- Annotation arrow showing the swing -->
+          <path stroke="#1E3A8A" stroke-width="1.2" fill="none" stroke-dasharray="3 3" opacity="0.5" d="M 460 195 L 460 215"/>
+
+          <!-- x-axis baselines -->
+          <line class="sc-axis" x1="270" y1="360" x2="290" y2="360"/>
+          <line class="sc-axis" x1="630" y1="360" x2="650" y2="360"/>
+
+          <!-- bottom note -->
+          <text class="sc-row-sub" x="460" y="395" text-anchor="middle" font-size="11.5" fill="var(--muted)">Cumulative population growth, blocks with ~3× the within-state mean flood exposure</text>
+          <text class="sc-row-sub" x="460" y="412" text-anchor="middle" font-size="10.5" fill="var(--hint)">Same blocks, same SSP2 baseline scenario, same 30-year horizon. The only thing that changes is whether the projection knows about the water.</text>
+        </svg>
+
+        <p class="hero-chart-source"><strong>Source:</strong> Shu, Porter, Hauer, Sandoval-Olascoaga et al., <em>Nature Communications</em> 14:7870 (2023) · First Street Foundation Flood Model (3-meter resolution) × SSP2 baseline projections (Hauer 2019) × propensity-matched OLS estimation, state-by-state · Treatment threshold: blocks at ~3× the within-state mean proportion of inundated properties · Counterintuitive finding: more frequent (5-yr RP), less severe flooding produces the largest demographic response</p>
+      </figure>
+
+      <div class="stat-strip">
+        <div><p class="s-num">3-meter</p><p class="s-lbl">Resolution of First Street's <strong>fluvial, pluvial, and coastal</strong> flood model</p></div>
+        <div><p class="s-num">−7.19 pp</p><p class="s-lbl">Cumulative growth swing for blocks most exposed to <strong>5-year-RP flooding</strong></p></div>
+        <div><p class="s-num">21.8M</p><p class="s-lbl">U.S. properties already exposed to flooding · rising to <strong>23.5M by mid-century</strong></p></div>
+      </div>
+
+      <section class="sec">
+        <p class="kicker">Why it matters</p>
+        <h2>Population projections quietly assume flood risk doesn't change where Americans live.</h2>
+        <p>Almost every demographic projection in active use — county-level Census Bureau forecasts, SSP scenarios feeding IPCC integrated assessment models, state-level planning forecasts — treats flood exposure as exogenous to population. People will live where they live; the flood line moves around them.</p>
+        <p>The empirical record from the past 23 years says otherwise. Where flood exposure is sufficiently concentrated, people leave (or never arrive). The question this paper asked was whether you could measure that relationship precisely enough to <em>fold it back into</em> the projections — to produce a forecast that knows about the water.</p>
+      </section>
+
+      <section class="sec">
+        <p class="kicker">How we did it</p>
+        <h2>3-meter flood maps × propensity-matched demographic models, block by block.</h2>
+        <p>The flood layer is the First Street Foundation Flood Model — 3-meter resolution, covering fluvial, pluvial, and coastal sources at 5-, 20-, 100-, and 500-year return periods, with future projections built under RCP 4.5 from a 21-GCM ensemble. The demographic layer is the Hauer (2019) SSP2 county-level baseline projection, proportionally downscaled to U.S. Census blocks.</p>
+        <p>We then run a three-step empirical strategy. First, propensity-score matching within each state pairs synthetic treatment/control blocks on observable covariates (job density, job growth, median income, median home value, multi-deprivation, employment rate, 2000 population, density). Second, state-by-state OLS estimates block-level population change rates (2000–2020) as a function of flood exposure (linear + squared, across return periods) with stepwise AIC selection and 80/20 train/test splits. Third, we apply the estimated coefficients to FSF's 30-year flood projections to produce a climate-adjusted forecast to circa 2053.</p>
+      </section>
+
+      <section class="sec">
+        <p class="kicker">What we found</p>
+        <h2>Frequent flooding moves more people than rare disasters.</h2>
+        <p><strong>The headline.</strong> Census blocks with relatively high exposure to <strong>5-year-RP flooding</strong> swing from <strong>+5.76% baseline cumulative growth to −1.42% loss</strong> when the climate-population relationship is integrated — a <strong>−7.19 percentage-point</strong> swing, the largest in the paper. For 20-year-RP exposure, the swing is <strong>−1.40pp</strong>. For 100-year-RP, <strong>−1.54pp</strong>. The most dramatic adjustment is for the most common floods, not the catastrophic ones.</p>
+        <p><strong>The Miami-Dade case.</strong> Within Miami-Dade County the relationship between exposure and growth is non-linear: population continues to rise with exposure up to roughly <strong>7–10% of properties affected</strong>, then turns sharply negative beyond that threshold. The most exposed blocks — Atlantic shoreline, Miami Beach, and blocks adjacent to the Everglades — are where the adjusted forecast bleeds red.</p>
+        <p><strong>The Cincinnati counter-example.</strong> The flood-population relationship is not a national constant. In Cincinnati, highly inundated blocks are actually <em>more</em> likely to grow than less-exposed ones — a coastal/inland asymmetry that breaks any simple "exposure means decline" narrative. The state-by-state estimation strategy is what makes this visible.</p>
+        <p><strong>A model that pulls in both directions.</strong> Within a county that's still projected to grow on net, the spatial distribution of that growth shifts: high-exposure blocks lose, lower-exposure blocks attract spillover. The forecast becomes lumpier — and the lumps fall along the climate gradient.</p>
+      </section>
+
+      <blockquote class="pull-quote">
+        Research that equates inundated populations to the migration population may be overly simplistic if it does not adequately include other covariates in the modeling.
+        <span class="pull-quote-cite">— from the paper</span>
+      </blockquote>
+
+      <section class="cite">
+        <p class="cite-label">Cite this paper <button class="cite-copy" type="button">Copy ↓</button></p>
+        <p class="cite-text">Shu, E. G., Porter, J. R., Hauer, M. E., Sandoval-Olascoaga, S., Gourevitch, J., Wilson, B., Pope, M., Melecio-Vazquez, D., &amp; Kearns, E. (2023). Integrating climate change induced flood risk into future population projections. <em>Nature Communications</em>, 14, 7870. doi:10.1038/s41467-023-43493-8</p>
+      </section>
+
+    </main>
+
+    <aside class="paper-side">
+      <div class="side-group">
+        <p class="side-label">Authors</p>
+        <ul class="side-list">
+          <li><strong>Evelyn G. Shu</strong><br><span class="aff">First Street Foundation</span></li>
+          <li><strong>Jeremy R. Porter</strong><br><span class="aff">First Street · CUNY · Columbia Mailman</span></li>
+          <li><strong>Mathew E. Hauer</strong><br><span class="aff">Florida State University</span></li>
+          <li><strong>Sebastian Sandoval Olascoaga</strong><br><span class="aff">MIT DUSP · academic methodological advisor</span></li>
+          <li><strong>+ 5 First Street co-authors</strong></li>
+        </ul>
+      </div>
+      <div class="side-group">
+        <p class="side-label">Venue</p>
+        <ul class="side-list">
+          <li><em>Nature Communications</em></li>
+          <li>14:7870 · December 2023</li>
+          <li>DOI: 10.1038/s41467-023-43493-8</li>
+        </ul>
+        <span class="side-pill">Open Access · CC BY 4.0</span>
+      </div>
+      <div class="side-group">
+        <p class="side-label">Methods</p>
+        <ul class="side-list">
+          <li>Propensity score matching (state-level)</li>
+          <li>State-by-state OLS estimation</li>
+          <li>Climate-adjusted demographic forecast</li>
+          <li>80/20 train/test validation</li>
+        </ul>
+      </div>
+      <div class="side-group">
+        <p class="side-label">Data</p>
+        <ul class="side-list">
+          <li>First Street Flood Model · 3m resolution</li>
+          <li>Hauer 2019 SSP2 projections</li>
+          <li>U.S. Census Block geography</li>
+          <li>21-GCM ensemble · RCP 4.5</li>
+          <li>Lai et al. + NOAA historic floods</li>
+        </ul>
+      </div>
+      <div class="side-group">
+        <p class="side-label">Read &amp; download</p>
+        <a class="side-link" href="https://www.nature.com/articles/s41467-023-43493-8"><span class="arrow">↗</span>Read at Nature Communications</a>
+      </div>
+    </aside>
+  </div>
+
+  <section class="related">
+    <div class="related-head"><span class="related-label">Other papers in this thread</span><span class="related-sub">Housing &amp; climate</span></div>
+    <div class="related-grid">
+      <a class="rel-card" href="preview-paper.html">
+        <p class="rel-eye">2024 · Paper</p>
+        <p class="rel-q">When buyers see a home's flood risk, <em>where do they go instead?</em></p>
+        <p class="rel-meta">NBER w33119 · R&amp;R, <em>American Economic Review</em></p>
+      </a>
+      <a class="rel-card" href="preview-paper-frontiers.html">
+        <p class="rel-eye">2025 · Paper</p>
+        <p class="rel-q">What happens to property values in <em>flood-exposed</em> neighborhoods?</p>
+        <p class="rel-meta"><em>Frontiers in Environmental Economics</em></p>
+      </a>
+      <a class="rel-card" href="preview-paper-jama.html">
+        <p class="rel-eye">2021 · Paper</p>
+        <p class="rel-q">When states ended their eviction bans, <em>what happened to COVID-19?</em></p>
+        <p class="rel-meta"><em>JAMA Network Open</em></p>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-grid">
+      <p class="foot-note">A working garden, not an archive — pages here grow and get tended.</p>
+      <nav class="footlinks">
+        <a href="preview-papers.html">Papers</a><a href="#">CV</a><a href="#">About</a>
+        <a href="https://www.linkedin.com/in/sebastianolascoaga/">LinkedIn</a>
+        <a href="https://scholar.google.com/">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+      </nav>
+    </div>
+    <p class="copy">© 2026 Sebastian Olascoaga</p>
+  </footer>
+</div>
+<script>
+document.querySelector('.cite-copy')?.addEventListener('click',function(){var t=document.querySelector('.cite-text')?.innerText||'';if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){var btn=document.querySelector('.cite-copy');var orig=btn.innerHTML;btn.innerHTML='Copied ✓';setTimeout(function(){btn.innerHTML=orig;},1600);});}});
+</script>
+</body>
+</html>

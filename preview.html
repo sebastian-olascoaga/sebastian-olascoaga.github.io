@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sebastian Olascoaga</title>
+<meta name="description" content="Sebastian Olascoaga — field experiments and evaluations on public questions." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFFFF;
+    --paper-tint:#F4F6FA;
+    --paper-deep:#E5E9F0;
+    --ink:#0A0F1F;
+    --text:#1F2937;
+    --muted:#64748B;
+    --hint:#94A3B8;
+    --hair:rgba(15,23,42,0.10);
+    --rule:rgba(15,23,42,0.18);
+    --counter:#94A3B8;
+    --accent:#1E3A8A;
+    --accent-soft:rgba(30,58,138,0.12);
+    --serif:"Bodoni Moda","Bodoni MT","Didot",Georgia,serif;
+    --sans:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#0F172A;
+      --paper-tint:#1E293B;
+      --paper-deep:#334155;
+      --ink:#F8FAFC;
+      --text:#E2E8F0;
+      --muted:#94A3B8;
+      --hint:#64748B;
+      --hair:rgba(248,250,252,0.10);
+      --rule:rgba(248,250,252,0.18);
+      --counter:#475569;
+      --accent:#93C5FD;
+      --accent-soft:rgba(147,197,253,0.18);
+    }
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--paper); color:var(--text);
+    font-family:var(--sans); font-size:16px; line-height:1.62;
+    font-weight:400; -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .num{font-variant-numeric:tabular-nums;}
+
+  .wrap{max-width:1120px; margin:0 auto; padding:0 40px;}
+
+  /* HEADER */
+  header.site{
+    padding:56px 0 32px;
+    border-bottom:1px solid var(--hair);
+  }
+  .head-grid{
+    display:grid; grid-template-columns:auto 1fr; gap:48px;
+    align-items:start;
+  }
+  .name-block{min-width:0;}
+  .name{
+    font-family:var(--serif); font-weight:500; color:var(--ink);
+    font-size:clamp(28px,3.6vw,34px); line-height:1.06;
+    font-variation-settings:"opsz" 96;
+    letter-spacing:-0.005em; margin:0 0 8px;
+  }
+  .name a{text-decoration:none;}
+  .role{
+    font-family:var(--sans); font-size:13px; color:var(--muted);
+    letter-spacing:0.04em; margin:0;
+  }
+  .role .dot{color:var(--hint); margin:0 6px;}
+  .role strong{color:var(--ink); font-weight:500;}
+
+  .nav{
+    margin-top:20px;
+    display:flex; flex-wrap:wrap; gap:8px 26px;
+    font-family:var(--sans); font-size:13.5px; color:var(--muted);
+    grid-column:1 / -1;
+  }
+  .nav a{
+    text-decoration:none; padding-bottom:3px;
+    border-bottom:1px solid transparent;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .nav a:hover, .nav a.here{color:var(--ink); border-bottom-color:var(--accent);}
+
+  /* HERO (spans full width of container) */
+  .hero{
+    padding:64px 0 56px;
+    border-bottom:1px solid var(--hair);
+  }
+  .hero p{
+    font-family:var(--serif);
+    font-size:clamp(28px,3.8vw,42px); line-height:1.18;
+    font-variation-settings:"opsz" 96;
+    font-weight:400; color:var(--ink);
+    letter-spacing:-0.012em; margin:0; max-width:24ch;
+  }
+  .hero p em{
+    font-style:italic; color:var(--accent);
+    font-variation-settings:"opsz" 96;
+  }
+
+  /* TWO-COLUMN BODY */
+  .landing-body{
+    display:grid; grid-template-columns:1fr 400px;
+    gap:80px; align-items:start;
+    padding:56px 0 0;
+  }
+  .landing-main{min-width:0;}
+  .landing-side{min-width:0;}
+
+  /* ABOUT */
+  .about{
+    margin:0;
+  }
+  .about-label{
+    font-family:var(--sans); font-size:11.5px; font-weight:600;
+    letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--muted); margin:0 0 18px;
+  }
+  .about p{
+    font-size:17px; line-height:1.65; color:var(--text);
+    max-width:60ch; margin:0 0 18px;
+  }
+  .about p:last-child{margin-bottom:0;}
+  .about strong{color:var(--ink); font-weight:500;}
+  .about em{font-style:italic; color:var(--ink);}
+
+  /* RIGHT NOW */
+  .now{
+    margin:48px 0 0;
+    padding:28px 32px;
+    background:var(--paper-tint);
+    border-left:3px solid var(--accent);
+    border-radius:0 2px 2px 0;
+  }
+  .now-head{
+    display:flex; align-items:baseline; justify-content:space-between;
+    gap:18px; margin:0 0 14px;
+  }
+  .now-label{
+    font-family:var(--sans); font-size:11.5px; font-weight:600;
+    letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--accent); margin:0;
+  }
+  .now-when{
+    font-family:var(--sans); font-size:11.5px; color:var(--muted);
+    letter-spacing:0.04em; font-style:italic;
+  }
+  .now p{
+    font-family:var(--serif);
+    font-size:17px; line-height:1.55; color:var(--text);
+    font-variation-settings:"opsz" 16;
+    max-width:58ch; margin:0;
+  }
+  .now p em{font-style:italic; color:var(--ink);}
+
+  /* LATEST UPDATES (right column) */
+  .updates{margin:0;}
+  .updates-head{
+    display:flex; align-items:baseline; gap:18px;
+    padding-bottom:14px; margin:0 0 8px;
+    border-bottom:1px solid var(--ink);
+  }
+  .updates-label{
+    font-family:var(--sans); font-size:12px; font-weight:600;
+    letter-spacing:0.22em; text-transform:uppercase; color:var(--ink);
+  }
+  .updates-all{
+    margin-left:auto;
+    font-family:var(--sans); font-size:12.5px; color:var(--muted);
+    text-decoration:none; letter-spacing:0.04em;
+    border-bottom:1px solid var(--hair);
+  }
+  .updates-all:hover{color:var(--accent); border-bottom-color:var(--accent);}
+
+  .feed{list-style:none; padding:0; margin:0;}
+  .upd{
+    display:grid; grid-template-columns:74px 1fr;
+    gap:20px; padding:22px 0;
+    border-bottom:1px solid var(--hair);
+  }
+  .upd.major{padding:26px 0;}
+  .upd.brief{padding:16px 0;}
+
+  .upd-date{
+    text-align:right; padding-top:2px;
+    font-variant-numeric:tabular-nums;
+  }
+  .upd-day{
+    display:block; font-family:var(--sans);
+    font-size:12px; font-weight:500; color:var(--ink);
+    letter-spacing:0.04em;
+  }
+  .upd-year{
+    display:block; font-family:var(--sans);
+    font-size:11.5px; color:var(--muted); margin-top:2px;
+  }
+
+  .upd-body{min-width:0;}
+  .upd-type{
+    font-family:var(--sans); font-size:10px; font-weight:600;
+    letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--accent); margin:0 0 6px;
+  }
+  .upd-head{
+    font-family:var(--serif); font-weight:500; color:var(--ink);
+    font-size:17px; line-height:1.28;
+    font-variation-settings:"opsz" 36;
+    letter-spacing:-0.005em;
+    margin:0 0 8px;
+  }
+  .upd.brief .upd-head{
+    font-size:14.5px; font-weight:400; line-height:1.45;
+    font-family:var(--serif); font-variation-settings:"opsz" 16;
+  }
+  .upd-head em{font-style:italic;}
+  .upd-text{
+    font-size:14px; line-height:1.55; color:var(--text);
+    margin:0 0 8px;
+  }
+  .upd-text:last-child{margin-bottom:0;}
+  .upd-text em{font-style:italic; color:var(--ink);}
+  .upd-link{
+    display:inline-block;
+    font-family:var(--sans); font-size:12.5px; color:var(--ink);
+    text-decoration:none; padding-bottom:1px;
+    border-bottom:1px solid var(--hair);
+    margin-top:4px;
+  }
+  .upd-link:hover{color:var(--accent); border-bottom-color:var(--accent);}
+
+  /* footer */
+  footer{margin-top:96px; padding:48px 0 96px; border-top:1px solid var(--hair);}
+  .foot-grid{display:grid; grid-template-columns:1fr auto; gap:30px; align-items:end;}
+  .foot-note{
+    font-family:var(--serif); font-size:14px; color:var(--muted);
+    max-width:48ch; line-height:1.55; font-style:italic;
+    font-variation-settings:"opsz" 16;
+  }
+  .footlinks{display:flex; flex-wrap:wrap; gap:6px 22px; font-family:var(--sans); font-size:13px; color:var(--muted);}
+  .footlinks a{text-decoration:none; border-bottom:1px solid transparent; transition:border-color .15s ease,color .15s ease;}
+  .footlinks a:hover{color:var(--ink); border-bottom-color:var(--accent);}
+  .copy{font-family:var(--sans); font-size:11.5px; color:var(--hint); margin-top:30px; letter-spacing:0.06em; text-align:center;}
+
+  .reveal{opacity:0; transform:translateY(8px); animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards;}
+  @keyframes rise{to{opacity:1; transform:none;}}
+  .d1{animation-delay:.04s}.d2{animation-delay:.14s}.d3{animation-delay:.24s}.d4{animation-delay:.34s}.d5{animation-delay:.44s}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1; transform:none; animation:none;}}
+
+  @media (max-width:900px){
+    .landing-body{grid-template-columns:1fr; gap:64px;}
+    .landing-side{order:2;}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 22px;}
+    header.site{padding-top:40px;}
+    .head-grid{grid-template-columns:1fr; gap:18px;}
+    .hero{padding:48px 0 40px;}
+    .landing-body{padding-top:40px; gap:48px;}
+    .now{padding:22px 22px;}
+    .upd{grid-template-columns:1fr; gap:6px;}
+    .upd-date{text-align:left;}
+    .upd-day, .upd-year{display:inline; font-size:12px; color:var(--muted); margin-right:6px;}
+    .upd-day{font-weight:500; color:var(--ink);}
+    .upd-year:before{content:"·  ";}
+    .foot-grid{grid-template-columns:1fr; gap:22px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header class="site reveal d1">
+    <div class="head-grid">
+      <div class="name-block">
+        <h1 class="name"><a href="#">Sebastian Olascoaga</a></h1>
+        <p class="role">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong></p>
+      </div>
+      <nav class="nav">
+        <a href="#" class="here">Home</a>
+        <a href="preview-papers.html">Papers</a>
+        <a href="#">Threads</a>
+        <a href="#">Notes</a>
+        <a href="#">About</a>
+        <a href="#">CV</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero reveal d2">
+    <p>I'm interested in whether rules and tools <em>actually do</em> what they promise — in housing markets meeting climate change, in city governments adopting new technology, in public-health policies under stress.</p>
+  </section>
+
+  <!-- TWO-COLUMN BODY -->
+  <div class="landing-body">
+
+    <main class="landing-main reveal d3">
+
+      <section class="about">
+        <p class="about-label">About</p>
+        <p>I do field experiments and evaluations on public questions. These days I lead the <strong>research and evaluation function at the City of Boston</strong>, where I run experiments on things like procurement AI and fare-free buses, and I teach the city-planning economics sequence at <strong>MIT DUSP</strong>.</p>
+        <p>Before all this: economic policy in Mexico City as Director of Economic Policy at the federal Treasury, the OECD in Paris, and fellowships at Redfin and OptumLabs working on housing markets, climate, and public health. I think in English, Spanish, and French, and try to write in all of them.</p>
+      </section>
+
+      <section class="now">
+        <div class="now-head">
+          <p class="now-label">Right now</p>
+          <span class="now-when">Updated · Spring 2026</span>
+        </div>
+        <p>Finishing the <em>AER</em> revision of the Redfin flood-risk paper, scaling Boston's enterprise GenAI evaluation pipeline, and writing up the fare-free bus evaluation for general release. Also collecting notes on what it actually takes to run a research function inside a city — and might make a habit of writing them down here.</p>
+      </section>
+
+    </main>
+
+    <aside class="landing-side reveal d4">
+
+      <section class="updates">
+        <div class="updates-head">
+          <span class="updates-label">Latest</span>
+          <a class="updates-all" href="#">All notes &amp; news →</a>
+        </div>
+
+        <ul class="feed">
+
+          <li class="upd major">
+            <div class="upd-date">
+              <span class="upd-day">Apr 18</span>
+              <span class="upd-year">2026</span>
+            </div>
+            <div class="upd-body">
+              <p class="upd-type">Talk</p>
+              <h3 class="upd-head">Invited to the NBER Summer Institute, July</h3>
+              <p class="upd-text">Speaking in the Real Estate session on heterogeneous responses to climate-risk disclosure, joint with Daryl Fairweather, Matt Kahn, and Robert Metcalfe.</p>
+            </div>
+          </li>
+
+          <li class="upd major">
+            <div class="upd-date">
+              <span class="upd-day">Mar 22</span>
+              <span class="upd-year">2026</span>
+            </div>
+            <div class="upd-body">
+              <p class="upd-type">Press</p>
+              <h3 class="upd-head"><em>MIT News</em> on Boston's first city-government RCT</h3>
+              <p class="upd-text">Coverage of the BidBot procurement-assistant experiment — designed and fielded with the Harvard Kennedy and Business schools.</p>
+              <a class="upd-link" href="#">Read at MIT News →</a>
+            </div>
+          </li>
+
+          <li class="upd">
+            <div class="upd-date">
+              <span class="upd-day">Feb</span>
+              <span class="upd-year">2026</span>
+            </div>
+            <div class="upd-body">
+              <p class="upd-type">Project</p>
+              <h3 class="upd-head">Boston's enterprise GenAI evaluation pipeline went into production</h3>
+              <p class="upd-text">~800K anonymized prompts classified so far, across Claude, Gemini, and in-house retrieval tools.</p>
+            </div>
+          </li>
+
+          <li class="upd brief">
+            <div class="upd-date">
+              <span class="upd-day">Jan</span>
+              <span class="upd-year">2026</span>
+            </div>
+            <div class="upd-body">
+              <p class="upd-type">Note</p>
+              <h3 class="upd-head">A small thing on survey weighting — wrote up the multiplier-bootstrap approach for non-probability samples.</h3>
+            </div>
+          </li>
+
+          <li class="upd major">
+            <div class="upd-date">
+              <span class="upd-day">Dec 07</span>
+              <span class="upd-year">2024</span>
+            </div>
+            <div class="upd-body">
+              <p class="upd-type">Press</p>
+              <h3 class="upd-head"><em>The New York Times</em> on mortgages and the climate-risk question</h3>
+              <p class="upd-text">Citing the NBER paper, now <em>R&amp;R at the AER</em>, in reporting on Fannie Mae and Freddie Mac weighing flood-risk lending criteria.</p>
+              <a class="upd-link" href="#">Read at the NYT →</a>
+            </div>
+          </li>
+
+          <li class="upd brief">
+            <div class="upd-date">
+              <span class="upd-day">Sep</span>
+              <span class="upd-year">2024</span>
+            </div>
+            <div class="upd-body">
+              <p class="upd-type">Role</p>
+              <h3 class="upd-head">Joined the stakeholder advisory board for the NIEHS Center for Environmental Health at the Harvard Chan School.</h3>
+            </div>
+          </li>
+
+        </ul>
+      </section>
+
+    </aside>
+
+  </div>
+
+  <footer>
+    <div class="foot-grid">
+      <p class="foot-note">A working garden, not an archive — pages here grow and get tended.</p>
+      <nav class="footlinks">
+        <a href="preview-papers.html">Papers</a>
+        <a href="#">Threads</a>
+        <a href="#">Notes</a>
+        <a href="#">CV</a>
+        <a href="#">About</a>
+        <a href="https://www.linkedin.com/in/sebastianolascoaga/">LinkedIn</a>
+        <a href="https://scholar.google.com/">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+      </nav>
+    </div>
+    <p class="copy">© 2026 Sebastian Olascoaga</p>
+  </footer>
+
+</div>
+</body>
+</html>

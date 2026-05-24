@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sebastian Olascoaga</title>
+<meta name="description" content="Sebastian Olascoaga — field experiments and evaluations on public questions." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFFFF;
+    --paper-tint:#F4F6FA;
+    --paper-deep:#E5E9F0;
+    --ink:#0A0F1F;
+    --text:#1F2937;
+    --muted:#64748B;
+    --hint:#94A3B8;
+    --hair:rgba(15,23,42,0.10);
+    --rule:rgba(15,23,42,0.18);
+    --counter:#94A3B8;
+    --accent:#1E3A8A;
+    --accent-soft:rgba(30,58,138,0.12);
+    --serif:"Bodoni Moda","Bodoni MT","Didot",Georgia,serif;
+    --sans:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#0F172A;
+      --paper-tint:#1E293B;
+      --paper-deep:#334155;
+      --ink:#F8FAFC;
+      --text:#E2E8F0;
+      --muted:#94A3B8;
+      --hint:#64748B;
+      --hair:rgba(248,250,252,0.10);
+      --rule:rgba(248,250,252,0.18);
+      --counter:#475569;
+      --accent:#93C5FD;
+      --accent-soft:rgba(147,197,253,0.18);
+    }
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--paper); color:var(--text);
+    font-family:var(--sans); font-size:16px; line-height:1.62;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .sans{font-family:var(--sans); font-feature-settings:"ss01";}
+
+  .wrap{max-width:1120px; margin:0 auto; padding:0 40px;}
+  .wrap-tight{max-width:760px; margin:0 auto; padding:0 40px;}
+
+  /* HEADER — compact, Lab-style */
+  header{
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--hair);
+  }
+  .head-grid{
+    display:grid; grid-template-columns:auto 1fr; gap:48px;
+    align-items:start;
+  }
+  .name-block{min-width:0;}
+  .name{
+    font-family:var(--serif); font-weight:500; color:var(--ink);
+    font-size:clamp(28px,3.6vw,34px); line-height:1.06;
+    font-variation-settings:"opsz" 96;
+    letter-spacing:-0.005em; margin:0 0 8px;
+  }
+  .role{
+    font-family:var(--sans); font-size:13px; color:var(--muted);
+    letter-spacing:0.04em; margin:0;
+  }
+  .role .dot{color:var(--hint); margin:0 6px;}
+  .role strong{color:var(--ink); font-weight:500;}
+
+  .tagline{
+    font-family:var(--serif); font-style:italic;
+    font-variation-settings:"opsz" 36;
+    font-size:clamp(16px,1.7vw,18px); line-height:1.45;
+    color:var(--text); max-width:48ch;
+    margin:0; padding-top:6px;
+  }
+  .tagline em{
+    color:var(--accent); font-style:italic;
+    font-variation-settings:"opsz" 36;
+  }
+
+  .nav{
+    margin-top:24px; padding-top:0;
+    display:flex; flex-wrap:wrap; gap:8px 26px;
+    font-family:var(--sans); font-size:13.5px; color:var(--muted);
+    grid-column:1 / -1;
+  }
+  .nav a{
+    text-decoration:none; padding-bottom:3px;
+    border-bottom:1px solid transparent;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .nav a:hover, .nav a.here{color:var(--ink); border-bottom-color:var(--accent);}
+
+  /* GALLERY SECTION (papers, organized by thread) */
+  main{padding:48px 0 0;}
+
+  .category{margin:0 0 64px;}
+  .category-head{
+    display:flex; align-items:baseline; justify-content:space-between;
+    gap:24px; padding-bottom:18px;
+    border-bottom:1px solid var(--ink);
+    margin:0 0 36px;
+  }
+  .category-label{
+    font-family:var(--sans); font-size:12px; font-weight:600;
+    letter-spacing:0.22em; text-transform:uppercase; color:var(--ink);
+  }
+  .category-count{
+    font-family:var(--sans); font-size:12px; color:var(--muted);
+    letter-spacing:0.06em; font-variant-numeric:tabular-nums;
+  }
+  .category-blurb{
+    font-family:var(--serif); font-size:18px; line-height:1.5;
+    color:var(--text); max-width:62ch;
+    font-style:italic; font-variation-settings:"opsz" 24;
+    margin:0 0 36px; font-weight:400;
+  }
+
+  .gallery{
+    display:grid; grid-template-columns:repeat(2, 1fr);
+    gap:32px;
+  }
+
+  .paper-card{
+    display:flex; flex-direction:column;
+    text-decoration:none; color:inherit;
+    background:var(--paper);
+    border:1px solid var(--hair); border-radius:2px;
+    overflow:hidden;
+    transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+  }
+  .paper-card:hover{
+    border-color:var(--accent);
+    transform:translateY(-3px);
+    box-shadow:0 10px 28px rgba(15,23,42,0.06);
+  }
+
+  .pc-img{
+    background:var(--paper-tint);
+    aspect-ratio:3 / 2;
+    padding:30px 32px;
+    border-bottom:1px solid var(--hair);
+    display:flex; align-items:stretch;
+  }
+  .pc-img svg{width:100%; height:100%; display:block; overflow:visible;}
+
+  /* card-image chart styles */
+  .ti-eye{font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; fill:var(--muted);}
+  .ti-lbl{font-family:var(--sans); font-size:12.5px; fill:var(--text);}
+  .ti-lbl.accent{fill:var(--accent); font-weight:500;}
+  .ti-val{font-family:var(--sans); font-size:14px; font-weight:600; fill:var(--ink); font-variant-numeric:tabular-nums;}
+  .ti-val.accent{fill:var(--accent);}
+  .ti-delta{font-family:var(--sans); font-size:12px; font-weight:600; fill:var(--accent);}
+  .ti-axis{font-family:var(--sans); font-size:10.5px; fill:var(--muted);}
+  .ti-bar-ctrl{fill:var(--counter); transition:transform .35s ease;}
+  .ti-bar-treat{fill:var(--accent); transition:transform .35s ease;}
+  .ti-line-ctrl{stroke:var(--counter); stroke-width:1.8; fill:none;}
+  .ti-line-treat{stroke:var(--accent); stroke-width:2.2; fill:none; stroke-linecap:round; stroke-linejoin:round;}
+  .ti-dash{stroke-dasharray:5 4;}
+  .ti-band{fill:var(--accent-soft);}
+  .ti-ref{stroke:var(--hair); stroke-dasharray:3 3;}
+  .ti-dot-ctrl{fill:var(--counter);}
+  .ti-dot-treat{fill:var(--accent);}
+
+  /* hover micro-anims */
+  .paper-card:hover .ti-bar-ctrl{transform:scaleX(1.015); transform-origin:left center;}
+  .paper-card:hover .ti-bar-treat{transform:scaleX(1.03); transform-origin:left center;}
+  .paper-card .ti-redraw{
+    stroke-dasharray:800; stroke-dashoffset:0;
+  }
+  .paper-card:hover .ti-redraw{animation:redraw 1.2s cubic-bezier(.2,.7,.2,1);}
+  @keyframes redraw{from{stroke-dashoffset:800;} to{stroke-dashoffset:0;}}
+
+  .pc-body{
+    padding:26px 28px 28px;
+    display:flex; flex-direction:column; flex:1;
+  }
+  .pc-q{
+    font-family:var(--serif); font-weight:500; color:var(--ink);
+    font-size:clamp(21px,2.1vw,25px); line-height:1.22;
+    font-variation-settings:"opsz" 72;
+    letter-spacing:-0.005em; margin:0 0 18px; flex:1;
+  }
+  .pc-q em{font-style:italic; font-variation-settings:"opsz" 72;}
+
+  .pc-meta{
+    font-family:var(--sans); font-size:12px; color:var(--muted);
+    letter-spacing:0.04em; line-height:1.5;
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:14px; border-top:1px solid var(--hair);
+    gap:12px;
+  }
+  .pc-meta .left{display:flex; gap:8px; align-items:baseline; flex-wrap:wrap; min-width:0;}
+  .pc-meta .year{color:var(--ink); font-weight:500; font-variant-numeric:tabular-nums;}
+  .pc-meta .dot{color:var(--hint);}
+  .pc-meta em{font-style:italic; color:var(--text);}
+  .pc-meta .pill{
+    color:var(--accent); font-weight:600;
+    letter-spacing:0.05em;
+    font-size:11px;
+  }
+  .pc-meta .arrow{
+    color:var(--accent); font-size:14px; flex-shrink:0;
+    transition:transform .2s ease;
+  }
+  .paper-card:hover .arrow{transform:translateX(4px);}
+
+  /* "in progress" categories shown as compact strip */
+  .upcoming{
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:24px;
+    margin:0 0 56px;
+  }
+  .upcoming-card{
+    padding:24px 26px;
+    border:1px dashed var(--hair); border-radius:2px;
+    text-decoration:none; color:inherit;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .upcoming-card:hover{border-color:var(--accent); background:var(--paper-tint);}
+  .upcoming-eye{
+    font-family:var(--sans); font-size:10px; font-weight:600;
+    letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--muted); margin:0 0 8px;
+  }
+  .upcoming-title{
+    font-family:var(--serif); font-weight:500; color:var(--ink);
+    font-size:19px; line-height:1.3;
+    font-variation-settings:"opsz" 36;
+    margin:0 0 8px; letter-spacing:-0.003em;
+  }
+  .upcoming-title em{font-style:italic;}
+  .upcoming-note{
+    font-family:var(--sans); font-size:12.5px; color:var(--muted);
+    line-height:1.5;
+  }
+
+  /* notes & news */
+  .notes-strip{margin:80px 0 0; padding:32px 0 0; border-top:1px solid var(--hair);}
+  .notes-strip h2{
+    font-family:var(--sans); font-size:11.5px; font-weight:600;
+    letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--muted); margin:0 0 22px;
+    display:flex; align-items:baseline; gap:14px;
+  }
+  .notes-strip h2 .all{margin-left:auto; font-size:12.5px; font-weight:400; letter-spacing:0.04em; text-transform:none; color:var(--muted);}
+  .notes-strip h2 .all a{color:var(--muted); text-decoration:none; border-bottom:1px solid var(--hair);}
+  .notes-strip h2 .all a:hover{color:var(--accent); border-bottom-color:var(--accent);}
+  .notes-list{list-style:none; padding:0; margin:0;}
+  .notes-list li{
+    display:grid; grid-template-columns:110px 80px 1fr;
+    gap:18px; padding:11px 0; border-bottom:1px solid var(--hair);
+    font-size:15px; line-height:1.5; align-items:baseline;
+  }
+  .notes-list li:last-child{border-bottom:none;}
+  .notes-list .when{font-family:var(--sans); font-size:12px; color:var(--muted); letter-spacing:0.04em; font-variant-numeric:tabular-nums;}
+  .notes-list .kind{font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent);}
+  .notes-list .what{color:var(--text);}
+  .notes-list .what em{font-style:italic; color:var(--ink);}
+
+  /* footer */
+  footer{margin-top:96px; padding:48px 0 96px; border-top:1px solid var(--hair);}
+  .foot-grid{display:grid; grid-template-columns:1fr auto; gap:30px; align-items:end;}
+  .foot-note{font-size:14.5px; color:var(--muted); max-width:48ch; line-height:1.55; font-style:italic;}
+  .footlinks{display:flex; flex-wrap:wrap; gap:6px 22px; font-family:var(--sans); font-size:13px; color:var(--muted);}
+  .footlinks a{text-decoration:none; border-bottom:1px solid transparent; transition:border-color .15s ease,color .15s ease;}
+  .footlinks a:hover{color:var(--ink); border-bottom-color:var(--accent);}
+  .copy{font-family:var(--sans); font-size:11.5px; color:var(--hint); margin-top:30px; letter-spacing:0.06em; text-align:center;}
+
+  .reveal{opacity:0; transform:translateY(8px); animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards;}
+  @keyframes rise{to{opacity:1; transform:none;}}
+  .d1{animation-delay:.04s}.d2{animation-delay:.14s}.d3{animation-delay:.24s}.d4{animation-delay:.34s}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; animation:none;}
+    .paper-card:hover{transform:none; box-shadow:none;}
+    .paper-card:hover .ti-bar-ctrl, .paper-card:hover .ti-bar-treat, .paper-card:hover .ti-redraw{transform:none; animation:none;}
+  }
+
+  @media (max-width:880px){
+    .gallery{grid-template-columns:1fr; gap:24px;}
+    .upcoming{grid-template-columns:1fr; gap:16px;}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 22px;}
+    .wrap-tight{padding:0 22px;}
+    .head-grid{grid-template-columns:1fr; gap:18px;}
+    header{padding-top:40px;}
+    main{padding-top:36px;}
+    .pc-img{padding:22px 22px;}
+    .pc-body{padding:22px 22px 22px;}
+    .notes-list li{grid-template-columns:1fr; gap:2px;}
+    .notes-list .when, .notes-list .kind{display:inline; margin-right:8px;}
+    .foot-grid{grid-template-columns:1fr; gap:22px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="reveal d1">
+    <div class="head-grid">
+      <div class="name-block">
+        <h1 class="name">Sebastian Olascoaga</h1>
+        <p class="role sans">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong></p>
+      </div>
+      <p class="tagline">Field experiments and evaluations on public questions — I look for whether rules and tools <em>actually do</em> what they promise, and try to say so plainly.</p>
+      <nav class="nav">
+        <a href="#" class="here">Papers</a>
+        <a href="#">Notes</a>
+        <a href="#">About</a>
+        <a href="#">CV</a>
+        <a href="https://scholar.google.com/">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Category: Housing × Climate (4 published papers) -->
+    <section class="category reveal d2">
+      <div class="category-head">
+        <span class="category-label">Housing &amp; climate</span>
+        <span class="category-count">4 papers · 2021–2025</span>
+      </div>
+      <p class="category-blurb">Field experiments and projections on what households do when they see the climate risk attached to a house, and on what happens to neighborhoods that flood while still gaining people.</p>
+
+      <div class="gallery">
+
+        <!-- Card 1: NBER w33119 / Redfin -->
+        <a class="paper-card" href="#">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Flood-risk disclosure · field experiment</text>
+
+              <text x="0" y="116" class="ti-lbl">Without scores (control)</text>
+              <rect class="ti-bar-ctrl" x="0" y="128" width="480" height="36"/>
+              <text x="500" y="153" text-anchor="end" class="ti-val">100</text>
+
+              <text x="0" y="220" class="ti-lbl accent">With flood-risk scores</text>
+              <rect class="ti-bar-treat" x="0" y="232" width="221" height="36"/>
+              <text x="500" y="257" text-anchor="end">
+                <tspan class="ti-val accent">46</tspan>
+                <tspan dx="10" class="ti-delta">−54%</tspan>
+              </text>
+
+              <line x1="0" y1="320" x2="540" y2="320" stroke="rgba(15,23,42,0.10)"/>
+              <text x="0"   y="345" class="ti-axis">0</text>
+              <text x="270" y="345" text-anchor="middle" class="ti-axis">Flood-risk index of homes bought</text>
+              <text x="540" y="345" text-anchor="end" class="ti-axis">100</text>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">Does showing buyers a home's flood risk change <em>what they buy?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2024</span>
+                <span class="dot">·</span>
+                <span>NBER w33119</span>
+                <span class="dot">·</span>
+                <span class="pill">R&amp;R, AER</span>
+              </span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2: JAMA Network Open / Eviction moratoria -->
+        <a class="paper-card" href="#">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Eviction moratoria × COVID-19 hazard</text>
+
+              <!-- HR=1 reference -->
+              <line class="ti-ref" x1="260" y1="60" x2="260" y2="320"/>
+              <text x="260" y="345" text-anchor="middle" class="ti-axis">HR = 1 (no effect)</text>
+
+              <!-- 5 strata rows (point estimates + CIs) -->
+              <text x="0" y="92" class="ti-lbl">Highest income</text>
+              <line x1="266" y1="100" x2="296" y2="100" stroke="#94A3B8" stroke-width="1.4"/>
+              <circle class="ti-dot-ctrl" cx="278" cy="100" r="3.4"/>
+
+              <text x="0" y="148" class="ti-lbl">Upper-middle</text>
+              <line x1="274" y1="156" x2="318" y2="156" stroke="#94A3B8" stroke-width="1.4"/>
+              <circle class="ti-dot-ctrl" cx="290" cy="156" r="3.4"/>
+
+              <text x="0" y="204" class="ti-lbl">Middle</text>
+              <line x1="290" y1="212" x2="346" y2="212" stroke="#94A3B8" stroke-width="1.4"/>
+              <circle class="ti-dot-ctrl" cx="312" cy="212" r="3.4"/>
+
+              <text x="0" y="260" class="ti-lbl">Lower-middle</text>
+              <line x1="312" y1="268" x2="390" y2="268" stroke="#94A3B8" stroke-width="1.4"/>
+              <circle class="ti-dot-ctrl" cx="346" cy="268" r="3.4"/>
+
+              <text x="0" y="316" class="ti-lbl accent">Lowest income</text>
+              <line x1="346" y1="324" x2="470" y2="324" stroke="#1E3A8A" stroke-width="2"/>
+              <circle class="ti-dot-treat" cx="402" cy="324" r="4"/>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">When states ended their eviction bans, <em>what happened to COVID-19?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2021</span>
+                <span class="dot">·</span>
+                <span><em>JAMA Network Open</em></span>
+              </span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3: Nature Communications / Flood + population projection -->
+        <a class="paper-card" href="#">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Coastal population projection</text>
+
+              <!-- gap fill -->
+              <path class="ti-band" d="M0,270 C120,240 220,200 540,120 L540,240 C400,240 240,250 0,270 Z"/>
+
+              <!-- baseline (dashed) -->
+              <path class="ti-line-ctrl ti-dash ti-redraw" d="M0,270 C120,240 220,200 540,120"/>
+
+              <!-- flood-adjusted (solid) -->
+              <path class="ti-line-treat ti-redraw" d="M0,270 C120,255 220,245 540,240"/>
+
+              <!-- end labels -->
+              <text x="530" y="116" text-anchor="end" class="ti-lbl">Baseline projection</text>
+              <text x="530" y="262" text-anchor="end" class="ti-lbl accent">With flood risk</text>
+
+              <!-- x axis -->
+              <line x1="0" y1="320" x2="540" y2="320" stroke="rgba(15,23,42,0.10)"/>
+              <text x="0"   y="345" class="ti-axis">2020</text>
+              <text x="270" y="345" text-anchor="middle" class="ti-axis">2060</text>
+              <text x="540" y="345" text-anchor="end" class="ti-axis">2100</text>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">How do U.S. coastal population maps shift when <em>flood risk drives migration?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2023</span>
+                <span class="dot">·</span>
+                <span><em>Nature Communications</em></span>
+              </span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 4: Frontiers in Environmental Economics / Event study -->
+        <a class="paper-card" href="#">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Property values · event study around flood</text>
+
+              <!-- baseline at zero -->
+              <line x1="0" y1="180" x2="540" y2="180" stroke="rgba(15,23,42,0.14)"/>
+              <text x="0" y="174" class="ti-axis">0</text>
+
+              <!-- event marker -->
+              <line class="ti-ref" x1="270" y1="60" x2="270" y2="320"/>
+              <text x="270" y="345" text-anchor="middle" class="ti-axis">Flood event</text>
+              <text x="0"   y="345" class="ti-axis">−3 yr</text>
+              <text x="540" y="345" text-anchor="end" class="ti-axis">+3 yr</text>
+
+              <!-- CI band -->
+              <path class="ti-band" d="M0,176 L90,170 L180,170 L270,178 L360,212 L450,238 L540,250 L540,278 L450,266 L360,240 L270,194 L180,190 L90,188 L0,188 Z"/>
+
+              <!-- point estimate line -->
+              <path class="ti-line-treat ti-redraw" d="M0,182 L90,180 L180,180 L270,184 L360,224 L450,250 L540,262"/>
+
+              <!-- dots -->
+              <circle class="ti-dot-treat" cx="0"   cy="182" r="4"/>
+              <circle class="ti-dot-treat" cx="90"  cy="180" r="4"/>
+              <circle class="ti-dot-treat" cx="180" cy="180" r="4"/>
+              <circle class="ti-dot-treat" cx="270" cy="184" r="4"/>
+              <circle class="ti-dot-treat" cx="360" cy="224" r="4"/>
+              <circle class="ti-dot-treat" cx="450" cy="250" r="4"/>
+              <circle class="ti-dot-treat" cx="540" cy="262" r="4"/>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">What happens to property values in <em>flood-exposed neighborhoods?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2025</span>
+                <span class="dot">·</span>
+                <span><em>Frontiers in Environmental Economics</em></span>
+              </span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Other threads, work-in-progress (no published cards yet) -->
+    <section class="reveal d3">
+      <div class="category-head">
+        <span class="category-label">Also brewing</span>
+        <span class="category-count">In progress</span>
+      </div>
+      <div class="upcoming">
+        <a class="upcoming-card" href="#">
+          <p class="upcoming-eye">Public-sector evaluation</p>
+          <p class="upcoming-title">Evaluation, inside a <em>city government</em></p>
+          <p class="upcoming-note">Fare-free buses, Boston's first city RCT (with HKS + HBS), and notes from three years of running a research function from inside government.</p>
+        </a>
+        <a class="upcoming-card" href="#">
+          <p class="upcoming-eye">Generative AI in cities</p>
+          <p class="upcoming-title">Generative AI, when the user is <em>a city</em></p>
+          <p class="upcoming-note">Boston's enterprise evaluation program — output quality, adoption, downstream RCT impact across Claude, Gemini, and in-house tools.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Notes & news -->
+    <section class="notes-strip reveal d4">
+      <h2>Latest notes &amp; news <span class="all sans"><a href="#">all →</a></span></h2>
+      <ul class="notes-list">
+        <li><span class="when">Apr 2025</span><span class="kind">Paper</span><span class="what">New paper out in <em>Frontiers in Environmental Economics</em></span></li>
+        <li><span class="when">Dec 2024</span><span class="kind">Press</span><span class="what"><em>The New York Times</em> on mortgages and climate risk</span></li>
+        <li><span class="when">Sep 2024</span><span class="kind">Role</span><span class="what">Joined the NIEHS stakeholder advisory board, Harvard Chan</span></li>
+        <li><span class="when">Jun 2024</span><span class="kind">Talk</span><span class="what">MIT DUSP — what cities actually do with evaluation</span></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="foot-grid">
+      <p class="foot-note">A working garden, not an archive — pages here grow and get tended.</p>
+      <nav class="footlinks">
+        <a href="#">Papers</a>
+        <a href="#">CV</a>
+        <a href="#">About</a>
+        <a href="https://www.linkedin.com/in/sebastianolascoaga/">LinkedIn</a>
+        <a href="https://scholar.google.com/">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+      </nav>
+    </div>
+    <p class="copy">© 2026 Sebastian Olascoaga</p>
+  </footer>
+
+</div>
+</body>
+</html>

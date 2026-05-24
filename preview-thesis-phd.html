@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Housing Dynamics in the Face of Shocks — Sebastian Olascoaga, PhD Dissertation</title>
+<meta name="description" content="A three-essay PhD dissertation on how housing systems mediate climate, health, and speculative shocks." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#FFFFFF;--paper-tint:#F4F6FA;--paper-deep:#E5E9F0;--ink:#0A0F1F;--text:#1F2937;--muted:#64748B;--hint:#94A3B8;--hair:rgba(15,23,42,0.10);--rule:rgba(15,23,42,0.18);--counter:#94A3B8;--accent:#1E3A8A;--accent-soft:rgba(30,58,138,0.12);--serif:"Bodoni Moda","Bodoni MT","Didot",Georgia,serif;--sans:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+  @media (prefers-color-scheme: dark){:root{--paper:#0F172A;--paper-tint:#1E293B;--paper-deep:#334155;--ink:#F8FAFC;--text:#E2E8F0;--muted:#94A3B8;--hint:#64748B;--hair:rgba(248,250,252,0.10);--rule:rgba(248,250,252,0.18);--counter:#475569;--accent:#93C5FD;--accent-soft:rgba(147,197,253,0.18);}}
+  *{box-sizing:border-box;}html{-webkit-text-size-adjust:100%;}
+  body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;}.num{font-variant-numeric:tabular-nums;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px;}
+  header.site{padding:40px 0 32px;border-bottom:1px solid var(--hair);}
+  .head-grid{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start;}
+  .name-block{min-width:0;}
+  .name{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:clamp(22px,2.8vw,26px);line-height:1.06;font-variation-settings:"opsz" 96;letter-spacing:-0.005em;margin:0 0 6px;}
+  .name a{text-decoration:none;}
+  .role{font-family:var(--sans);font-size:12.5px;color:var(--muted);letter-spacing:0.04em;margin:0;}
+  .role .dot{color:var(--hint);margin:0 6px;}.role strong{color:var(--ink);font-weight:500;}
+  .nav{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 24px;font-family:var(--sans);font-size:13px;color:var(--muted);grid-column:1 / -1;}
+  .nav a{text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:color .15s ease,border-color .15s ease;}
+  .nav a:hover,.nav a.here{color:var(--ink);border-bottom-color:var(--accent);}
+  .paper-hero{padding:64px 0 40px;}
+  .breadcrumb{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:0.04em;margin:0 0 28px;}
+  .breadcrumb a{text-decoration:none;border-bottom:1px solid var(--hair);transition:border-color .15s ease,color .15s ease;}
+  .breadcrumb a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+  .breadcrumb .dot{color:var(--hint);margin:0 6px;}
+  .paper-eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 22px;}
+  .paper-eyebrow .sep{color:var(--hint);font-weight:400;margin:0 8px;}
+  .paper-eyebrow .year{color:var(--ink);font-variant-numeric:tabular-nums;}
+  .paper-q{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:clamp(38px,5.5vw,62px);line-height:1.04;font-variation-settings:"opsz" 96;letter-spacing:-0.015em;margin:0 0 32px;max-width:22ch;}
+  .paper-q em{font-style:italic;font-variation-settings:"opsz" 96;}
+  .paper-byline{font-family:var(--sans);font-size:14.5px;color:var(--text);line-height:1.55;margin:0 0 18px;max-width:60ch;}
+  .paper-byline strong{color:var(--ink);font-weight:500;}
+  .paper-status{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:0.06em;color:var(--accent);padding:6px 12px;border:1px solid var(--accent);border-radius:2px;}
+  .paper-status .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;}
+  .paper-body{display:grid;grid-template-columns:1fr 280px;gap:80px;padding:32px 0 64px;border-top:1px solid var(--hair);}
+  .paper-main{min-width:0;}
+  .lead{font-family:var(--serif);font-size:clamp(22px,2.4vw,26px);line-height:1.38;font-variation-settings:"opsz" 36;color:var(--ink);font-weight:400;margin:40px 0 44px;max-width:34ch;letter-spacing:-0.005em;}
+  .lead strong{font-weight:600;color:var(--accent);}
+  .hero-chart{margin:0 0 64px;padding:40px 36px 28px;background:var(--paper-tint);border:1px solid var(--hair);border-radius:2px;}
+  .hero-chart-eye{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;}
+  .hero-chart-title{font-family:var(--serif);font-size:clamp(20px,2.2vw,24px);line-height:1.18;font-weight:500;color:var(--ink);font-variation-settings:"opsz" 48;letter-spacing:-0.005em;margin:0 0 8px;max-width:38ch;}
+  .hero-chart-sub{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 28px;max-width:64ch;}
+  .hero-chart svg{width:100%;height:auto;display:block;overflow:visible;}
+  .hero-chart-source{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair);font-family:var(--sans);font-size:11.5px;color:var(--hint);letter-spacing:0.02em;}
+  .hero-chart-source strong{color:var(--muted);font-weight:500;}
+  .stat-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin:32px 0 8px;padding:24px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);}
+  .stat-strip .s-num{font-family:var(--serif);font-size:clamp(26px,3vw,34px);font-weight:600;color:var(--accent);line-height:1.05;font-variation-settings:"opsz" 72;font-variant-numeric:tabular-nums;letter-spacing:-0.005em;margin:0 0 6px;}
+  .stat-strip .s-lbl{font-family:var(--sans);font-size:12px;color:var(--muted);line-height:1.4;}
+  .stat-strip .s-lbl strong{color:var(--ink);font-weight:500;}
+  .sec{margin:56px 0 0;}
+  .sec h2{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:clamp(24px,2.8vw,32px);line-height:1.16;font-variation-settings:"opsz" 72;letter-spacing:-0.008em;margin:0 0 8px;}
+  .sec h2 em{font-style:italic;font-variation-settings:"opsz" 72;}
+  .sec .kicker{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;}
+  .sec p{font-size:16.5px;line-height:1.7;color:var(--text);max-width:62ch;margin:0 0 18px;}
+  .sec p:last-child{margin-bottom:0;}.sec p em{font-style:italic;color:var(--ink);}.sec p strong{font-weight:600;color:var(--ink);}
+  .pull-quote{font-family:var(--serif);font-style:italic;font-variation-settings:"opsz" 36;font-size:clamp(20px,2.2vw,24px);line-height:1.4;color:var(--ink);padding:24px 0 24px 24px;border-left:3px solid var(--accent);margin:32px 0;max-width:50ch;}
+  .pull-quote-cite{display:block;font-family:var(--sans);font-style:normal;font-size:12px;color:var(--muted);letter-spacing:0.04em;margin-top:14px;}
+  .cite{margin:48px 0 0;padding:24px 26px;background:var(--paper-tint);border:1px solid var(--hair);border-radius:2px;}
+  .cite-label{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;display:flex;align-items:center;justify-content:space-between;}
+  .cite-copy{font-family:var(--sans);font-size:11px;color:var(--accent);background:none;cursor:pointer;padding:4px 10px;border:1px solid var(--accent-soft);border-radius:2px;transition:background .15s ease,color .15s ease;font-weight:600;letter-spacing:0.06em;}
+  .cite-copy:hover{background:var(--accent);color:var(--paper);}
+  .cite-text{font-family:var(--serif);font-size:15px;line-height:1.6;color:var(--ink);margin:0;font-variation-settings:"opsz" 16;}
+  .cite-text em{font-style:italic;}
+  .paper-side{position:sticky;top:32px;align-self:start;margin-top:40px;padding:24px 24px;border:1px solid var(--hair);border-radius:2px;background:var(--paper);}
+  .side-group{padding:14px 0;border-top:1px solid var(--hair);}
+  .side-group:first-child{padding-top:0;border-top:none;}
+  .side-label{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;}
+  .side-list{list-style:none;padding:0;margin:0;}
+  .side-list li{font-family:var(--sans);font-size:13px;color:var(--text);line-height:1.5;padding:3px 0;}
+  .side-list li strong{color:var(--ink);font-weight:500;}
+  .side-list li .aff{color:var(--muted);font-size:12px;}
+  .side-list li em{font-style:italic;color:var(--ink);}
+  .side-pill{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.06em;color:var(--accent);padding:3px 8px;border:1px solid var(--accent-soft);border-radius:2px;margin-top:6px;}
+  .side-link{display:flex;align-items:baseline;gap:8px;font-family:var(--sans);font-size:13px;padding:6px 0;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--hair);}
+  .side-link:last-of-type{border-bottom:none;}
+  .side-link .arrow{color:var(--accent);font-size:12px;}
+  .side-link:hover{color:var(--accent);}.side-link .ext{color:var(--muted);font-size:11px;margin-left:auto;}
+  .related{padding:56px 0 0;margin-top:24px;border-top:1px solid var(--ink);}
+  .related-head{display:flex;align-items:baseline;gap:16px;margin:0 0 32px;}
+  .related-label{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink);}
+  .related-sub{font-family:var(--sans);font-size:12.5px;color:var(--muted);letter-spacing:0.04em;}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .rel-card{display:block;text-decoration:none;color:inherit;padding:20px 22px;border:1px solid var(--hair);border-radius:2px;background:var(--paper);transition:border-color .2s ease,transform .2s ease;}
+  .rel-card:hover{border-color:var(--accent);transform:translateY(-2px);}
+  .rel-eye{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin:0 0 10px;}
+  .rel-q{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:17px;line-height:1.25;font-variation-settings:"opsz" 36;margin:0 0 12px;letter-spacing:-0.005em;}
+  .rel-q em{font-style:italic;}.rel-meta{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:0.04em;}
+  .rel-meta em{font-style:italic;color:var(--text);}
+  footer{margin-top:80px;padding:48px 0 96px;border-top:1px solid var(--hair);}
+  .foot-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;}
+  .foot-note{font-size:14px;color:var(--muted);max-width:48ch;line-height:1.55;font-style:italic;font-family:var(--serif);font-variation-settings:"opsz" 16;}
+  .footlinks{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--sans);font-size:13px;color:var(--muted);}
+  .footlinks a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s ease,color .15s ease;}
+  .footlinks a:hover{color:var(--ink);border-bottom-color:var(--accent);}
+  .copy{font-family:var(--sans);font-size:11.5px;color:var(--hint);margin-top:30px;letter-spacing:0.06em;text-align:center;}
+  @media (max-width:980px){.paper-body{grid-template-columns:1fr;gap:32px;}.paper-side{position:static;margin-top:0;}.related-grid{grid-template-columns:1fr;gap:16px;}}
+  @media (max-width:640px){.wrap{padding:0 22px;}.head-grid{grid-template-columns:1fr;gap:18px;}header.site{padding-top:32px;}.paper-hero{padding:40px 0 28px;}.hero-chart{padding:24px 18px 18px;}.foot-grid{grid-template-columns:1fr;gap:22px;}.stat-strip{grid-template-columns:1fr;gap:16px;}}
+
+  /* chapter card */
+  .chap{margin:48px 0 0; padding-top:40px; border-top:1px solid var(--hair);}
+  .chap-eye{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 8px;}
+  .chap-title{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:clamp(22px,2.4vw,26px);line-height:1.22;font-variation-settings:"opsz" 48;letter-spacing:-0.005em;margin:0 0 16px;}
+  .chap-title em{font-style:italic;}
+
+  /* small multiples styles */
+  .sm-panel-title{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:0.06em;fill:var(--ink);}
+  .sm-panel-sub{font-family:var(--sans);font-size:10.5px;fill:var(--muted);}
+  .sm-axislbl{font-family:var(--sans);font-size:10.5px;fill:var(--muted);font-variant-numeric:tabular-nums;}
+  .sm-axislbl.bold{font-weight:600;fill:var(--ink);}
+  .sm-axis{stroke:rgba(15,23,42,0.20);stroke-width:1;}
+  .sm-grid{stroke:rgba(15,23,42,0.06);stroke-width:1;}
+  .sm-zero{stroke:rgba(15,23,42,0.30);stroke-width:1;}
+  .sm-event{stroke:var(--ink);stroke-width:1;stroke-dasharray:3 3;}
+  .sm-line{stroke:var(--accent);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+  .sm-band{fill:var(--accent-soft);}
+  .sm-dot{fill:var(--accent);}
+  .sm-callout{font-family:var(--serif);font-size:16px;font-weight:600;fill:var(--accent);font-variant-numeric:tabular-nums;font-variation-settings:"opsz" 24;}
+  .sm-callout-lbl{font-family:var(--sans);font-size:10px;fill:var(--accent);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;}
+  .sm-eye{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;fill:var(--muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <div class="head-grid">
+      <div class="name-block">
+        <h1 class="name"><a href="preview.html">Sebastian Olascoaga</a></h1>
+        <p class="role">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong></p>
+      </div>
+      <nav class="nav">
+        <a href="preview.html">Home</a><a href="preview-papers.html">Papers</a><a href="#">Threads</a><a href="#">Notes</a><a href="#">About</a><a href="#">CV</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="paper-hero">
+    <p class="breadcrumb"><a href="preview-papers.html">Papers</a><span class="dot">·</span><a href="#">Theses</a></p>
+    <p class="paper-eyebrow">PhD dissertation · MIT DUSP <span class="sep">·</span> <span class="year">2023</span></p>
+    <h2 class="paper-q">Housing dynamics in the face of <em>shocks.</em></h2>
+    <p class="paper-byline">Advisor: <strong>Mariana C. Arcaya</strong> · Committee: <strong>Atheendar Venkataramani · Albert Saiz · devin michelle bunten</strong></p>
+    <span class="paper-status"><span class="dot"></span>PhD in Urban Economics &amp; Policy · MIT Presidential Fellowship</span>
+  </section>
+
+  <div class="paper-body">
+    <main class="paper-main">
+
+      <p class="lead">Three different shocks — a tornado that destroys a neighborhood, a pandemic that lifts a housing protection, an investor who buys a home to flip — produce the <strong>same shape of harm</strong>: prices, health, and stability bend away from a flat baseline and don't bend back. The dissertation argues that housing systems mediate every modern shock — and that public policy can sometimes shorten the bend, but rarely from the outside.</p>
+
+      <!-- HERO CHART: Three-panel small multiples — the dissertation's unified visual signature -->
+      <figure class="hero-chart">
+        <p class="hero-chart-eye">The dissertation in one image</p>
+        <h3 class="hero-chart-title">Three shocks. Three event studies. One signature: the bend that doesn't come back.</h3>
+        <p class="hero-chart-sub">Each panel is the headline finding of one chapter. The pre-trend is flat in every case (causal-inference design); the post-event divergence is the harm. Different units, different shocks, same visual grammar — chosen to make the dissertation's thesis visible.</p>
+
+        <svg viewBox="0 0 920 360" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="phd-title">
+          <title id="phd-title">Three-panel small multiples of the PhD dissertation's chapter findings: tornado property values falling for 9 years, COVID-19 hazard rising after eviction moratoria expire, and house-flipping concentration by price tier</title>
+
+          <!-- ============== PANEL 1: CH II Tornadoes — property prices fall ============== -->
+          <g>
+            <text class="sm-eye" x="170" y="36" text-anchor="middle">CH. II — CLIMATE SHOCK</text>
+            <text class="sm-panel-title" x="170" y="56" text-anchor="middle">Tornado-affected home prices</text>
+            <text class="sm-panel-sub" x="170" y="72" text-anchor="middle">vs. comparable non-affected homes</text>
+
+            <!-- grid -->
+            <line class="sm-grid" x1="40" y1="100" x2="300" y2="100"/>
+            <line class="sm-zero" x1="40" y1="150" x2="300" y2="150"/>
+            <line class="sm-grid" x1="40" y1="200" x2="300" y2="200"/>
+            <line class="sm-grid" x1="40" y1="250" x2="300" y2="250"/>
+
+            <!-- y labels -->
+            <text class="sm-axislbl bold" x="35" y="154" text-anchor="end">$0</text>
+            <text class="sm-axislbl" x="35" y="204" text-anchor="end">−$10k</text>
+            <text class="sm-axislbl" x="35" y="254" text-anchor="end">−$20k</text>
+
+            <!-- event line at year 0, x=110 -->
+            <line class="sm-event" x1="110" y1="85" x2="110" y2="275"/>
+
+            <!-- CI band -->
+            <path class="sm-band" d="M 40 145 L 60 147 L 80 144 L 100 148 L 110 150 L 130 165 L 150 180 L 170 198 L 190 220 L 210 242 L 230 258 L 250 268 L 270 272 L 290 275 L 300 277 L 300 286 L 290 284 L 270 282 L 250 277 L 230 268 L 210 252 L 190 230 L 170 210 L 150 192 L 130 175 L 110 158 L 100 155 L 80 152 L 60 154 L 40 152 Z"/>
+
+            <!-- line -->
+            <path class="sm-line" d="M 40 148 L 60 150 L 80 147 L 100 150 L 110 152 L 130 170 L 150 188 L 170 206 L 190 226 L 210 248 L 230 263 L 250 271 L 270 275 L 290 278 L 300 280"/>
+            <circle class="sm-dot" cx="110" cy="152" r="3"/>
+            <circle class="sm-dot" cx="300" cy="280" r="4.5"/>
+            <circle cx="300" cy="280" r="8" fill="none" stroke="#1E3A8A" stroke-width="1" opacity="0.4"/>
+
+            <!-- x-axis -->
+            <line class="sm-axis" x1="40" y1="290" x2="300" y2="290"/>
+            <text class="sm-axislbl" x="40" y="306">y −5</text>
+            <text class="sm-axislbl" x="110" y="306" text-anchor="middle">0</text>
+            <text class="sm-axislbl" x="300" y="306" text-anchor="end">+9</text>
+
+            <!-- callout -->
+            <text class="sm-callout" x="290" y="265" text-anchor="end">−$23k</text>
+            <text class="sm-callout-lbl" x="290" y="252" text-anchor="end">at year 8</text>
+
+            <!-- chapter note below -->
+            <text class="sm-axislbl" x="170" y="338" text-anchor="middle" fill="var(--muted)">21,000 tornadoes · 1996–2019 · FEMA aid had no measurable effect</text>
+          </g>
+
+          <!-- ============== PANEL 2: CH III Eviction × COVID — hazard rises ============== -->
+          <g>
+            <text class="sm-eye" x="460" y="36" text-anchor="middle">CH. III — HEALTH SHOCK</text>
+            <text class="sm-panel-title" x="460" y="56" text-anchor="middle">COVID-19 hazard ratio</text>
+            <text class="sm-panel-sub" x="460" y="72" text-anchor="middle">after states lifted eviction moratoria</text>
+
+            <line class="sm-grid" x1="330" y1="100" x2="590" y2="100"/>
+            <line class="sm-grid" x1="330" y1="150" x2="590" y2="150"/>
+            <line class="sm-zero" x1="330" y1="200" x2="590" y2="200"/>
+            <line class="sm-grid" x1="330" y1="250" x2="590" y2="250"/>
+
+            <text class="sm-axislbl" x="325" y="104" text-anchor="end">2.0</text>
+            <text class="sm-axislbl" x="325" y="154" text-anchor="end">1.5</text>
+            <text class="sm-axislbl bold" x="325" y="204" text-anchor="end">1.0</text>
+            <text class="sm-axislbl" x="325" y="254" text-anchor="end">0.5</text>
+
+            <line class="sm-event" x1="430" y1="85" x2="430" y2="275"/>
+
+            <path class="sm-band" d="M 330 198 L 350 200 L 370 197 L 390 201 L 410 199 L 430 198 L 450 185 L 470 170 L 490 158 L 510 145 L 530 132 L 550 122 L 570 115 L 590 110 L 590 132 L 570 137 L 550 144 L 530 152 L 510 163 L 490 175 L 470 188 L 450 200 L 430 207 L 410 208 L 390 207 L 370 206 L 350 208 L 330 206 Z"/>
+
+            <path class="sm-line" d="M 330 200 L 350 201 L 370 199 L 390 200 L 410 200 L 430 200 L 450 188 L 470 175 L 490 165 L 510 152 L 530 140 L 550 130 L 570 122 L 590 118"/>
+            <circle class="sm-dot" cx="430" cy="200" r="3"/>
+            <circle class="sm-dot" cx="590" cy="118" r="4.5"/>
+            <circle cx="590" cy="118" r="8" fill="none" stroke="#1E3A8A" stroke-width="1" opacity="0.4"/>
+
+            <line class="sm-axis" x1="330" y1="290" x2="590" y2="290"/>
+            <text class="sm-axislbl" x="330" y="306">wk −15</text>
+            <text class="sm-axislbl" x="430" y="306" text-anchor="middle">0</text>
+            <text class="sm-axislbl" x="590" y="306" text-anchor="end">+12</text>
+
+            <text class="sm-callout" x="580" y="108" text-anchor="end">HR 1.83</text>
+            <text class="sm-callout-lbl" x="580" y="95" text-anchor="end">12 weeks after</text>
+
+            <text class="sm-axislbl" x="460" y="338" text-anchor="middle" fill="var(--muted)">509,694 individuals · 43 states + DC · Pre-trends p = .98</text>
+          </g>
+
+          <!-- ============== PANEL 3: CH IV Flipping — rate by price tier ============== -->
+          <g>
+            <text class="sm-eye" x="755" y="36" text-anchor="middle">CH. IV — SPECULATION SHOCK</text>
+            <text class="sm-panel-title" x="755" y="56" text-anchor="middle">House-flipping rate by tier</text>
+            <text class="sm-panel-sub" x="755" y="72" text-anchor="middle">Greater Boston · 2008–2021</text>
+
+            <line class="sm-grid" x1="620" y1="100" x2="880" y2="100"/>
+            <line class="sm-grid" x1="620" y1="150" x2="880" y2="150"/>
+            <line class="sm-grid" x1="620" y1="200" x2="880" y2="200"/>
+            <line class="sm-grid" x1="620" y1="250" x2="880" y2="250"/>
+
+            <text class="sm-axislbl" x="615" y="104" text-anchor="end">25%</text>
+            <text class="sm-axislbl" x="615" y="154" text-anchor="end">15%</text>
+            <text class="sm-axislbl" x="615" y="204" text-anchor="end">10%</text>
+            <text class="sm-axislbl" x="615" y="254" text-anchor="end">5%</text>
+
+            <!-- 5 bars across quintiles -->
+            <!-- Most affordable: 23.05% → ~h=205 from y=290 -->
+            <rect fill="#1E3A8A" x="635" y="105" width="40" height="185"/>
+            <text class="sm-axislbl bold" x="655" y="100" text-anchor="middle" fill="#1E3A8A" font-size="11" font-weight="600">23%</text>
+            <text class="sm-axislbl" x="655" y="304" text-anchor="middle" font-size="9.5">Most aff.</text>
+
+            <!-- Affordable: 18% -->
+            <rect fill="rgba(30,58,138,0.7)" x="685" y="138" width="40" height="152"/>
+            <text class="sm-axislbl" x="705" y="133" text-anchor="middle" font-size="11" font-weight="600">18%</text>
+            <text class="sm-axislbl" x="705" y="304" text-anchor="middle" font-size="9.5">Aff.</text>
+
+            <!-- Mid: ~13% -->
+            <rect fill="rgba(30,58,138,0.5)" x="735" y="180" width="40" height="110"/>
+            <text class="sm-axislbl" x="755" y="175" text-anchor="middle" font-size="11">13%</text>
+            <text class="sm-axislbl" x="755" y="304" text-anchor="middle" font-size="9.5">Mid</text>
+
+            <!-- Expensive: ~10% -->
+            <rect fill="#94A3B8" x="785" y="200" width="40" height="90"/>
+            <text class="sm-axislbl" x="805" y="195" text-anchor="middle" font-size="11">10%</text>
+            <text class="sm-axislbl" x="805" y="304" text-anchor="middle" font-size="9.5">Exp.</text>
+
+            <!-- Most expensive: 7.2% -->
+            <rect fill="#94A3B8" x="835" y="222" width="40" height="68"/>
+            <text class="sm-axislbl" x="855" y="217" text-anchor="middle" font-size="11">7%</text>
+            <text class="sm-axislbl" x="855" y="304" text-anchor="middle" font-size="9.5">Most exp.</text>
+
+            <line class="sm-axis" x1="620" y1="290" x2="880" y2="290"/>
+
+            <text class="sm-callout" x="870" y="55" text-anchor="end">3.2×</text>
+            <text class="sm-callout-lbl" x="870" y="42" text-anchor="end">flipping concentration</text>
+
+            <text class="sm-axislbl" x="755" y="338" text-anchor="middle" fill="var(--muted)">Affordable units are 3.2× more likely to be flipped than expensive units</text>
+          </g>
+
+          <!-- shared subtitle at bottom -->
+          <text class="sm-axislbl" x="460" y="358" text-anchor="middle" font-size="11" fill="var(--hint)">Each panel uses its own units. The visual grammar — flat then bend — is shared on purpose.</text>
+        </svg>
+
+        <p class="hero-chart-source"><strong>Source:</strong> Sandoval Olascoaga (2023), <em>Housing Dynamics in the Face of Shocks</em>, MIT DUSP PhD Dissertation · Chapter II uses Sun &amp; Abraham (2021) event-study on 21,174 NOAA tornado paths × CoreLogic/Redfin property transactions · Chapter III is the JAMA Network Open analysis · Chapter IV uses Warren Group transactions, City of Boston permits, and HOLC area-description files (Markley 2023)</p>
+      </figure>
+
+      <div class="stat-strip">
+        <div><p class="s-num">21,000+</p><p class="s-lbl">Tornadoes (1996–2019) used as <strong>natural experiments</strong> in Chapter II</p></div>
+        <div><p class="s-num">12.2%</p><p class="s-lbl">Higher probability that a former <strong>yellowlined</strong> (HOLC C) property is flipped today</p></div>
+        <div><p class="s-num">66.4%</p><p class="s-lbl">Of flipped properties had <strong>no approved permits</strong> while the flipper owned them</p></div>
+      </div>
+
+      <!-- Chapter II -->
+      <section class="chap">
+        <p class="chap-eye">Chapter II · Climate shock</p>
+        <h3 class="chap-title">The effects of localized climate shocks <em>on places and people</em></h3>
+        <p class="sec p"><strong>Working paper · single-authored.</strong> Treats roughly 21,000 U.S. tornado paths (1996–2019, NOAA Severe Weather GIS) as exogenous treatment polygons, with a 1 km ring as control. Sun &amp; Abraham (2021) event-study estimator with property-level fixed effects across CoreLogic and Redfin transaction data, Data Axle business records, the Stanford Educational Opportunity Project, and the FEMA Presidential Disaster Declaration Database.</p>
+        <p class="sec p"><strong>What it finds.</strong> Property prices fall by <strong>$8,055 two years after</strong> the tornado and reach <strong>−$23,412 by year 8</strong> (p = .002), with no recovery. FEMA Presidential Disaster Declarations have <strong>no statistically significant effect</strong> on sale prices, and tornado intensity (Fujita scale) doesn't matter either — a striking null. Property tax collections drop by <strong>~$300 per property the first year</strong> and reach <strong>−$400 by year 9</strong>. School math scores fall <strong>−0.26 SD</strong> by year 9. Households are <strong>8.8% more likely</strong> to live in a different ZIP code one year after a tornado. Small businesses (1–2 employees) drop <strong>−21%</strong> immediately. The "no-recovery" growth path is empirically real, and the federal aid program does not bend it.</p>
+      </section>
+
+      <!-- Chapter III -->
+      <section class="chap">
+        <p class="chap-eye">Chapter III · Health shock</p>
+        <h3 class="chap-title">Eviction-moratoria expiration and <em>COVID-19 infection risk</em></h3>
+        <p class="sec p"><strong>Published as Sandoval-Olascoaga, Venkataramani &amp; Arcaya, <em>JAMA Network Open</em> (2021).</strong> Individual-level Cox proportional-hazards difference-in-differences in an event-time framework on 509,694 OptumLabs Data Warehouse enrollees, 43 states + DC, with the week of each state's moratorium lift as the event.</p>
+        <p class="sec p"><strong>What it finds.</strong> Twelve weeks after expiration, hazard ratio reaches <strong>1.83</strong> (95% CI 1.36–2.46). The effect is strongly stratified by baseline health and neighborhood context: <strong>HR 2.36 for CCI ≥3</strong>, <strong>HR 2.31 for high-rent-burden ZIPs</strong>, <strong>HR 2.14 for high-poverty ZIPs</strong>. A null result on individuals' own ZIP-code changes argues the mechanism is community spillover, not personal eviction — recasting eviction policy as health-equity infrastructure. <a href="preview-paper-jama.html" style="color:var(--accent);border-bottom:1px solid var(--accent);text-decoration:none;">Full paper page →</a></p>
+      </section>
+
+      <!-- Chapter IV -->
+      <section class="chap">
+        <p class="chap-eye">Chapter IV · Speculation shock</p>
+        <h3 class="chap-title">House flipping within <em>rapidly changing neighborhoods</em></h3>
+        <p class="sec p"><strong>Working paper · single-authored · mixed methods.</strong> Hedonic regressions distinguishing the "back end" and "front end" of a flip; spatial regression discontinuity with inverse-probability weights along HOLC zone boundaries (100 m buffer), using Markley (2023)'s digitized area-description files; Participatory Action Research with the Healthy Neighborhoods Study Consortium (resident researchers across Lynn, Everett, Chelsea, Roxbury, Dorchester, Mattapan, Brockton, New Bedford, Fall River).</p>
+        <p class="sec p"><strong>What it finds.</strong> <strong>23.05%</strong> of all affordable-unit sales (2008–2021, Greater Boston) were flipped, versus only <strong>7.2%</strong> of expensive units. Flippers buy at a <strong>27.9% discount</strong> and sell at a <strong>19.1% premium</strong> relative to comparable non-flipped properties. <strong>66.4% of flipped properties had no approved permits</strong> while the flipper owned them. <strong>62% of back-end flip purchases are cash.</strong> The investor share of flipper purchases <strong>rose from 13.8% in 2008 to 41.6% in 2021</strong>. And the spatial regression discontinuity at HOLC boundaries finds properties in former yellowlined (C-grade) zones are <strong>12.2% more likely to be flipped a century later</strong> than properties just across the line in former A-grade zones. A century-old map still shapes which homes get scraped for profit.</p>
+      </section>
+
+      <blockquote class="pull-quote">
+        Shock stabilizers should be triggered automatically and shouldn't depend on political cycles or emergency declarations to be activated.
+        <span class="pull-quote-cite">— from the dissertation</span>
+      </blockquote>
+
+      <section class="cite">
+        <p class="cite-label">Cite this dissertation <button class="cite-copy" type="button">Copy ↓</button></p>
+        <p class="cite-text">Sandoval Olascoaga, S. (2023). <em>Housing Dynamics in the Face of Shocks.</em> PhD Dissertation, Massachusetts Institute of Technology, Department of Urban Studies and Planning.</p>
+      </section>
+
+    </main>
+
+    <aside class="paper-side">
+      <div class="side-group">
+        <p class="side-label">Committee</p>
+        <ul class="side-list">
+          <li><strong>Mariana C. Arcaya</strong> · chair<br><span class="aff">MIT DUSP</span></li>
+          <li><strong>Atheendar Venkataramani</strong><br><span class="aff">Penn Medicine</span></li>
+          <li><strong>Albert Saiz</strong><br><span class="aff">MIT DUSP</span></li>
+          <li><strong>devin michelle bunten</strong><br><span class="aff">MIT DUSP</span></li>
+        </ul>
+      </div>
+      <div class="side-group">
+        <p class="side-label">Institution</p>
+        <ul class="side-list">
+          <li>MIT Department of Urban Studies &amp; Planning</li>
+          <li>PhD, Urban Economics and Policy</li>
+          <li>Submitted: August 16, 2023</li>
+          <li>183 pp · 3 essays</li>
+        </ul>
+        <span class="side-pill">MIT Presidential Fellow</span>
+      </div>
+      <div class="side-group">
+        <p class="side-label">Funding</p>
+        <ul class="side-list">
+          <li>MIT Presidential Fellowship</li>
+          <li>Boston Area Research Initiative (BARI)</li>
+          <li>Priscilla King Gray Center · MIT</li>
+          <li>Lloyd &amp; Nadine Rodwin Fellowship</li>
+          <li>OptumLabs Visiting Fellowship</li>
+        </ul>
+      </div>
+      <div class="side-group">
+        <p class="side-label">Chapter status</p>
+        <ul class="side-list">
+          <li>Ch. II · working paper</li>
+          <li>Ch. III · <em>JAMA Network Open</em> (2021)</li>
+          <li>Ch. IV · working paper · PAR-collaborative</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <section class="related">
+    <div class="related-head"><span class="related-label">Related</span></div>
+    <div class="related-grid">
+      <a class="rel-card" href="preview-paper-jama.html">
+        <p class="rel-eye">Chapter III · 2021 paper</p>
+        <p class="rel-q">When states ended their eviction bans, <em>what happened to COVID-19?</em></p>
+        <p class="rel-meta"><em>JAMA Network Open</em></p>
+      </a>
+      <a class="rel-card" href="preview-thesis-master.html">
+        <p class="rel-eye">MA · PSE · 2015</p>
+        <p class="rel-q">How rich are the richest <em>in Mexico</em>, really?</p>
+        <p class="rel-meta">Advised by Alvaredo &amp; Piketty</p>
+      </a>
+      <a class="rel-card" href="preview-thesis-ba.html">
+        <p class="rel-eye">BA · CIDE · 2012</p>
+        <p class="rel-q">Why are Mexican microentrepreneurs <em>shut out of the credit market?</em></p>
+        <p class="rel-meta">Theoretical &amp; empirical model</p>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-grid">
+      <p class="foot-note">A working garden, not an archive — pages here grow and get tended.</p>
+      <nav class="footlinks">
+        <a href="preview-papers.html">Papers</a><a href="#">CV</a><a href="#">About</a>
+        <a href="https://www.linkedin.com/in/sebastianolascoaga/">LinkedIn</a>
+        <a href="https://scholar.google.com/">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+      </nav>
+    </div>
+    <p class="copy">© 2026 Sebastian Olascoaga</p>
+  </footer>
+</div>
+<script>
+document.querySelector('.cite-copy')?.addEventListener('click',function(){var t=document.querySelector('.cite-text')?.innerText||'';if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){var btn=document.querySelector('.cite-copy');var orig=btn.innerHTML;btn.innerHTML='Copied ✓';setTimeout(function(){btn.innerHTML=orig;},1600);});}});
+</script>
+</body>
+</html>
