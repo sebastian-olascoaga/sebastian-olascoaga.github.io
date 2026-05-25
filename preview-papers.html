@@ -4,58 +4,58 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Sebastian Olascoaga</title>
-<meta name="description" content="Sebastian Olascoaga — field experiments and evaluations on public questions." />
+<meta name="description" content="Sebastian Olascoaga. Field experiments and evaluations on public questions." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FFFFFF;
-    --paper-tint:#F4F6FA;
-    --paper-deep:#E5E9F0;
-    --ink:#0A0F1F;
-    --text:#1F2937;
-    --muted:#64748B;
-    --hint:#94A3B8;
-    --hair:rgba(15,23,42,0.10);
-    --rule:rgba(15,23,42,0.18);
-    --counter:#94A3B8;
-    --accent:#1E3A8A;
-    --accent-soft:rgba(30,58,138,0.12);
-    --serif:"Bodoni Moda","Bodoni MT","Didot",Georgia,serif;
-    --sans:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --paper:#F4F2EC;
+    --paper-tint:#EBE8E0;
+    --paper-deep:#DDD8CB;
+    --ink:#2A1E15;
+    --text:#403228;
+    --muted:#6A553E;
+    --hint:#A89A82;
+    --hair:rgba(42,30,21,0.12);
+    --rule:rgba(42,30,21,0.22);
+    --counter:#A89A82;
+    --accent:#6B1F2D;
+    --accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --paper:#0F172A;
-      --paper-tint:#1E293B;
-      --paper-deep:#334155;
-      --ink:#F8FAFC;
-      --text:#E2E8F0;
-      --muted:#94A3B8;
-      --hint:#64748B;
-      --hair:rgba(248,250,252,0.10);
-      --rule:rgba(248,250,252,0.18);
-      --counter:#475569;
-      --accent:#93C5FD;
-      --accent-soft:rgba(147,197,253,0.18);
+      --paper:#1A1410;
+      --paper-tint:#251D17;
+      --paper-deep:#33281F;
+      --ink:#F5EFE4;
+      --text:#DDD2BF;
+      --muted:#9C8A72;
+      --hint:#6F6051;
+      --hair:rgba(245,239,228,0.10);
+      --rule:rgba(245,239,228,0.20);
+      --counter:#6F6051;
+      --accent:#C9685A;
+      --accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);
     }
   }
   *{box-sizing:border-box;}
   html{-webkit-text-size-adjust:100%;}
   body{
     margin:0; background:var(--paper); color:var(--text);
-    font-family:var(--sans); font-size:16px; line-height:1.62;
+    font-family:var(--sans); font-size:16px; line-height:1.55;
     font-weight:400;
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;}
   .sans{font-family:var(--sans); font-feature-settings:"ss01";}
 
-  .wrap{max-width:1120px; margin:0 auto; padding:0 40px;}
+  .wrap{max-width:1440px; margin:0 auto; padding:0 40px;}
   .wrap-tight{max-width:760px; margin:0 auto; padding:0 40px;}
 
-  /* HEADER — compact, Lab-style */
+  /* HEADER. Compact, Lab-style. */
   header{
     padding:56px 0 40px;
     border-bottom:1px solid var(--hair);
@@ -132,6 +132,9 @@
     display:grid; grid-template-columns:repeat(2, 1fr);
     gap:32px;
   }
+  .gallery.solo{ display:flex; justify-content:flex-start; }
+  .gallery.solo .paper-card{ width:calc(50% - 16px); }
+  @media (max-width:880px){ .gallery.solo .paper-card{ width:100%; } }
 
   .paper-card{
     display:flex; flex-direction:column;
@@ -144,8 +147,10 @@
   .paper-card:hover{
     border-color:var(--accent);
     transform:translateY(-3px);
-    box-shadow:0 10px 28px rgba(15,23,42,0.06);
+    box-shadow:0 10px 28px rgba(42,30,21,0.08);
   }
+  .paper-card.no-link{cursor:default;}
+  .paper-card.no-link:hover{border-color:var(--hair); transform:none; box-shadow:none;}
 
   .pc-img{
     background:var(--paper-tint);
@@ -165,14 +170,14 @@
   .ti-delta{font-family:var(--sans); font-size:12px; font-weight:600; fill:var(--accent);}
   .ti-axis{font-family:var(--sans); font-size:10.5px; fill:var(--muted);}
   .ti-bar-ctrl{fill:var(--counter); transition:transform .35s ease;}
-  .ti-bar-treat{fill:var(--accent); transition:transform .35s ease;}
+  .ti-bar-treat{fill:var(--treat); transition:transform .35s ease;}
   .ti-line-ctrl{stroke:var(--counter); stroke-width:1.8; fill:none;}
-  .ti-line-treat{stroke:var(--accent); stroke-width:2.2; fill:none; stroke-linecap:round; stroke-linejoin:round;}
+  .ti-line-treat{stroke:var(--treat); stroke-width:2.2; fill:none; stroke-linecap:round; stroke-linejoin:round;}
   .ti-dash{stroke-dasharray:5 4;}
-  .ti-band{fill:var(--accent-soft);}
+  .ti-band{fill:var(--treat-soft);}
   .ti-ref{stroke:var(--hair); stroke-dasharray:3 3;}
   .ti-dot-ctrl{fill:var(--counter);}
-  .ti-dot-treat{fill:var(--accent);}
+  .ti-dot-treat{fill:var(--treat);}
 
   /* hover micro-anims */
   .paper-card:hover .ti-bar-ctrl{transform:scaleX(1.015); transform-origin:left center;}
@@ -271,12 +276,12 @@
 
   /* footer */
   footer{margin-top:96px; padding:48px 0 96px; border-top:1px solid var(--hair);}
-  .foot-grid{display:grid; grid-template-columns:1fr auto; gap:30px; align-items:end;}
+  .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; align-items:flex-end;}
   .foot-note{font-size:14.5px; color:var(--muted); max-width:48ch; line-height:1.55; font-style:italic;}
   .footlinks{display:flex; flex-wrap:wrap; gap:6px 22px; font-family:var(--sans); font-size:13px; color:var(--muted);}
   .footlinks a{text-decoration:none; border-bottom:1px solid transparent; transition:border-color .15s ease,color .15s ease;}
   .footlinks a:hover{color:var(--ink); border-bottom-color:var(--accent);}
-  .copy{font-family:var(--sans); font-size:11.5px; color:var(--hint); margin-top:30px; letter-spacing:0.06em; text-align:center;}
+  .copy{font-family:var(--sans); font-size:11.5px; color:var(--hint); letter-spacing:0.06em; margin:0;}
 
   .reveal{opacity:0; transform:translateY(8px); animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards;}
   @keyframes rise{to{opacity:1; transform:none;}}
@@ -304,6 +309,7 @@
     .foot-grid{grid-template-columns:1fr; gap:22px;}
   }
 </style>
+<style>:root[data-theme="dark"]{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}:root[data-theme="light"]{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
 </head>
 <body>
 
@@ -312,35 +318,32 @@
   <header class="reveal d1">
     <div class="head-grid">
       <div class="name-block">
-        <h1 class="name">Sebastian Olascoaga</h1>
-        <p class="role sans">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong></p>
+        <h1 class="name"><a href="preview.html">Sebastian Olascoaga</a></h1>
+        <p class="role sans">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong> <span class="pub-as">(publishes as <em>Sandoval-Olascoaga</em>)</span></p>
       </div>
-      <p class="tagline">Field experiments and evaluations on public questions — I look for whether rules and tools <em>actually do</em> what they promise, and try to say so plainly.</p>
+      <p class="tagline">Four threads of published and in-progress work, grouped by the question each one is trying to answer.</p>
       <nav class="nav">
-        <a href="#" class="here">Papers</a>
-        <a href="#">Notes</a>
-        <a href="#">About</a>
-        <a href="#">CV</a>
-        <a href="https://scholar.google.com/">Scholar</a>
-        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+        <a href="preview.html">Home</a>
+        <a href="preview-papers.html" class="here">Papers</a>
+        <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com" target="_blank" rel="noopener noreferrer">Email</a><button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark"><span class="tt-icon">◐</span><span class="tt-label"><span class="tt-when-light">Dark mode</span><span class="tt-when-dark">Light mode</span></span></button>
       </nav>
     </div>
   </header>
 
   <main>
 
-    <!-- Category: Housing × Climate (4 published papers) -->
-    <section class="category reveal d2">
+    <!-- Category: Housing × Climate (3 published papers) -->
+    <section class="category reveal d2" id="housing-climate">
       <div class="category-head">
-        <span class="category-label">Housing &amp; climate</span>
-        <span class="category-count">4 papers · 2021–2025</span>
+        <span class="category-label">Housing markets under climate stress</span>
+        <span class="category-count">3 papers · 2023–2025</span>
       </div>
-      <p class="category-blurb">Field experiments and projections on what households do when they see the climate risk attached to a house, and on what happens to neighborhoods that flood while still gaining people.</p>
 
       <div class="gallery">
 
         <!-- Card 1: NBER w33119 / Redfin -->
-        <a class="paper-card" href="#">
+        <a class="paper-card" href="preview-paper.html">
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Flood-risk disclosure · field experiment</text>
@@ -356,7 +359,7 @@
                 <tspan dx="10" class="ti-delta">−54%</tspan>
               </text>
 
-              <line x1="0" y1="320" x2="540" y2="320" stroke="rgba(15,23,42,0.10)"/>
+              <line x1="0" y1="320" x2="540" y2="320" stroke="rgba(42,30,21,0.12)"/>
               <text x="0"   y="345" class="ti-axis">0</text>
               <text x="270" y="345" text-anchor="middle" class="ti-axis">Flood-risk index of homes bought</text>
               <text x="540" y="345" text-anchor="end" class="ti-axis">100</text>
@@ -377,53 +380,8 @@
           </div>
         </a>
 
-        <!-- Card 2: JAMA Network Open / Eviction moratoria -->
-        <a class="paper-card" href="#">
-          <div class="pc-img">
-            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
-              <text x="0" y="22" class="ti-eye">Eviction moratoria × COVID-19 hazard</text>
-
-              <!-- HR=1 reference -->
-              <line class="ti-ref" x1="260" y1="60" x2="260" y2="320"/>
-              <text x="260" y="345" text-anchor="middle" class="ti-axis">HR = 1 (no effect)</text>
-
-              <!-- 5 strata rows (point estimates + CIs) -->
-              <text x="0" y="92" class="ti-lbl">Highest income</text>
-              <line x1="266" y1="100" x2="296" y2="100" stroke="#94A3B8" stroke-width="1.4"/>
-              <circle class="ti-dot-ctrl" cx="278" cy="100" r="3.4"/>
-
-              <text x="0" y="148" class="ti-lbl">Upper-middle</text>
-              <line x1="274" y1="156" x2="318" y2="156" stroke="#94A3B8" stroke-width="1.4"/>
-              <circle class="ti-dot-ctrl" cx="290" cy="156" r="3.4"/>
-
-              <text x="0" y="204" class="ti-lbl">Middle</text>
-              <line x1="290" y1="212" x2="346" y2="212" stroke="#94A3B8" stroke-width="1.4"/>
-              <circle class="ti-dot-ctrl" cx="312" cy="212" r="3.4"/>
-
-              <text x="0" y="260" class="ti-lbl">Lower-middle</text>
-              <line x1="312" y1="268" x2="390" y2="268" stroke="#94A3B8" stroke-width="1.4"/>
-              <circle class="ti-dot-ctrl" cx="346" cy="268" r="3.4"/>
-
-              <text x="0" y="316" class="ti-lbl accent">Lowest income</text>
-              <line x1="346" y1="324" x2="470" y2="324" stroke="#1E3A8A" stroke-width="2"/>
-              <circle class="ti-dot-treat" cx="402" cy="324" r="4"/>
-            </svg>
-          </div>
-          <div class="pc-body">
-            <h3 class="pc-q">When states ended their eviction bans, <em>what happened to COVID-19?</em></h3>
-            <div class="pc-meta">
-              <span class="left">
-                <span class="year">2021</span>
-                <span class="dot">·</span>
-                <span><em>JAMA Network Open</em></span>
-              </span>
-              <span class="arrow">→</span>
-            </div>
-          </div>
-        </a>
-
         <!-- Card 3: Nature Communications / Flood + population projection -->
-        <a class="paper-card" href="#">
+        <a class="paper-card" href="preview-paper-nature.html">
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Coastal population projection</text>
@@ -442,7 +400,7 @@
               <text x="530" y="262" text-anchor="end" class="ti-lbl accent">With flood risk</text>
 
               <!-- x axis -->
-              <line x1="0" y1="320" x2="540" y2="320" stroke="rgba(15,23,42,0.10)"/>
+              <line x1="0" y1="320" x2="540" y2="320" stroke="rgba(42,30,21,0.12)"/>
               <text x="0"   y="345" class="ti-axis">2020</text>
               <text x="270" y="345" text-anchor="middle" class="ti-axis">2060</text>
               <text x="540" y="345" text-anchor="end" class="ti-axis">2100</text>
@@ -462,39 +420,37 @@
         </a>
 
         <!-- Card 4: Frontiers in Environmental Economics / Event study -->
-        <a class="paper-card" href="#">
+        <a class="paper-card" href="preview-paper-frontiers.html">
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
-              <text x="0" y="22" class="ti-eye">Property values · event study around flood</text>
+              <text x="0" y="22" class="ti-eye">Flood penalty on property values, year 0 to +12</text>
 
               <!-- baseline at zero -->
-              <line x1="0" y1="180" x2="540" y2="180" stroke="rgba(15,23,42,0.14)"/>
-              <text x="0" y="174" class="ti-axis">0</text>
+              <line x1="0" y1="100" x2="540" y2="100" stroke="rgba(42,30,21,0.16)"/>
+              <text x="0" y="94" class="ti-axis">$0</text>
 
               <!-- event marker -->
-              <line class="ti-ref" x1="270" y1="60" x2="270" y2="320"/>
-              <text x="270" y="345" text-anchor="middle" class="ti-axis">Flood event</text>
-              <text x="0"   y="345" class="ti-axis">−3 yr</text>
-              <text x="540" y="345" text-anchor="end" class="ti-axis">+3 yr</text>
+              <line class="ti-ref" x1="80" y1="70" x2="80" y2="320"/>
+              <text x="86" y="90" class="ti-axis">Flood</text>
 
-              <!-- CI band -->
-              <path class="ti-band" d="M0,176 L90,170 L180,170 L270,178 L360,212 L450,238 L540,250 L540,278 L450,266 L360,240 L270,194 L180,190 L90,188 L0,188 Z"/>
+              <!-- point estimate line, clean -->
+              <path class="ti-line-treat ti-redraw" d="M0,98 L40,100 L80,100 L140,150 L200,200 L260,235 L320,260 L380,275 L440,283 L500,288 L540,290"/>
 
-              <!-- point estimate line -->
-              <path class="ti-line-treat ti-redraw" d="M0,182 L90,180 L180,180 L270,184 L360,224 L450,250 L540,262"/>
+              <!-- endpoint dots -->
+              <circle class="ti-dot-treat" cx="80" cy="100" r="3"/>
+              <circle class="ti-dot-treat" cx="540" cy="290" r="6"/>
 
-              <!-- dots -->
-              <circle class="ti-dot-treat" cx="0"   cy="182" r="4"/>
-              <circle class="ti-dot-treat" cx="90"  cy="180" r="4"/>
-              <circle class="ti-dot-treat" cx="180" cy="180" r="4"/>
-              <circle class="ti-dot-treat" cx="270" cy="184" r="4"/>
-              <circle class="ti-dot-treat" cx="360" cy="224" r="4"/>
-              <circle class="ti-dot-treat" cx="450" cy="250" r="4"/>
-              <circle class="ti-dot-treat" cx="540" cy="262" r="4"/>
+              <!-- callout at endpoint -->
+              <text x="538" y="280" text-anchor="end"><tspan class="ti-val accent" font-size="18">−18.9%</tspan></text>
+              <text x="538" y="312" text-anchor="end" class="ti-axis">by year 12 · n = 8.1M sales</text>
+
+              <text x="0"   y="345" class="ti-axis">−3y</text>
+              <text x="80"  y="345" text-anchor="middle" class="ti-axis">0</text>
+              <text x="540" y="345" text-anchor="end" class="ti-axis">+12y</text>
             </svg>
           </div>
           <div class="pc-body">
-            <h3 class="pc-q">What happens to property values in <em>flood-exposed neighborhoods?</em></h3>
+            <h3 class="pc-q">When a flood hits a shrinking neighborhood, <em>home prices never recover.</em></h3>
             <div class="pc-meta">
               <span class="left">
                 <span class="year">2025</span>
@@ -509,34 +465,299 @@
       </div>
     </section>
 
-    <!-- Other threads, work-in-progress (no published cards yet) -->
-    <section class="reveal d3">
+    <!-- Housing & public health (JAMA) -->
+    <section class="category reveal d3" id="housing-health">
       <div class="category-head">
-        <span class="category-label">Also brewing</span>
-        <span class="category-count">In progress</span>
+        <span class="category-label">Housing &amp; public health</span>
+        <span class="category-count">1 paper · 2021</span>
       </div>
-      <div class="upcoming">
-        <a class="upcoming-card" href="#">
-          <p class="upcoming-eye">Public-sector evaluation</p>
-          <p class="upcoming-title">Evaluation, inside a <em>city government</em></p>
-          <p class="upcoming-note">Fare-free buses, Boston's first city RCT (with HKS + HBS), and notes from three years of running a research function from inside government.</p>
+
+      <div class="gallery solo">
+
+        <!-- JAMA Network Open / Eviction moratoria -->
+        <a class="paper-card" href="preview-paper-jama.html">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Eviction moratoria × COVID-19 hazard ratio</text>
+
+              <line class="ti-ref" x1="220" y1="70" x2="220" y2="310"/>
+              <text x="220" y="340" text-anchor="middle" class="ti-axis">HR = 1 (no effect)</text>
+
+              <text x="0" y="115" class="ti-lbl" font-size="18">Highest income</text>
+              <line x1="226" y1="125" x2="256" y2="125" stroke="#A89A82" stroke-width="2"/>
+              <circle class="ti-dot-ctrl" cx="238" cy="125" r="5"/>
+
+              <text x="0" y="195" class="ti-lbl" font-size="18">Middle</text>
+              <line x1="246" y1="205" x2="306" y2="205" stroke="#A89A82" stroke-width="2"/>
+              <circle class="ti-dot-ctrl" cx="272" cy="205" r="5"/>
+
+              <text x="0" y="275" class="ti-lbl accent" font-size="18">Lowest income</text>
+              <line x1="306" y1="285" x2="430" y2="285" stroke="#1F4F5A" stroke-width="2.5"/>
+              <circle class="ti-dot-treat" cx="358" cy="285" r="6"/>
+              <text x="440" y="290" font-size="14" font-weight="600" fill="#1F4F5A" font-family="Inter,sans-serif">HR 2.3×</text>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">When states ended their eviction bans, <em>what happened to COVID-19?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2021</span>
+                <span class="dot">·</span>
+                <span><em>JAMA Network Open</em></span>
+              </span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
         </a>
-        <a class="upcoming-card" href="#">
-          <p class="upcoming-eye">Generative AI in cities</p>
-          <p class="upcoming-title">Generative AI, when the user is <em>a city</em></p>
-          <p class="upcoming-note">Boston's enterprise evaluation program — output quality, adoption, downstream RCT impact across Claude, Gemini, and in-house tools.</p>
+
+      </div>
+    </section>
+
+    <!-- Public-sector evaluation & applied AI -->
+    <section class="category reveal d3" id="public-sector-ai">
+      <div class="category-head">
+        <span class="category-label">Public-sector evaluation &amp; applied AI</span>
+        <span class="category-count">4 projects · ongoing</span>
+      </div>
+
+      <div class="gallery">
+
+        <!-- BidBot RCT -->
+        <div class="paper-card no-link">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">City of Boston's first RCT · two-arm design</text>
+
+              <rect x="0" y="80" width="240" height="80" fill="var(--paper)" stroke="rgba(42,30,21,0.18)" rx="2"/>
+              <text x="120" y="115" text-anchor="middle" class="ti-lbl">Control</text>
+              <text x="120" y="140" text-anchor="middle" font-size="11" fill="var(--muted)">standard workflow</text>
+
+              <rect x="300" y="80" width="240" height="80" fill="var(--accent-soft)" stroke="var(--accent)" rx="2"/>
+              <text x="420" y="115" text-anchor="middle" class="ti-lbl accent">Treatment</text>
+              <text x="420" y="140" text-anchor="middle" font-size="11" fill="var(--accent)">with BidBot (RAG)</text>
+
+              <line x1="120" y1="170" x2="120" y2="220" stroke="rgba(42,30,21,0.30)" stroke-dasharray="3 3"/>
+              <line x1="420" y1="170" x2="420" y2="220" stroke="rgba(42,30,21,0.30)" stroke-dasharray="3 3"/>
+
+              <rect x="0" y="230" width="540" height="60" fill="var(--paper-tint)" stroke="rgba(42,30,21,0.10)" rx="2"/>
+              <text x="270" y="258" text-anchor="middle" class="ti-lbl">Outcome: solicitation quality &amp; cycle time</text>
+              <text x="270" y="278" text-anchor="middle" font-size="11" fill="var(--muted)">results pending</text>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">Can a Retrieval-Augmented Generation assistant help procurement staff <em>write better solicitations?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2024–25</span>
+                <span class="dot">·</span>
+                <span>City of Boston × HKS × HBS</span>
+                <span class="dot">·</span>
+                <span class="pill">Working paper</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- GenAI evaluation program -->
+        <div class="paper-card no-link">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Enterprise GenAI · output, adoption, impact</text>
+
+              <rect x="0" y="70" width="160" height="60" fill="var(--paper)" stroke="rgba(42,30,21,0.16)" rx="2"/>
+              <text x="80" y="105" text-anchor="middle" class="ti-lbl">Claude</text>
+              <rect x="190" y="70" width="160" height="60" fill="var(--paper)" stroke="rgba(42,30,21,0.16)" rx="2"/>
+              <text x="270" y="105" text-anchor="middle" class="ti-lbl">Gemini</text>
+              <rect x="380" y="70" width="160" height="60" fill="var(--paper)" stroke="rgba(42,30,21,0.16)" rx="2"/>
+              <text x="460" y="98" text-anchor="middle" class="ti-lbl">in-house</text>
+              <text x="460" y="118" text-anchor="middle" class="ti-lbl">RAG</text>
+
+              <line x1="80" y1="140" x2="80" y2="180" stroke="rgba(42,30,21,0.30)" stroke-dasharray="3 3"/>
+              <line x1="270" y1="140" x2="270" y2="180" stroke="rgba(42,30,21,0.30)" stroke-dasharray="3 3"/>
+              <line x1="460" y1="140" x2="460" y2="180" stroke="rgba(42,30,21,0.30)" stroke-dasharray="3 3"/>
+
+              <rect x="0" y="190" width="540" height="60" fill="var(--accent-soft)" stroke="var(--accent)" rx="2"/>
+              <text x="270" y="218" text-anchor="middle" class="ti-lbl accent">Evaluation pipeline</text>
+              <text x="270" y="240" text-anchor="middle" font-size="11" fill="var(--accent)">classifies anonymized prompts into structured outputs</text>
+
+              <text x="270" y="305" text-anchor="middle" class="ti-axis">Output quality · Adoption · Operational impact</text>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">How do you evaluate enterprise GenAI <em>inside a city government?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2024–present</span>
+                <span class="dot">·</span>
+                <span>City of Boston</span>
+                <span class="dot">·</span>
+                <span class="pill">In production</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fare-Free Bus -->
+        <div class="paper-card no-link">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Boston Fare-Free Bus pilot · 23.8M boardings (2016–25)</text>
+
+              <text x="0" y="78" class="ti-axis">0</text>
+              <text x="540" y="78" text-anchor="end" class="ti-axis">23.8M boardings</text>
+              <rect class="ti-bar-ctrl" x="0" y="90" width="540" height="44"/>
+              <rect class="ti-bar-treat" x="0" y="90" width="115" height="44"/>
+
+              <line x1="115" y1="90" x2="115" y2="180" stroke="var(--accent)" stroke-width="1.2"/>
+              <text x="120" y="170" font-size="18" fill="var(--accent)" font-weight="500" font-family="Source Serif 4, Georgia, serif">21.3%  (5.1M)</text>
+              <text x="120" y="190" font-size="11" fill="var(--muted)">program-attributable boardings</text>
+
+              <text x="0" y="270" class="ti-axis">$2.4M–$3.6M projected MBTA renegotiation savings</text>
+              <text x="0" y="295" class="ti-axis">City of Boston · supports the ongoing MBTA negotiation</text>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">How much of the fare-free bus ridership <em>is the program actually causing?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2024</span>
+                <span class="dot">·</span>
+                <span>City of Boston · MBTA</span>
+                <span class="dot">·</span>
+                <span class="pill">Internal report</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proactive Rental Inspection -->
+        <div class="paper-card no-link">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Proactive Rental Inspection Ordinance · coverage gap</text>
+
+              <text x="0" y="140" font-size="86" font-family="Source Serif 4, Georgia, serif" fill="var(--accent)" font-weight="600">~27%</text>
+              <text x="0" y="180" class="ti-lbl">~50,000 rental units</text>
+              <text x="0" y="205" class="ti-axis">never registered with the inspection system</text>
+
+              <text x="0" y="265" class="ti-axis">Boston rental stock</text>
+              <rect x="0" y="275" width="540" height="22" fill="var(--paper-tint)" stroke="rgba(42,30,21,0.10)"/>
+              <rect x="0" y="275" width="146" height="22" fill="var(--accent-soft)" stroke="var(--accent)"/>
+              <text x="0" y="320" class="ti-axis">unregistered, outside the ordinance</text>
+              <text x="540" y="320" text-anchor="end" class="ti-axis">total units</text>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">How many rental units <em>fall outside the system meant to regulate them?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2025</span>
+                <span class="dot">·</span>
+                <span>City of Boston</span>
+                <span class="dot">·</span>
+                <span class="pill">In progress</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Long-form work -->
+    <section class="category reveal d4" id="long-form">
+      <div class="category-head">
+        <span class="category-label">Long-form work</span>
+        <span class="category-count">2 dissertations · MIT (2023) &amp; PSE (2015)</span>
+      </div>
+
+      <div class="gallery">
+
+        <!-- MA: PSE / Top incomes Mexico -->
+        <a class="paper-card" href="preview-thesis-master.html">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Top 0.01% income share · 2012 · Mexico vs developed economies</text>
+
+              <text x="0" y="78" class="ti-lbl accent">Mexico</text>
+              <rect class="ti-bar-treat" x="0" y="90" width="480" height="32"/>
+              <text x="500" y="113" text-anchor="end"><tspan class="ti-val accent">3.20%</tspan></text>
+
+              <text x="0" y="156" class="ti-lbl">United States</text>
+              <rect class="ti-bar-ctrl" x="0" y="168" width="462" height="32"/>
+              <text x="500" y="191" text-anchor="end" class="ti-val">3.08%</text>
+
+              <text x="0" y="234" class="ti-lbl">France</text>
+              <rect class="ti-bar-ctrl" x="0" y="246" width="178" height="32"/>
+              <text x="500" y="269" text-anchor="end" class="ti-val">1.19%</text>
+
+              <text x="0" y="312" class="ti-lbl">Spain</text>
+              <rect class="ti-bar-ctrl" x="0" y="324" width="137" height="32"/>
+              <text x="500" y="347" text-anchor="end" class="ti-val">0.91%</text>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">How concentrated is wealth at the very top in <em>Mexico?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2015</span>
+                <span class="dot">·</span>
+                <span>MA · Paris School of Economics</span>
+                <span class="dot">·</span>
+                <span><em>advised by Alvaredo &amp; Piketty</em></span>
+              </span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
         </a>
+
+        <!-- PhD: MIT / Housing Dynamics in the Face of Shocks -->
+        <a class="paper-card" href="preview-thesis-phd.html">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Tornadoes as shocks · property values, 9 years out</text>
+
+              <line x1="0" y1="110" x2="540" y2="110" stroke="rgba(42,30,21,0.16)"/>
+              <text x="0" y="104" class="ti-axis">$0</text>
+
+              <line class="ti-ref" x1="160" y1="70" x2="160" y2="310"/>
+              <text x="170" y="90" class="ti-axis">Tornado</text>
+
+              <path class="ti-line-treat ti-redraw" d="M0,108 L40,110 L80,108 L120,110 L160,110 L200,145 L240,180 L280,215 L320,245 L360,265 L400,278 L440,285 L480,288 L540,290"/>
+
+              <circle class="ti-dot-treat" cx="160" cy="110" r="3"/>
+              <circle class="ti-dot-treat" cx="540" cy="290" r="5"/>
+
+              <text x="538" y="282" text-anchor="end"><tspan class="ti-val accent">−$23,412</tspan></text>
+              <text x="538" y="312" text-anchor="end" class="ti-axis">by year 8 · no recovery</text>
+
+              <text x="0"   y="345" class="ti-axis">−5y</text>
+              <text x="160" y="345" text-anchor="middle" class="ti-axis">0</text>
+              <text x="540" y="345" text-anchor="end" class="ti-axis">+9y</text>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">What happens to a neighborhood <em>after a shock?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2023</span>
+                <span class="dot">·</span>
+                <span>PhD · MIT DUSP</span>
+              </span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </a>
+
       </div>
     </section>
 
     <!-- Notes & news -->
     <section class="notes-strip reveal d4">
-      <h2>Latest notes &amp; news <span class="all sans"><a href="#">all →</a></span></h2>
+      <h2>Latest notes &amp; news</h2>
       <ul class="notes-list">
-        <li><span class="when">Apr 2025</span><span class="kind">Paper</span><span class="what">New paper out in <em>Frontiers in Environmental Economics</em></span></li>
         <li><span class="when">Dec 2024</span><span class="kind">Press</span><span class="what"><em>The New York Times</em> on mortgages and climate risk</span></li>
-        <li><span class="when">Sep 2024</span><span class="kind">Role</span><span class="what">Joined the NIEHS stakeholder advisory board, Harvard Chan</span></li>
-        <li><span class="when">Jun 2024</span><span class="kind">Talk</span><span class="what">MIT DUSP — what cities actually do with evaluation</span></li>
+        <li><span class="when">Sep 2024</span><span class="kind">Role</span><span class="what">Joined the NIEHS stakeholder advisory board at the Harvard Chan School of Public Health</span></li>
       </ul>
     </section>
 
@@ -544,19 +765,18 @@
 
   <footer>
     <div class="foot-grid">
-      <p class="foot-note">A working garden, not an archive — pages here grow and get tended.</p>
+      <p class="copy">© 2026 Sebastian Olascoaga</p>
       <nav class="footlinks">
-        <a href="#">Papers</a>
-        <a href="#">CV</a>
-        <a href="#">About</a>
-        <a href="https://www.linkedin.com/in/sebastianolascoaga/">LinkedIn</a>
-        <a href="https://scholar.google.com/">Scholar</a>
-        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+        <a href="preview.html">Home</a>
+        <a href="preview-papers.html">Papers</a>
+        <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
       </nav>
     </div>
-    <p class="copy">© 2026 Sebastian Olascoaga</p>
   </footer>
 
 </div>
+<script>document.querySelectorAll(".theme-toggle").forEach(function(b){b.addEventListener("click",function(){var r=document.documentElement;var c=r.getAttribute("data-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var n=c==="dark"?"light":"dark";r.setAttribute("data-theme",n);localStorage.setItem("theme",n);});});</script>
 </body>
 </html>

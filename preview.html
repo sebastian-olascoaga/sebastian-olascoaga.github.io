@@ -4,54 +4,54 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Sebastian Olascoaga</title>
-<meta name="description" content="Sebastian Olascoaga — field experiments and evaluations on public questions." />
+<meta name="description" content="Sebastian Olascoaga. Field experiments and evaluations on public questions." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FFFFFF;
-    --paper-tint:#F4F6FA;
-    --paper-deep:#E5E9F0;
-    --ink:#0A0F1F;
-    --text:#1F2937;
-    --muted:#64748B;
-    --hint:#94A3B8;
-    --hair:rgba(15,23,42,0.10);
-    --rule:rgba(15,23,42,0.18);
-    --counter:#94A3B8;
-    --accent:#1E3A8A;
-    --accent-soft:rgba(30,58,138,0.12);
-    --serif:"Bodoni Moda","Bodoni MT","Didot",Georgia,serif;
-    --sans:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --paper:#F4F2EC;
+    --paper-tint:#EBE8E0;
+    --paper-deep:#DDD8CB;
+    --ink:#2A1E15;
+    --text:#403228;
+    --muted:#6A553E;
+    --hint:#A89A82;
+    --hair:rgba(42,30,21,0.12);
+    --rule:rgba(42,30,21,0.22);
+    --counter:#A89A82;
+    --accent:#6B1F2D;
+    --accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --paper:#0F172A;
-      --paper-tint:#1E293B;
-      --paper-deep:#334155;
-      --ink:#F8FAFC;
-      --text:#E2E8F0;
-      --muted:#94A3B8;
-      --hint:#64748B;
-      --hair:rgba(248,250,252,0.10);
-      --rule:rgba(248,250,252,0.18);
-      --counter:#475569;
-      --accent:#93C5FD;
-      --accent-soft:rgba(147,197,253,0.18);
+      --paper:#1A1410;
+      --paper-tint:#251D17;
+      --paper-deep:#33281F;
+      --ink:#F5EFE4;
+      --text:#DDD2BF;
+      --muted:#9C8A72;
+      --hint:#6F6051;
+      --hair:rgba(245,239,228,0.10);
+      --rule:rgba(245,239,228,0.20);
+      --counter:#6F6051;
+      --accent:#C9685A;
+      --accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);
     }
   }
   *{box-sizing:border-box;}
   html{-webkit-text-size-adjust:100%;}
   body{
     margin:0; background:var(--paper); color:var(--text);
-    font-family:var(--sans); font-size:16px; line-height:1.62;
+    font-family:var(--sans); font-size:16px; line-height:1.55;
     font-weight:400; -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;}
   .num{font-variant-numeric:tabular-nums;}
 
-  .wrap{max-width:1120px; margin:0 auto; padding:0 40px;}
+  .wrap{max-width:1200px; margin:0 auto; padding:0 40px;}
 
   /* HEADER */
   header.site{
@@ -100,20 +100,29 @@
     font-size:clamp(28px,3.8vw,42px); line-height:1.18;
     font-variation-settings:"opsz" 96;
     font-weight:400; color:var(--ink);
-    letter-spacing:-0.012em; margin:0; max-width:24ch;
+    letter-spacing:-0.012em; margin:0; max-width:50ch;
   }
   .hero p em{
     font-style:italic; color:var(--accent);
     font-variation-settings:"opsz" 96;
   }
+  .hero-cta{
+    display:inline-block; margin-top:28px;
+    font-family:var(--sans); font-size:14px; font-weight:500;
+    color:var(--accent); text-decoration:none;
+    letter-spacing:0.04em;
+    border-bottom:1px solid var(--accent); padding-bottom:2px;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .hero-cta:hover{ color:var(--ink); border-bottom-color:var(--ink); }
 
   /* TWO-COLUMN BODY */
   .landing-body{
-    display:grid; grid-template-columns:1fr 400px;
+    display:grid; grid-template-columns:1fr 340px;
     gap:80px; align-items:start;
     padding:56px 0 0;
   }
-  .landing-main{min-width:0;}
+  .landing-main{min-width:0; max-width:680px;}
   .landing-side{min-width:0;}
 
   /* ABOUT */
@@ -127,7 +136,7 @@
   }
   .about p{
     font-size:17px; line-height:1.65; color:var(--text);
-    max-width:60ch; margin:0 0 18px;
+    max-width:none; margin:0 0 18px;
   }
   .about p:last-child{margin-bottom:0;}
   .about strong{color:var(--ink); font-weight:500;}
@@ -162,84 +171,45 @@
   }
   .now p em{font-style:italic; color:var(--ink);}
 
-  /* LATEST UPDATES (right column) */
-  .updates{margin:0;}
-  .updates-head{
+  /* THREADS (right column) */
+  .threads{margin:0;}
+  .threads-head{
     display:flex; align-items:baseline; gap:18px;
     padding-bottom:14px; margin:0 0 8px;
     border-bottom:1px solid var(--ink);
   }
-  .updates-label{
+  .threads-label{
     font-family:var(--sans); font-size:12px; font-weight:600;
     letter-spacing:0.22em; text-transform:uppercase; color:var(--ink);
   }
-  .updates-all{
-    margin-left:auto;
-    font-family:var(--sans); font-size:12.5px; color:var(--muted);
-    text-decoration:none; letter-spacing:0.04em;
-    border-bottom:1px solid var(--hair);
+  .thread-card{
+    display:block; padding:22px 0; border-bottom:1px solid var(--hair);
+    text-decoration:none; color:inherit;
   }
-  .updates-all:hover{color:var(--accent); border-bottom-color:var(--accent);}
-
-  .feed{list-style:none; padding:0; margin:0;}
-  .upd{
-    display:grid; grid-template-columns:74px 1fr;
-    gap:20px; padding:22px 0;
-    border-bottom:1px solid var(--hair);
+  .thread-card:last-child{border-bottom:none;}
+  .thread-card:hover .thread-title{color:var(--accent);}
+  .thread-eye{
+    font-family:var(--sans); font-size:10.5px; font-weight:600;
+    letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--muted); margin:0 0 8px;
   }
-  .upd.major{padding:26px 0;}
-  .upd.brief{padding:16px 0;}
-
-  .upd-date{
-    text-align:right; padding-top:2px;
-    font-variant-numeric:tabular-nums;
-  }
-  .upd-day{
-    display:block; font-family:var(--sans);
-    font-size:12px; font-weight:500; color:var(--ink);
-    letter-spacing:0.04em;
-  }
-  .upd-year{
-    display:block; font-family:var(--sans);
-    font-size:11.5px; color:var(--muted); margin-top:2px;
-  }
-
-  .upd-body{min-width:0;}
-  .upd-type{
-    font-family:var(--sans); font-size:10px; font-weight:600;
-    letter-spacing:0.2em; text-transform:uppercase;
-    color:var(--accent); margin:0 0 6px;
-  }
-  .upd-head{
+  .thread-title{
     font-family:var(--serif); font-weight:500; color:var(--ink);
-    font-size:17px; line-height:1.28;
+    font-size:20px; line-height:1.22;
     font-variation-settings:"opsz" 36;
     letter-spacing:-0.005em;
     margin:0 0 8px;
+    transition:color .15s ease;
   }
-  .upd.brief .upd-head{
-    font-size:14.5px; font-weight:400; line-height:1.45;
-    font-family:var(--serif); font-variation-settings:"opsz" 16;
+  .thread-title em{font-style:italic;}
+  .thread-note{
+    font-family:var(--sans); font-size:13px; color:var(--text);
+    line-height:1.55; margin:0;
   }
-  .upd-head em{font-style:italic;}
-  .upd-text{
-    font-size:14px; line-height:1.55; color:var(--text);
-    margin:0 0 8px;
-  }
-  .upd-text:last-child{margin-bottom:0;}
-  .upd-text em{font-style:italic; color:var(--ink);}
-  .upd-link{
-    display:inline-block;
-    font-family:var(--sans); font-size:12.5px; color:var(--ink);
-    text-decoration:none; padding-bottom:1px;
-    border-bottom:1px solid var(--hair);
-    margin-top:4px;
-  }
-  .upd-link:hover{color:var(--accent); border-bottom-color:var(--accent);}
 
   /* footer */
   footer{margin-top:96px; padding:48px 0 96px; border-top:1px solid var(--hair);}
-  .foot-grid{display:grid; grid-template-columns:1fr auto; gap:30px; align-items:end;}
+  .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; align-items:flex-end;}
   .foot-note{
     font-family:var(--serif); font-size:14px; color:var(--muted);
     max-width:48ch; line-height:1.55; font-style:italic;
@@ -248,7 +218,7 @@
   .footlinks{display:flex; flex-wrap:wrap; gap:6px 22px; font-family:var(--sans); font-size:13px; color:var(--muted);}
   .footlinks a{text-decoration:none; border-bottom:1px solid transparent; transition:border-color .15s ease,color .15s ease;}
   .footlinks a:hover{color:var(--ink); border-bottom-color:var(--accent);}
-  .copy{font-family:var(--sans); font-size:11.5px; color:var(--hint); margin-top:30px; letter-spacing:0.06em; text-align:center;}
+  .copy{font-family:var(--sans); font-size:11.5px; color:var(--hint); letter-spacing:0.06em; margin:0;}
 
   .reveal{opacity:0; transform:translateY(8px); animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards;}
   @keyframes rise{to{opacity:1; transform:none;}}
@@ -274,6 +244,7 @@
     .foot-grid{grid-template-columns:1fr; gap:22px;}
   }
 </style>
+<style>:root[data-theme="dark"]{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}:root[data-theme="light"]{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
 </head>
 <body>
 
@@ -283,24 +254,22 @@
   <header class="site reveal d1">
     <div class="head-grid">
       <div class="name-block">
-        <h1 class="name"><a href="#">Sebastian Olascoaga</a></h1>
-        <p class="role">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong></p>
+        <h1 class="name"><a href="preview.html">Sebastian Olascoaga</a></h1>
+        <p class="role">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong> <span class="pub-as">(publishes as <em>Sandoval-Olascoaga</em>)</span></p>
       </div>
       <nav class="nav">
-        <a href="#" class="here">Home</a>
+        <a href="preview.html" class="here">Home</a>
         <a href="preview-papers.html">Papers</a>
-        <a href="#">Threads</a>
-        <a href="#">Notes</a>
-        <a href="#">About</a>
-        <a href="#">CV</a>
-        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com" target="_blank" rel="noopener noreferrer">Email</a><button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark"><span class="tt-icon">◐</span><span class="tt-label"><span class="tt-when-light">Dark mode</span><span class="tt-when-dark">Light mode</span></span></button>
       </nav>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero reveal d2">
-    <p>I'm interested in whether rules and tools <em>actually do</em> what they promise — in housing markets meeting climate change, in city governments adopting new technology, in public-health policies under stress.</p>
+    <p>Sebastian Olascoaga is an economist. He runs field experiments on consumer platforms, evaluations inside city government, and applied-AI work for the public sector. The recurring question is whether public choices, market signals, and new tools <em>actually do what they promise</em>.</p>
+    <a class="hero-cta" href="preview-papers.html">See the work →</a>
   </section>
 
   <!-- TWO-COLUMN BODY -->
@@ -310,103 +279,45 @@
 
       <section class="about">
         <p class="about-label">About</p>
-        <p>I do field experiments and evaluations on public questions. These days I lead the <strong>research and evaluation function at the City of Boston</strong>, where I run experiments on things like procurement AI and fare-free buses, and I teach the city-planning economics sequence at <strong>MIT DUSP</strong>.</p>
-        <p>Before all this: economic policy in Mexico City as Director of Economic Policy at the federal Treasury, the OECD in Paris, and fellowships at Redfin and OptumLabs working on housing markets, climate, and public health. I think in English, Spanish, and French, and try to write in all of them.</p>
-      </section>
-
-      <section class="now">
-        <div class="now-head">
-          <p class="now-label">Right now</p>
-          <span class="now-when">Updated · Spring 2026</span>
-        </div>
-        <p>Finishing the <em>AER</em> revision of the Redfin flood-risk paper, scaling Boston's enterprise GenAI evaluation pipeline, and writing up the fare-free bus evaluation for general release. Also collecting notes on what it actually takes to run a research function inside a city — and might make a habit of writing them down here.</p>
+        <p>Sebastian Olascoaga serves as the <strong>Director of Research and Evaluation for the City of Boston</strong> and is a <strong>Research Affiliate at MIT's Department of Urban Studies and Planning</strong>. He established and now leads the City's evaluation unit, which conducts impact evaluations, representative surveys, and economic analyses that inform budget and policy decisions across major city programs and services. His team also develops predictive and causal research tools to support departments on challenges ranging from housing and public health to climate resilience and city operations.</p>
+        <p>Before Boston, he was a research fellow at <strong>Redfin</strong> running consumer-platform experiments, a visiting health-economist fellow at <strong>OptumLabs</strong>, Director of Economic Policy at <strong>Mexico's Federal Treasury</strong>, and a researcher at the <strong>OECD</strong> in Paris.</p>
+        <p>Sebastian holds a <strong>PhD in Urban Economics and Policy</strong> from MIT, an <strong>MA in Applied Economics</strong> from the Paris School of Economics (advised by Alvaredo and Piketty), and a <strong>BA in Economics</strong> from CIDE. His work has appeared in <em>JAMA Network Open</em>, <em>Nature Communications</em>, NBER, and <em>Frontiers in Environmental Economics</em>, with coverage in <em>The New York Times</em>, Bloomberg, NPR Marketplace, and MIT News.</p>
+        <p>In his free time you can find him at Fenway rooting for the Red Sox, rock climbing in New England, or searching for fresh waves in the Atlantic.</p>
       </section>
 
     </main>
 
     <aside class="landing-side reveal d4">
 
-      <section class="updates">
-        <div class="updates-head">
-          <span class="updates-label">Latest</span>
-          <a class="updates-all" href="#">All notes &amp; news →</a>
+      <section class="threads">
+        <div class="threads-head">
+          <span class="threads-label">Threads</span>
         </div>
 
-        <ul class="feed">
+        <a class="thread-card" href="preview-papers.html#housing-climate">
+          <p class="thread-eye">3 papers · 2023–25</p>
+          <h3 class="thread-title">Housing markets under climate stress</h3>
+          <p class="thread-note">Field experiments and event studies on what happens when climate risk becomes visible in housing markets.</p>
+        </a>
 
-          <li class="upd major">
-            <div class="upd-date">
-              <span class="upd-day">Apr 18</span>
-              <span class="upd-year">2026</span>
-            </div>
-            <div class="upd-body">
-              <p class="upd-type">Talk</p>
-              <h3 class="upd-head">Invited to the NBER Summer Institute, July</h3>
-              <p class="upd-text">Speaking in the Real Estate session on heterogeneous responses to climate-risk disclosure, joint with Daryl Fairweather, Matt Kahn, and Robert Metcalfe.</p>
-            </div>
-          </li>
+        <a class="thread-card" href="preview-papers.html#housing-health">
+          <p class="thread-eye">1 paper · 2021</p>
+          <h3 class="thread-title">Housing &amp; public health</h3>
+          <p class="thread-note">Eviction moratoria expiration and COVID-19 infection risk across strata of health and socioeconomic status, in <em>JAMA Network Open</em>.</p>
+        </a>
 
-          <li class="upd major">
-            <div class="upd-date">
-              <span class="upd-day">Mar 22</span>
-              <span class="upd-year">2026</span>
-            </div>
-            <div class="upd-body">
-              <p class="upd-type">Press</p>
-              <h3 class="upd-head"><em>MIT News</em> on Boston's first city-government RCT</h3>
-              <p class="upd-text">Coverage of the BidBot procurement-assistant experiment — designed and fielded with the Harvard Kennedy and Business schools.</p>
-              <a class="upd-link" href="#">Read at MIT News →</a>
-            </div>
-          </li>
+        <a class="thread-card" href="preview-papers.html#public-sector-ai">
+          <p class="thread-eye">4 projects · ongoing</p>
+          <h3 class="thread-title">Public-sector evaluation &amp; applied AI</h3>
+          <p class="thread-note">A city's first RCT (BidBot, RAG procurement), an enterprise GenAI evaluation pipeline, fare-free buses, and the rental-inspection ordinance.</p>
+        </a>
 
-          <li class="upd">
-            <div class="upd-date">
-              <span class="upd-day">Feb</span>
-              <span class="upd-year">2026</span>
-            </div>
-            <div class="upd-body">
-              <p class="upd-type">Project</p>
-              <h3 class="upd-head">Boston's enterprise GenAI evaluation pipeline went into production</h3>
-              <p class="upd-text">~800K anonymized prompts classified so far, across Claude, Gemini, and in-house retrieval tools.</p>
-            </div>
-          </li>
+        <a class="thread-card" href="preview-papers.html#long-form">
+          <p class="thread-eye">2 dissertations · 2015 &amp; 2023</p>
+          <h3 class="thread-title">Long-form work</h3>
+          <p class="thread-note">An MA on Mexico's top incomes, advised by Alvaredo and Piketty. A PhD on housing systems under shocks, at MIT DUSP.</p>
+        </a>
 
-          <li class="upd brief">
-            <div class="upd-date">
-              <span class="upd-day">Jan</span>
-              <span class="upd-year">2026</span>
-            </div>
-            <div class="upd-body">
-              <p class="upd-type">Note</p>
-              <h3 class="upd-head">A small thing on survey weighting — wrote up the multiplier-bootstrap approach for non-probability samples.</h3>
-            </div>
-          </li>
-
-          <li class="upd major">
-            <div class="upd-date">
-              <span class="upd-day">Dec 07</span>
-              <span class="upd-year">2024</span>
-            </div>
-            <div class="upd-body">
-              <p class="upd-type">Press</p>
-              <h3 class="upd-head"><em>The New York Times</em> on mortgages and the climate-risk question</h3>
-              <p class="upd-text">Citing the NBER paper, now <em>R&amp;R at the AER</em>, in reporting on Fannie Mae and Freddie Mac weighing flood-risk lending criteria.</p>
-              <a class="upd-link" href="#">Read at the NYT →</a>
-            </div>
-          </li>
-
-          <li class="upd brief">
-            <div class="upd-date">
-              <span class="upd-day">Sep</span>
-              <span class="upd-year">2024</span>
-            </div>
-            <div class="upd-body">
-              <p class="upd-type">Role</p>
-              <h3 class="upd-head">Joined the stakeholder advisory board for the NIEHS Center for Environmental Health at the Harvard Chan School.</h3>
-            </div>
-          </li>
-
-        </ul>
       </section>
 
     </aside>
@@ -415,21 +326,18 @@
 
   <footer>
     <div class="foot-grid">
-      <p class="foot-note">A working garden, not an archive — pages here grow and get tended.</p>
+      <p class="copy">© 2026 Sebastian Olascoaga</p>
       <nav class="footlinks">
+        <a href="preview.html">Home</a>
         <a href="preview-papers.html">Papers</a>
-        <a href="#">Threads</a>
-        <a href="#">Notes</a>
-        <a href="#">CV</a>
-        <a href="#">About</a>
-        <a href="https://www.linkedin.com/in/sebastianolascoaga/">LinkedIn</a>
-        <a href="https://scholar.google.com/">Scholar</a>
-        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
       </nav>
     </div>
-    <p class="copy">© 2026 Sebastian Olascoaga</p>
   </footer>
 
 </div>
+<script>document.querySelectorAll(".theme-toggle").forEach(function(b){b.addEventListener("click",function(){var r=document.documentElement;var c=r.getAttribute("data-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var n=c==="dark"?"light":"dark";r.setAttribute("data-theme",n);localStorage.setItem("theme",n);});});</script>
 </body>
 </html>

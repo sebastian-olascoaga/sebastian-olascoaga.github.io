@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Flood Risk and Property Value Changes — Sebastian Olascoaga</title>
-<meta name="description" content="A nationwide event study of 8 million home sales: flood-exposed properties lose 19% of their value over 12 years — and only growing neighborhoods recover." />
+<title>Flood Risk and Property Value Changes. Sebastian Olascoaga</title>
+<meta name="description" content="A nationwide event study of 8 million home sales. Flood-exposed properties lose 19% of their value over 12 years. Only growing neighborhoods recover." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--paper:#FFFFFF;--paper-tint:#F4F6FA;--paper-deep:#E5E9F0;--ink:#0A0F1F;--text:#1F2937;--muted:#64748B;--hint:#94A3B8;--hair:rgba(15,23,42,0.10);--rule:rgba(15,23,42,0.18);--counter:#94A3B8;--accent:#1E3A8A;--accent-soft:rgba(30,58,138,0.12);--serif:"Bodoni Moda","Bodoni MT","Didot",Georgia,serif;--sans:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
-  @media (prefers-color-scheme: dark){:root{--paper:#0F172A;--paper-tint:#1E293B;--paper-deep:#334155;--ink:#F8FAFC;--text:#E2E8F0;--muted:#94A3B8;--hint:#64748B;--hair:rgba(248,250,252,0.10);--rule:rgba(248,250,252,0.18);--counter:#475569;--accent:#93C5FD;--accent-soft:rgba(147,197,253,0.18);}}
+  :root{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);--serif:"Source Serif 4",Georgia,serif;--sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+  @media (prefers-color-scheme: dark){:root{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}}
   *{box-sizing:border-box;}html{-webkit-text-size-adjust:100%;}
-  body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;}
   a{color:inherit;}.num{font-variant-numeric:tabular-nums;}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 40px;}
+  .wrap{max-width:1440px;margin:0 auto;padding:0 40px;}
   header.site{padding:40px 0 32px;border-bottom:1px solid var(--hair);}
   .head-grid{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start;}
   .name-block{min-width:0;}
@@ -33,7 +33,7 @@
   .paper-eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 22px;}
   .paper-eyebrow .sep{color:var(--hint);font-weight:400;margin:0 8px;}
   .paper-eyebrow .year{color:var(--ink);font-variant-numeric:tabular-nums;}
-  .paper-q{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:clamp(38px,5.5vw,62px);line-height:1.04;font-variation-settings:"opsz" 96;letter-spacing:-0.015em;margin:0 0 32px;max-width:22ch;}
+  .paper-q{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:clamp(32px,5vw,48px);line-height:1.04;font-variation-settings:"opsz" 96;letter-spacing:-0.015em;margin:0 0 32px;max-width:22ch;}
   .paper-q em{font-style:italic;font-variation-settings:"opsz" 96;}
   .paper-byline{font-family:var(--sans);font-size:14.5px;color:var(--text);line-height:1.55;margin:0 0 18px;max-width:60ch;}
   .paper-byline strong{color:var(--ink);font-weight:500;}
@@ -50,9 +50,9 @@
   .hero-chart svg{width:100%;height:auto;display:block;overflow:visible;}
   .hero-chart-source{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair);font-family:var(--sans);font-size:11.5px;color:var(--hint);letter-spacing:0.02em;}
   .hero-chart-source strong{color:var(--muted);font-weight:500;}
-  .c-axis-line{stroke:rgba(15,23,42,0.20);stroke-width:1;}
-  .c-grid{stroke:rgba(15,23,42,0.06);stroke-width:1;}
-  .c-zero{stroke:rgba(15,23,42,0.30);stroke-width:1;}
+  .c-axis-line{stroke:rgba(42,30,21,0.22);stroke-width:1;}
+  .c-grid{stroke:rgba(42,30,21,0.08);stroke-width:1;}
+  .c-zero{stroke:rgba(42,30,21,0.32);stroke-width:1;}
   .c-event{stroke:var(--ink);stroke-width:1;stroke-dasharray:3 3;}
   .c-axislbl{font-family:var(--sans);font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums;}
   .c-axislbl.bold{font-weight:600;fill:var(--ink);}
@@ -107,15 +107,16 @@
   .rel-q em{font-style:italic;}.rel-meta{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:0.04em;}
   .rel-meta em{font-style:italic;color:var(--text);}
   footer{margin-top:80px;padding:48px 0 96px;border-top:1px solid var(--hair);}
-  .foot-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;}
+  .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; align-items:flex-end;}
   .foot-note{font-size:14px;color:var(--muted);max-width:48ch;line-height:1.55;font-style:italic;font-family:var(--serif);font-variation-settings:"opsz" 16;}
   .footlinks{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--sans);font-size:13px;color:var(--muted);}
   .footlinks a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s ease,color .15s ease;}
   .footlinks a:hover{color:var(--ink);border-bottom-color:var(--accent);}
-  .copy{font-family:var(--sans);font-size:11.5px;color:var(--hint);margin-top:30px;letter-spacing:0.06em;text-align:center;}
+  .copy{font-family:var(--sans);font-size:11.5px;color:var(--hint);letter-spacing:0.06em;margin:0;}
   @media (max-width:980px){.paper-body{grid-template-columns:1fr;gap:32px;}.paper-side{position:static;margin-top:0;}.related-grid{grid-template-columns:1fr;gap:16px;}}
   @media (max-width:640px){.wrap{padding:0 22px;}.head-grid{grid-template-columns:1fr;gap:18px;}header.site{padding-top:32px;}.paper-hero{padding:40px 0 28px;}.hero-chart{padding:24px 18px 18px;}.foot-grid{grid-template-columns:1fr;gap:22px;}.stat-strip{grid-template-columns:1fr;gap:16px;}}
 </style>
+<style>:root[data-theme="dark"]{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}:root[data-theme="light"]{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
 </head>
 <body>
 <div class="wrap">
@@ -123,17 +124,18 @@
     <div class="head-grid">
       <div class="name-block">
         <h1 class="name"><a href="preview.html">Sebastian Olascoaga</a></h1>
-        <p class="role">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong></p>
+        <p class="role">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong> <span class="pub-as">(publishes as <em>Sandoval-Olascoaga</em>)</span></p>
       </div>
       <nav class="nav">
-        <a href="preview.html">Home</a><a href="preview-papers.html">Papers</a><a href="#">Threads</a><a href="#">Notes</a><a href="#">About</a><a href="#">CV</a>
-        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+        <a href="preview.html">Home</a><a href="preview-papers.html">Papers</a>
+        <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com" target="_blank" rel="noopener noreferrer">Email</a><button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark"><span class="tt-icon">◐</span><span class="tt-label"><span class="tt-when-light">Dark mode</span><span class="tt-when-dark">Light mode</span></span></button>
       </nav>
     </div>
   </header>
 
   <section class="paper-hero">
-    <p class="breadcrumb"><a href="preview-papers.html">Papers</a><span class="dot">·</span><a href="#">Housing &amp; climate</a></p>
+    <p class="breadcrumb"><a href="preview-papers.html">Papers</a><span class="dot">·</span><span>Housing &amp; climate</span></p>
     <p class="paper-eyebrow">Event study · 8M transactions <span class="sep">·</span> <span class="year">2025</span></p>
     <h2 class="paper-q">When a flood hits a shrinking neighborhood, <em>home prices never recover.</em></h2>
     <p class="paper-byline"><strong>Sebastian Sandoval-Olascoaga</strong> · <strong>Evelyn Shu</strong> · <strong>Jeremy Porter</strong></p>
@@ -143,7 +145,7 @@
   <div class="paper-body">
     <main class="paper-main">
 
-      <p class="lead">A home that would have sold for $1,000,000 absent a flood sells for <strong>$811,000 twelve years later</strong> — a $189,000 penalty that deepens over time. The penalty is permanent only where population is shrinking: in growing neighborhoods, prices fall and then recover; in declining ones, they fall and keep falling.</p>
+      <p class="lead">A home that would have sold for $1,000,000 absent a flood sells for <strong>$811,000 twelve years later</strong>. A $189,000 penalty that deepens over time. The penalty is permanent only where population is shrinking. In growing neighborhoods, prices fall and then recover. In declining ones, they fall and keep falling.</p>
 
       <!-- HERO CHART: Two-panel event study -->
       <figure class="hero-chart">
@@ -165,7 +167,7 @@
           <!-- ============ PANEL 1: Growing-population tracts ============ -->
           <g>
             <text class="c-panel-title" x="270" y="36" text-anchor="middle">Growing-population tracts</text>
-            <text class="c-panel-sub" x="270" y="52" text-anchor="middle">Prices fall — then claw back</text>
+            <text class="c-panel-sub" x="270" y="52" text-anchor="middle">Prices fall, then claw back</text>
             <!-- grid -->
             <line class="c-grid" x1="60" y1="84"  x2="460" y2="84"/>
             <line class="c-zero" x1="60" y1="138" x2="460" y2="138"/>
@@ -177,18 +179,18 @@
             <line class="c-event" x1="200" y1="70" x2="200" y2="370"/>
             <text class="c-anno-sub" x="206" y="80">Flood event</text>
             <!-- CI band (pre-flat, post divergent then recovery) -->
-            <path fill="rgba(30,58,138,0.12)" d="M 60 132 L 80 134 L 100 133 L 120 135 L 140 134 L 160 136 L 180 136 L 200 138 L 220 145 L 240 158 L 260 178 L 280 210 L 300 246 L 320 280 L 340 290 L 360 285 L 380 272 L 400 250 L 420 230 L 440 215 L 460 205 L 460 230 L 440 245 L 420 260 L 400 280 L 380 300 L 360 312 L 340 318 L 320 308 L 300 274 L 280 240 L 260 208 L 240 188 L 220 175 L 200 144 L 180 144 L 160 144 L 140 142 L 120 143 L 100 141 L 80 142 L 60 140 Z"/>
+            <path fill="rgba(31,79,90,0.14)" d="M 60 132 L 80 134 L 100 133 L 120 135 L 140 134 L 160 136 L 180 136 L 200 138 L 220 145 L 240 158 L 260 178 L 280 210 L 300 246 L 320 280 L 340 290 L 360 285 L 380 272 L 400 250 L 420 230 L 440 215 L 460 205 L 460 230 L 440 245 L 420 260 L 400 280 L 380 300 L 360 312 L 340 318 L 320 308 L 300 274 L 280 240 L 260 208 L 240 188 L 220 175 L 200 144 L 180 144 L 160 144 L 140 142 L 120 143 L 100 141 L 80 142 L 60 140 Z"/>
             <!-- treatment line -->
-            <path stroke="#1E3A8A" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 60 134 L 80 136 L 100 135 L 120 137 L 140 136 L 160 138 L 180 138 L 200 138 L 220 150 L 240 167 L 260 190 L 280 222 L 300 258 L 320 290 L 340 300 L 360 295 L 380 285 L 400 268 L 420 252 L 440 232 L 460 220"/>
+            <path stroke="#1F4F5A" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 60 134 L 80 136 L 100 135 L 120 137 L 140 136 L 160 138 L 180 138 L 200 138 L 220 150 L 240 167 L 260 190 L 280 222 L 300 258 L 320 290 L 340 300 L 360 295 L 380 285 L 400 268 L 420 252 L 440 232 L 460 220"/>
             <!-- dots at key event times -->
-            <circle cx="200" cy="138" r="2.8" fill="#1E3A8A"/>
-            <circle cx="320" cy="290" r="3.5" fill="#1E3A8A"/>
-            <circle cx="460" cy="220" r="4.5" fill="#1E3A8A"/>
+            <circle cx="200" cy="138" r="2.8" fill="#1F4F5A"/>
+            <circle cx="320" cy="290" r="3.5" fill="#1F4F5A"/>
+            <circle cx="460" cy="220" r="4.5" fill="#1F4F5A"/>
             <!-- annotations -->
-            <text class="c-axislbl bold" x="320" y="312" text-anchor="middle" font-size="11.5" fill="#1E3A8A">−17.8% at y8</text>
-            <text class="c-axislbl bold" x="466" y="216" font-size="11.5" fill="#1E3A8A">−8.7% at y11</text>
+            <text class="c-axislbl bold" x="320" y="312" text-anchor="middle" font-size="11.5" fill="#1F4F5A">−17.8% at y8</text>
+            <text class="c-axislbl bold" x="466" y="216" font-size="11.5" fill="#1F4F5A">−8.7% at y11</text>
             <!-- arrow showing recovery -->
-            <path stroke="#1E3A8A" stroke-width="1.2" fill="none" stroke-dasharray="2 3" opacity="0.5" d="M 340 290 Q 400 256 440 232"/>
+            <path stroke="#1F4F5A" stroke-width="1.2" fill="none" stroke-dasharray="2 3" opacity="0.5" d="M 340 290 Q 400 256 440 232"/>
             <!-- x axis -->
             <line class="c-axis-line" x1="60" y1="370" x2="460" y2="370"/>
             <text class="c-axislbl" x="60" y="388">−7y</text>
@@ -199,7 +201,7 @@
           <!-- ============ PANEL 2: Shrinking-population tracts (the WOW) ============ -->
           <g>
             <text class="c-panel-title" x="690" y="36" text-anchor="middle">Shrinking-population tracts</text>
-            <text class="c-panel-sub" x="690" y="52" text-anchor="middle">Prices fall — and keep falling</text>
+            <text class="c-panel-sub" x="690" y="52" text-anchor="middle">Prices fall, and keep falling</text>
             <line class="c-grid" x1="480" y1="84"  x2="880" y2="84"/>
             <line class="c-zero" x1="480" y1="138" x2="880" y2="138"/>
             <line class="c-grid" x1="480" y1="192" x2="880" y2="192"/>
@@ -208,14 +210,14 @@
             <line class="c-grid" x1="480" y1="354" x2="880" y2="354"/>
             <line class="c-event" x1="620" y1="70" x2="620" y2="370"/>
             <text class="c-anno-sub" x="626" y="80">Flood event</text>
-            <path fill="rgba(30,58,138,0.16)" d="M 480 134 L 500 136 L 520 134 L 540 136 L 560 135 L 580 136 L 600 136 L 620 138 L 640 152 L 660 172 L 680 194 L 700 216 L 720 232 L 740 248 L 760 264 L 780 280 L 800 296 L 820 308 L 840 316 L 860 322 L 880 328 L 880 350 L 860 346 L 840 340 L 820 332 L 800 320 L 780 308 L 760 292 L 740 272 L 720 256 L 700 240 L 680 220 L 660 198 L 640 178 L 620 144 L 600 144 L 580 144 L 560 142 L 540 144 L 520 142 L 500 144 L 480 142 Z"/>
-            <path stroke="#1E3A8A" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 480 135 L 500 137 L 520 135 L 540 137 L 560 136 L 580 137 L 600 137 L 620 138 L 640 156 L 660 178 L 680 200 L 700 222 L 720 240 L 740 256 L 760 272 L 780 286 L 800 300 L 820 312 L 840 320 L 860 326 L 880 330"/>
+            <path fill="rgba(31,79,90,0.18)" d="M 480 134 L 500 136 L 520 134 L 540 136 L 560 135 L 580 136 L 600 136 L 620 138 L 640 152 L 660 172 L 680 194 L 700 216 L 720 232 L 740 248 L 760 264 L 780 280 L 800 296 L 820 308 L 840 316 L 860 322 L 880 328 L 880 350 L 860 346 L 840 340 L 820 332 L 800 320 L 780 308 L 760 292 L 740 272 L 720 256 L 700 240 L 680 220 L 660 198 L 640 178 L 620 144 L 600 144 L 580 144 L 560 142 L 540 144 L 520 142 L 500 144 L 480 142 Z"/>
+            <path stroke="#1F4F5A" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 480 135 L 500 137 L 520 135 L 540 137 L 560 136 L 580 137 L 600 137 L 620 138 L 640 156 L 660 178 L 680 200 L 700 222 L 720 240 L 740 256 L 760 272 L 780 286 L 800 300 L 820 312 L 840 320 L 860 326 L 880 330"/>
             <!-- dots -->
-            <circle cx="620" cy="138" r="2.8" fill="#1E3A8A"/>
-            <circle cx="720" cy="240" r="3.5" fill="#1E3A8A"/>
-            <circle cx="880" cy="330" r="4.5" fill="#1E3A8A"/>
-            <circle cx="880" cy="330" r="9" fill="none" stroke="#1E3A8A" stroke-width="1.2" opacity="0.4"/>
-            <text class="c-axislbl bold" x="726" y="234" font-size="11.5" fill="#1E3A8A">−4.8% at y5</text>
+            <circle cx="620" cy="138" r="2.8" fill="#1F4F5A"/>
+            <circle cx="720" cy="240" r="3.5" fill="#1F4F5A"/>
+            <circle cx="880" cy="330" r="4.5" fill="#1F4F5A"/>
+            <circle cx="880" cy="330" r="9" fill="none" stroke="#1F4F5A" stroke-width="1.2" opacity="0.4"/>
+            <text class="c-axislbl bold" x="726" y="234" font-size="11.5" fill="#1F4F5A">−4.8% at y5</text>
             <text class="c-callout-num" x="876" y="298" text-anchor="end">−15%</text>
             <text class="c-callout-lbl" x="876" y="316" text-anchor="end">at year 11, still falling</text>
             <line class="c-axis-line" x1="480" y1="370" x2="880" y2="370"/>
@@ -239,30 +241,30 @@
 
       <section class="sec">
         <p class="kicker">Why it matters</p>
-        <h2>The flood-price literature said the discount was 5–10% and faded. We found it was 19% and growing.</h2>
-        <p>Prior empirical work on flood-exposed property values clustered around two findings: discounts of 5–10%, and a "forgetting" pattern in which prices recovered within a decade. Both came from geographically narrow case studies — Miami-Dade, NYC after Sandy, individual counties in North Carolina or Georgia — and from standard hedonic regressions.</p>
-        <p>By assembling a nationwide repeated-sales panel and using the modern Sun–Abraham (2021) event-study estimator, we recover an effect more than twice as deep and entirely persistent — provided you stop pooling all neighborhoods together. <em>Where</em> the flood lands turns out to be everything.</p>
+        <h2>The flood-price literature said the discount was 5 to 10% and faded. We found it was 19% and growing.</h2>
+        <p>Prior empirical work on flood-exposed property values clustered around two findings. Discounts of 5 to 10%. And a "forgetting" pattern in which prices recovered within a decade. Both came from geographically narrow case studies (Miami-Dade, NYC after Sandy, individual counties in North Carolina or Georgia) and from standard hedonic regressions.</p>
+        <p>By assembling a nationwide repeated-sales panel and using the modern Sun–Abraham (2021) event-study estimator, we recover an effect more than twice as deep and entirely persistent, provided you stop pooling all neighborhoods together. <em>Where</em> the flood lands turns out to be everything.</p>
       </section>
 
       <section class="sec">
         <p class="kicker">How we did it</p>
-        <h2>Same property, before and after — across eight million sales.</h2>
-        <p>The unit of observation is the transaction. The outcome is log(sale price per square foot). The treatment cohort is the year a property's census tract first experienced a flood between 2000 and 2020, drawn from the Lai et al. (2022) NLP-extracted event database and the NOAA Storm Events Database. Property-level fixed effects absorb all time-invariant home characteristics; year and month fixed effects absorb national macro shocks and seasonality. Standard errors cluster at the census-tract level.</p>
-        <p>The repeated-sales design — restricting analysis to properties that transact multiple times across flood exposure — strengthens identification beyond standard hedonic models. Event time runs from −7 to +12 years, with e = −1 as the reference. We estimate the model separately for properties in census tracts that gained vs lost population in the 2000–2010 census, isolating the demographic moderator. A second stage estimates state-by-state elasticities of property-tax revenue to sale prices, then projects county-level fiscal impacts using First Street Foundation 30-year flood inundation projections and SSP-aligned block-group population forecasts from Shu et al. (2023).</p>
+        <h2>Same property, before and after, across eight million sales.</h2>
+        <p>The unit of observation is the transaction. The outcome is log(sale price per square foot). The treatment cohort is the year a property's census tract first experienced a flood between 2000 and 2020, drawn from the Lai et al. (2022) NLP-extracted event database and the NOAA Storm Events Database. Property-level fixed effects absorb all time-invariant home characteristics. Year and month fixed effects absorb national macro shocks and seasonality. Standard errors cluster at the census-tract level.</p>
+        <p>The repeated-sales design restricts analysis to properties that transact multiple times across flood exposure, strengthening identification beyond standard hedonic models. Event time runs from −7 to +12 years, with e = −1 as the reference. We estimate the model separately for properties in census tracts that gained versus lost population in the 2000 to 2010 census, isolating the demographic moderator. A second stage estimates state-by-state elasticities of property-tax revenue to sale prices, then projects county-level fiscal impacts using First Street Foundation 30-year flood inundation projections and SSP-aligned block-group population forecasts from Shu et al. (2023).</p>
       </section>
 
       <section class="sec">
         <p class="kicker">What we found</p>
-        <h2>A 19% penalty after 12 years — that splits in two when you condition on demographics.</h2>
-        <p><strong>Pooled.</strong> Three years after a flood, properties sell for <strong>2.5% less</strong> than identical non-flooded properties (p = 0.0001). By <strong>year 10, the gap is 18.9%</strong> (p &lt; 0.0001). On a million-dollar home, that's a <strong>$189,000 penalty</strong> — and it's still deepening, not fading.</p>
-        <p><strong>Split by population trajectory.</strong> In growing tracts, prices dip to <strong>−17.8% at year 8</strong>, then partially recover to <strong>−8.7% by year 11</strong>. In shrinking tracts, prices fall to <strong>−4.8% by year 5</strong> and continue down to <strong>−15% by year 11</strong>, with no rebound. The penalty isn't permanent everywhere — it's permanent <em>only where housing demand is also retreating</em>.</p>
-        <p><strong>Even before the flood.</strong> Growing-population tracts saw prices rise <strong>+3.05% per year faster</strong> than shrinking ones (2001–2022, statistically significant every year except during the Financial Crisis). The gap widened to <strong>+5.8% by 2022</strong>. Climate exposure compounds an existing demographic divergence — it doesn't create it from scratch.</p>
-        <p><strong>The fiscal echo.</strong> The nationwide elasticity of property-tax revenue to sale prices is <strong>0.71</strong> (p = 0.001) — a 1% price decline implies a 0.71% revenue decline. Twelve years after a flood, projected impacts on total county taxes range from <strong>2.7% to 24.5%</strong> (mean 12.1%). At the upper bound, that's <strong>32.3% of total county salary and wages</strong> — or <strong>21.83% of education expenditure</strong>. The same shrinking communities that face the deepest price penalty lose the most fiscal capacity to adapt.</p>
+        <h2>A 19% penalty after 12 years, that splits in two when you condition on demographics.</h2>
+        <p><strong>Pooled.</strong> Three years after a flood, properties sell for <strong>2.5% less</strong> than identical non-flooded properties (p = 0.0001). By <strong>year 10, the gap is 18.9%</strong> (p &lt; 0.0001). On a million-dollar home, that is a <strong>$189,000 penalty</strong>. And it is still deepening.</p>
+        <p><strong>Split by population trajectory.</strong> In growing tracts, prices dip to <strong>−17.8% at year 8</strong>, then partially recover to <strong>−8.7% by year 11</strong>. In shrinking tracts, prices fall to <strong>−4.8% by year 5</strong> and continue down to <strong>−15% by year 11</strong>, with no rebound. The penalty is permanent <em>only where housing demand is also retreating</em>.</p>
+        <p><strong>Even before the flood.</strong> Growing-population tracts saw prices rise <strong>+3.05% per year faster</strong> than shrinking ones (2001 to 2022, statistically significant every year except during the Financial Crisis). The gap widened to <strong>+5.8% by 2022</strong>. Climate exposure compounds an existing demographic divergence. The gap was already there.</p>
+        <p><strong>The fiscal echo.</strong> The nationwide elasticity of property-tax revenue to sale prices is <strong>0.71</strong> (p = 0.001). A 1% price decline implies a 0.71% revenue decline. Twelve years after a flood, projected impacts on total county taxes range from <strong>2.7% to 24.5%</strong> (mean 12.1%). At the upper bound, that is <strong>32.3% of total county salary and wages</strong>, or <strong>21.83% of education expenditure</strong>. The same shrinking communities that face the deepest price penalty lose the most fiscal capacity to adapt.</p>
       </section>
 
       <blockquote class="pull-quote">
         In communities already facing demographic and economic headwinds, flood events may exacerbate existing vulnerabilities, further constraining their tax base and financial capacity to invest in recovery or long-term adaptation.
-        <span class="pull-quote-cite">— from the paper</span>
+        <span class="pull-quote-cite">From the paper.</span>
       </blockquote>
 
       <section class="cite">
@@ -312,7 +314,7 @@
       </div>
       <div class="side-group">
         <p class="side-label">Read &amp; download</p>
-        <a class="side-link" href="https://www.frontiersin.org/journals/environmental-economics/articles/10.3389/frevc.2025.1615802/full"><span class="arrow">↗</span>Read at Frontiers</a>
+        <a class="side-link" href="https://www.frontiersin.org/journals/environmental-economics/articles/10.3389/frevc.2025.1615802/full" target="_blank" rel="noopener noreferrer"><span class="arrow">↗</span>Read at Frontiers</a>
       </div>
     </aside>
   </div>
@@ -340,19 +342,19 @@
 
   <footer>
     <div class="foot-grid">
-      <p class="foot-note">A working garden, not an archive — pages here grow and get tended.</p>
+      <p class="copy">© 2026 Sebastian Olascoaga</p>
       <nav class="footlinks">
-        <a href="preview-papers.html">Papers</a><a href="#">CV</a><a href="#">About</a>
-        <a href="https://www.linkedin.com/in/sebastianolascoaga/">LinkedIn</a>
-        <a href="https://scholar.google.com/">Scholar</a>
-        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+        <a href="preview.html">Home</a><a href="preview-papers.html">Papers</a>
+        <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
       </nav>
     </div>
-    <p class="copy">© 2026 Sebastian Olascoaga</p>
   </footer>
 </div>
 <script>
 document.querySelector('.cite-copy')?.addEventListener('click',function(){var t=document.querySelector('.cite-text')?.innerText||'';if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){var btn=document.querySelector('.cite-copy');var orig=btn.innerHTML;btn.innerHTML='Copied ✓';setTimeout(function(){btn.innerHTML=orig;},1600);});}});
 </script>
+<script>document.querySelectorAll(".theme-toggle").forEach(function(b){b.addEventListener("click",function(){var r=document.documentElement;var c=r.getAttribute("data-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var n=c==="dark"?"light":"dark";r.setAttribute("data-theme",n);localStorage.setItem("theme",n);});});</script>
 </body>
 </html>

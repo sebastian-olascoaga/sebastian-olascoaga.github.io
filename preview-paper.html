@@ -3,36 +3,34 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Expecting Climate Change — Sebastian Olascoaga</title>
+<title>Expecting Climate Change. Sebastian Olascoaga</title>
 <meta name="description" content="A nationwide Redfin field experiment with 17.5 million users testing how flood-risk disclosure reshapes the housing market." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FFFFFF; --paper-tint:#F4F6FA; --paper-deep:#E5E9F0;
-    --ink:#0A0F1F; --text:#1F2937; --muted:#64748B; --hint:#94A3B8;
-    --hair:rgba(15,23,42,0.10); --rule:rgba(15,23,42,0.18); --counter:#94A3B8;
-    --accent:#1E3A8A; --accent-soft:rgba(30,58,138,0.12); --accent-deep:#0F2C5F;
-    --warm:#B45309; --warm-soft:rgba(180,83,9,0.10);
-    --serif:"Bodoni Moda","Bodoni MT","Didot",Georgia,serif;
-    --sans:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --paper:#F4F2EC; --paper-tint:#EBE8E0; --paper-deep:#DDD8CB;
+    --ink:#2A1E15; --text:#403228; --muted:#6A553E; --hint:#A89A82;
+    --hair:rgba(42,30,21,0.12); --rule:rgba(42,30,21,0.22); --counter:#A89A82;
+    --accent:#6B1F2D; --accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --paper:#0F172A; --paper-tint:#1E293B; --paper-deep:#334155;
-      --ink:#F8FAFC; --text:#E2E8F0; --muted:#94A3B8; --hint:#64748B;
-      --hair:rgba(248,250,252,0.10); --rule:rgba(248,250,252,0.18); --counter:#475569;
-      --accent:#93C5FD; --accent-soft:rgba(147,197,253,0.18); --accent-deep:#BFDBFE;
-      --warm:#FBBF24; --warm-soft:rgba(251,191,36,0.14);
+      --paper:#1A1410; --paper-tint:#251D17; --paper-deep:#33281F;
+      --ink:#F5EFE4; --text:#DDD2BF; --muted:#9C8A72; --hint:#6F6051;
+      --hair:rgba(245,239,228,0.10); --rule:rgba(245,239,228,0.20); --counter:#6F6051;
+      --accent:#C9685A; --accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);
     }
   }
   *{box-sizing:border-box;}
   html{-webkit-text-size-adjust:100%;}
-  body{margin:0; background:var(--paper); color:var(--text); font-family:var(--sans); font-size:16px; line-height:1.62; -webkit-font-smoothing:antialiased;}
+  body{margin:0; background:var(--paper); color:var(--text); font-family:var(--sans); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;}
   a{color:inherit;}
   .num{font-variant-numeric:tabular-nums;}
-  .wrap{max-width:1180px; margin:0 auto; padding:0 40px;}
+  .wrap{max-width:1440px; margin:0 auto; padding:0 40px;}
 
   /* HEADER (matches site) */
   header.site{padding:40px 0 32px; border-bottom:1px solid var(--hair);}
@@ -58,7 +56,7 @@
   .paper-eyebrow .sep{color:var(--hint); font-weight:400; margin:0 8px;}
   .paper-eyebrow .year{color:var(--ink); font-variant-numeric:tabular-nums;}
 
-  .paper-q{font-family:var(--serif); font-weight:500; color:var(--ink); font-size:clamp(38px,5.5vw,62px); line-height:1.04; font-variation-settings:"opsz" 96; letter-spacing:-0.015em; margin:0 0 32px; max-width:22ch;}
+  .paper-q{font-family:var(--serif); font-weight:500; color:var(--ink); font-size:clamp(32px,5vw,48px); line-height:1.04; font-variation-settings:"opsz" 96; letter-spacing:-0.015em; margin:0 0 32px; max-width:22ch;}
   .paper-q em{font-style:italic; font-variation-settings:"opsz" 96;}
 
   .paper-byline{font-family:var(--sans); font-size:14.5px; color:var(--text); line-height:1.55; margin:0 0 18px; max-width:60ch;}
@@ -84,13 +82,13 @@
   .hero-chart-source strong{color:var(--muted); font-weight:500;}
 
   /* Chart SVG styles */
-  .c-axis-line{stroke:rgba(15,23,42,0.20); stroke-width:1;}
-  .c-grid{stroke:rgba(15,23,42,0.06); stroke-width:1;}
-  .c-zero{stroke:rgba(15,23,42,0.30); stroke-width:1;}
+  .c-axis-line{stroke:rgba(42,30,21,0.22); stroke-width:1;}
+  .c-grid{stroke:rgba(42,30,21,0.08); stroke-width:1;}
+  .c-zero{stroke:rgba(42,30,21,0.32); stroke-width:1;}
   .c-event{stroke:var(--ink); stroke-width:1; stroke-dasharray:3 3;}
   .c-control{stroke:var(--counter); stroke-width:2; fill:none; stroke-linecap:round; stroke-linejoin:round;}
-  .c-treat{stroke:var(--accent); stroke-width:2.5; fill:none; stroke-linecap:round; stroke-linejoin:round;}
-  .c-ci{fill:var(--accent-soft); opacity:0.6;}
+  .c-treat{stroke:var(--treat); stroke-width:2.5; fill:none; stroke-linecap:round; stroke-linejoin:round;}
+  .c-ci{fill:var(--treat-soft); opacity:0.6;}
   .c-axislbl{font-family:var(--sans); font-size:11px; fill:var(--muted); font-variant-numeric:tabular-nums;}
   .c-axislbl.bold{font-weight:600; fill:var(--ink);}
   .c-anno{font-family:var(--sans); font-size:12px; fill:var(--ink); font-weight:500;}
@@ -174,16 +172,17 @@
 
   /* Footer */
   footer{margin-top:80px; padding:48px 0 96px; border-top:1px solid var(--hair);}
-  .foot-grid{display:grid; grid-template-columns:1fr auto; gap:30px; align-items:end;}
+  .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; align-items:flex-end;}
   .foot-note{font-size:14px; color:var(--muted); max-width:48ch; line-height:1.55; font-style:italic; font-family:var(--serif); font-variation-settings:"opsz" 16;}
   .footlinks{display:flex; flex-wrap:wrap; gap:6px 22px; font-family:var(--sans); font-size:13px; color:var(--muted);}
   .footlinks a{text-decoration:none; border-bottom:1px solid transparent; transition:border-color .15s ease,color .15s ease;}
   .footlinks a:hover{color:var(--ink); border-bottom-color:var(--accent);}
-  .copy{font-family:var(--sans); font-size:11.5px; color:var(--hint); margin-top:30px; letter-spacing:0.06em; text-align:center;}
+  .copy{font-family:var(--sans); font-size:11.5px; color:var(--hint); letter-spacing:0.06em; margin:0;}
 
   @media (max-width:980px){.paper-body{grid-template-columns:1fr; gap:32px;} .paper-side{position:static; margin-top:0;} .related-grid{grid-template-columns:1fr; gap:16px;}}
   @media (max-width:640px){.wrap{padding:0 22px;} .head-grid{grid-template-columns:1fr; gap:18px;} header.site{padding-top:32px;} .paper-hero{padding:40px 0 28px;} .hero-chart{padding:24px 18px 18px;} .foot-grid{grid-template-columns:1fr; gap:22px;} .stat-strip{grid-template-columns:1fr; gap:16px;}}
 </style>
+<style>:root[data-theme="dark"]{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}:root[data-theme="light"]{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
 </head>
 <body>
 
@@ -193,25 +192,22 @@
     <div class="head-grid">
       <div class="name-block">
         <h1 class="name"><a href="preview.html">Sebastian Olascoaga</a></h1>
-        <p class="role">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong></p>
+        <p class="role">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong> <span class="pub-as">(publishes as <em>Sandoval-Olascoaga</em>)</span></p>
       </div>
       <nav class="nav">
         <a href="preview.html">Home</a>
         <a href="preview-papers.html">Papers</a>
-        <a href="#">Threads</a>
-        <a href="#">Notes</a>
-        <a href="#">About</a>
-        <a href="#">CV</a>
-        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com" target="_blank" rel="noopener noreferrer">Email</a><button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark"><span class="tt-icon">◐</span><span class="tt-label"><span class="tt-when-light">Dark mode</span><span class="tt-when-dark">Light mode</span></span></button>
       </nav>
     </div>
   </header>
 
   <section class="paper-hero">
-    <p class="breadcrumb"><a href="preview-papers.html">Papers</a><span class="dot">·</span><a href="#">Housing &amp; climate</a></p>
+    <p class="breadcrumb"><a href="preview-papers.html">Papers</a><span class="dot">·</span><span>Housing &amp; climate</span></p>
     <p class="paper-eyebrow">Field experiment <span class="sep">·</span> <span class="year">2024</span></p>
     <h2 class="paper-q">When buyers see a home's flood risk, <em>where do they go instead?</em></h2>
-    <p class="paper-byline"><strong>Daryl Fairweather</strong> · <strong>Matthew E. Kahn</strong> · <strong>Robert D. Metcalfe</strong> · <strong>Sebastian Sandoval Olascoaga</strong></p>
+    <p class="paper-byline"><strong>Daryl Fairweather</strong> · <strong>Matthew E. Kahn</strong> · <strong>Robert D. Metcalfe</strong> · <strong>Sebastian Sandoval-Olascoaga</strong></p>
     <span class="paper-status"><span class="dot"></span>Revise &amp; Resubmit · American Economic Review</span>
   </section>
 
@@ -219,12 +215,12 @@
 
     <main class="paper-main">
 
-      <p class="lead">In the first nationwide field experiment of climate-risk disclosure in the U.S. housing market, <strong>17.5 million Redfin users</strong> were randomly shown — or not shown — the flood risk of every home they viewed. Among those already shopping in high-risk areas, treated buyers closed on properties with <strong>59% less flood exposure</strong>. The market repriced. Republican and Democratic counties responded the same.</p>
+      <p class="lead">In the first nationwide field experiment of climate-risk disclosure in the U.S. housing market, <strong>17.5 million Redfin users</strong> were randomly shown (or not shown) the flood risk of every home they viewed. Among those already shopping in high-risk areas, treated buyers closed on properties with <strong>59% less flood exposure</strong>. The market repriced. Republican and Democratic counties responded the same.</p>
 
       <!-- HERO CHART: Event-study NYT style -->
       <figure class="hero-chart">
         <p class="hero-chart-eye">The signature visual</p>
-        <h3 class="hero-chart-title">When the flood score appears, search behavior bends — and keeps bending</h3>
+        <h3 class="hero-chart-title">When the flood score appears, search behavior bends, and keeps bending</h3>
         <p class="hero-chart-sub">Weekly difference between treated and control users, in the flood-risk score of homes they searched for. The treatment cohort had been searching homes in high-risk areas before the experiment.</p>
 
         <svg viewBox="0 0 880 460" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="ev-title">
@@ -270,20 +266,20 @@
           <path class="c-treat" d="M 80 200 L 125 198 L 170 203 L 215 197 L 260 195 L 305 207 L 350 224 L 395 247 L 440 274 L 485 302 L 530 332 L 575 354 L 620 369 L 665 369 L 710 369 L 755 369 L 800 369"/>
 
           <!-- endpoint emphasis circle -->
-          <circle cx="620" cy="369" r="4.5" fill="#1E3A8A"/>
-          <circle cx="620" cy="369" r="9" fill="none" stroke="#1E3A8A" stroke-width="1.2" opacity="0.4"/>
+          <circle cx="620" cy="369" r="4.5" fill="#1F4F5A"/>
+          <circle cx="620" cy="369" r="9" fill="none" stroke="#1F4F5A" stroke-width="1.2" opacity="0.4"/>
 
           <!-- horizontal dotted line from endpoint to right edge -->
-          <line x1="620" y1="369" x2="800" y2="369" stroke="#1E3A8A" stroke-width="1" stroke-dasharray="2 3" opacity="0.5"/>
+          <line x1="620" y1="369" x2="800" y2="369" stroke="#1F4F5A" stroke-width="1" stroke-dasharray="2 3" opacity="0.5"/>
 
           <!-- callout block (right side) -->
           <text class="c-callout-num" x="800" y="358" text-anchor="end">−11.8%</text>
           <text class="c-callout-lbl" x="800" y="376" text-anchor="end">By week 9</text>
 
           <!-- legend (top right, inside chart) -->
-          <line x1="595" y1="100" x2="625" y2="100" stroke="#1E3A8A" stroke-width="2.5"/>
+          <line x1="595" y1="100" x2="625" y2="100" stroke="#1F4F5A" stroke-width="2.5"/>
           <text class="c-legend c-legend-treat" x="632" y="104">Treated · saw flood scores</text>
-          <line x1="595" y1="120" x2="625" y2="120" stroke="#94A3B8" stroke-width="2"/>
+          <line x1="595" y1="120" x2="625" y2="120" stroke="#A89A82" stroke-width="2"/>
           <text class="c-legend c-legend-ctrl" x="632" y="124">Control · saw the regular listing</text>
         </svg>
 
@@ -310,25 +306,25 @@
       <section class="sec">
         <p class="kicker">Why it matters</p>
         <h2>Climate change is rewriting where Americans can safely live. The housing market hasn't been pricing it.</h2>
-        <p>Climate-driven flood risk in the United States is rising. But housing markets have historically been quiet about it: buyers often don't know what they're buying, lenders don't always price it, and home prices in exposed neighborhoods don't reliably reflect the science of where the water is going.</p>
-        <p>The standard policy lever is mandated disclosure — require sellers to tell buyers about risk. This experiment tested a weaker but more deployable cousin: <em>just show people the number</em>, at the moment they're choosing. If buyers act on it, disclosure has bite. If they don't, the policy needs reinforcement elsewhere.</p>
+        <p>Climate-driven flood risk in the United States is rising. But housing markets have historically been quiet about it. Buyers often don't know what they're buying, lenders don't always price it, and home prices in exposed neighborhoods don't reliably reflect the science of where the water is going.</p>
+        <p>The standard policy lever is mandated disclosure, which requires sellers to tell buyers about risk. This experiment tested a weaker but more deployable cousin. <em>Just show people the number</em>, at the moment they're choosing. If buyers act on it, disclosure has bite. If they don't, the policy needs reinforcement elsewhere.</p>
       </section>
 
       <section class="sec">
         <p class="kicker">How we did it</p>
         <h2>A covert, nationwide field experiment on Redfin's actual platform.</h2>
-        <p>From October 1, 2020 through January 3, 2021, Redfin's randomization framework silently split <strong>17.5 million users</strong> into treatment (a First Street Foundation Flood Factor score, 1–10, appeared on every property page) and control (the standard listing). Sellers were blind. Agents were blind. Users weren't notified — the information was just <em>there</em>.</p>
-        <p>We tracked the same individuals across every step of the funnel — search, tour, offer, close — and linked the platform behavior to MLS transactions. Identification rests on three estimators: an average-treatment difference-in-differences, a conditional-average-treatment-effect interacted with each user's baseline search risk-category, and a dynamic event-study. Standard errors clustered at the user level, with Romano-Wolf multiple-testing corrections (1,000 bootstrap resamples for search, 3,000 for offers). The hedonic price analysis uses random variation in the share of treated viewers per listing as an exogenous exposure measure — a Crépon-style design applied to homes rather than labor markets.</p>
+        <p>From October 1, 2020 through January 3, 2021, Redfin's randomization framework silently split <strong>17.5 million users</strong> into treatment (a First Street Foundation Flood Factor score, 1–10, appeared on every property page) and control (the standard listing). Sellers were blind. Agents were blind. Users weren't notified. The information was just <em>there</em>.</p>
+        <p>We tracked the same individuals across every step of the funnel (search, tour, offer, close) and linked the platform behavior to MLS transactions. Identification rests on three estimators. An average-treatment difference-in-differences. A conditional-average-treatment-effect interacted with each user's baseline search risk-category. And a dynamic event-study. Standard errors clustered at the user level, with Romano-Wolf multiple-testing corrections (1,000 bootstrap resamples for search, 3,000 for offers). The hedonic price analysis uses random variation in the share of treated viewers per listing as an exogenous exposure measure, a Crépon-style design applied to homes rather than labor markets.</p>
       </section>
 
       <section class="sec">
         <p class="kicker">What we found</p>
-        <h2>Same people. Same budget. Different homes — and the market itself moved.</h2>
-        <p><strong>Search.</strong> Treated registered users who had been browsing the riskiest properties shifted toward homes with <strong>11.8% less flood risk by week 9</strong> (p&lt;0.01). Effects grew over time; pre-trends were flat (joint test p=0.66).</p>
-        <p><strong>Bids and closes.</strong> Those same users placed offers on homes with <strong>57.1% less flood-score exposure</strong> (s.e. 19.73) than control buyers, and closed on homes with <strong>58.8% less</strong> (p&lt;0.01). Crucially, treated users weren't less likely to bid — they were just bidding on different homes.</p>
-        <p><strong>Trade-offs.</strong> Treated high-risk buyers were <strong>39.6% less likely to bid on waterfront</strong> properties and accepted <strong>14.6% less square footage</strong>. They didn't adjust price or bedrooms — they traded walkability and the water view for safer ground.</p>
-        <p><strong>The market repriced.</strong> Scaling random viewer-exposure intensity from 0 to 100% within Redfin, high-flood-risk non-waterfront homes lost <strong>~$6,800 (1.7%)</strong> in sale price; low-risk homes <em>gained</em> about $4,000. Linearly extrapolated to full-market saturation: a <strong>~$85,000 (21%) price reduction</strong> on high-risk properties. Investors responded too — moving from 0→100% treated raised the probability that a low-risk property was bought by an institutional investor by <strong>2.5 percentage points</strong> over a 9.76% baseline.</p>
-        <p><strong>And the political surprise.</strong> "We cannot reject the null that Biden and Trump's counties respond to the flood score in the same way for both searches and offers." A pre-registered hypothesis that the polarization literature predicted would split — didn't.</p>
+        <h2>Same people. Same budget. Different homes. And the market itself moved.</h2>
+        <p><strong>Search.</strong> Treated registered users who had been browsing the riskiest properties shifted toward homes with <strong>11.8% less flood risk by week 9</strong> (p&lt;0.01). Effects grew over time. Pre-trends were flat (joint test p=0.66).</p>
+        <p><strong>Bids and closes.</strong> Those same users placed offers on homes with <strong>57.1% less flood-score exposure</strong> (s.e. 19.73) than control buyers, and closed on homes with <strong>58.8% less</strong> (p&lt;0.01). Treated users were not less likely to bid. They were bidding on different homes.</p>
+        <p><strong>Trade-offs.</strong> Treated high-risk buyers were <strong>39.6% less likely to bid on waterfront</strong> properties and accepted <strong>14.6% less square footage</strong>. They didn't adjust price or bedrooms. They traded walkability and the water view for safer ground.</p>
+        <p><strong>The market repriced.</strong> Scaling random viewer-exposure intensity from 0 to 100% within Redfin, high-flood-risk non-waterfront homes lost <strong>~$6,800 (1.7%)</strong> in sale price. Low-risk homes <em>gained</em> about $4,000. Linearly extrapolated to full-market saturation, that implies a <strong>~$85,000 (21%) price reduction</strong> on high-risk properties. Investors responded too. Moving from 0 to 100% treated raised the probability that a low-risk property was bought by an institutional investor by <strong>2.5 percentage points</strong> over a 9.76% baseline.</p>
+        <p><strong>And the political surprise.</strong> "We cannot reject the null that Biden and Trump's counties respond to the flood score in the same way for both searches and offers." A pre-registered hypothesis that the polarization literature predicted would split. It did not.</p>
       </section>
 
       <section class="sec">
@@ -336,20 +332,20 @@
         <h2>Coverage in major outlets.</h2>
         <ul class="press-list">
           <li>
-            <p class="press-headline"><a href="#">Mortgages and the Climate-Risk Question</a></p>
+            <p class="press-headline">Mortgages and the Climate-Risk Question</p>
             <p class="press-outlet"><em>The New York Times</em> <span class="dot">·</span> December 2024</p>
             <blockquote class="press-pull">"Mortgage giants Fannie Mae and Freddie Mac are weighing whether to factor flood risk into their lending — a shift that could reshape how Americans buy homes in places exposed to climate change."</blockquote>
           </li>
           <li>
-            <p class="press-headline"><a href="#">Real-Estate Listings With Flood Scores Shift Home-Shopper Habits</a></p>
+            <p class="press-headline">Real-Estate Listings With Flood Scores Shift Home-Shopper Habits</p>
             <p class="press-outlet"><em>Bloomberg</em> <span class="dot">·</span> September 2022</p>
           </li>
           <li>
-            <p class="press-headline"><a href="#">Home Buyers Reject Listings With High Flood Risk</a></p>
+            <p class="press-headline">Home Buyers Reject Listings With High Flood Risk</p>
             <p class="press-outlet"><em>The Weather Channel</em> <span class="dot">·</span> 2022</p>
           </li>
           <li>
-            <p class="press-headline"><a href="#">Buyers shifted toward less-risky homes when given a Flood Factor</a></p>
+            <p class="press-headline">Buyers shifted toward less-risky homes when given a Flood Factor</p>
             <p class="press-outlet"><em>Yale Environment 360</em> <span class="dot">·</span> 2022</p>
           </li>
         </ul>
@@ -401,9 +397,7 @@
       </div>
       <div class="side-group">
         <p class="side-label">Read &amp; download</p>
-        <a class="side-link" href="https://www.nber.org/papers/w33119"><span class="arrow">↗</span>Working paper · NBER <span class="ext">PDF</span></a>
-        <a class="side-link" href="#"><span class="arrow">↗</span>Pre-registration</a>
-        <a class="side-link" href="#"><span class="arrow">↗</span>Slides</a>
+        <a class="side-link" href="https://www.nber.org/papers/w33119" target="_blank" rel="noopener noreferrer"><span class="arrow">↗</span>Working paper · NBER <span class="ext">PDF</span></a>
       </div>
     </aside>
 
@@ -435,17 +429,15 @@
 
   <footer>
     <div class="foot-grid">
-      <p class="foot-note">A working garden, not an archive — pages here grow and get tended.</p>
+      <p class="copy">© 2026 Sebastian Olascoaga</p>
       <nav class="footlinks">
+        <a href="preview.html">Home</a>
         <a href="preview-papers.html">Papers</a>
-        <a href="#">CV</a>
-        <a href="#">About</a>
-        <a href="https://www.linkedin.com/in/sebastianolascoaga/">LinkedIn</a>
-        <a href="https://scholar.google.com/">Scholar</a>
-        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
       </nav>
     </div>
-    <p class="copy">© 2026 Sebastian Olascoaga</p>
   </footer>
 
 </div>
@@ -464,5 +456,6 @@
   });
 </script>
 
+<script>document.querySelectorAll(".theme-toggle").forEach(function(b){b.addEventListener("click",function(){var r=document.documentElement;var c=r.getAttribute("data-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var n=c==="dark"?"light":"dark";r.setAttribute("data-theme",n);localStorage.setItem("theme",n);});});</script>
 </body>
 </html>

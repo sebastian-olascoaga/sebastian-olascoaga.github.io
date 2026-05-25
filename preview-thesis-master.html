@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The Distribution of Top Incomes in Mexico — Sebastian Olascoaga</title>
-<meta name="description" content="Using personal tax microdata, Mexico's top 1% holds 13.6% of national income and the top 0.001% — about 709 individuals — earns an average of $30.5M PPP per year." />
+<title>The Distribution of Top Incomes in Mexico. Sebastian Olascoaga</title>
+<meta name="description" content="Using personal tax microdata, Mexico's top 1% holds 13.6% of national income and the top 0.001% (about 709 individuals) earns an average of $30.5M PPP per year." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--paper:#FFFFFF;--paper-tint:#F4F6FA;--paper-deep:#E5E9F0;--ink:#0A0F1F;--text:#1F2937;--muted:#64748B;--hint:#94A3B8;--hair:rgba(15,23,42,0.10);--rule:rgba(15,23,42,0.18);--counter:#94A3B8;--accent:#1E3A8A;--accent-soft:rgba(30,58,138,0.12);--serif:"Bodoni Moda","Bodoni MT","Didot",Georgia,serif;--sans:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
-  @media (prefers-color-scheme: dark){:root{--paper:#0F172A;--paper-tint:#1E293B;--paper-deep:#334155;--ink:#F8FAFC;--text:#E2E8F0;--muted:#94A3B8;--hint:#64748B;--hair:rgba(248,250,252,0.10);--rule:rgba(248,250,252,0.18);--counter:#475569;--accent:#93C5FD;--accent-soft:rgba(147,197,253,0.18);}}
+  :root{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);--serif:"Source Serif 4",Georgia,serif;--sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+  @media (prefers-color-scheme: dark){:root{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}}
   *{box-sizing:border-box;}html{-webkit-text-size-adjust:100%;}
-  body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;}
   a{color:inherit;}.num{font-variant-numeric:tabular-nums;}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 40px;}
+  .wrap{max-width:1440px;margin:0 auto;padding:0 40px;}
   header.site{padding:40px 0 32px;border-bottom:1px solid var(--hair);}
   .head-grid{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start;}
   .name-block{min-width:0;}
@@ -33,7 +33,7 @@
   .paper-eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 22px;}
   .paper-eyebrow .sep{color:var(--hint);font-weight:400;margin:0 8px;}
   .paper-eyebrow .year{color:var(--ink);font-variant-numeric:tabular-nums;}
-  .paper-q{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:clamp(38px,5.5vw,62px);line-height:1.04;font-variation-settings:"opsz" 96;letter-spacing:-0.015em;margin:0 0 32px;max-width:22ch;}
+  .paper-q{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:clamp(32px,5vw,48px);line-height:1.04;font-variation-settings:"opsz" 96;letter-spacing:-0.015em;margin:0 0 32px;max-width:22ch;}
   .paper-q em{font-style:italic;font-variation-settings:"opsz" 96;}
   .paper-byline{font-family:var(--sans);font-size:14.5px;color:var(--text);line-height:1.55;margin:0 0 18px;max-width:60ch;}
   .paper-byline strong{color:var(--ink);font-weight:500;}
@@ -94,18 +94,18 @@
   .rel-q em{font-style:italic;}.rel-meta{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:0.04em;}
   .rel-meta em{font-style:italic;color:var(--text);}
   footer{margin-top:80px;padding:48px 0 96px;border-top:1px solid var(--hair);}
-  .foot-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;}
+  .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; align-items:flex-end;}
   .foot-note{font-size:14px;color:var(--muted);max-width:48ch;line-height:1.55;font-style:italic;font-family:var(--serif);font-variation-settings:"opsz" 16;}
   .footlinks{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--sans);font-size:13px;color:var(--muted);}
   .footlinks a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s ease,color .15s ease;}
   .footlinks a:hover{color:var(--ink);border-bottom-color:var(--accent);}
-  .copy{font-family:var(--sans);font-size:11.5px;color:var(--hint);margin-top:30px;letter-spacing:0.06em;text-align:center;}
+  .copy{font-family:var(--sans);font-size:11.5px;color:var(--hint);letter-spacing:0.06em;margin:0;}
   @media (max-width:980px){.paper-body{grid-template-columns:1fr;gap:32px;}.paper-side{position:static;margin-top:0;}.related-grid{grid-template-columns:1fr;gap:16px;}}
   @media (max-width:640px){.wrap{padding:0 22px;}.head-grid{grid-template-columns:1fr;gap:18px;}header.site{padding-top:32px;}.paper-hero{padding:40px 0 28px;}.hero-chart{padding:24px 18px 18px;}.foot-grid{grid-template-columns:1fr;gap:22px;}.stat-strip{grid-template-columns:1fr;gap:16px;}}
 
   /* bar comparison chart styles */
-  .bc-grid{stroke:rgba(15,23,42,0.06);stroke-width:1;}
-  .bc-axis{stroke:rgba(15,23,42,0.20);stroke-width:1;}
+  .bc-grid{stroke:rgba(42,30,21,0.08);stroke-width:1;}
+  .bc-axis{stroke:rgba(42,30,21,0.22);stroke-width:1;}
   .bc-country{font-family:var(--sans);font-size:13.5px;fill:var(--text);}
   .bc-country.bold{font-weight:600;fill:var(--ink);}
   .bc-bar{fill:var(--counter);}
@@ -114,6 +114,7 @@
   .bc-val.heavy{fill:var(--accent);}
   .bc-xlbl{font-family:var(--sans);font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums;}
 </style>
+<style>:root[data-theme="dark"]{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}:root[data-theme="light"]{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
 </head>
 <body>
 <div class="wrap">
@@ -121,27 +122,28 @@
     <div class="head-grid">
       <div class="name-block">
         <h1 class="name"><a href="preview.html">Sebastian Olascoaga</a></h1>
-        <p class="role">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong></p>
+        <p class="role">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong> <span class="pub-as">(publishes as <em>Sandoval-Olascoaga</em>)</span></p>
       </div>
       <nav class="nav">
-        <a href="preview.html">Home</a><a href="preview-papers.html">Papers</a><a href="#">Threads</a><a href="#">Notes</a><a href="#">About</a><a href="#">CV</a>
-        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+        <a href="preview.html">Home</a><a href="preview-papers.html">Papers</a>
+        <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com" target="_blank" rel="noopener noreferrer">Email</a><button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark"><span class="tt-icon">◐</span><span class="tt-label"><span class="tt-when-light">Dark mode</span><span class="tt-when-dark">Light mode</span></span></button>
       </nav>
     </div>
   </header>
 
   <section class="paper-hero">
-    <p class="breadcrumb"><a href="preview-papers.html">Papers</a><span class="dot">·</span><a href="#">Theses</a></p>
+    <p class="breadcrumb"><a href="preview-papers.html">Papers</a><span class="dot">·</span><span>Theses</span></p>
     <p class="paper-eyebrow">Master's thesis · Paris School of Economics <span class="sep">·</span> <span class="year">2015</span></p>
     <h2 class="paper-q">How rich are the richest <em>in Mexico</em>, really?</h2>
-    <p class="paper-byline"><strong>Sebastian Sandoval Olascoaga</strong> — advised by <strong>Facundo Alvaredo</strong> and <strong>Thomas Piketty</strong></p>
+    <p class="paper-byline"><strong>Sebastian Sandoval-Olascoaga</strong>. Advised by <strong>Facundo Alvaredo</strong> and <strong>Thomas Piketty</strong>.</p>
     <span class="paper-status"><span class="dot"></span>Summa Cum Laude · 116 pp · M.Sc. in Public Policy and Development</span>
   </section>
 
   <div class="paper-body">
     <main class="paper-main">
 
-      <p class="lead">When the official statistics said Mexico's Gini was falling, the country's tax microdata told a different story. Once you correct for systematic under-reporting, the <strong>top 1% holds 13.6%</strong> of national income, the <strong>top 0.001%</strong> — roughly 709 people in a country of 112 million — earns an average of <strong>$30.5 million PPP a year</strong>, and Mexico's inverted Pareto coefficient sits "at the same level as the USA and UK of the 1920s."</p>
+      <p class="lead">When the official statistics said Mexico's Gini was falling, the country's tax microdata told a different story. Once you correct for systematic under-reporting, the <strong>top 1% holds 13.6%</strong> of national income. The <strong>top 0.001%</strong> (roughly 709 people in a country of 112 million) earns an average of <strong>$30.5 million PPP a year</strong>. Mexico's inverted Pareto coefficient sits "at the same level as the USA and UK of the 1920s."</p>
 
       <!-- HERO CHART: International comparison of top 0.01% share -->
       <figure class="hero-chart">
@@ -172,7 +174,7 @@
 
           <!-- Each percentage point = 140 px wide. Bar from x=220. -->
 
-          <!-- MEXICO — adjusted, the headline. Top 0.01% = 3.20% (2012); ~3.0% in 2011 estimate from Pareto fit -->
+          <!-- MEXICO. Adjusted, the headline. Top 0.01% = 3.20% (2012). ~3.0% in 2011 estimate from Pareto fit -->
           <g>
             <text class="bc-country bold" x="210" y="76" text-anchor="end">Mexico</text>
             <rect class="bc-bar heavy" x="220" y="60" width="420" height="32"/>
@@ -184,7 +186,7 @@
             <rect class="bc-bar" x="220" y="108" width="404" height="32"/>
             <text class="bc-val" x="634" y="131">2.89%</text>
           </g>
-          <!-- Colombia (the only country above Mexico on top-1% revenue measure — included for context but lower on 0.01%) -->
+          <!-- Colombia (the only country above Mexico on top-1% revenue measure, included for context but lower on 0.01%) -->
           <g>
             <text class="bc-country" x="210" y="172" text-anchor="end">Argentina</text>
             <rect class="bc-bar" x="220" y="156" width="300" height="32"/>
@@ -216,7 +218,7 @@
           </g>
 
           <!-- Multiplier callouts on the right -->
-          <text x="725" y="83" font-family="var(--sans)" font-size="11.5" font-weight="600" fill="#1E3A8A" letter-spacing="0.04em">Mexico</text>
+          <text x="725" y="83" font-family="var(--sans)" font-size="11.5" font-weight="600" fill="#1F4F5A" letter-spacing="0.04em">Mexico</text>
           <text x="725" y="131" font-family="var(--sans)" font-size="11.5" fill="var(--muted)">1.04× Mexico</text>
           <text x="725" y="179" font-family="var(--sans)" font-size="11.5" fill="var(--muted)">1.4× less</text>
           <text x="725" y="227" font-family="var(--sans)" font-size="11.5" fill="var(--muted)">1.73× less</text>
@@ -230,43 +232,43 @@
 
       <div class="stat-strip">
         <div><p class="s-num">~709</p><p class="s-lbl">Mexicans in the top <strong>0.001%</strong>, earning an average of <strong>$30.5M PPP</strong> per year</p></div>
-        <div><p class="s-num">13.6%</p><p class="s-lbl">Of national income held by the top 1% (adjusted, 2012) — <strong>1 in every 7 pesos</strong></p></div>
-        <div><p class="s-num">3.89</p><p class="s-lbl">Inverted Pareto coefficient at P99.99 — <strong>"USA and UK of the 1920s"</strong></p></div>
+        <div><p class="s-num">13.6%</p><p class="s-lbl">Of national income held by the top 1% (adjusted, 2012). <strong>1 in every 7 pesos</strong></p></div>
+        <div><p class="s-num">3.89</p><p class="s-lbl">Inverted Pareto coefficient at P99.99. <strong>"USA and UK of the 1920s"</strong></p></div>
       </div>
 
       <section class="sec">
         <p class="kicker">The puzzle</p>
-        <h2>Mexico's official inequality numbers were falling — at exactly the moment the very top was pulling further away.</h2>
-        <p>By 2013, Mexico's official Gini coefficient had fallen from 0.59 to roughly 0.49, the kind of trend that featured in international reports celebrating Latin America's "inequality improvements" of the early 21st century. The household-survey infrastructure those Ginis rest on — ENIGH and its peers — were doing what household surveys do: undercounting the top.</p>
-        <p>This thesis asked whether, with access to the full set of Mexican personal-income tax microdata, you could see the part of the distribution that surveys can't. The methodological challenge: in a country with substantial tax noncompliance, even the tax data don't tell the truth at face value. You need to know how much, and where, taxpayers are inflating their deductions and understating their income.</p>
+        <h2>Mexico's official inequality numbers were falling at exactly the moment the very top was pulling further away.</h2>
+        <p>By 2013, Mexico's official Gini coefficient had fallen from 0.59 to roughly 0.49, the kind of trend that featured in international reports celebrating Latin America's "inequality improvements" of the early 21st century. The household-survey infrastructure those Ginis rest on (ENIGH and its peers) was doing what household surveys do. It was undercounting the top.</p>
+        <p>This thesis asked whether, with access to the full set of Mexican personal-income tax microdata, you could see the part of the distribution that surveys cannot. The methodological challenge is harder than it sounds. In a country with substantial tax noncompliance, even the tax data do not tell the truth at face value. You need to know how much, and where, taxpayers are inflating their deductions and understating their income.</p>
       </section>
 
       <section class="sec">
         <p class="kicker">How we did it</p>
         <h2>2.5 million tax returns a year, corrected with an "anonymous disclosure" benchmark from the Economic Census.</h2>
-        <p>The data: the universe of Mexican personal-income tax microdata 2009–2012 — about <strong>2.0–2.5 million personal returns</strong> and <strong>20–25 million employer-reported wage records</strong> per year — accessed through an OECD–Mexican government collaboration. The income denominator is built from INEGI's national accounts (Balance of primary income, adjusted, ≈59–60% of GDP). The adult-population control comes from 2005/2010 census interpolations.</p>
-        <p>The methodological contribution is a <strong>discrepancy-based evasion adjustment</strong>, adapted from Fiorio &amp; D'Amuri (2006) and Matsaganis et al. (2010). The intuition: when filers face a real-time tax incentive to overstate deductions, they will. When they don't — as in the anonymous, mandatory 2009 Mexican Economic Census, covering 5.14 million business units — they won't. Comparing average deductions across the two sources gives an evasion rate for each category, which deflates the tax-declared values to reconstruct true income. Three income definitions — Revenue, Net, and Adjusted — bracket the truth.</p>
+        <p>The data is the universe of Mexican personal-income tax microdata 2009 to 2012, about <strong>2.0 to 2.5 million personal returns</strong> and <strong>20 to 25 million employer-reported wage records</strong> per year, accessed through an OECD-Mexican government collaboration. The income denominator is built from INEGI's national accounts (Balance of primary income, adjusted, ≈59 to 60% of GDP). The adult-population control comes from 2005 and 2010 census interpolations.</p>
+        <p>The methodological contribution is a <strong>discrepancy-based evasion adjustment</strong>, adapted from Fiorio &amp; D'Amuri (2006) and Matsaganis et al. (2010). The intuition is straightforward. When filers face a real-time tax incentive to overstate deductions, they will. When they don't (as in the anonymous, mandatory 2009 Mexican Economic Census, covering 5.14 million business units) they won't. Comparing average deductions across the two sources gives an evasion rate for each category, which deflates the tax-declared values to reconstruct true income. Three income definitions (Revenue, Net, and Adjusted) bracket the truth.</p>
       </section>
 
       <section class="sec">
         <p class="kicker">What it shows</p>
-        <h2>Static concentration plus low mobility — locked in.</h2>
-        <p><strong>Top shares.</strong> After adjustment, the top 1% holds <strong>13.2% (2009) → 13.6% (2012)</strong> of national income. Top 0.01%: <strong>3.2% in 2012</strong>. Top 0.001%: <strong>1.7% in 2012</strong> (peak 1.85% in 2011). Definition matters dramatically — the 2012 top 1% share is <strong>10.2% (Net) vs 13.6% (Adjusted) vs 19.5% (Revenue)</strong>; the revenue measure puts Mexico above nearly every country in the WTID except Colombia.</p>
-        <p><strong>Growth capture.</strong> Of all real income growth in Mexico 2009–2012, the top 1% captured <strong>8%</strong>, the top 0.1% captured <strong>5%</strong>, the top 0.01% captured <strong>3%</strong>, and the top 0.001% captured <strong>2%</strong>. Real income growth <em>within</em> the top 0.001%: <strong>+40.8%</strong> in three years.</p>
-        <p><strong>International standing.</strong> Mexico's top 0.01% share is <strong>3.5× Spain's, 2.70× France's, 1.73× Uruguay's, and 1.04× the United States'.</strong> The inverted Pareto coefficient at P99.99 reaches <strong>3.89 in 2011</strong> — "at the same level of the 1920s of the USA and the UK," in the thesis's own words.</p>
-        <p><strong>The locked-in part.</strong> Spearman rank correlation between 2009 and 2012 individual incomes is <strong>0.81</strong>. Of those in the top 0.01%+ in 2009, <strong>60.7%</strong> were still there in 2012 — far above the Colombian benchmark of 26.7–33.7%. Mexico's super-rich are dense, growing faster than everyone else, and staying put.</p>
-        <p><strong>Taxation of the top.</strong> Effective average tax rates of top fractiles range from <strong>3.6% to 13.36%</strong>. The top 0.01–0.001% has taxable income equal to only ~20% of revenue, while the 5–1% fractile has ~80% — a structure of legal exemption that the thesis documents in painstaking institutional detail.</p>
+        <h2>Static concentration plus low mobility. Locked in.</h2>
+        <p><strong>Top shares.</strong> After adjustment, the top 1% holds <strong>13.2% (2009) rising to 13.6% (2012)</strong> of national income. Top 0.01%, <strong>3.2% in 2012</strong>. Top 0.001%, <strong>1.7% in 2012</strong> (peak 1.85% in 2011). Definition matters dramatically. The 2012 top 1% share is <strong>10.2% (Net) vs 13.6% (Adjusted) vs 19.5% (Revenue)</strong>. The revenue measure puts Mexico above nearly every country in the WTID except Colombia.</p>
+        <p><strong>Growth capture.</strong> Of all real income growth in Mexico 2009 to 2012, the top 1% captured <strong>8%</strong>, the top 0.1% captured <strong>5%</strong>, the top 0.01% captured <strong>3%</strong>, and the top 0.001% captured <strong>2%</strong>. Real income growth <em>within</em> the top 0.001% was <strong>+40.8%</strong> in three years.</p>
+        <p><strong>International standing.</strong> Mexico's top 0.01% share is <strong>3.5× Spain's, 2.70× France's, 1.73× Uruguay's, and 1.04× the United States'.</strong> The inverted Pareto coefficient at P99.99 reaches <strong>3.89 in 2011</strong>. "At the same level of the 1920s of the USA and the UK," in the thesis's own words.</p>
+        <p><strong>The locked-in part.</strong> Spearman rank correlation between 2009 and 2012 individual incomes is <strong>0.81</strong>. Of those in the top 0.01%+ in 2009, <strong>60.7%</strong> were still there in 2012, far above the Colombian benchmark of 26.7 to 33.7%. Mexico's super-rich are dense, growing faster than everyone else, and staying put.</p>
+        <p><strong>Taxation of the top.</strong> Effective average tax rates of top fractiles range from <strong>3.6% to 13.36%</strong>. The top 0.01 to 0.001% has taxable income equal to only ~20% of revenue, while the 5 to 1% fractile has ~80%. A structure of legal exemption that the thesis documents in painstaking institutional detail.</p>
       </section>
 
       <blockquote class="pull-quote">
-        Astonishingly, the top 0.001% of the individuals, nearly 709 individuals, controlled between 1.33%–1.85% of total income in Mexico.
-        <span class="pull-quote-cite">— from the thesis</span>
+        Astonishingly, the top 0.001% of the individuals, nearly 709 individuals, controlled between 1.33% and 1.85% of total income in Mexico.
+        <span class="pull-quote-cite">From the thesis.</span>
       </blockquote>
 
       <section class="sec">
         <p class="kicker">Context</p>
         <h2>Written at the intellectual home of inequality research.</h2>
-        <p>The thesis was written at the Paris School of Economics, advised by <strong>Facundo Alvaredo</strong> and <strong>Thomas Piketty</strong>, in 2015 — the year after <em>Capital in the 21st Century</em>. It is a Mexican entry into the Atkinson–Piketty–Saez World Top Incomes Database tradition, the first using personal-income tax microdata at this level of granularity. Funded by Mexico's CONACYT graduate scholarship; data accessed through an OECD–Mexican government partnership. Graduated Summa Cum Laude.</p>
+        <p>The thesis was written at the Paris School of Economics, advised by <strong>Facundo Alvaredo</strong> and <strong>Thomas Piketty</strong>, in 2015. The year after <em>Capital in the 21st Century</em>. It is a Mexican entry into the Atkinson-Piketty-Saez World Top Incomes Database tradition, the first using personal-income tax microdata at this level of granularity. Funded by Mexico's CONACYT graduate scholarship. Data accessed through an OECD and Mexican government partnership. Graduated Summa Cum Laude.</p>
       </section>
 
       <section class="cite">
@@ -280,7 +282,7 @@
       <div class="side-group">
         <p class="side-label">Author &amp; advisors</p>
         <ul class="side-list">
-          <li><strong>Sebastian Sandoval Olascoaga</strong></li>
+          <li><strong>Sebastian Sandoval-Olascoaga</strong></li>
           <li><strong>Facundo Alvaredo</strong> · advisor<br><span class="aff">PSE · WID.world</span></li>
           <li><strong>Thomas Piketty</strong> · advisor<br><span class="aff">PSE</span></li>
         </ul>
@@ -316,8 +318,8 @@
       </div>
       <div class="side-group">
         <p class="side-label">Read &amp; download</p>
-        <a class="side-link" href="https://sebastian-olascoaga.github.io/files/inequality_mexico_2015.pdf"><span class="arrow">↗</span>Original 2015 thesis <span class="ext">PDF</span></a>
-        <a class="side-link" href="https://sebastian-olascoaga.github.io/files/inequality_mexico_2017.pdf"><span class="arrow">↗</span>Updated 2017 version <span class="ext">PDF</span></a>
+        <a class="side-link" href="https://sebastian-olascoaga.github.io/files/inequality_mexico_2015.pdf" target="_blank" rel="noopener noreferrer"><span class="arrow">↗</span>Original 2015 thesis <span class="ext">PDF</span></a>
+        <a class="side-link" href="https://sebastian-olascoaga.github.io/files/inequality_mexico_2017.pdf" target="_blank" rel="noopener noreferrer"><span class="arrow">↗</span>Updated 2017 version <span class="ext">PDF</span></a>
       </div>
     </aside>
   </div>
@@ -330,11 +332,6 @@
         <p class="rel-q">Housing dynamics in the face of <em>shocks</em></p>
         <p class="rel-meta">Three essays · climate, eviction, speculation</p>
       </a>
-      <a class="rel-card" href="preview-thesis-ba.html">
-        <p class="rel-eye">BA · CIDE · 2012</p>
-        <p class="rel-q">Why are Mexican microentrepreneurs <em>shut out of the credit market?</em></p>
-        <p class="rel-meta">Theoretical &amp; empirical model</p>
-      </a>
       <a class="rel-card" href="preview-paper.html">
         <p class="rel-eye">2024 · Paper</p>
         <p class="rel-q">When buyers see a home's flood risk, <em>where do they go instead?</em></p>
@@ -345,19 +342,19 @@
 
   <footer>
     <div class="foot-grid">
-      <p class="foot-note">A working garden, not an archive — pages here grow and get tended.</p>
+      <p class="copy">© 2026 Sebastian Olascoaga</p>
       <nav class="footlinks">
-        <a href="preview-papers.html">Papers</a><a href="#">CV</a><a href="#">About</a>
-        <a href="https://www.linkedin.com/in/sebastianolascoaga/">LinkedIn</a>
-        <a href="https://scholar.google.com/">Scholar</a>
-        <a href="mailto:sebastian.olascoaga@gmail.com">Email</a>
+        <a href="preview.html">Home</a><a href="preview-papers.html">Papers</a>
+        <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="mailto:sebastian.olascoaga@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
       </nav>
     </div>
-    <p class="copy">© 2026 Sebastian Olascoaga</p>
   </footer>
 </div>
 <script>
 document.querySelector('.cite-copy')?.addEventListener('click',function(){var t=document.querySelector('.cite-text')?.innerText||'';if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){var btn=document.querySelector('.cite-copy');var orig=btn.innerHTML;btn.innerHTML='Copied ✓';setTimeout(function(){btn.innerHTML=orig;},1600);});}});
 </script>
+<script>document.querySelectorAll(".theme-toggle").forEach(function(b){b.addEventListener("click",function(){var r=document.documentElement;var c=r.getAttribute("data-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var n=c==="dark"?"light":"dark";r.setAttribute("data-theme",n);localStorage.setItem("theme",n);});});</script>
 </body>
 </html>
