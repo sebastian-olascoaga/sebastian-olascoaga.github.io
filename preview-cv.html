@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sebastian Olascoaga</title>
-<meta name="description" content="Sebastian Olascoaga. Field experiments and evaluations on public questions." />
+<title>CV — Sebastian Olascoaga</title>
+<meta name="description" content="Curriculum vitae of Sebastian Olascoaga." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -97,10 +97,10 @@
   }
   .hero p{
     font-family:var(--serif);
-    font-size:clamp(26px,3.4vw,38px); line-height:1.22;
+    font-size:clamp(28px,3.8vw,42px); line-height:1.18;
     font-variation-settings:"opsz" 96;
     font-weight:400; color:var(--ink);
-    letter-spacing:-0.012em; margin:0;
+    letter-spacing:-0.012em; margin:0; max-width:50ch;
   }
   .hero p em{
     font-style:italic; color:var(--accent);
@@ -246,39 +246,25 @@
 </style>
 <style>:root[data-theme="dark"]{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}:root[data-theme="light"]{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
 <style>
-  /* CONTACT */
-  .contact{margin:88px 0 0; padding:56px 0 0; border-top:1px solid var(--hair); text-align:center;}
-  .contact-label{font-family:var(--sans); font-size:11.5px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin:0 0 18px;}
-  .contact-lede{font-family:var(--serif); font-size:18px; line-height:1.6; color:var(--text); max-width:62ch; margin:0 auto 36px;}
-  .contact-lede a{color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent); padding-bottom:1px; transition:color .15s ease, border-color .15s ease;}
-  .contact-lede a:hover{color:var(--ink); border-bottom-color:var(--ink);}
-  .contact-form{display:grid; grid-template-columns:1fr 1fr; gap:18px 22px; max-width:780px; margin:0 auto; text-align:left;}
-  .contact-form label{display:flex; flex-direction:column; gap:6px; min-width:0;}
-  .contact-form label.full{grid-column:1 / -1;}
-  .field-label{font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted);}
-  .field-label .req{color:var(--accent); font-weight:600;}
-  .contact-form input, .contact-form textarea{
-    font-family:var(--sans); font-size:14px; color:var(--ink);
-    background:var(--paper-tint); border:1px solid var(--hair);
-    padding:11px 13px; line-height:1.45; width:100%;
-    border-radius:0; box-shadow:none; -webkit-appearance:none; appearance:none;
-    transition:border-color .15s ease, background .15s ease;
-  }
-  .contact-form input::placeholder, .contact-form textarea::placeholder{color:var(--hint); font-style:italic;}
-  .contact-form input:focus, .contact-form textarea:focus{outline:none; border-color:var(--accent); background:var(--paper);}
-  .contact-form textarea{min-height:140px; resize:vertical; font-family:var(--sans);}
-  .contact-send{
-    grid-column:1 / -1; margin-top:6px;
-    font-family:var(--sans); font-size:13.5px; font-weight:500; letter-spacing:0.08em;
-    color:var(--paper); background:var(--accent); border:0; cursor:pointer;
-    padding:14px 18px; text-transform:uppercase;
-    transition:background .15s ease, color .15s ease;
-  }
-  .contact-send:hover{background:var(--ink);}
+  /* CV page */
+  /* CV dropdown over PDF fix: PDF iframe was capturing hover and closing the Work dropdown */
+  body.cv-page header.site{position:relative; z-index:200;}
+  body.cv-page .pdf-embed{position:relative; z-index:1;}
+  body.cv-page:has(.nav-item:hover) .pdf-embed,
+  body.cv-page:has(.nav-item:focus-within) .pdf-embed{pointer-events:none;}
+  body.cv-page header.site{padding-bottom:18px; border-bottom:none;}
+  .cv-hero{padding:14px 0 10px; border-bottom:none;}
+  .cv-actions{margin:0; display:flex; flex-wrap:wrap; gap:8px 26px; align-items:baseline; font-family:var(--sans); font-size:13.5px;}
+  .cv-actions .meta{color:var(--muted); letter-spacing:0.04em;}
+  .cv-actions a.dl{color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent); padding-bottom:2px; font-weight:500; letter-spacing:0.04em; transition:color .15s ease, border-color .15s ease;}
+  .cv-actions a.dl:hover{color:var(--ink); border-bottom-color:var(--ink);}
+  .cv-embed-wrap{margin:14px 0 0;}
+  .pdf-embed{display:block; width:100%; height:min(1500px, calc(100vh - 60px)); min-height:780px; border:1px solid var(--hair); background:var(--paper-tint);}
+  .pdf-fallback{font-family:var(--sans); font-size:14px; color:var(--muted); padding:24px;}
+  .pdf-fallback a{color:var(--accent); border-bottom:1px solid var(--accent); text-decoration:none; padding-bottom:1px;}
   @media (max-width:640px){
-    .contact{margin-top:64px; padding-top:40px;}
-    .contact-form{grid-template-columns:1fr;}
-    .contact-lede{margin-bottom:28px;}
+    .cv-hero{padding:10px 0 8px;}
+    .pdf-embed{height:80vh; min-height:520px;}
   }
 </style>
 <style>
@@ -316,7 +302,7 @@
   @media (max-width:640px){.nav-dropdown, .nav-item .caret{display:none;}}
 </style>
 </head>
-<body>
+<body class="cv-page">
 
 <div class="wrap">
 
@@ -328,7 +314,7 @@
         <p class="role"><strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong></p>
       </div>
       <nav class="nav">
-        <a href="preview.html" class="here">Home</a>
+        <a href="preview.html">Home</a>
         <div class="nav-item">
           <a href="preview-papers.html" class="nav-trigger">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
           <div class="nav-dropdown" role="menu">
@@ -346,7 +332,7 @@
             </span>
           </div>
         </div>
-        <a href="preview-cv.html">CV</a>
+        <a href="preview-cv.html" class="here">CV</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
         <a href="preview.html#contact">Contact</a>
         <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark"><span class="tt-icon">◐</span><span class="tt-label"><span class="tt-when-light">Dark mode</span><span class="tt-when-dark">Light mode</span></span></button>
@@ -354,91 +340,21 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero reveal d2">
-    <p>Sebastian Olascoaga is a director of research and evaluation who designs studies, runs analyses, and advises decision-makers on the findings. He works across consumer platforms, city government, and applied AI, using RCTs, quasi-experiments, and machine-learning models. The constant across his work is one test, whether products and policies <em>actually do what they promise</em>, for whom, and under what conditions.</p>
-    <a class="hero-cta" href="preview-papers.html">See the work →</a>
+  <!-- CV ACTIONS -->
+  <section class="cv-hero reveal d2">
+    <p class="cv-actions">
+      <span class="meta">Updated May 2026</span>
+      <a class="dl" href="files/cv.pdf" download>Download PDF ↓</a>
+      <a class="dl" href="files/cv.pdf" target="_blank" rel="noopener noreferrer">Open in new tab ↗</a>
+    </p>
   </section>
 
-  <!-- TWO-COLUMN BODY -->
-  <div class="landing-body">
-
-    <main class="landing-main reveal d3">
-
-      <section class="about">
-        <p class="about-label">About</p>
-        <p>Sebastian Olascoaga serves as the <strong>Director of Research and Evaluation for the City of Boston</strong> and is a <strong>Research Affiliate at MIT</strong>. He established and now leads the City's evaluation unit, which conducts impact evaluations, representative surveys, and economic analyses that inform budget and policy decisions across major city programs and services. His team also equips city departments with predictive and causal research tools to act on challenges from housing and public health to climate resilience and operations.</p>
-        <p>Before Boston, he was a research fellow at <strong>Redfin</strong> running consumer-platform experiments, a visiting health-economist fellow at <strong>OptumLabs</strong>, Director of Economic Policy at <strong>Mexico's Federal Treasury</strong>, and a researcher at the <strong>OECD</strong> in Paris.</p>
-        <p>Sebastian holds a <strong>PhD in Urban Economics and Policy</strong> from MIT, an <strong>MA in Applied Economics</strong> from the Paris School of Economics, and a <strong>BA in Economics</strong> from CIDE. His research has been covered in <em>The New York Times</em>, Bloomberg, NPR Marketplace, and MIT News, and published in <em>JAMA Network Open</em>, <em>Nature Communications</em>, NBER, and <em>Frontiers in Environmental Economics</em>.</p>
-        <p>In his free time you can find him at Fenway rooting for the Red Sox, rock climbing in New England, or searching for fresh waves in the Atlantic.</p>
-      </section>
-
-    </main>
-
-    <aside class="landing-side reveal d4">
-
-      <section class="threads">
-        <div class="threads-head">
-          <span class="threads-label">Threads</span>
-        </div>
-
-        <a class="thread-card" href="preview-papers.html#housing+climate">
-          <p class="thread-eye">3 papers · 2023–25</p>
-          <h3 class="thread-title">Housing markets under climate stress</h3>
-          <p class="thread-note">Field experiments and event studies on what happens when climate risk becomes visible in housing markets.</p>
-        </a>
-
-        <a class="thread-card" href="preview-papers.html#housing+public-health">
-          <p class="thread-eye">1 paper · 2021</p>
-          <h3 class="thread-title">Housing &amp; public health</h3>
-          <p class="thread-note">Eviction moratoria expiration and COVID-19 infection risk across strata of health and socioeconomic status, in <em>JAMA Network Open</em>.</p>
-        </a>
-
-        <a class="thread-card" href="preview-papers.html#public-sector">
-          <p class="thread-eye">4 projects · ongoing</p>
-          <h3 class="thread-title">Public-sector evaluation &amp; applied AI</h3>
-          <p class="thread-note">A city's first RCT (BidBot, RAG procurement), an enterprise GenAI evaluation pipeline, fare-free buses, and the rental-inspection ordinance.</p>
-        </a>
-
-        <a class="thread-card" href="preview-papers.html#inequality">
-          <p class="thread-eye">2 dissertations · 2015 &amp; 2023</p>
-          <h3 class="thread-title">Dissertations</h3>
-          <p class="thread-note">An MA on Mexico's top incomes, advised by Alvaredo and Piketty. A PhD on housing systems under shocks, at MIT DUSP.</p>
-        </a>
-
-      </section>
-
-    </aside>
-
+  <!-- EMBEDDED PDF -->
+  <div class="cv-embed-wrap reveal d3">
+    <object class="pdf-embed" data="files/cv.pdf#view=FitH&amp;pagemode=none&amp;navpanes=0&amp;toolbar=1" type="application/pdf" aria-label="Sebastian Olascoaga CV (PDF)">
+      <div class="pdf-fallback">Your browser can't display the embedded PDF. <a href="files/cv.pdf">Download the CV as a PDF.</a></div>
+    </object>
   </div>
-
-  <!-- CONTACT -->
-  <section class="contact reveal d5" id="contact">
-    <p class="contact-label">Contact</p>
-    <p class="contact-lede">Sebastian welcomes research collaborations, advisory work, consulting, speaking, and press / media inquiries. Write below, or reach him directly at <a href="mailto:sebastian.olascoaga@gmail.com">sebastian.olascoaga@gmail.com</a>.</p>
-    <form class="contact-form" action="https://formsubmit.co/sebastian.olascoaga@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="basic">
-      <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
-      <label>
-        <span class="field-label">Name</span>
-        <input type="text" name="name" placeholder="Your name" autocomplete="name">
-      </label>
-      <label>
-        <span class="field-label">Email <span class="req">*</span></span>
-        <input type="email" name="email" placeholder="you@example.com" required autocomplete="email">
-      </label>
-      <label class="full">
-        <span class="field-label">Subject</span>
-        <input type="text" name="subject" placeholder="What's this about?">
-      </label>
-      <label class="full">
-        <span class="field-label">Message</span>
-        <textarea name="message" rows="6" placeholder="Write a few lines..." required></textarea>
-      </label>
-      <button type="submit" class="contact-send">Send</button>
-    </form>
-  </section>
 
   <footer>
     <div class="foot-grid">

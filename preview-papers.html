@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sebastian Olascoaga</title>
+<title>Published Work · Sebastian Olascoaga</title>
 <meta name="description" content="Sebastian Olascoaga. Field experiments and evaluations on public questions." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,6 +71,7 @@
     font-variation-settings:"opsz" 96;
     letter-spacing:-0.005em; margin:0 0 8px;
   }
+  .name a{text-decoration:none;}
   .role{
     font-family:var(--sans); font-size:13px; color:var(--muted);
     letter-spacing:0.04em; margin:0;
@@ -310,6 +311,67 @@
   }
 </style>
 <style>:root[data-theme="dark"]{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}:root[data-theme="light"]{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
+<style>
+  /* WORK DROPDOWN */
+  .nav-item{position:relative;}
+  .nav-item .caret{display:inline-block; font-size:0.7em; margin-left:3px; position:relative; top:-1px; opacity:0.7; transition:transform .18s ease;}
+  .nav-item:hover .caret, .nav-item:focus-within .caret{transform:rotate(180deg);}
+  .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
+  .nav-dropdown{
+    position:absolute; top:100%; left:-14px;
+    min-width:248px; padding:8px 0;
+    background:var(--paper); border:1px solid var(--hair);
+    box-shadow:0 12px 32px rgba(0,0,0,0.18);
+    opacity:0; visibility:hidden; transform:translateY(-4px);
+    transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.12s;
+    z-index:100;
+  }
+  .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown{
+    opacity:1; visibility:visible; transform:translateY(0); transition-delay:0s;
+  }
+  .nav-dropdown .dd-item{
+    display:block; padding:11px 18px;
+    text-decoration:none; color:var(--text);
+    font-family:var(--sans); border:none;
+    transition:background .12s ease, color .12s ease;
+  }
+  .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{
+    background:var(--paper-tint); color:var(--accent); outline:none; border:none;
+  }
+  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;}
+  .nav-dropdown .dd-item.disabled:hover{background:transparent; color:var(--hint);}
+  .dd-title{display:block; font-size:14px; font-weight:500;}
+  .dd-note{display:block; font-size:11.5px; color:var(--muted); margin-top:2px; font-style:italic;}
+  .dd-item.disabled .dd-note{color:var(--hint);}
+  @media (max-width:640px){.nav-dropdown, .nav-item .caret{display:none;}}
+</style>
+<style>
+  /* WORK FILTER */
+  .filter-bar{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 40px;}
+  .filter-bar .chip{
+    font-family:var(--sans); font-size:13px;
+    color:var(--text); background:transparent;
+    border:1px solid var(--hair); border-radius:2px;
+    padding:7px 14px; cursor:pointer; letter-spacing:0.02em;
+    transition:background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .filter-bar .chip:hover{background:var(--paper-tint); border-color:var(--rule);}
+  .filter-bar .chip[aria-pressed="true"]{background:var(--accent); color:var(--paper); border-color:var(--accent);}
+  .filter-bar .chip-all{margin-right:4px;}
+  .paper-card.is-hidden{display:none;}
+  .empty-msg{
+    display:none;
+    font-family:var(--serif); font-style:italic; font-size:17px;
+    color:var(--muted); text-align:center;
+    padding:48px 0 0; margin:0;
+  }
+  .work-gallery.is-empty + .empty-msg{display:block;}
+  @media (max-width:880px){
+    .work-gallery{grid-template-columns:1fr;}
+    .filter-bar{gap:6px;}
+    .filter-bar .chip{font-size:12px; padding:6px 12px;}
+  }
+</style>
 </head>
 <body>
 
@@ -319,50 +381,99 @@
     <div class="head-grid">
       <div class="name-block">
         <h1 class="name"><a href="preview.html">Sebastian Olascoaga</a></h1>
-        <p class="role sans">Research &amp; evaluation <span class="dot">·</span> <strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong> <span class="pub-as">(publishes as <em>Sandoval-Olascoaga</em>)</span></p>
+        <p class="role sans"><strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong></p>
       </div>
-      <p class="tagline">Four threads of published and in-progress work, grouped by the question each one is trying to answer.</p>
+      <p class="tagline">Projects across housing, climate, public sector, and generative AI. Filter by topic or method, or browse all. Published as <em>Sandoval-Olascoaga</em>.</p>
       <nav class="nav">
         <a href="preview.html">Home</a>
-        <a href="preview-papers.html" class="here">Papers</a>
+        <div class="nav-item">
+          <a href="preview-papers.html" class="nav-trigger here">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
+          <div class="nav-dropdown" role="menu">
+            <a href="preview-papers.html" role="menuitem" class="dd-item">
+              <span class="dd-title">Published Work</span>
+              <span class="dd-note">Papers, working papers, and theses</span>
+            </a>
+            <span class="dd-item disabled" role="menuitem" aria-disabled="true">
+              <span class="dd-title">Short Pieces</span>
+              <span class="dd-note">Coming soon</span>
+            </span>
+            <span class="dd-item disabled" role="menuitem" aria-disabled="true">
+              <span class="dd-title">Teaching</span>
+              <span class="dd-note">Coming soon</span>
+            </span>
+          </div>
+        </div>
+        <a href="preview-cv.html">CV</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
-        <a href="mailto:sebastian.olascoaga@gmail.com" target="_blank" rel="noopener noreferrer">Email</a><button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark"><span class="tt-icon">◐</span><span class="tt-label"><span class="tt-when-light">Dark mode</span><span class="tt-when-dark">Light mode</span></span></button>
+        <a href="preview.html#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark"><span class="tt-icon">◐</span><span class="tt-label"><span class="tt-when-light">Dark mode</span><span class="tt-when-dark">Light mode</span></span></button>
       </nav>
     </div>
   </header>
 
   <main>
 
-    <!-- Category: Housing × Climate (3 published papers) -->
-    <section class="category reveal d2" id="housing-climate">
-      <div class="category-head">
-        <span class="category-label">Housing markets under climate stress</span>
-        <span class="category-count">3 papers · 2023–2025</span>
-      </div>
+    <!-- FILTER BAR -->
+    <div class="filter-bar reveal d2" role="tablist" aria-label="Filter work by tag">
+      <button class="chip chip-all" type="button" data-tag="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-tag="housing" aria-pressed="false">Housing</button>
+      <button class="chip" type="button" data-tag="climate" aria-pressed="false">Climate</button>
+      <button class="chip" type="button" data-tag="public-sector" aria-pressed="false">Public sector</button>
+      <button class="chip" type="button" data-tag="generative-ai" aria-pressed="false">Generative AI</button>
+      <button class="chip" type="button" data-tag="public-health" aria-pressed="false">Public health</button>
+      <button class="chip" type="button" data-tag="inequality" aria-pressed="false">Inequality</button>
+      <button class="chip" type="button" data-tag="field-experiment" aria-pressed="false">Field Experiment</button>
+      <button class="chip" type="button" data-tag="quasi-experiment" aria-pressed="false">Quasi-experiment</button>
+    </div>
 
-      <div class="gallery">
-
-        <!-- Card 1: NBER w33119 / Redfin -->
-        <a class="paper-card" href="preview-paper.html">
+    <!-- GALLERY -->
+    <div class="gallery work-gallery reveal d3">
+        <a class="paper-card" data-tags="housing climate field-experiment" href="preview-paper.html">
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Flood-risk disclosure · field experiment</text>
 
-              <text x="0" y="116" class="ti-lbl">Without scores (control)</text>
-              <rect class="ti-bar-ctrl" x="0" y="128" width="480" height="36"/>
-              <text x="500" y="153" text-anchor="end" class="ti-val">100</text>
+              <!-- Gridlines -->
+              <line class="ti-ref" x1="50" y1="80" x2="500" y2="80"/>
+              <line class="ti-ref" x1="50" y1="160" x2="500" y2="160"/>
+              <line class="ti-ref" x1="50" y1="240" x2="500" y2="240"/>
 
-              <text x="0" y="220" class="ti-lbl accent">With flood-risk scores</text>
-              <rect class="ti-bar-treat" x="0" y="232" width="221" height="36"/>
-              <text x="500" y="257" text-anchor="end">
-                <tspan class="ti-val accent">46</tspan>
-                <tspan dx="10" class="ti-delta">−54%</tspan>
-              </text>
+              <!-- Y-axis labels -->
+              <text x="44" y="84" text-anchor="end" class="ti-axis">0%</text>
+              <text x="44" y="164" text-anchor="end" class="ti-axis">−8%</text>
+              <text x="44" y="244" text-anchor="end" class="ti-axis">−16%</text>
 
-              <line x1="0" y1="320" x2="540" y2="320" stroke="rgba(42,30,21,0.12)"/>
-              <text x="0"   y="345" class="ti-axis">0</text>
-              <text x="270" y="345" text-anchor="middle" class="ti-axis">Flood-risk index of homes bought</text>
-              <text x="540" y="345" text-anchor="end" class="ti-axis">100</text>
+              <!-- 95% CI band (drawn first so the line and points sit on top) -->
+              <path class="ti-band" d="M 50 84 L 100 100 L 150 103 L 200 104 L 250 87 L 300 102 L 350 112 L 400 140 L 450 140 L 500 154 L 500 254 L 450 210 L 400 210 L 350 166 L 300 152 L 250 137 L 200 154 L 150 153 L 100 150 L 50 124 Z"/>
+
+              <!-- Connecting line through points -->
+              <path class="ti-line-treat" d="M 50 104 L 100 125 L 150 128 L 200 129 L 250 112 L 300 127 L 350 139 L 400 175 L 450 175 L 500 204"/>
+
+              <!-- Data points -->
+              <circle cx="50" cy="104" r="3" class="ti-dot-treat"/>
+              <circle cx="100" cy="125" r="3" class="ti-dot-treat"/>
+              <circle cx="150" cy="128" r="3" class="ti-dot-treat"/>
+              <circle cx="200" cy="129" r="3" class="ti-dot-treat"/>
+              <circle cx="250" cy="112" r="3" class="ti-dot-treat"/>
+              <circle cx="300" cy="127" r="3" class="ti-dot-treat"/>
+              <circle cx="350" cy="139" r="3" class="ti-dot-treat"/>
+              <circle cx="400" cy="175" r="3" class="ti-dot-treat"/>
+              <circle cx="450" cy="175" r="3" class="ti-dot-treat"/>
+              <circle cx="500" cy="204" r="4.5" class="ti-dot-treat"/>
+              <circle cx="500" cy="204" r="9" fill="none" stroke="#1F4F5A" stroke-width="1" opacity="0.4"/>
+
+              <!-- Endpoint callout -->
+              <text x="492" y="195" text-anchor="end" class="ti-delta">−12.4%</text>
+
+              <!-- X-axis line + ticks -->
+              <line x1="50" y1="260" x2="500" y2="260" stroke="rgba(42,30,21,0.22)"/>
+              <text x="50"  y="278" class="ti-axis">Wk 0</text>
+              <text x="275" y="278" text-anchor="middle" class="ti-axis">Weeks since entering experiment</text>
+              <text x="500" y="278" text-anchor="end" class="ti-axis">Wk 9</text>
+
+              <!-- Caption -->
+              <text x="0" y="320" class="ti-lbl accent">Flood-risk score of searched homes</text>
+              <text x="0" y="342" class="ti-axis">High-risk baseline searchers, change vs control</text>
             </svg>
           </div>
           <div class="pc-body">
@@ -380,47 +491,7 @@
           </div>
         </a>
 
-        <!-- Card 3: Nature Communications / Flood + population projection -->
-        <a class="paper-card" href="preview-paper-nature.html">
-          <div class="pc-img">
-            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
-              <text x="0" y="22" class="ti-eye">Coastal population projection</text>
-
-              <!-- gap fill -->
-              <path class="ti-band" d="M0,270 C120,240 220,200 540,120 L540,240 C400,240 240,250 0,270 Z"/>
-
-              <!-- baseline (dashed) -->
-              <path class="ti-line-ctrl ti-dash ti-redraw" d="M0,270 C120,240 220,200 540,120"/>
-
-              <!-- flood-adjusted (solid) -->
-              <path class="ti-line-treat ti-redraw" d="M0,270 C120,255 220,245 540,240"/>
-
-              <!-- end labels -->
-              <text x="530" y="116" text-anchor="end" class="ti-lbl">Baseline projection</text>
-              <text x="530" y="262" text-anchor="end" class="ti-lbl accent">With flood risk</text>
-
-              <!-- x axis -->
-              <line x1="0" y1="320" x2="540" y2="320" stroke="rgba(42,30,21,0.12)"/>
-              <text x="0"   y="345" class="ti-axis">2020</text>
-              <text x="270" y="345" text-anchor="middle" class="ti-axis">2060</text>
-              <text x="540" y="345" text-anchor="end" class="ti-axis">2100</text>
-            </svg>
-          </div>
-          <div class="pc-body">
-            <h3 class="pc-q">How do U.S. coastal population maps shift when <em>flood risk drives migration?</em></h3>
-            <div class="pc-meta">
-              <span class="left">
-                <span class="year">2023</span>
-                <span class="dot">·</span>
-                <span><em>Nature Communications</em></span>
-              </span>
-              <span class="arrow">→</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Card 4: Frontiers in Environmental Economics / Event study -->
-        <a class="paper-card" href="preview-paper-frontiers.html">
+        <a class="paper-card" data-tags="housing climate quasi-experiment" href="preview-paper-frontiers.html">
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Flood penalty on property values, year 0 to +12</text>
@@ -462,39 +533,86 @@
           </div>
         </a>
 
-      </div>
-    </section>
+        <a class="paper-card" data-tags="housing climate quasi-experiment" href="preview-paper-nature.html">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Coastal population projection</text>
 
-    <!-- Housing & public health (JAMA) -->
-    <section class="category reveal d3" id="housing-health">
-      <div class="category-head">
-        <span class="category-label">Housing &amp; public health</span>
-        <span class="category-count">1 paper · 2021</span>
-      </div>
+              <!-- gap fill -->
+              <path class="ti-band" d="M0,270 C120,240 220,200 540,120 L540,240 C400,240 240,250 0,270 Z"/>
 
-      <div class="gallery solo">
+              <!-- baseline (dashed) -->
+              <path class="ti-line-ctrl ti-dash ti-redraw" d="M0,270 C120,240 220,200 540,120"/>
 
-        <!-- JAMA Network Open / Eviction moratoria -->
-        <a class="paper-card" href="preview-paper-jama.html">
+              <!-- flood-adjusted (solid) -->
+              <path class="ti-line-treat ti-redraw" d="M0,270 C120,255 220,245 540,240"/>
+
+              <!-- end labels -->
+              <text x="530" y="116" text-anchor="end" class="ti-lbl">Baseline projection</text>
+              <text x="530" y="262" text-anchor="end" class="ti-lbl accent">With flood risk</text>
+
+              <!-- x axis -->
+              <line x1="0" y1="320" x2="540" y2="320" stroke="rgba(42,30,21,0.12)"/>
+              <text x="0"   y="345" class="ti-axis">2020</text>
+              <text x="270" y="345" text-anchor="middle" class="ti-axis">2060</text>
+              <text x="540" y="345" text-anchor="end" class="ti-axis">2100</text>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">How do U.S. coastal population maps shift when <em>flood risk drives migration?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2023</span>
+                <span class="dot">·</span>
+                <span><em>Nature Communications</em></span>
+              </span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="paper-card" data-tags="housing public-health quasi-experiment" href="preview-paper-jama.html">
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Eviction moratoria × COVID-19 hazard ratio</text>
 
-              <line class="ti-ref" x1="220" y1="70" x2="220" y2="310"/>
-              <text x="220" y="340" text-anchor="middle" class="ti-axis">HR = 1 (no effect)</text>
+              <!-- HR=1 reference line (no effect) -->
+              <line class="ti-ref" x1="160" y1="64" x2="160" y2="288" stroke-dasharray="4 3"/>
+              <text x="160" y="54" text-anchor="middle" class="ti-axis">HR = 1 (no effect)</text>
 
-              <text x="0" y="115" class="ti-lbl" font-size="18">Highest income</text>
-              <line x1="226" y1="125" x2="256" y2="125" stroke="#A89A82" stroke-width="2"/>
-              <circle class="ti-dot-ctrl" cx="238" cy="125" r="5"/>
+              <!-- Row 1: CCI = 0 (~HR 1.5) -->
+              <text x="0" y="115" class="ti-lbl" font-size="15">CCI 0</text>
+              <line x1="160" y1="110" x2="249" y2="110" stroke="#A89A82" stroke-width="2"/>
+              <circle class="ti-dot-ctrl" cx="249" cy="110" r="5"/>
+              <text x="261" y="115" font-size="13" class="ti-axis">1.55</text>
 
-              <text x="0" y="195" class="ti-lbl" font-size="18">Middle</text>
-              <line x1="246" y1="205" x2="306" y2="205" stroke="#A89A82" stroke-width="2"/>
-              <circle class="ti-dot-ctrl" cx="272" cy="205" r="5"/>
+              <!-- Row 2: CCI = 1 (~HR 1.7) -->
+              <text x="0" y="165" class="ti-lbl" font-size="15">CCI 1</text>
+              <line x1="160" y1="160" x2="309" y2="160" stroke="#A89A82" stroke-width="2"/>
+              <circle class="ti-dot-ctrl" cx="309" cy="160" r="5"/>
+              <text x="321" y="165" font-size="13" class="ti-axis">1.93</text>
 
-              <text x="0" y="275" class="ti-lbl accent" font-size="18">Lowest income</text>
-              <line x1="306" y1="285" x2="430" y2="285" stroke="#1F4F5A" stroke-width="2.5"/>
-              <circle class="ti-dot-treat" cx="358" cy="285" r="6"/>
-              <text x="440" y="290" font-size="14" font-weight="600" fill="#1F4F5A" font-family="Inter,sans-serif">HR 2.3×</text>
+              <!-- Row 3: CCI = 2 (~HR 2.4) -->
+              <text x="0" y="215" class="ti-lbl" font-size="15">CCI 2</text>
+              <line x1="160" y1="210" x2="390" y2="210" stroke="#1F4F5A" stroke-width="2.2"/>
+              <circle class="ti-dot-treat" cx="390" cy="210" r="5"/>
+              <text x="402" y="215" font-size="13" class="ti-axis">2.44</text>
+
+              <!-- Row 4: CCI ≥ 3 (HR 2.36, the headline gradient) -->
+              <text x="0" y="265" class="ti-lbl accent" font-size="15">CCI ≥ 3</text>
+              <line x1="160" y1="260" x2="378" y2="260" stroke="#1F4F5A" stroke-width="2.5"/>
+              <circle class="ti-dot-treat" cx="378" cy="260" r="6.5"/>
+              <text x="390" y="265" font-size="14" font-weight="600" fill="#1F4F5A" font-family="Inter,sans-serif">HR 2.36</text>
+
+              <!-- HR axis -->
+              <line x1="80" y1="290" x2="500" y2="290" stroke="rgba(42,30,21,0.15)"/>
+              <text x="80"  y="308" class="ti-axis">0.5</text>
+              <text x="160" y="308" text-anchor="middle" class="ti-axis">1.0</text>
+              <text x="320" y="308" text-anchor="middle" class="ti-axis">2.0</text>
+              <text x="480" y="308" text-anchor="end" class="ti-axis">3.0</text>
+
+              <!-- Caption -->
+              <text x="0" y="340" class="ti-axis">By Charlson Comorbidity Index, week 12 after the moratorium was lifted</text>
             </svg>
           </div>
           <div class="pc-body">
@@ -510,20 +628,81 @@
           </div>
         </a>
 
-      </div>
-    </section>
+        <a class="paper-card" data-tags="housing inequality climate quasi-experiment public-health" href="preview-thesis-phd.html">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Tornadoes as shocks · property values, 9 years out</text>
 
-    <!-- Public-sector evaluation & applied AI -->
-    <section class="category reveal d3" id="public-sector-ai">
-      <div class="category-head">
-        <span class="category-label">Public-sector evaluation &amp; applied AI</span>
-        <span class="category-count">4 projects · ongoing</span>
-      </div>
+              <line x1="0" y1="110" x2="540" y2="110" stroke="rgba(42,30,21,0.16)"/>
+              <text x="0" y="104" class="ti-axis">$0</text>
 
-      <div class="gallery">
+              <line class="ti-ref" x1="160" y1="70" x2="160" y2="310"/>
+              <text x="170" y="90" class="ti-axis">Tornado</text>
 
-        <!-- BidBot RCT -->
-        <div class="paper-card no-link">
+              <path class="ti-line-treat ti-redraw" d="M0,108 L40,110 L80,108 L120,110 L160,110 L200,145 L240,180 L280,215 L320,245 L360,265 L400,278 L440,285 L480,288 L540,290"/>
+
+              <circle class="ti-dot-treat" cx="160" cy="110" r="3"/>
+              <circle class="ti-dot-treat" cx="540" cy="290" r="5"/>
+
+              <text x="538" y="282" text-anchor="end"><tspan class="ti-val accent">−$23,412</tspan></text>
+              <text x="538" y="312" text-anchor="end" class="ti-axis">by year 8 · no recovery</text>
+
+              <text x="0"   y="345" class="ti-axis">−5y</text>
+              <text x="160" y="345" text-anchor="middle" class="ti-axis">0</text>
+              <text x="540" y="345" text-anchor="end" class="ti-axis">+9y</text>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">What happens to a neighborhood <em>after a shock?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2023</span>
+                <span class="dot">·</span>
+                <span>PhD · MIT DUSP</span>
+              </span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="paper-card" data-tags="inequality" href="preview-thesis-master.html">
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Top 0.01% income share · 2012 · Mexico vs developed economies</text>
+
+              <text x="0" y="78" class="ti-lbl accent">Mexico</text>
+              <rect class="ti-bar-treat" x="0" y="90" width="480" height="32"/>
+              <text x="500" y="113" text-anchor="end"><tspan class="ti-val accent">3.20%</tspan></text>
+
+              <text x="0" y="156" class="ti-lbl">United States</text>
+              <rect class="ti-bar-ctrl" x="0" y="168" width="462" height="32"/>
+              <text x="500" y="191" text-anchor="end" class="ti-val">3.08%</text>
+
+              <text x="0" y="234" class="ti-lbl">France</text>
+              <rect class="ti-bar-ctrl" x="0" y="246" width="178" height="32"/>
+              <text x="500" y="269" text-anchor="end" class="ti-val">1.19%</text>
+
+              <text x="0" y="312" class="ti-lbl">Spain</text>
+              <rect class="ti-bar-ctrl" x="0" y="324" width="137" height="32"/>
+              <text x="500" y="347" text-anchor="end" class="ti-val">0.91%</text>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">How concentrated is wealth at the very top in <em>Mexico?</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2015</span>
+                <span class="dot">·</span>
+                <span>MA · Paris School of Economics</span>
+                <span class="dot">·</span>
+                <span><em>advised by Alvaredo &amp; Piketty</em></span>
+              </span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </a>
+
+        <div class="paper-card no-link" data-tags="public-sector generative-ai field-experiment">
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">City of Boston's first RCT · two-arm design</text>
@@ -558,8 +737,7 @@
           </div>
         </div>
 
-        <!-- GenAI evaluation program -->
-        <div class="paper-card no-link">
+        <div class="paper-card no-link" data-tags="public-sector generative-ai">
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Enterprise GenAI · output, adoption, impact</text>
@@ -597,8 +775,7 @@
           </div>
         </div>
 
-        <!-- Fare-Free Bus -->
-        <div class="paper-card no-link">
+        <div class="paper-card no-link" data-tags="public-sector quasi-experiment">
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Boston Fare-Free Bus pilot · 23.8M boardings (2016–25)</text>
@@ -630,8 +807,7 @@
           </div>
         </div>
 
-        <!-- Proactive Rental Inspection -->
-        <div class="paper-card no-link">
+        <div class="paper-card no-link" data-tags="housing public-sector quasi-experiment">
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Proactive Rental Inspection Ordinance · coverage gap</text>
@@ -661,105 +837,9 @@
           </div>
         </div>
 
-      </div>
-    </section>
+    </div>
 
-    <!-- Long-form work -->
-    <section class="category reveal d4" id="long-form">
-      <div class="category-head">
-        <span class="category-label">Long-form work</span>
-        <span class="category-count">2 dissertations · MIT (2023) &amp; PSE (2015)</span>
-      </div>
-
-      <div class="gallery">
-
-        <!-- MA: PSE / Top incomes Mexico -->
-        <a class="paper-card" href="preview-thesis-master.html">
-          <div class="pc-img">
-            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
-              <text x="0" y="22" class="ti-eye">Top 0.01% income share · 2012 · Mexico vs developed economies</text>
-
-              <text x="0" y="78" class="ti-lbl accent">Mexico</text>
-              <rect class="ti-bar-treat" x="0" y="90" width="480" height="32"/>
-              <text x="500" y="113" text-anchor="end"><tspan class="ti-val accent">3.20%</tspan></text>
-
-              <text x="0" y="156" class="ti-lbl">United States</text>
-              <rect class="ti-bar-ctrl" x="0" y="168" width="462" height="32"/>
-              <text x="500" y="191" text-anchor="end" class="ti-val">3.08%</text>
-
-              <text x="0" y="234" class="ti-lbl">France</text>
-              <rect class="ti-bar-ctrl" x="0" y="246" width="178" height="32"/>
-              <text x="500" y="269" text-anchor="end" class="ti-val">1.19%</text>
-
-              <text x="0" y="312" class="ti-lbl">Spain</text>
-              <rect class="ti-bar-ctrl" x="0" y="324" width="137" height="32"/>
-              <text x="500" y="347" text-anchor="end" class="ti-val">0.91%</text>
-            </svg>
-          </div>
-          <div class="pc-body">
-            <h3 class="pc-q">How concentrated is wealth at the very top in <em>Mexico?</em></h3>
-            <div class="pc-meta">
-              <span class="left">
-                <span class="year">2015</span>
-                <span class="dot">·</span>
-                <span>MA · Paris School of Economics</span>
-                <span class="dot">·</span>
-                <span><em>advised by Alvaredo &amp; Piketty</em></span>
-              </span>
-              <span class="arrow">→</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- PhD: MIT / Housing Dynamics in the Face of Shocks -->
-        <a class="paper-card" href="preview-thesis-phd.html">
-          <div class="pc-img">
-            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
-              <text x="0" y="22" class="ti-eye">Tornadoes as shocks · property values, 9 years out</text>
-
-              <line x1="0" y1="110" x2="540" y2="110" stroke="rgba(42,30,21,0.16)"/>
-              <text x="0" y="104" class="ti-axis">$0</text>
-
-              <line class="ti-ref" x1="160" y1="70" x2="160" y2="310"/>
-              <text x="170" y="90" class="ti-axis">Tornado</text>
-
-              <path class="ti-line-treat ti-redraw" d="M0,108 L40,110 L80,108 L120,110 L160,110 L200,145 L240,180 L280,215 L320,245 L360,265 L400,278 L440,285 L480,288 L540,290"/>
-
-              <circle class="ti-dot-treat" cx="160" cy="110" r="3"/>
-              <circle class="ti-dot-treat" cx="540" cy="290" r="5"/>
-
-              <text x="538" y="282" text-anchor="end"><tspan class="ti-val accent">−$23,412</tspan></text>
-              <text x="538" y="312" text-anchor="end" class="ti-axis">by year 8 · no recovery</text>
-
-              <text x="0"   y="345" class="ti-axis">−5y</text>
-              <text x="160" y="345" text-anchor="middle" class="ti-axis">0</text>
-              <text x="540" y="345" text-anchor="end" class="ti-axis">+9y</text>
-            </svg>
-          </div>
-          <div class="pc-body">
-            <h3 class="pc-q">What happens to a neighborhood <em>after a shock?</em></h3>
-            <div class="pc-meta">
-              <span class="left">
-                <span class="year">2023</span>
-                <span class="dot">·</span>
-                <span>PhD · MIT DUSP</span>
-              </span>
-              <span class="arrow">→</span>
-            </div>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- Notes & news -->
-    <section class="notes-strip reveal d4">
-      <h2>Latest notes &amp; news</h2>
-      <ul class="notes-list">
-        <li><span class="when">Dec 2024</span><span class="kind">Press</span><span class="what"><em>The New York Times</em> on mortgages and climate risk</span></li>
-        <li><span class="when">Sep 2024</span><span class="kind">Role</span><span class="what">Joined the NIEHS stakeholder advisory board at the Harvard Chan School of Public Health</span></li>
-      </ul>
-    </section>
+    <p class="empty-msg">No projects match this filter.</p>
 
   </main>
 
@@ -768,15 +848,89 @@
       <p class="copy">© 2026 Sebastian Olascoaga</p>
       <nav class="footlinks">
         <a href="preview.html">Home</a>
-        <a href="preview-papers.html">Papers</a>
+        <a href="preview-papers.html">Work</a>
+        <a href="preview-cv.html">CV</a>
         <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
-        <a href="mailto:sebastian.olascoaga@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+        <a href="preview.html#contact">Contact</a>
       </nav>
     </div>
   </footer>
 
 </div>
 <script>document.querySelectorAll(".theme-toggle").forEach(function(b){b.addEventListener("click",function(){var r=document.documentElement;var c=r.getAttribute("data-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var n=c==="dark"?"light":"dark";r.setAttribute("data-theme",n);localStorage.setItem("theme",n);});});</script>
+<script>
+(function(){
+  var gallery = document.querySelector('.work-gallery');
+  var chips = document.querySelectorAll('.filter-bar .chip');
+  if (!gallery || !chips.length) return;
+  var cards = gallery.querySelectorAll('.paper-card');
+  var allChip = document.querySelector('.filter-bar .chip-all');
+  var validTags = {};
+  Array.prototype.forEach.call(chips, function(c){ if (c !== allChip) validTags[c.dataset.tag] = true; });
+
+  function activeTags(){
+    var out = [];
+    Array.prototype.forEach.call(chips, function(ch){
+      if (ch !== allChip && ch.getAttribute('aria-pressed') === 'true') out.push(ch.dataset.tag);
+    });
+    return out;
+  }
+
+  function applyFilter(){
+    var active = activeTags();
+    if (active.length === 0){
+      Array.prototype.forEach.call(cards, function(c){ c.classList.remove('is-hidden'); });
+      if (allChip) allChip.setAttribute('aria-pressed', 'true');
+    } else {
+      if (allChip) allChip.setAttribute('aria-pressed', 'false');
+      // AND logic: card must have every active tag
+      Array.prototype.forEach.call(cards, function(c){
+        var t = (c.dataset.tags || '').split(/\s+/);
+        var hasAll = active.every(function(tag){ return t.indexOf(tag) >= 0; });
+        c.classList.toggle('is-hidden', !hasAll);
+      });
+    }
+    var anyVisible = false;
+    Array.prototype.forEach.call(cards, function(c){
+      if (!c.classList.contains('is-hidden')) anyVisible = true;
+    });
+    gallery.classList.toggle('is-empty', !anyVisible);
+    if (active.length > 0){
+      history.replaceState(null, '', '#' + active.join('+'));
+    } else if (window.location.hash){
+      history.replaceState(null, '', window.location.pathname);
+    }
+  }
+
+  Array.prototype.forEach.call(chips, function(ch){
+    ch.addEventListener('click', function(){
+      if (ch === allChip){
+        // Reset: turn off every other chip
+        Array.prototype.forEach.call(chips, function(c){
+          if (c !== allChip) c.setAttribute('aria-pressed', 'false');
+        });
+      } else {
+        // Toggle this chip
+        var pressed = ch.getAttribute('aria-pressed') === 'true';
+        ch.setAttribute('aria-pressed', pressed ? 'false' : 'true');
+      }
+      applyFilter();
+    });
+  });
+
+  // Init from URL hash (supports "tag1+tag2+..." for multi-tag deep links)
+  var hash = (window.location.hash || '').replace('#','');
+  if (hash){
+    var tags = hash.split('+');
+    Array.prototype.forEach.call(chips, function(ch){
+      if (ch !== allChip && tags.indexOf(ch.dataset.tag) >= 0 && validTags[ch.dataset.tag]){
+        ch.setAttribute('aria-pressed', 'true');
+      }
+    });
+  }
+  applyFilter();
+})();
+</script>
 </body>
 </html>
