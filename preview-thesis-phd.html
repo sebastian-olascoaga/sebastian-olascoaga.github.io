@@ -198,13 +198,13 @@
 
   <section class="paper-hero">
     <p class="breadcrumb"><a href="preview-papers.html">Work</a><span class="dot">·</span><span>Theses</span></p>
-    <p class="paper-eyebrow">PhD dissertation · MIT DUSP <span class="sep">·</span> <span class="year">2023</span></p>
+    <p class="paper-eyebrow">PhD dissertation · MIT <span class="sep">·</span> <span class="year">2023</span></p>
     <h2 class="paper-q">Housing dynamics in the face of <em>shocks.</em></h2>
     <p class="paper-byline"><strong>Sebastian Sandoval-Olascoaga</strong>. Advised by <strong>Mariana C. Arcaya</strong>. Committee: <strong>Atheendar Venkataramani</strong>, <strong>Albert Saiz</strong>, <strong>devin michelle bunten</strong>.</p>
-    <span class="paper-status"><span class="dot"></span>PhD in Urban Economics &amp; Policy · MIT Presidential Fellowship</span>
+    <span class="paper-status"><span class="dot"></span>PhD in Urban Economics &amp; Policy - MIT</span>
   </section>
 
-  <p class="lead">Three different shocks produce the <strong>same shape of harm</strong>. A tornado that destroys a neighborhood. A pandemic that lifts a housing protection. An investor who buys a home to flip. Prices, health, and stability bend away from a flat baseline and don't bend back. The dissertation argues that housing systems mediate every modern shock. Public policy can sometimes shorten the bend, but rarely from the outside.</p>
+  <p class="lead">The dissertation examines three different shocks with three different causal-inference designs and finds the <strong>same pattern</strong> in housing systems. A tornado destroys a neighborhood. A pandemic lifts an eviction moratorium. An investor buys a home to flip. In each case the trajectory shows a flat pre-event period followed by a post-event divergence that does not recover. Public policy can shorten the divergence only when its responses are triggered automatically rather than left to discretionary declarations.</p>
 
 
 
@@ -214,19 +214,19 @@
       <!-- HERO CHART. Three-panel small multiples. The dissertation's unified visual signature -->
       <figure class="hero-chart">
         <p class="hero-chart-eye">The dissertation in one image</p>
-        <h3 class="hero-chart-title">Three shocks. Three event studies. One signature. The bend that doesn't come back.</h3>
-        <p class="hero-chart-sub">Each panel is the headline finding of one chapter. The pre-trend is flat in every case (causal-inference design). The post-event divergence is the harm. Different units, different shocks, same visual grammar. Chosen to make the dissertation's thesis visible.</p>
+        <h3 class="hero-chart-title">Three shocks. Three causal designs. The same pattern of harm.</h3>
+        <p class="hero-chart-sub">Each panel is the headline finding of one chapter. Panels I and II are event studies with flat pre-trends and post-event divergence. Panel III is a spatial regression discontinuity at HOLC zone boundaries drawn in 1933. The treatment effect in each panel is the size of the discontinuity at the design's reference axis.</p>
 
         <svg viewBox="0 0 920 360" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="phd-title">
-          <title id="phd-title">Three-panel small multiples of the PhD dissertation's chapter findings: tornado property values falling for 9 years, COVID-19 hazard rising after eviction moratoria expire, and house-flipping concentration by price tier</title>
+          <title id="phd-title">Three-panel small multiples of the PhD dissertation's chapter findings: tornado property values falling for 9 years (event study), COVID-19 hazard ratio rising after eviction moratoria expire (event study, log scale), and flip probability jumping at HOLC zone boundaries from 1933 (spatial regression discontinuity)</title>
 
-          <!-- ============== PANEL 1. CH II Tornadoes. Property prices fall ============== -->
+          <!-- ============== PANEL 1. CH II Tornadoes. Event-study, property prices fall ============== -->
           <g>
             <text class="sm-eye" x="170" y="36" text-anchor="middle">CH. II · CLIMATE SHOCK</text>
             <text class="sm-panel-title" x="170" y="56" text-anchor="middle">Tornado-affected home prices</text>
             <text class="sm-panel-sub" x="170" y="72" text-anchor="middle">vs. comparable non-affected homes</text>
 
-            <!-- grid -->
+            <!-- grid (linear $ scale; 5px per $1K) -->
             <line class="sm-grid" x1="40" y1="100" x2="300" y2="100"/>
             <line class="sm-zero" x1="40" y1="150" x2="300" y2="150"/>
             <line class="sm-grid" x1="40" y1="200" x2="300" y2="200"/>
@@ -237,17 +237,17 @@
             <text class="sm-axislbl" x="35" y="204" text-anchor="end">−$10k</text>
             <text class="sm-axislbl" x="35" y="254" text-anchor="end">−$20k</text>
 
-            <!-- event line at year 0, x=110 -->
+            <!-- event line at year 0 -->
             <line class="sm-event" x1="110" y1="85" x2="110" y2="275"/>
 
-            <!-- CI band -->
-            <path class="sm-band" d="M 40 145 L 60 147 L 80 144 L 100 148 L 110 150 L 130 165 L 150 180 L 170 198 L 190 220 L 210 242 L 230 258 L 250 268 L 270 272 L 290 275 L 300 277 L 300 286 L 290 284 L 270 282 L 250 277 L 230 268 L 210 252 L 190 230 L 170 210 L 150 192 L 130 175 L 110 158 L 100 155 L 80 152 L 60 154 L 40 152 Z"/>
+            <!-- 95% CI band: widened to match dissertation Figure II-4 whisker widths (lower bound clipped at y=285 for far years) -->
+            <path class="sm-band" d="M 40 120 L 60 122 L 80 118 L 100 120 L 110 120 L 130 125 L 150 140 L 170 155 L 190 155 L 210 165 L 230 175 L 250 185 L 270 200 L 290 195 L 300 195 L 300 285 L 290 285 L 270 285 L 250 285 L 230 285 L 210 285 L 190 275 L 170 255 L 150 240 L 130 205 L 110 180 L 100 180 L 80 178 L 60 182 L 40 180 Z"/>
 
-            <!-- line -->
-            <path class="sm-line" d="M 40 148 L 60 150 L 80 147 L 100 150 L 110 152 L 130 170 L 150 188 L 170 206 L 190 226 L 210 248 L 230 263 L 250 271 L 270 275 L 290 278 L 300 280"/>
-            <circle class="sm-dot" cx="110" cy="152" r="3"/>
-            <circle class="sm-dot" cx="300" cy="280" r="4.5"/>
-            <circle cx="300" cy="280" r="8" fill="none" stroke="#1F4F5A" stroke-width="1" opacity="0.4"/>
+            <!-- estimate line (year +8 = −$23k, year +9 ≈ −$22k) -->
+            <path class="sm-line" d="M 40 150 L 60 152 L 80 148 L 100 150 L 110 150 L 130 165 L 150 190 L 170 205 L 190 215 L 210 225 L 230 240 L 250 250 L 270 265 L 290 260 L 300 260"/>
+            <circle class="sm-dot" cx="110" cy="150" r="3"/>
+            <circle class="sm-dot" cx="270" cy="265" r="4.5"/>
+            <circle cx="270" cy="265" r="8" fill="none" stroke="#1F4F5A" stroke-width="1" opacity="0.4"/>
 
             <!-- x-axis -->
             <line class="sm-axis" x1="40" y1="290" x2="300" y2="290"/>
@@ -255,101 +255,121 @@
             <text class="sm-axislbl" x="110" y="306" text-anchor="middle">0</text>
             <text class="sm-axislbl" x="300" y="306" text-anchor="end">+9</text>
 
-            <!-- callout -->
-            <text class="sm-callout" x="290" y="265" text-anchor="end">−$23k</text>
-            <text class="sm-callout-lbl" x="290" y="252" text-anchor="end">at year 8</text>
+            <!-- callout at year +8 (the headline year) -->
+            <text class="sm-callout" x="262" y="265" text-anchor="end">−$23k</text>
+            <text class="sm-callout-lbl" x="262" y="252" text-anchor="end">at year 8</text>
 
             <!-- chapter note below -->
-            <text class="sm-axislbl" x="170" y="338" text-anchor="middle" fill="var(--muted)">21,000 tornadoes · 1996–2019 · FEMA aid had no measurable effect</text>
+            <text class="sm-axislbl" x="170" y="338" text-anchor="middle" fill="var(--muted)">21,174 tornadoes · 1996–2019 · pre-trends p = .60 · FEMA aid had no effect</text>
           </g>
 
-          <!-- ============== PANEL 2. CH III Eviction × COVID. Hazard rises ============== -->
+          <!-- ============== PANEL 2. CH III Eviction × COVID. LOG-SCALE event study ============== -->
           <g>
             <text class="sm-eye" x="460" y="36" text-anchor="middle">CH. III · HEALTH SHOCK</text>
             <text class="sm-panel-title" x="460" y="56" text-anchor="middle">COVID-19 hazard ratio</text>
             <text class="sm-panel-sub" x="460" y="72" text-anchor="middle">after states lifted eviction moratoria</text>
 
+            <!-- gridlines on LOG scale: HR 0.5 (y=280), HR 1.0 (y=210), HR 2.0 (y=141), HR 3.0 (y=100) -->
             <line class="sm-grid" x1="330" y1="100" x2="590" y2="100"/>
-            <line class="sm-grid" x1="330" y1="150" x2="590" y2="150"/>
-            <line class="sm-zero" x1="330" y1="200" x2="590" y2="200"/>
-            <line class="sm-grid" x1="330" y1="250" x2="590" y2="250"/>
+            <line class="sm-grid" x1="330" y1="141" x2="590" y2="141"/>
+            <line class="sm-zero" x1="330" y1="210" x2="590" y2="210"/>
+            <line class="sm-grid" x1="330" y1="280" x2="590" y2="280"/>
 
-            <text class="sm-axislbl" x="325" y="104" text-anchor="end">2.0</text>
-            <text class="sm-axislbl" x="325" y="154" text-anchor="end">1.5</text>
-            <text class="sm-axislbl bold" x="325" y="204" text-anchor="end">1.0</text>
-            <text class="sm-axislbl" x="325" y="254" text-anchor="end">0.5</text>
+            <!-- y labels: equal log spacing (each tick is a doubling) -->
+            <text class="sm-axislbl" x="325" y="104" text-anchor="end">3.0</text>
+            <text class="sm-axislbl" x="325" y="145" text-anchor="end">2.0</text>
+            <text class="sm-axislbl bold" x="325" y="214" text-anchor="end">1.0</text>
+            <text class="sm-axislbl" x="325" y="284" text-anchor="end">0.5</text>
 
+            <!-- event line (week 0 = moratorium lift) -->
             <line class="sm-event" x1="430" y1="85" x2="430" y2="275"/>
 
-            <path class="sm-band" d="M 330 198 L 350 200 L 370 197 L 390 201 L 410 199 L 430 198 L 450 185 L 470 170 L 490 158 L 510 145 L 530 132 L 550 122 L 570 115 L 590 110 L 590 132 L 570 137 L 550 144 L 530 152 L 510 163 L 490 175 L 470 188 L 450 200 L 430 207 L 410 208 L 390 207 L 370 206 L 350 208 L 330 206 Z"/>
+            <!-- 95% CI band on log scale, widths matching dissertation Figure III-3 (CI [1.36, 2.46] at week +12) -->
+            <path class="sm-band" d="M 330 175 L 350 185 L 370 180 L 390 170 L 410 175 L 430 180 L 450 175 L 470 180 L 490 155 L 510 142 L 530 130 L 550 124 L 570 110 L 590 120 L 590 179 L 570 170 L 550 174 L 530 178 L 510 191 L 490 200 L 470 240 L 450 235 L 430 240 L 410 235 L 390 230 L 370 240 L 350 245 L 330 235 Z"/>
 
-            <path class="sm-line" d="M 330 200 L 350 201 L 370 199 L 390 200 L 410 200 L 430 200 L 450 188 L 470 175 L 490 165 L 510 152 L 530 140 L 550 130 L 570 122 L 590 118"/>
-            <circle class="sm-dot" cx="430" cy="200" r="3"/>
-            <circle class="sm-dot" cx="590" cy="118" r="4.5"/>
-            <circle cx="590" cy="118" r="8" fill="none" stroke="#1F4F5A" stroke-width="1" opacity="0.4"/>
+            <!-- estimate line: HR≈1 pre-event, rising to HR 1.83 at week +12 -->
+            <path class="sm-line" d="M 330 205 L 350 215 L 370 210 L 390 200 L 410 205 L 430 210 L 450 205 L 470 210 L 490 177 L 510 166 L 530 154 L 550 149 L 570 141 L 590 150"/>
+            <circle class="sm-dot" cx="430" cy="210" r="3"/>
+            <circle class="sm-dot" cx="590" cy="150" r="4.5"/>
+            <circle cx="590" cy="150" r="8" fill="none" stroke="#1F4F5A" stroke-width="1" opacity="0.4"/>
 
+            <!-- x-axis -->
             <line class="sm-axis" x1="330" y1="290" x2="590" y2="290"/>
             <text class="sm-axislbl" x="330" y="306">wk −15</text>
             <text class="sm-axislbl" x="430" y="306" text-anchor="middle">0</text>
             <text class="sm-axislbl" x="590" y="306" text-anchor="end">+12</text>
 
-            <text class="sm-callout" x="580" y="108" text-anchor="end">HR 1.83</text>
-            <text class="sm-callout-lbl" x="580" y="95" text-anchor="end">12 weeks after</text>
+            <!-- callout (positioned to read above the endpoint on log scale) -->
+            <text class="sm-callout" x="580" y="140" text-anchor="end">HR 1.83</text>
+            <text class="sm-callout-lbl" x="580" y="127" text-anchor="end">12 weeks after</text>
 
-            <text class="sm-axislbl" x="460" y="338" text-anchor="middle" fill="var(--muted)">509,694 individuals · 43 states + DC · Pre-trends p = .98</text>
+            <!-- chapter note below -->
+            <text class="sm-axislbl" x="460" y="338" text-anchor="middle" fill="var(--muted)">509,694 individuals · log scale · pre-trends p = .98 · 95% CI [1.36, 2.46]</text>
           </g>
 
-          <!-- ============== PANEL 3. CH IV Flipping. Investor share rising 2008-2021 ============== -->
+          <!-- ============== PANEL 3. CH IV Spatial Regression Discontinuity at HOLC boundary ============== -->
           <g>
             <text class="sm-eye" x="755" y="36" text-anchor="middle">CH. IV · SPECULATION SHOCK</text>
-            <text class="sm-panel-title" x="755" y="56" text-anchor="middle">Investor share of flipper purchases</text>
-            <text class="sm-panel-sub" x="755" y="72" text-anchor="middle">Greater Boston · 2008–2021</text>
+            <text class="sm-panel-title" x="755" y="56" text-anchor="middle">Flip probability at HOLC boundary</text>
+            <text class="sm-panel-sub" x="755" y="72" text-anchor="middle">Adjacent A-zone vs C-zone properties</text>
 
-            <line class="sm-grid" x1="620" y1="100" x2="880" y2="100"/>
-            <line class="sm-grid" x1="620" y1="150" x2="880" y2="150"/>
-            <line class="sm-grid" x1="620" y1="200" x2="880" y2="200"/>
-            <line class="sm-grid" x1="620" y1="250" x2="880" y2="250"/>
+            <!-- gridlines (linear % scale; 10px per percentage point) -->
+            <line class="sm-grid" x1="620" y1="120" x2="880" y2="120"/>
+            <line class="sm-grid" x1="620" y1="170" x2="880" y2="170"/>
+            <line class="sm-grid" x1="620" y1="220" x2="880" y2="220"/>
+            <line class="sm-zero" x1="620" y1="270" x2="880" y2="270"/>
 
-            <text class="sm-axislbl" x="615" y="104" text-anchor="end">50%</text>
-            <text class="sm-axislbl" x="615" y="154" text-anchor="end">35%</text>
-            <text class="sm-axislbl bold" x="615" y="204" text-anchor="end">20%</text>
-            <text class="sm-axislbl" x="615" y="254" text-anchor="end">5%</text>
+            <!-- y labels -->
+            <text class="sm-axislbl" x="615" y="124" text-anchor="end">15%</text>
+            <text class="sm-axislbl" x="615" y="174" text-anchor="end">10%</text>
+            <text class="sm-axislbl bold" x="615" y="224" text-anchor="end">5%</text>
+            <text class="sm-axislbl" x="615" y="274" text-anchor="end">0</text>
 
-            <!-- CI band around the rise -->
-            <path class="sm-band" d="M 620 220 L 660 218 L 700 208 L 740 195 L 780 175 L 820 152 L 860 128 L 880 118 L 880 138 L 860 148 L 820 172 L 780 195 L 740 215 L 700 228 L 660 238 L 620 240 Z"/>
+            <!-- HOLC boundary line (the "discontinuity" axis) -->
+            <line class="sm-event" x1="750" y1="85" x2="750" y2="275"/>
 
-            <!-- main rising line -->
-            <path class="sm-line" d="M 620 230 L 660 228 L 700 218 L 740 205 L 780 185 L 820 162 L 860 138 L 880 128"/>
+            <!-- Left (A zone) 95% CI band -->
+            <path class="sm-band" d="M 620 195 L 660 180 L 685 175 L 717 195 L 737 200 L 746 205 L 746 245 L 737 240 L 717 235 L 685 215 L 660 220 L 620 235 Z"/>
+            <!-- Left polynomial fit (A zone): hovers around 5-7%, dips to ~4.5% at boundary -->
+            <path class="sm-line" d="M 620 215 L 660 200 L 685 195 L 717 215 L 737 220 L 746 225"/>
 
-            <!-- endpoint emphasis dots -->
-            <circle class="sm-dot" cx="620" cy="230" r="3"/>
-            <circle class="sm-dot" cx="880" cy="128" r="4.5"/>
-            <circle cx="880" cy="128" r="8" fill="none" stroke="#1F4F5A" stroke-width="1" opacity="0.4"/>
+            <!-- Right (C zone) 95% CI band -->
+            <path class="sm-band" d="M 754 110 L 770 105 L 786 115 L 815 135 L 847 165 L 880 190 L 880 230 L 847 205 L 815 175 L 786 155 L 770 145 L 754 150 Z"/>
+            <!-- Right polynomial fit (C zone): jumps to ~13%, peaks just past boundary, decays -->
+            <path class="sm-line" d="M 754 130 L 770 125 L 786 135 L 815 155 L 847 185 L 880 210"/>
 
-            <!-- start label -->
-            <text class="sm-axislbl" x="625" y="220" font-size="10.5">13.8%</text>
+            <!-- Discontinuity dots: left limit and right limit at boundary -->
+            <circle class="sm-dot" cx="746" cy="225" r="3"/>
+            <circle class="sm-dot" cx="754" cy="130" r="4.5"/>
+            <circle cx="754" cy="130" r="8" fill="none" stroke="#1F4F5A" stroke-width="1" opacity="0.4"/>
 
-            <!-- x axis -->
+            <!-- vertical arrow marking the jump -->
+            <path stroke="#6B1F2D" stroke-width="1.4" fill="none" d="M 750 220 L 750 138"/>
+            <path stroke="#6B1F2D" stroke-width="1.4" fill="#6B1F2D" d="M 746 144 L 750 134 L 754 144 Z"/>
+
+            <!-- x-axis -->
             <line class="sm-axis" x1="620" y1="290" x2="880" y2="290"/>
-            <text class="sm-axislbl" x="620" y="306">2008</text>
-            <text class="sm-axislbl" x="750" y="306" text-anchor="middle">2015</text>
-            <text class="sm-axislbl" x="880" y="306" text-anchor="end">2021</text>
+            <text class="sm-axislbl" x="620" y="306">−100m</text>
+            <text class="sm-axislbl" x="750" y="306" text-anchor="middle">boundary</text>
+            <text class="sm-axislbl" x="880" y="306" text-anchor="end">+100m</text>
 
-            <text class="sm-callout" x="870" y="118" text-anchor="end">41.6%</text>
-            <text class="sm-callout-lbl" x="870" y="105" text-anchor="end">by 2021</text>
+            <!-- callout: the jump at the boundary -->
+            <text class="sm-callout" x="870" y="120" text-anchor="end">+12.2 pp</text>
+            <text class="sm-callout-lbl" x="870" y="107" text-anchor="end">jump at boundary</text>
 
-            <text class="sm-axislbl" x="755" y="338" text-anchor="middle" fill="var(--muted)">Investor share of flipper purchases tripled across 13 years</text>
+            <!-- chapter note below -->
+            <text class="sm-axislbl" x="755" y="338" text-anchor="middle" fill="var(--muted)">Yellowlined (C) vs greenlined (A) · SRDD with IPW · p &lt; .001</text>
           </g>
 
           <!-- shared subtitle at bottom -->
-          <text class="sm-axislbl" x="460" y="358" text-anchor="middle" font-size="11" fill="var(--hint)">Each panel uses its own units. The visual grammar of flat then bend is shared on purpose.</text>
+          <text class="sm-axislbl" x="460" y="358" text-anchor="middle" font-size="11" fill="var(--hint)">Each panel uses its own units. All three follow a flat-pre-event, divergence-post-event structure.</text>
         </svg>
 
-        <p class="hero-chart-source"><strong>Source:</strong> Sandoval Olascoaga (2023), <em>Housing Dynamics in the Face of Shocks</em>, MIT DUSP PhD Dissertation · Chapter II uses Sun &amp; Abraham (2021) event-study on 21,174 NOAA tornado paths × CoreLogic/Redfin property transactions · Chapter III is the JAMA Network Open analysis · Chapter IV uses Warren Group transactions, City of Boston permits, and HOLC area-description files (Markley 2023)</p>
+        <p class="hero-chart-source"><strong>Source:</strong> Sandoval Olascoaga (2023), <em>Housing Dynamics in the Face of Shocks</em>, MIT PhD Dissertation · Chapter II uses Sun &amp; Abraham (2021) event-study on 21,174 NOAA tornado paths × CoreLogic/Redfin property transactions · Chapter III uses Cox event-time hazards on 509,694 OptumLabs enrollees (Y-axis log scale; 95% CI [1.36, 2.46] at week 12) · Chapter IV uses spatial regression discontinuity with inverse probability weights at HOLC zone boundaries (Warren Group + Markley 2023 area-description files) · 95% confidence bands shown</p>
       </figure>
 
       <div class="stat-strip">
-        <div><p class="s-num">21,000+</p><p class="s-lbl">Tornadoes (1996–2019) used as <strong>natural experiments</strong> in Chapter II</p></div>
+        <div><p class="s-num">21,174</p><p class="s-lbl">Tornadoes (1996–2019) used as <strong>natural experiments</strong> in Chapter II</p></div>
         <div><p class="s-num">12.2%</p><p class="s-lbl">Higher probability that a former <strong>yellowlined</strong> (HOLC C) property is flipped today</p></div>
         <div><p class="s-num">66.4%</p><p class="s-lbl">Of flipped properties had <strong>no approved permits</strong> while the flipper owned them</p></div>
       </div>
@@ -375,7 +395,7 @@
         <p class="chap-eye">Chapter IV · Speculation shock</p>
         <h3 class="chap-title">House flipping within <em>rapidly changing neighborhoods</em></h3>
         <p class="sec p"><strong>Working paper · single-authored · mixed methods.</strong> Hedonic regressions distinguishing the "back end" and "front end" of a flip; spatial regression discontinuity with inverse-probability weights along HOLC zone boundaries (100 m buffer), using Markley (2023)'s digitized area-description files; Participatory Action Research with the Healthy Neighborhoods Study Consortium (resident researchers across Lynn, Everett, Chelsea, Roxbury, Dorchester, Mattapan, Brockton, New Bedford, Fall River).</p>
-        <p class="sec p"><strong>What it finds.</strong> <strong>23.05%</strong> of all affordable-unit sales (2008–2021, Greater Boston) were flipped, versus only <strong>7.2%</strong> of expensive units. Flippers buy at a <strong>27.9% discount</strong> and sell at a <strong>19.1% premium</strong> relative to comparable non-flipped properties. <strong>66.4% of flipped properties had no approved permits</strong> while the flipper owned them. <strong>62% of back-end flip purchases are cash.</strong> The investor share of flipper purchases <strong>rose from 13.8% in 2008 to 41.6% in 2021</strong>. And the spatial regression discontinuity at HOLC boundaries finds properties in former yellowlined (C-grade) zones are <strong>12.2% more likely to be flipped a century later</strong> than properties just across the line in former A-grade zones. A century-old map still shapes which homes get scraped for profit.</p>
+        <p class="sec p"><strong>What it finds.</strong> <strong>23.05%</strong> of all affordable-unit sales (2008–2021, Greater Boston) were flipped, versus only <strong>7.2%</strong> of expensive units. Flippers buy at a <strong>27.9% discount</strong> and sell at a <strong>19.1% premium</strong> relative to comparable non-flipped properties. <strong>66.4% of flipped properties had no approved permits</strong> while the flipper owned them. <strong>62% of back-end flip purchases are cash.</strong> The investor share of flipper purchases <strong>rose from 13.8% in 2008 to 41.6% in 2021</strong>. And the spatial regression discontinuity at HOLC boundaries finds properties in former yellowlined (C-grade) zones are <strong>12.2% more likely to be flipped a century later</strong> than properties just across the line in former A-grade zones. The 1933 HOLC map still predicts which homes are most likely to be flipped today.</p>
       </section>
 
       <blockquote class="pull-quote">
@@ -406,7 +426,7 @@
           <li>MIT Department of Urban Studies &amp; Planning</li>
           <li>PhD, Urban Economics and Policy</li>
           <li>Submitted: August 16, 2023</li>
-          <li>183 pp · 3 essays</li>
+          <li>163 pp · 3 essays</li>
         </ul>
         <span class="side-pill">MIT Presidential Fellow</span>
       </div>

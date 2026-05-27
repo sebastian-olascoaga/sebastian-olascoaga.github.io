@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Flood Risk and Property Value Changes. Sebastian Olascoaga</title>
-<meta name="description" content="A nationwide event study of 8 million home sales. Flood-exposed properties lose 19% of their value over 12 years. Only growing neighborhoods recover." />
+<title>Financial Crisis & Food Insecurity in Mexico. Sebastian Olascoaga</title>
+<meta name="description" content="The 2008 financial crisis pushed 2.4 million more Mexicans into severe food insecurity. Using ENIGH and the EMSA scale, the paper shows the crisis pulled the bottom down faster." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -50,18 +50,6 @@
   .hero-chart svg{width:100%;height:auto;display:block;overflow:visible;}
   .hero-chart-source{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair);font-family:var(--sans);font-size:11.5px;color:var(--hint);letter-spacing:0.02em;}
   .hero-chart-source strong{color:var(--muted);font-weight:500;}
-  .c-axis-line{stroke:rgba(42,30,21,0.22);stroke-width:1;}
-  .c-grid{stroke:rgba(42,30,21,0.08);stroke-width:1;}
-  .c-zero{stroke:rgba(42,30,21,0.32);stroke-width:1;}
-  .c-event{stroke:var(--ink);stroke-width:1;stroke-dasharray:3 3;}
-  .c-axislbl{font-family:var(--sans);font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums;}
-  .c-axislbl.bold{font-weight:600;fill:var(--ink);}
-  .c-anno{font-family:var(--sans);font-size:12px;fill:var(--ink);font-weight:500;}
-  .c-anno-sub{font-family:var(--sans);font-size:11px;fill:var(--muted);}
-  .c-callout-num{font-family:var(--serif);font-size:24px;font-weight:600;fill:var(--accent);font-variant-numeric:tabular-nums;font-variation-settings:"opsz" 48;}
-  .c-callout-lbl{font-family:var(--sans);font-size:10px;fill:var(--accent);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;}
-  .c-panel-title{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;fill:var(--ink);}
-  .c-panel-sub{font-family:var(--sans);font-size:11px;fill:var(--muted);letter-spacing:0.02em;}
   .stat-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin:32px 0 8px;padding:24px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);}
   .stat-strip .s-num{font-family:var(--serif);font-size:clamp(26px,3vw,34px);font-weight:600;color:var(--accent);line-height:1.05;font-variation-settings:"opsz" 72;font-variant-numeric:tabular-nums;letter-spacing:-0.005em;margin:0 0 6px;}
   .stat-strip .s-lbl{font-family:var(--sans);font-size:12px;color:var(--muted);line-height:1.4;}
@@ -71,9 +59,8 @@
   .sec h2 em{font-style:italic;font-variation-settings:"opsz" 72;}
   .sec .kicker{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;}
   .sec p{font-size:16.5px;line-height:1.7;color:var(--text);margin:0 0 18px;}
-  .sec p:last-child{margin-bottom:0;}.sec p em{font-style:italic;color:var(--ink);}
-  .sec p strong{font-weight:600;color:var(--ink);}
-  .pull-quote{font-family:var(--serif);font-style:italic;font-variation-settings:"opsz" 36;font-size:clamp(20px,2.2vw,24px);line-height:1.4;color:var(--ink);padding:24px 0 24px 24px;border-left:3px solid var(--accent);margin:32px 0;max-width:50ch;}
+  .sec p:last-child{margin-bottom:0;}.sec p em{font-style:italic;color:var(--ink);}.sec p strong{font-weight:600;color:var(--ink);}
+  .pull-quote{font-family:var(--serif);font-style:italic;font-variation-settings:"opsz" 36;font-size:clamp(20px,2.2vw,24px);line-height:1.4;color:var(--ink);padding:24px 0 24px 24px;border-left:3px solid var(--accent);margin:32px 0;max-width:62ch;}
   .pull-quote-cite{display:block;font-family:var(--sans);font-style:normal;font-size:12px;color:var(--muted);letter-spacing:0.04em;margin-top:14px;}
   .cite{margin:48px 0 0;padding:24px 26px;background:var(--paper-tint);border:1px solid var(--hair);border-radius:2px;}
   .cite-label{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;display:flex;align-items:center;justify-content:space-between;}
@@ -115,6 +102,19 @@
   .copy{font-family:var(--sans);font-size:11.5px;color:var(--hint);letter-spacing:0.06em;margin:0;}
   @media (max-width:980px){.paper-body{grid-template-columns:1fr;gap:32px;}.paper-side{position:static;margin-top:0;}.related-grid{grid-template-columns:1fr;gap:16px;}}
   @media (max-width:640px){.wrap{padding:0 22px;}.head-grid{grid-template-columns:1fr;gap:18px;}header.site{padding-top:32px;}.paper-hero{padding:40px 0 28px;}.hero-chart{padding:24px 18px 18px;}.foot-grid{grid-template-columns:1fr;gap:22px;}.stat-strip{grid-template-columns:1fr;gap:16px;}}
+
+  /* bar chart styles for the hero */
+  .bc-bar-ctrl{fill:var(--counter);}
+  .bc-bar-treat{fill:var(--accent);}
+  .bc-axis{stroke:rgba(42,30,21,0.22);stroke-width:1;}
+  .bc-grid{stroke:rgba(42,30,21,0.08);stroke-width:1;}
+  .bc-axislbl{font-family:var(--sans);font-size:12px;fill:var(--muted);font-variant-numeric:tabular-nums;}
+  .bc-axislbl.bold{font-weight:600;fill:var(--ink);}
+  .bc-bar-val{font-family:var(--serif);font-size:22px;font-weight:600;fill:var(--ink);font-variant-numeric:tabular-nums;font-variation-settings:"opsz" 36;}
+  .bc-bar-val.accent{fill:var(--accent);}
+  .bc-bar-sub{font-family:var(--sans);font-size:11.5px;fill:var(--muted);}
+  .bc-delta{font-family:var(--sans);font-size:13px;font-weight:600;fill:var(--accent);letter-spacing:0.04em;text-transform:uppercase;}
+  .bc-delta-num{font-family:var(--serif);font-size:24px;font-weight:600;fill:var(--accent);font-variant-numeric:tabular-nums;font-variation-settings:"opsz" 36;}
 </style>
 <style>:root[data-theme="dark"]{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}:root[data-theme="light"]{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
 <style>
@@ -188,147 +188,105 @@
   </header>
 
   <section class="paper-hero">
-    <p class="breadcrumb"><a href="preview-papers.html">Work</a><span class="dot">·</span><span>Housing &amp; climate</span></p>
-    <p class="paper-eyebrow">Event study · 8M transactions <span class="sep">·</span> <span class="year">2025</span></p>
-    <h2 class="paper-q">When a flood hits a shrinking neighborhood, <em>home prices never recover.</em></h2>
-    <p class="paper-byline"><strong>Sebastian Sandoval-Olascoaga</strong> · <strong>Evelyn Shu</strong> · <strong>Jeremy Porter</strong></p>
-    <span class="paper-status"><span class="dot"></span>Published - Frontiers in Environmental Economics</span>
+    <p class="breadcrumb"><a href="preview-papers.html">Work</a><span class="dot">·</span><span>Public health &amp; inequality</span></p>
+    <p class="paper-eyebrow">Quasi-experimental analysis <span class="sep">·</span> <span class="year">2015</span></p>
+    <h2 class="paper-q">When Mexico's economy shrank, <em>who went hungry first?</em></h2>
+    <p class="paper-byline"><strong>Mireya Vilar-Compte</strong> · <strong>Sebastián Sandoval-Olascoaga</strong> · <strong>Ana Bernal-Stuart</strong> · <strong>Sandhya Shimoga</strong> · <strong>Arturo Vargas-Bustamante</strong></p>
+    <span class="paper-status"><span class="dot"></span>Published - Public Health Nutrition</span>
   </section>
 
-  <p class="lead">A home that would have sold for $1,000,000 absent a flood sells for <strong>$811,000 twelve years later</strong>. A $189,000 penalty that deepens over time. The penalty is permanent only where population is shrinking. In growing neighborhoods, prices fall and partially recover. In declining ones, they fall and keep falling.</p>
+  <p class="lead">Mexico's economy shrank <strong>6.7% in 2009</strong>. By 2010, the number of severely food-insecure Mexicans had jumped from <strong>9.8 million (8.9%)</strong> to <strong>12.2 million (10.8%)</strong>. The total food-insecure population stayed flat at around 50 million across both years, but the composition shifted toward the most severe category. The crisis fell disproportionately on households that were already most exposed.</p>
 
 
 
   <div class="paper-body">
 
     <main class="paper-main">
-      <!-- HERO CHART: Figure 2 — pooled event study with 95% CI band -->
+
+      <!-- HERO CHART: 2008 vs 2010 severely food-insecure population share -->
       <figure class="hero-chart">
-        <p class="hero-chart-eye">Figure 2 · The persistent penalty</p>
-        <h3 class="hero-chart-title">A flood-exposure penalty that keeps deepening for over a decade.</h3>
-        <p class="hero-chart-sub">Sun–Abraham (2021) event-study estimator on a repeated-sales panel of 8,148,080 U.S. residential transactions (LightBox, 2000–2020). The dot at year −1 is the reference period. After exposure, sale prices per square foot fall steadily relative to non-flooded controls, reaching <strong>−18.9%</strong> by year 12. Pre-trends are flat (joint test p = 0.6).</p>
+        <p class="hero-chart-eye">The crisis in one number</p>
+        <h3 class="hero-chart-title">Severely food-insecure Mexicans: 8.9% in 2008, 10.8% in 2010.</h3>
+        <p class="hero-chart-sub">Share of the Mexican population in the severely food-insecure category of the Mexican Food Security Scale (EMSA) before and after the 2008 financial crisis. Sample: 29,468 ENIGH households in 2008 and 27,654 in 2010. While total food insecurity stayed at ~50 million people (~45% of the population), composition shifted from milder categories into the most severe one.</p>
 
-        <svg viewBox="0 0 920 460" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="fr-title">
-          <title id="fr-title">Single-panel event study showing a persistent flood-exposure penalty on sale prices per square foot, descending from near zero pre-event to −18.9% by year 12, with shaded 95% confidence band</title>
+        <svg viewBox="0 0 920 400" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="phn-title">
+          <title id="phn-title">Bar chart comparing the share of the Mexican population in the severely food-insecure category in 2008 (8.9%) and 2010 (10.8%), with a 2.4 million-person increase callout</title>
 
-          <!-- y-axis labels (10px per percentage point, 0% at y=140) -->
-          <text class="c-axislbl" x="66" y="124" text-anchor="end">+2%</text>
-          <text class="c-axislbl bold" x="66" y="144" text-anchor="end">0</text>
-          <text class="c-axislbl" x="66" y="194" text-anchor="end">−5%</text>
-          <text class="c-axislbl" x="66" y="244" text-anchor="end">−10%</text>
-          <text class="c-axislbl" x="66" y="294" text-anchor="end">−15%</text>
-          <text class="c-axislbl" x="66" y="344" text-anchor="end">−20%</text>
-          <text class="c-axislbl" x="66" y="394" text-anchor="end">−25%</text>
+          <!-- Y-axis labels (0% to 12%) -->
+          <text class="bc-axislbl" x="160" y="84" text-anchor="end">12%</text>
+          <text class="bc-axislbl" x="160" y="144" text-anchor="end">9%</text>
+          <text class="bc-axislbl" x="160" y="204" text-anchor="end">6%</text>
+          <text class="bc-axislbl" x="160" y="264" text-anchor="end">3%</text>
+          <text class="bc-axislbl bold" x="160" y="324" text-anchor="end">0</text>
 
-          <!-- gridlines (x=80 to x=840, year -7 to year +12) -->
-          <line class="c-grid" x1="80" y1="120" x2="840" y2="120"/>
-          <line class="c-zero" x1="80" y1="140" x2="840" y2="140"/>
-          <line class="c-grid" x1="80" y1="190" x2="840" y2="190"/>
-          <line class="c-grid" x1="80" y1="240" x2="840" y2="240"/>
-          <line class="c-grid" x1="80" y1="290" x2="840" y2="290"/>
-          <line class="c-grid" x1="80" y1="340" x2="840" y2="340"/>
-          <line class="c-grid" x1="80" y1="390" x2="840" y2="390"/>
+          <!-- Gridlines -->
+          <line class="bc-grid" x1="170" y1="80" x2="800" y2="80"/>
+          <line class="bc-grid" x1="170" y1="140" x2="800" y2="140"/>
+          <line class="bc-grid" x1="170" y1="200" x2="800" y2="200"/>
+          <line class="bc-grid" x1="170" y1="260" x2="800" y2="260"/>
+          <line class="bc-axis" x1="170" y1="320" x2="800" y2="320"/>
 
-          <!-- event marker at year 0 (x=320) -->
-          <line class="c-event" x1="320" y1="106" x2="320" y2="404"/>
-          <text class="c-anno-sub" x="326" y="116">Flood event</text>
+          <!-- 2008 bar: 8.9% → height = 8.9 * 20 = 178; top y = 320 - 178 = 142 -->
+          <rect class="bc-bar-ctrl" x="260" y="142" width="140" height="178"/>
+          <text class="bc-bar-val" x="330" y="130" text-anchor="middle">8.9%</text>
+          <text class="bc-axislbl bold" x="330" y="344" text-anchor="middle">2008</text>
+          <text class="bc-bar-sub" x="330" y="362" text-anchor="middle">9.8 million Mexicans</text>
+          <text class="bc-bar-sub" x="330" y="378" text-anchor="middle">before the crisis</text>
 
-          <!-- 95% CI band (upper bound left→right, then lower bound right→left, closed) -->
-          <path fill="rgba(31,79,90,0.14)" d="M 80 118 L 120 125 L 160 117 L 200 122 L 240 124 L 280 121 L 320 140 L 360 123 L 400 125 L 440 131 L 480 135 L 520 153 L 560 175 L 600 198 L 640 221 L 680 245 L 720 269 L 760 287 L 800 292 L 840 286 L 840 372 L 800 378 L 760 371 L 720 351 L 680 325 L 640 299 L 600 272 L 560 245 L 520 217 L 480 195 L 440 185 L 400 175 L 360 167 L 320 140 L 280 161 L 240 164 L 200 162 L 160 157 L 120 165 L 80 158 Z"/>
+          <!-- 2010 bar: 10.8% → height = 10.8 * 20 = 216; top y = 320 - 216 = 104 -->
+          <rect class="bc-bar-treat" x="570" y="104" width="140" height="216"/>
+          <text class="bc-bar-val accent" x="640" y="92" text-anchor="middle">10.8%</text>
+          <text class="bc-axislbl bold" x="640" y="344" text-anchor="middle">2010</text>
+          <text class="bc-bar-sub" x="640" y="362" text-anchor="middle">12.2 million Mexicans</text>
+          <text class="bc-bar-sub" x="640" y="378" text-anchor="middle">after the crisis</text>
 
-          <!-- estimate line -->
-          <path stroke="#1F4F5A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 80 138 L 120 145 L 160 137 L 200 142 L 240 144 L 280 141 L 320 140 L 360 145 L 400 150 L 440 158 L 480 165 L 520 185 L 560 210 L 600 235 L 640 260 L 680 285 L 720 310 L 760 329 L 800 335 L 840 329"/>
-
-          <!-- data point circles at each event-time -->
-          <circle cx="80"  cy="138" r="2.4" fill="#1F4F5A"/>
-          <circle cx="120" cy="145" r="2.4" fill="#1F4F5A"/>
-          <circle cx="160" cy="137" r="2.4" fill="#1F4F5A"/>
-          <circle cx="200" cy="142" r="2.4" fill="#1F4F5A"/>
-          <circle cx="240" cy="144" r="2.4" fill="#1F4F5A"/>
-          <circle cx="280" cy="141" r="2.4" fill="#1F4F5A"/>
-          <circle cx="320" cy="140" r="3.4" fill="#1F4F5A"/>
-          <circle cx="360" cy="145" r="2.4" fill="#1F4F5A"/>
-          <circle cx="400" cy="150" r="2.4" fill="#1F4F5A"/>
-          <circle cx="440" cy="158" r="2.4" fill="#1F4F5A"/>
-          <circle cx="480" cy="165" r="2.8" fill="#1F4F5A"/>
-          <circle cx="520" cy="185" r="2.4" fill="#1F4F5A"/>
-          <circle cx="560" cy="210" r="2.4" fill="#1F4F5A"/>
-          <circle cx="600" cy="235" r="2.4" fill="#1F4F5A"/>
-          <circle cx="640" cy="260" r="2.4" fill="#1F4F5A"/>
-          <circle cx="680" cy="285" r="2.4" fill="#1F4F5A"/>
-          <circle cx="720" cy="310" r="2.4" fill="#1F4F5A"/>
-          <circle cx="760" cy="329" r="2.8" fill="#1F4F5A"/>
-          <circle cx="800" cy="335" r="2.4" fill="#1F4F5A"/>
-
-          <!-- endpoint emphasis at year +12 -->
-          <circle cx="840" cy="329" r="5" fill="#1F4F5A"/>
-          <circle cx="840" cy="329" r="10" fill="none" stroke="#1F4F5A" stroke-width="1.2" opacity="0.4"/>
-
-          <!-- reference-point annotation at year -1 -->
-          <text class="c-anno-sub" x="320" y="132" text-anchor="middle">e = −1 ref</text>
-
-          <!-- in-chart annotations for key event-time estimates -->
-          <text class="c-anno-sub" x="486" y="158" font-size="11">−2.53% at y3</text>
-          <text class="c-anno-sub" x="766" y="322" font-size="11">−18.9% at y10</text>
-
-          <!-- endpoint callout -->
-          <text class="c-callout-num" x="836" y="312" text-anchor="end">−18.9%</text>
-          <text class="c-callout-lbl" x="836" y="328" text-anchor="end">by year 12</text>
-
-          <!-- x-axis baseline and labels -->
-          <line class="c-axis-line" x1="80" y1="410" x2="840" y2="410"/>
-          <text class="c-axislbl" x="80"  y="428">−7y</text>
-          <text class="c-axislbl" x="200" y="428" text-anchor="middle">−3y</text>
-          <text class="c-axislbl bold" x="320" y="428" text-anchor="middle">0</text>
-          <text class="c-axislbl" x="480" y="428" text-anchor="middle">+3y</text>
-          <text class="c-axislbl" x="600" y="428" text-anchor="middle">+6y</text>
-          <text class="c-axislbl" x="720" y="428" text-anchor="middle">+9y</text>
-          <text class="c-axislbl" x="840" y="428" text-anchor="end">+12y</text>
-
-          <!-- x-axis subtitle -->
-          <text class="c-axislbl" x="460" y="450" text-anchor="middle" font-size="11">Event time (years from flood) · Sale price per square foot, % change relative to year −1</text>
+          <!-- Delta callout between the bars -->
+          <line x1="400" y1="115" x2="570" y2="115" stroke="#6B1F2D" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.6"/>
+          <path stroke="#6B1F2D" stroke-width="1.2" fill="#6B1F2D" d="M 565 111 L 573 115 L 565 119 Z" opacity="0.8"/>
+          <text class="bc-delta-num" x="485" y="80" text-anchor="middle">+2.4M</text>
+          <text class="bc-delta" x="485" y="100" text-anchor="middle">in two years</text>
         </svg>
 
-        <p class="hero-chart-source"><strong>Source:</strong> Sandoval-Olascoaga, Shu &amp; Porter, <em>Frontiers in Environmental Economics</em> (2025), Figure 2 · LightBox property transactions 2000–2020 · Sun &amp; Abraham (2021) event-study estimator · Property + year/month fixed effects · Tract-clustered standard errors · 95% confidence band shown · Pre-trends joint test p = 0.6 · n = 8,148,080 transactions</p>
+        <p class="hero-chart-source"><strong>Source:</strong> Vilar-Compte, Sandoval-Olascoaga, Bernal-Stuart, Shimoga &amp; Vargas-Bustamante, <em>Public Health Nutrition</em> 18(16):2934–2942 (2015) · Mexican National Household Income and Expenditure Survey (ENIGH) 2008 and 2010 · Severely food-insecure defined as 8–12 affirmative answers on the 12-item EMSA scale · Population shares reported in the paper; absolute counts derived from contemporaneous Mexican population</p>
       </figure>
 
       <div class="stat-strip">
-        <div><p class="s-num">$189,000</p><p class="s-lbl">Flood penalty on a $1M home <strong>12 years later</strong></p></div>
-        <div><p class="s-num">8.1M</p><p class="s-lbl">Property transactions analyzed across <strong>the contiguous U.S.</strong></p></div>
-        <div><p class="s-num">32.3%</p><p class="s-lbl">Of county <strong>salary &amp; wages expenditure</strong> at risk in worst-affected counties</p></div>
+        <div><p class="s-num">+2.4M</p><p class="s-lbl">Mexicans pushed into <strong>severe food insecurity</strong> between 2008 and 2010</p></div>
+        <div><p class="s-num">OR 0.74</p><p class="s-lbl">Crisis significantly reduced the odds of being <strong>food secure</strong> vs severely food insecure (p &lt; .05)</p></div>
+        <div><p class="s-num">57,122</p><p class="s-lbl">Households analyzed across <strong>two ENIGH waves</strong> (2008 + 2010)</p></div>
       </div>
 
       <section class="sec">
         <p class="kicker">Why it matters</p>
-        <h2>The flood-price literature said the discount was 5 to 10% and faded. We found it was 19% and growing.</h2>
-        <p>Prior empirical work on flood-exposed property values clustered around two findings. Discounts of 5 to 10%. And a "forgetting" pattern in which prices recovered within a decade. Both came from geographically narrow case studies (Miami-Dade, NYC after Sandy, individual counties in North Carolina or Georgia) and from standard hedonic regressions.</p>
-        <p>By assembling a nationwide repeated-sales panel and using the modern Sun–Abraham (2021) event-study estimator, we recover an effect more than twice as deep and entirely persistent, provided you stop pooling all neighborhoods together. <em>Where</em> the flood lands turns out to be everything.</p>
+        <h2>How the 2009 contraction reshaped Mexican household food security.</h2>
+        <p>Mexico's GDP contracted <strong>6.7% in 2009</strong> as the global financial crisis worked through the Mexican economy. The aggregate effects were well documented. The household-level effects on food security were not. Standard inequality and poverty statistics could not say whether households able to meet their food needs in 2008 were still doing so in 2010.</p>
+        <p>Few studies investigated this for middle-income countries during the 2008 crisis, and none for Mexico. ENIGH 2008 was the first wave to include the Mexican Food Security Scale (EMSA), so the 2008+2010 comparison provides a consistent food-security measure across the crisis.</p>
       </section>
 
       <section class="sec">
         <p class="kicker">How we did it</p>
-        <h2>Same property, before and after, across eight million sales.</h2>
-        <p>The unit of observation is the transaction. The outcome is log(sale price per square foot). The treatment cohort is the year a property's census tract first experienced a flood between 2000 and 2020, drawn from the Lai et al. (2022) NLP-extracted event database and the NOAA Storm Events Database. Property-level fixed effects absorb all time-invariant home characteristics. Year and month fixed effects absorb national macro shocks and seasonality. Standard errors cluster at the census-tract level.</p>
-        <p>The repeated-sales design restricts analysis to properties that transact multiple times across flood exposure, strengthening identification beyond standard hedonic models. Event time runs from −7 to +12 years, with e = −1 as the reference. We estimate the model separately for properties in census tracts that gained versus lost population in the 2000 to 2010 census, isolating the demographic moderator. A second stage estimates state-by-state elasticities of property-tax revenue to sale prices, then projects county-level fiscal impacts using First Street Foundation 30-year flood inundation projections and SSP-aligned block-group population forecasts from Shu et al. (2023).</p>
+        <h2>Pooled ENIGH 2008 and 2010 with the EMSA food-security scale.</h2>
+        <p>The analytical sample pooled <strong>29,468 households from ENIGH 2008</strong> with <strong>27,654 households from ENIGH 2010</strong>. Food security was measured at the household level using the EMSA, a 12-item scale that classifies households into four ordered categories. <em>Food secure</em> households gave zero affirmative answers. <em>Mildly food insecure</em> households gave 1 to 3. <em>Moderately food insecure</em> households gave 4 to 7. <em>Severely food insecure</em> households gave 8 to 12.</p>
+        <p>We estimated three regression models on the pooled 2008+2010 cross-section. A <strong>generalized ordered logistic regression</strong> evaluated the experience-based measure across the four EMSA categories. An <strong>OLS regression</strong> on the share of household disposable income spent on food evaluated the expenditure-based measure. A <strong>quantile regression</strong> on the same continuous outcome allowed the effect of the crisis to vary across the income distribution. All three models adjusted for rural/urban residence, total household income quintile, household size, the head's gender and educational attainment, and indicators for social security, social health insurance, and participation in Oportunidades (the Mexican cash-transfer program).</p>
       </section>
 
       <section class="sec">
         <p class="kicker">What we found</p>
-        <h2>A 19% penalty after 12 years, that splits in two when you condition on demographics.</h2>
-        <p><strong>Pooled.</strong> Three years after a flood, properties sell for <strong>2.5% less</strong> than identical non-flooded properties (p = 0.0001). By <strong>year 10, the gap is 18.9%</strong> (p &lt; 0.0001). On a million-dollar home, that is a <strong>$189,000 penalty</strong>. And it is still deepening.</p>
-        <p><strong>Split by population trajectory.</strong> In growing tracts, prices dip to <strong>−17.8% at year 8</strong>, then partially recover to <strong>−8.7% by year 11</strong>. In shrinking tracts, prices fall to <strong>−4.8% by year 5</strong> and continue down to <strong>−15% by year 11</strong>, with no rebound. The penalty is permanent <em>only where housing demand is also retreating</em>.</p>
-        <p><strong>Even before the flood.</strong> Growing-population tracts saw prices rise <strong>+3.05% per year faster</strong> than shrinking ones (2001 to 2022, statistically significant every year except during the Financial Crisis). The gap widened to <strong>+5.8% by 2022</strong>. Climate exposure compounds an existing demographic divergence. The gap was already there.</p>
-        <p><strong>The fiscal echo.</strong> The nationwide elasticity of property-tax revenue to sale prices is <strong>0.71</strong> (p = 0.001). A 1% price decline implies a 0.71% revenue decline. Twelve years after a flood, projected impacts on total county taxes range from <strong>2.7% to 24.5%</strong> (mean 12.1%). At the upper bound, that is <strong>32.3% of total county salary and wages</strong>, or <strong>21.83% of education expenditure</strong>. The same shrinking communities that face the deepest price penalty lose the most fiscal capacity to adapt.</p>
+        <h2>Severe food insecurity grew between 2008 and 2010 while the total food-insecure population stayed flat.</h2>
+        <p><strong>Experience-based measure.</strong> The crisis significantly reduced the odds of being food secure (relative to severely food insecure), <strong>OR = 0.74</strong> (p &lt; .05). The corresponding reduction in odds of being severely or moderately food-insecure (relative to mildly food-insecure or food-secure) was <strong>OR = 0.81</strong>. Households were materially more likely to be classified as severely food insecure after the crisis than to remain in any of the milder categories.</p>
+        <p><strong>Expenditure-based measure.</strong> The OLS regression showed the crisis significantly increased the share of total income spent on food (β coefficient of <strong>0.02</strong>, p &lt; .05). Households spent a larger share of their budget on food after the crisis than before.</p>
+        <p><strong>Distributional measure.</strong> The quantile regression showed the crisis effect on food-expenditure share was more pronounced at lower quantiles. Households already spending a large fraction of their income on food before the crisis spent an even larger fraction after.</p>
+        <p><strong>Across measures.</strong> The experience-based and expenditure-based food-security measures agreed in sign and gradient. Households more vulnerable before the crisis showed the largest deterioration after, across both self-reported food insecurity and the share of income spent on food.</p>
       </section>
 
       <blockquote class="pull-quote">
-        In communities already facing demographic and economic headwinds, flood events may exacerbate existing vulnerabilities, further constraining their tax base and financial capacity to invest in recovery or long-term adaptation.
-        <span class="pull-quote-cite">From the paper.</span>
+        Households that were more vulnerable before the financial crisis saw a worsened effect in terms of food insecurity with the crisis. Findings were consistent with both measures of food security — one based on self-reported experience and the other based on food spending.
+        <span class="pull-quote-cite">From the paper's conclusions.</span>
       </blockquote>
 
       <section class="cite">
         <p class="cite-label">Cite this paper <button class="cite-copy" type="button">Copy ↓</button></p>
-        <p class="cite-text">Sandoval-Olascoaga, S., Shu, E., &amp; Porter, J. (2025). Flood risk and property value changes: understanding the impact of climate event exposure in the context of population change. <em>Frontiers in Environmental Economics</em>, 4, 1615802. https://doi.org/10.3389/frevc.2025.1615802</p>
+        <p class="cite-text">Vilar-Compte, M., Sandoval-Olascoaga, S., Bernal-Stuart, A., Shimoga, S., &amp; Vargas-Bustamante, A. (2015). The impact of the 2008 financial crisis on food security and food expenditures in Mexico: a disproportionate effect on the vulnerable. <em>Public Health Nutrition</em>, 18(16), 2934–2942. https://doi.org/10.1017/S1368980014002493</p>
       </section>
 
     </main>
@@ -337,64 +295,66 @@
       <div class="side-group">
         <p class="side-label">Authors</p>
         <ul class="side-list">
-          <li><strong>Sebastian Sandoval-Olascoaga</strong></li>
-          <li><strong>Evelyn Shu</strong><br><span class="aff">First Street · American Institutes for Research</span></li>
-          <li><strong>Jeremy Porter</strong><br><span class="aff">First Street · CUNY</span></li>
+          <li><strong>Mireya Vilar-Compte</strong> · corresponding<br><span class="aff">Universidad Iberoamericana</span></li>
+          <li><strong>Sebastián Sandoval-Olascoaga</strong></li>
+          <li><strong>Ana Bernal-Stuart</strong><br><span class="aff">Universidad Iberoamericana</span></li>
+          <li><strong>Sandhya Shimoga</strong><br><span class="aff">UCLA Fielding School of Public Health</span></li>
+          <li><strong>Arturo Vargas-Bustamante</strong><br><span class="aff">UCLA Fielding School of Public Health</span></li>
         </ul>
       </div>
       <div class="side-group">
         <p class="side-label">Venue</p>
         <ul class="side-list">
-          <li><em>Frontiers in Environmental Economics</em></li>
-          <li>Vol. 4, art. 1615802 · August 2025</li>
-          <li>DOI: 10.3389/frevc.2025.1615802</li>
+          <li><em>Public Health Nutrition</em></li>
+          <li>Vol. 18, Issue 16 · pp. 2934–2942</li>
+          <li>First published online: November 2014 · Volume year: 2015</li>
+          <li>DOI: 10.1017/S1368980014002493</li>
         </ul>
-        <span class="side-pill">Open Access</span>
+        <span class="side-pill">Cambridge University Press</span>
       </div>
       <div class="side-group">
         <p class="side-label">Methods</p>
         <ul class="side-list">
-          <li>Repeated-sales event study</li>
-          <li>Sun &amp; Abraham (2021) estimator</li>
-          <li>Property + year + month fixed effects</li>
-          <li>Tract-clustered standard errors</li>
-          <li>State-by-state elasticity stage</li>
+          <li>Generalized ordered logistic regression</li>
+          <li>OLS on food-expenditure share</li>
+          <li>Quantile regression</li>
+          <li>Pooled cross-sectional design (pre/post crisis)</li>
         </ul>
       </div>
       <div class="side-group">
         <p class="side-label">Data</p>
         <ul class="side-list">
-          <li>LightBox property transactions</li>
-          <li><strong>8,148,080</strong> sales · 2000–2020</li>
-          <li>Lai et al. + NOAA flood events</li>
-          <li>First Street flood projections</li>
-          <li>Census tract population (2000, 2010)</li>
+          <li>ENIGH 2008 + 2010 (Mexican National Household Income and Expenditure Survey)</li>
+          <li><strong>29,468</strong> households (2008)</li>
+          <li><strong>27,654</strong> households (2010)</li>
+          <li>EMSA · 12-item Mexican Food Security Scale</li>
         </ul>
       </div>
       <div class="side-group">
         <p class="side-label">Read &amp; download</p>
-        <a class="side-link" href="https://www.frontiersin.org/journals/environmental-economics/articles/10.3389/frevc.2025.1615802/full" target="_blank" rel="noopener noreferrer"><span class="arrow">↗</span>Read at Frontiers</a>
+        <a class="side-link" href="https://doi.org/10.1017/S1368980014002493" target="_blank" rel="noopener noreferrer"><span class="arrow">↗</span>Read at Cambridge Core</a>
+        <a class="side-link" href="files/FinalPHN.pdf" target="_blank" rel="noopener noreferrer"><span class="arrow">↗</span>Author copy <span class="ext">PDF</span></a>
       </div>
     </aside>
   </div>
 
   <section class="related">
-    <div class="related-head"><span class="related-label">Related work</span><span class="related-sub">Housing · Climate</span></div>
+    <div class="related-head"><span class="related-label">Related work</span><span class="related-sub">Public health · Inequality · Mexico</span></div>
     <div class="related-grid">
-      <a class="rel-card" href="preview-paper.html">
-        <p class="rel-eye">2024 · Paper</p>
-        <p class="rel-q">When buyers see a home's flood risk, <em>where do they go instead?</em></p>
-        <p class="rel-meta">NBER w33119 · R&amp;R, <em>American Economic Review</em></p>
-      </a>
-      <a class="rel-card" href="preview-paper-nature.html">
-        <p class="rel-eye">2023 · Paper</p>
-        <p class="rel-q">Blocks exposed to frequent flooding flip from <em>+5.76% growth to −1.42% loss.</em></p>
-        <p class="rel-meta"><em>Nature Communications</em></p>
-      </a>
       <a class="rel-card" href="preview-paper-jama.html">
         <p class="rel-eye">2021 · Paper</p>
         <p class="rel-q">When states ended their eviction bans, <em>what happened to COVID-19?</em></p>
         <p class="rel-meta"><em>JAMA Network Open</em></p>
+      </a>
+      <a class="rel-card" href="preview-thesis-master.html">
+        <p class="rel-eye">MA · PSE · 2015</p>
+        <p class="rel-q">How rich are the richest <em>in Mexico</em>, really?</p>
+        <p class="rel-meta">Advised by Alvaredo &amp; Piketty</p>
+      </a>
+      <a class="rel-card" href="preview-thesis-phd.html">
+        <p class="rel-eye">PhD · MIT · 2023</p>
+        <p class="rel-q">Housing dynamics in the face of <em>shocks</em></p>
+        <p class="rel-meta">Three essays · climate, eviction, speculation</p>
       </a>
     </div>
   </section>

@@ -100,6 +100,23 @@
   .footlinks a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s ease,color .15s ease;}
   .footlinks a:hover{color:var(--ink);border-bottom-color:var(--accent);}
   .copy{font-family:var(--sans);font-size:11.5px;color:var(--hint);letter-spacing:0.06em;margin:0;}
+  /* PRESS: featured + supplementary pattern */
+  .press-featured{margin:32px 0 28px;}
+  .pf-outlet{font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+  .pf-quote{font-family:var(--serif);font-style:italic;font-variation-settings:"opsz" 36;font-size:clamp(20px,1.8vw,22px);line-height:1.45;color:var(--ink);font-weight:400;margin:0 0 16px;padding:0;border:none;max-width:78ch;}
+  .pf-attr{font-family:var(--sans);font-size:14px;color:var(--muted);margin:0;line-height:1.5;}
+  .pf-attr a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--hair);transition:color .15s ease,border-color .15s ease;}
+  .pf-attr a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+  .pf-attr .sep{color:var(--hint);margin:0 8px;}
+  .press-sep{border:0;border-top:1px solid var(--hair);margin:28px 0 24px;}
+  .press-secondary{list-style:none;padding:0;margin:0;display:grid;gap:22px;}
+  .press-secondary li{margin:0;}
+  .ps-row{font-family:var(--serif);font-size:16.5px;line-height:1.5;color:var(--text);margin:0 0 3px;font-variation-settings:"opsz" 16;}
+  .ps-outlet{color:var(--ink);font-weight:600;margin-right:4px;}
+  .ps-link{color:inherit;text-decoration:none;border-bottom:1px solid transparent;transition:color .15s ease,border-color .15s ease;}
+  .ps-link:hover{color:var(--accent);border-bottom-color:var(--accent);}
+  .ps-date{font-family:var(--sans);font-size:9px;color:var(--muted);letter-spacing:0.04em;margin:0;}
+  @media (max-width:640px){.pf-quote{font-size:18px;}}
   @media (max-width:980px){.paper-body{grid-template-columns:1fr;gap:32px;}.paper-side{position:static;margin-top:0;}.related-grid{grid-template-columns:1fr;gap:16px;}}
   @media (max-width:640px){.wrap{padding:0 22px;}.head-grid{grid-template-columns:1fr;gap:18px;}header.site{padding-top:32px;}.paper-hero{padding:40px 0 28px;}.hero-chart{padding:24px 18px 18px;}.foot-grid{grid-template-columns:1fr;gap:22px;}.stat-strip{grid-template-columns:1fr;gap:16px;}}
 
@@ -198,10 +215,10 @@
     <p class="paper-eyebrow">Demographic projection <span class="sep">·</span> <span class="year">2023</span></p>
     <h2 class="paper-q">When flood risk drives migration, the demographic map <em>flips.</em></h2>
     <p class="paper-byline"><strong>Evelyn G. Shu</strong> · <strong>Jeremy R. Porter</strong> · <strong>Mathew E. Hauer</strong> · <strong>Sebastian Sandoval-Olascoaga</strong> · and the First Street Foundation team</p>
-    <span class="paper-status"><span class="dot"></span>Published · Nature Communications · December 2023</span>
+    <span class="paper-status"><span class="dot"></span>Published - Nature Communications</span>
   </section>
 
-  <p class="lead">When you integrate <strong>high-resolution flood risk</strong> into U.S. population projections, the blocks most exposed to <em>frequent</em> flooding flip from a <strong>+5.76% projected growth</strong> to a <strong>−1.42% loss</strong> over 30 years. The blocks that look like growth on the standard demographic map turn out, once climate is on the map too, to be among the country's emerging hollow-outs.</p>
+  <p class="lead">When you integrate <strong>high-resolution flood risk</strong> into U.S. population projections, the blocks most exposed to <em>frequent</em> flooding flip from a <strong>+5.76% projected growth</strong> to a <strong>−1.42% loss</strong> over 30 years. Standard demographic forecasts assume those blocks will keep growing. The 2000–2020 empirical relationship between flood exposure and population change implies otherwise.</p>
 
 
 
@@ -241,14 +258,14 @@
           <line class="sc-axis" x1="280" y1="80" x2="280" y2="350"/>
           <line class="sc-axis" x1="640" y1="80" x2="640" y2="350"/>
 
-          <!-- =========== 100-year RP =========== -->
+          <!-- =========== Composite (any 5/20/100-yr exposure) =========== -->
           <!-- baseline +14.02% → adjusted +12.47%, swing -1.54pp -->
           <line class="sc-line" x1="280" y1="100" x2="640" y2="118"/>
           <circle class="sc-dot" cx="280" cy="100" r="5"/>
           <circle class="sc-dot" cx="640" cy="118" r="5"/>
           <text class="sc-val pos" x="270" y="105" text-anchor="end">+14.02%</text>
           <text class="sc-val pos" x="650" y="123">+12.47%</text>
-          <text class="sc-row-sub" x="685" y="123" font-size="10.5">100-yr RP</text>
+          <text class="sc-row-sub" x="685" y="123" font-size="10.5">Any RP exposure</text>
           <text class="sc-row-sub" x="685" y="137" font-size="10.5" fill="var(--accent)">−1.54pp</text>
 
           <!-- =========== 20-year RP =========== -->
@@ -296,14 +313,14 @@
       <div class="stat-strip">
         <div><p class="s-num">3-meter</p><p class="s-lbl">Resolution of First Street's <strong>fluvial, pluvial, and coastal</strong> flood model</p></div>
         <div><p class="s-num">−7.19 pp</p><p class="s-lbl">Cumulative growth swing for blocks most exposed to <strong>5-year-RP flooding</strong></p></div>
-        <div><p class="s-num">21.8M</p><p class="s-lbl">U.S. properties already exposed to flooding · rising to <strong>23.5M by mid-century</strong></p></div>
+        <div><p class="s-num">7 to 10%</p><p class="s-lbl">Miami-Dade tipping point. Growth rises with exposure up to here, then <strong>turns negative</strong></p></div>
       </div>
 
       <section class="sec">
         <p class="kicker">Why it matters</p>
-        <h2>Population projections quietly assume flood risk doesn't change where Americans live.</h2>
-        <p>Almost every demographic projection in active use treats flood exposure as exogenous to population. County-level Census Bureau forecasts, SSP scenarios feeding IPCC integrated assessment models, state-level planning forecasts. People will live where they live, and the flood line moves around them.</p>
-        <p>The empirical record from the past 23 years says otherwise. Where flood exposure is sufficiently concentrated, people leave (or never arrive). The question this paper asked was whether you could measure that relationship precisely enough to <em>fold it back into</em> the projections. To produce a forecast that knows about the water.</p>
+        <h2>Population projections assume flood risk does not change where Americans live.</h2>
+        <p>Almost every demographic projection in active use treats flood exposure as exogenous to population. County-level Census Bureau forecasts, SSP scenarios feeding IPCC integrated assessment models, and state-level planning forecasts all hold population spatially fixed and treat the flood line as the only variable.</p>
+        <p>The 23-year empirical record from 2000 to 2023 contradicts that assumption. Where flood exposure is sufficiently concentrated, people leave (or never arrive). This paper asks whether that relationship can be measured precisely enough to incorporate into the projections, producing a forecast that accounts for climate exposure at high spatial resolution.</p>
       </section>
 
       <section class="sec">
@@ -316,20 +333,47 @@
       <section class="sec">
         <p class="kicker">What we found</p>
         <h2>Frequent flooding moves more people than rare disasters.</h2>
-        <p><strong>The headline.</strong> Census blocks with relatively high exposure to <strong>5-year-RP flooding</strong> swing from <strong>+5.76% baseline cumulative growth to −1.42% loss</strong> when the climate-population relationship is integrated. That is a <strong>−7.19 percentage-point</strong> swing, the largest in the paper. For 20-year-RP exposure, the swing is <strong>−1.40pp</strong>. For 100-year-RP, <strong>−1.54pp</strong>. The most dramatic adjustment is for the most common floods, not the catastrophic ones.</p>
-        <p><strong>The Miami-Dade case.</strong> Within Miami-Dade County the relationship between exposure and growth is non-linear. Population continues to rise with exposure up to roughly <strong>7 to 10% of properties affected</strong>, then turns sharply negative beyond that threshold. The most exposed blocks (Atlantic shoreline, Miami Beach, and blocks adjacent to the Everglades) are where the adjusted forecast bleeds red.</p>
+        <p><strong>The headline.</strong> Census blocks with relatively high exposure to <strong>5-year-RP flooding</strong> swing from <strong>+5.76% baseline cumulative growth to −1.42% loss</strong> when the climate-population relationship is integrated. That is a <strong>−7.19 percentage-point</strong> swing, the largest in the paper. For 20-year-RP exposure, the swing is <strong>−1.40pp</strong>. For the composite of any high exposure (5, 20, or 100-year), <strong>−1.54pp</strong>. The most dramatic adjustment shows up where flooding is most frequent, not where it is most severe.</p>
+        <p><strong>The Miami-Dade case.</strong> Within Miami-Dade County the relationship between exposure and growth is non-linear. Population continues to rise with exposure up to roughly <strong>7 to 10% of properties affected</strong>, then turns negative beyond that threshold. The most exposed blocks (Atlantic shoreline, Miami Beach, and blocks closest to the low-lying Everglades) are where the climate-adjusted forecast shows the largest projected population declines.</p>
         <p><strong>The Cincinnati counter-example.</strong> The flood-population relationship is not a national constant. In Cincinnati, highly inundated blocks are actually <em>more</em> likely to grow than less-exposed ones. A coastal and inland asymmetry that breaks any simple narrative about exposure meaning decline. The state-by-state estimation strategy is what makes this visible.</p>
-        <p><strong>A model that pulls in both directions.</strong> Within a county that's still projected to grow on net, the spatial distribution of that growth shifts. High-exposure blocks lose. Lower-exposure blocks attract spillover. The forecast becomes lumpier. The lumps fall along the climate gradient.</p>
+        <p><strong>Within-county redistribution.</strong> Within a county that is still projected to grow on net, the spatial distribution of growth shifts. High-exposure blocks lose population. Lower-exposure blocks gain population. The county-level forecast becomes more spatially uneven, with growth concentrating in less-exposed blocks.</p>
+      </section>
+
+      <section class="sec">
+        <p class="kicker">In the press</p>
+
+        <article class="press-featured">
+          <p class="pf-outlet">Bloomberg</p>
+          <blockquote class="pf-quote">"Over the last two decades, as San Antonio and surrounding Bexar County, Texas, grew by more than 600,000 people, some 17% of the city's blocks experienced a decrease in population."</blockquote>
+          <p class="pf-attr"><a href="https://www.bloomberg.com/news/articles/2023-12-18/more-than-3-million-americans-are-already-climate-migrants-researchers-say" target="_blank" rel="noopener noreferrer">More Than 3 Million Americans Are Already Climate Migrants, Researchers Say</a><span class="sep">·</span>December 2023</p>
+        </article>
+
+        <hr class="press-sep" />
+
+        <ul class="press-secondary">
+          <li>
+            <p class="ps-row"><span class="ps-outlet">Associated Press:</span> <a class="ps-link" href="https://apnews.com/article/climate-change-flooding-insurance-migration-rain-a43c10d60d5c4f0b9fe30e0a7fe024c4" target="_blank" rel="noopener noreferrer">Flooding drives millions to move as climate migration patterns emerge</a></p>
+            <p class="ps-date">December 2023</p>
+          </li>
+          <li>
+            <p class="ps-row"><span class="ps-outlet">CBS News:</span> <a class="ps-link" href="https://www.cbsnews.com/news/climate-change-america-3-million-migrants-first-street-nature/" target="_blank" rel="noopener noreferrer">About 3 million Americans are already "climate migrants," analysis finds. Here's where they left.</a></p>
+            <p class="ps-date">December 2023</p>
+          </li>
+          <li>
+            <p class="ps-row"><span class="ps-outlet">Axios:</span> <a class="ps-link" href="https://www.axios.com/2023/12/18/climate-change-migration-us" target="_blank" rel="noopener noreferrer">Climate migration may become "abandonment" as people flee flooding</a></p>
+            <p class="ps-date">December 2023</p>
+          </li>
+        </ul>
       </section>
 
       <blockquote class="pull-quote">
-        Research that equates inundated populations to the migration population may be overly simplistic if it does not adequately include other covariates in the modeling.
-        <span class="pull-quote-cite">From the paper.</span>
+        Exposure to high frequency flooding (5 and 20-year return periods) results in 2-7% lower growth rates than baseline projections. This is exacerbated in areas with relatively high exposure to frequent flooding where growth is expected to decline over the next 30 years.
+        <span class="pull-quote-cite">From the abstract.</span>
       </blockquote>
 
       <section class="cite">
         <p class="cite-label">Cite this paper <button class="cite-copy" type="button">Copy ↓</button></p>
-        <p class="cite-text">Shu, E. G., Porter, J. R., Hauer, M. E., Sandoval-Olascoaga, S., Gourevitch, J., Wilson, B., Pope, M., Melecio-Vazquez, D., &amp; Kearns, E. (2023). Integrating climate change induced flood risk into future population projections. <em>Nature Communications</em>, 14, 7870. doi:10.1038/s41467-023-43493-8</p>
+        <p class="cite-text">Shu, E. G., Porter, J. R., Hauer, M. E., Sandoval Olascoaga, S., Gourevitch, J., Wilson, B., Pope, M., Melecio-Vazquez, D., &amp; Kearns, E. (2023). Integrating climate change induced flood risk into future population projections. <em>Nature Communications</em>, 14, 7870. https://doi.org/10.1038/s41467-023-43493-8</p>
       </section>
 
     </main>
@@ -342,10 +386,10 @@
           <li><strong>Jeremy R. Porter</strong><br><span class="aff">First Street · CUNY · Columbia Mailman</span></li>
           <li><strong>Mathew E. Hauer</strong><br><span class="aff">Florida State University</span></li>
           <li><strong>Sebastian Sandoval-Olascoaga</strong></li>
-          <li><strong>Jeremy Gourevitch</strong><br><span class="aff">First Street Foundation</span></li>
+          <li><strong>Jesse Gourevitch</strong><br><span class="aff">Environmental Defense Fund</span></li>
           <li><strong>Bradley Wilson</strong><br><span class="aff">First Street Foundation</span></li>
           <li><strong>Mariah Pope</strong><br><span class="aff">First Street Foundation</span></li>
-          <li><strong>Daniel Melecio-Vazquez</strong><br><span class="aff">First Street Foundation</span></li>
+          <li><strong>David Melecio-Vazquez</strong><br><span class="aff">First Street Foundation</span></li>
           <li><strong>Edward Kearns</strong><br><span class="aff">First Street Foundation</span></li>
         </ul>
       </div>

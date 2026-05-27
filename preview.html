@@ -171,41 +171,56 @@
   }
   .now p em{font-style:italic; color:var(--ink);}
 
-  /* THREADS (right column) */
-  .threads{margin:0;}
-  .threads-head{
+  /* SELECTED WORK (right column) */
+  .selected{margin:0;}
+  .selected-head{
     display:flex; align-items:baseline; gap:18px;
-    padding-bottom:14px; margin:0 0 8px;
+    padding-bottom:14px; margin:0 0 4px;
     border-bottom:1px solid var(--ink);
   }
-  .threads-label{
+  .selected-label{
     font-family:var(--sans); font-size:12px; font-weight:600;
     letter-spacing:0.22em; text-transform:uppercase; color:var(--ink);
   }
-  .thread-card{
-    display:block; padding:22px 0; border-bottom:1px solid var(--hair);
+  .sw-row{
+    display:block;
+    padding:22px 0;
+    border-bottom:1px solid var(--hair);
     text-decoration:none; color:inherit;
+    transition:background .15s ease;
   }
-  .thread-card:last-child{border-bottom:none;}
-  .thread-card:hover .thread-title{color:var(--accent);}
-  .thread-eye{
+  .sw-row:last-of-type{border-bottom:none;}
+  .sw-row:hover{background:var(--paper-tint);}
+  .sw-row:hover .sw-title{color:var(--accent);}
+  .sw-eye{
     font-family:var(--sans); font-size:10.5px; font-weight:600;
-    letter-spacing:0.18em; text-transform:uppercase;
-    color:var(--muted); margin:0 0 8px;
+    letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--muted); margin:0 0 6px;
   }
-  .thread-title{
+  .sw-eye em{font-style:italic; color:var(--muted); text-transform:none; letter-spacing:0;}
+  .sw-sep{color:var(--hint); margin:0 5px;}
+  .sw-title{
     font-family:var(--serif); font-weight:500; color:var(--ink);
-    font-size:20px; line-height:1.22;
+    font-size:18px; line-height:1.25;
     font-variation-settings:"opsz" 36;
     letter-spacing:-0.005em;
     margin:0 0 8px;
     transition:color .15s ease;
   }
-  .thread-title em{font-style:italic;}
-  .thread-note{
+  .sw-find{
     font-family:var(--sans); font-size:13px; color:var(--text);
-    line-height:1.55; margin:0;
+    line-height:1.5; margin:0;
   }
+  .sw-find strong{color:var(--ink); font-weight:600;}
+  .sw-all{
+    display:inline-block; margin-top:18px;
+    font-family:var(--sans); font-size:12px; font-weight:500;
+    letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--accent); text-decoration:none;
+    border-bottom:1px solid var(--accent); padding-bottom:2px;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .sw-all:hover{color:var(--ink); border-bottom-color:var(--ink);}
 
   /* footer */
   footer{margin-top:96px; padding:48px 0 96px; border-top:1px solid var(--hair);}
@@ -369,7 +384,7 @@
         <p class="about-label">About</p>
         <p>Sebastian Olascoaga serves as the <strong>Director of Research and Evaluation for the City of Boston</strong> and is a <strong>Research Affiliate at MIT</strong>. He established and now leads the City's evaluation unit, which conducts impact evaluations, representative surveys, and economic analyses that inform budget and policy decisions across major city programs and services. His team also equips city departments with predictive and causal research tools to act on challenges from housing and public health to climate resilience and operations.</p>
         <p>Before Boston, he was a research fellow at <strong>Redfin</strong> running consumer-platform experiments, a visiting health-economist fellow at <strong>OptumLabs</strong>, Director of Economic Policy at <strong>Mexico's Federal Treasury</strong>, and a researcher at the <strong>OECD</strong> in Paris.</p>
-        <p>Sebastian holds a <strong>PhD in Urban Economics and Policy</strong> from MIT, an <strong>MA in Applied Economics</strong> from the Paris School of Economics, and a <strong>BA in Economics</strong> from CIDE. His research has been covered in <em>The New York Times</em>, Bloomberg, NPR Marketplace, and MIT News, and published in <em>JAMA Network Open</em>, <em>Nature Communications</em>, NBER, and <em>Frontiers in Environmental Economics</em>.</p>
+        <p>Sebastian holds a <strong>PhD in Urban Economics and Policy</strong> from MIT, an <strong>MA in Applied Economics</strong> from the Paris School of Economics, and a <strong>BA in Economics</strong> from CIDE. His research has been covered in <em>The New York Times</em>, Bloomberg, NPR Marketplace, and MIT News, and published in <em>JAMA Network Open</em>, <em>Nature Communications</em>, NBER, <em>Frontiers in Environmental Economics</em>, and <em>Public Health Nutrition</em>.</p>
         <p>In his free time you can find him at Fenway rooting for the Red Sox, rock climbing in New England, or searching for fresh waves in the Atlantic.</p>
       </section>
 
@@ -377,34 +392,36 @@
 
     <aside class="landing-side reveal d4">
 
-      <section class="threads">
-        <div class="threads-head">
-          <span class="threads-label">Threads</span>
+      <section class="selected">
+        <div class="selected-head">
+          <span class="selected-label">Selected work</span>
         </div>
 
-        <a class="thread-card" href="preview-papers.html#housing+climate">
-          <p class="thread-eye">3 papers · 2023–25</p>
-          <h3 class="thread-title">Housing markets under climate stress</h3>
-          <p class="thread-note">Field experiments and event studies on what happens when climate risk becomes visible in housing markets.</p>
+        <a class="sw-row" href="preview-paper.html">
+          <p class="sw-eye">NBER w33119 <span class="sw-sep">·</span> R&amp;R, <em>American Economic Review</em></p>
+          <h3 class="sw-title">Flood-risk disclosure on a real-estate platform</h3>
+          <p class="sw-find">Treated high-risk buyers placed offers on homes with <strong>57% lower flood scores</strong> than controls.</p>
         </a>
 
-        <a class="thread-card" href="preview-papers.html#housing+public-health">
-          <p class="thread-eye">1 paper · 2021</p>
-          <h3 class="thread-title">Housing &amp; public health</h3>
-          <p class="thread-note">Eviction moratoria expiration and COVID-19 infection risk across strata of health and socioeconomic status, in <em>JAMA Network Open</em>.</p>
+        <a class="sw-row" href="preview-paper-frontiers.html">
+          <p class="sw-eye"><em>Frontiers in Environmental Economics</em></p>
+          <h3 class="sw-title">Flood risk and property value changes</h3>
+          <p class="sw-find">Flood-exposed properties lose <strong>18.9% of value</strong> 12 years after exposure, across 8.1M U.S. sales.</p>
         </a>
 
-        <a class="thread-card" href="preview-papers.html#public-sector">
-          <p class="thread-eye">4 projects · ongoing</p>
-          <h3 class="thread-title">Public-sector evaluation &amp; applied AI</h3>
-          <p class="thread-note">A city's first RCT (BidBot, RAG procurement), an enterprise GenAI evaluation pipeline, fare-free buses, and the rental-inspection ordinance.</p>
+        <a class="sw-row" href="preview-paper-nature.html">
+          <p class="sw-eye"><em>Nature Communications</em></p>
+          <h3 class="sw-title">Integrating flood risk into U.S. population projections</h3>
+          <p class="sw-find">Blocks most exposed to frequent flooding flip from <strong>+5.76% projected growth to −1.42% loss</strong> over 30 years.</p>
         </a>
 
-        <a class="thread-card" href="preview-papers.html#inequality">
-          <p class="thread-eye">2 dissertations · 2015 &amp; 2023</p>
-          <h3 class="thread-title">Dissertations</h3>
-          <p class="thread-note">An MA on Mexico's top incomes, advised by Alvaredo and Piketty. A PhD on housing systems under shocks, at MIT DUSP.</p>
+        <a class="sw-row" href="preview-paper-jama.html">
+          <p class="sw-eye"><em>JAMA Network Open</em></p>
+          <h3 class="sw-title">Eviction moratoria expiration and COVID-19 infection risk</h3>
+          <p class="sw-find">Twelve weeks after states lifted eviction bans, COVID-19 hazard reached <strong>HR 1.83</strong>, concentrated in higher-comorbidity strata.</p>
         </a>
+
+        <a class="sw-all" href="preview-papers.html">See all work →</a>
 
       </section>
 
