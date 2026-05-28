@@ -3,15 +3,25 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Eviction Moratoria Expiration and COVID-19. Sebastian Olascoaga</title>
+<title>Eviction Moratoria Expiration and COVID-19 · Sebastian Olascoaga</title>
 <meta name="description" content="When states let eviction moratoria expire during the COVID-19 pandemic, infection risk rose. The harm concentrated on those already sick and already poor." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Sebastian Olascoaga" />
+<meta property="og:title" content="Eviction Moratoria Expiration and COVID-19 · Sebastian Olascoaga" />
+<meta property="og:description" content="When states let eviction moratoria expire during the COVID-19 pandemic, infection risk rose. The harm concentrated on those already sick and already poor." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Eviction Moratoria Expiration and COVID-19 · Sebastian Olascoaga" />
+<meta name="twitter:description" content="When states let eviction moratoria expire during the COVID-19 pandemic, infection risk rose. The harm concentrated on those already sick and already poor." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{--paper:#FBFBFB;--paper-tint:#F4F4F4;--paper-deep:#E8E8E8;--ink:#1A1916;--text:#38342F;--muted:#6D6862;--hint:#8F8B85;--hair:rgba(20,20,20,0.10);--rule:rgba(20,20,20,0.18);--counter:#B3AEA8;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.10);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.12);--serif:"Source Serif 4",Georgia,serif;--sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
   @media (prefers-color-scheme: dark){:root{--paper:#15110D;--paper-tint:#1F1A14;--paper-deep:#2A241D;--ink:#F7F3EE;--text:#DDD3C5;--muted:#999186;--hint:#6E6760;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#7A726B;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.14);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.16);}}
-  *{box-sizing:border-box;}html{-webkit-text-size-adjust:100%;}
+  *{box-sizing:border-box;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  :focus:not(:focus-visible){outline:none;}html{-webkit-text-size-adjust:100%;}
   body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;}
   a{color:inherit;}.num{font-variant-numeric:tabular-nums;}
   .wrap{max-width:1440px;margin:0 auto;padding:0 40px;}
@@ -50,9 +60,9 @@
   .hero-chart svg{width:100%;height:auto;display:block;overflow:visible;}
   .hero-chart-source{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair);font-family:var(--sans);font-size:11.5px;color:var(--hint);letter-spacing:0.02em;}
   .hero-chart-source strong{color:var(--muted);font-weight:500;}
-  .c-axis-line{stroke:rgba(20,20,20,0.18);stroke-width:1;}
-  .c-grid{stroke:rgba(20,20,20,0.08);stroke-width:1;}
-  .c-zero{stroke:rgba(20,20,20,0.32);stroke-width:1;}
+  .c-axis-line{stroke:var(--rule);stroke-width:1;}
+  .c-grid{stroke:var(--hair);stroke-width:1;}
+  .c-zero{stroke:var(--rule);stroke-width:1;}
   .c-event{stroke:var(--ink);stroke-width:1;stroke-dasharray:3 3;}
   .c-ci{fill:var(--treat-soft); opacity:0.6;}
   .c-axislbl{font-family:var(--sans);font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums;}
@@ -139,8 +149,10 @@
   /* WORK DROPDOWN */
   .nav-item{position:relative;} .nav-item::after{content:"";position:absolute;top:100%;left:0;right:0;height:14px;} header{position:relative;z-index:200;}
   .nav-item .caret{display:inline-block; font-size:0.7em; margin-left:3px; position:relative; top:-1px; opacity:0.7; transition:transform .18s ease;}
-  .nav-item:hover .caret, .nav-item:focus-within .caret{transform:rotate(180deg);}
-  .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
+  .nav-item:hover .caret, .nav-item:focus-within .caret, .nav-item.open .caret{transform:rotate(180deg);}
+    .nav-trigger{margin:0; background:none; border:0; border-bottom:1px solid transparent; font:inherit; color:var(--muted); cursor:pointer; padding:0 0 3px 0; display:inline-flex; align-items:center; transition:color .15s ease, border-color .15s ease;}
+  .nav-trigger.here{color:var(--ink); border-bottom-color:var(--accent);}
+  .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger, .nav-item.open .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
   .nav-dropdown{
     position:absolute; top:100%; left:-14px;
     min-width:248px; padding:8px 0;
@@ -150,7 +162,7 @@
     transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.25s;
     z-index:100;
   }
-  .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown{
+  .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown, .nav-item.open .nav-dropdown{
     opacity:1; visibility:visible; transform:translateY(0); transition-delay:0s;
   }
   .nav-dropdown .dd-item{
@@ -160,14 +172,22 @@
     transition:background .12s ease, color .12s ease;
   }
   .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{
-    background:var(--paper-tint); color:var(--accent); outline:none; border:none;
+    background:var(--paper-tint); color:var(--accent); border:none;
   }
-  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;} .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
-  .nav-dropdown .dd-item.disabled:hover{background:transparent; color:var(--hint);}
+  .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
   .dd-title{display:block; font-size:14px; font-weight:500;}
   .dd-note{display:block; font-size:11.5px; color:var(--muted); margin-top:2px; font-style:italic;}
-  .dd-item.disabled .dd-note{color:var(--hint);}
-  @media (max-width:640px){.nav-dropdown, .nav-item .caret{display:none;}}
+  @media (max-width:640px){
+    .nav-item .nav-trigger, .nav-item .caret, .nav-item::after{display:none;}
+    .nav-item{position:static;}
+    .nav-dropdown{position:static; display:inline-flex; flex-wrap:wrap; gap:8px 26px; min-width:0; opacity:1; visibility:visible; transform:none; transition:none; background:none; border:none; box-shadow:none; padding:0;}
+    .nav-dropdown .dd-item{padding:0 0 3px 0; border-bottom:1px solid transparent; background:none; color:var(--muted);}
+    .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{background:none; color:var(--ink); border-bottom-color:var(--accent);}
+    .nav-dropdown a.dd-item[aria-current="page"]{background:none;}
+    .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent);}
+    .nav-dropdown .dd-note{display:none;}
+    .nav-dropdown .dd-title{font-size:13.5px; font-weight:400;}
+  }
 </style>
 </head>
 <body>
@@ -181,20 +201,16 @@
       <nav class="nav">
         <a href="preview.html">Home</a>
         <div class="nav-item">
-          <a href="preview-papers.html" class="nav-trigger here">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
-          <div class="nav-dropdown" role="menu">
-            <a href="preview-papers.html" role="menuitem" class="dd-item" aria-current="page">
+          <button type="button" class="nav-trigger here" aria-expanded="false" aria-haspopup="true">Research <span class="caret" aria-hidden="true">&#x25BE;</span></button>
+          <div class="nav-dropdown">
+            <a href="preview-papers.html" class="dd-item" aria-current="page">
               <span class="dd-title">Published Work</span>
               <span class="dd-note">Papers, working papers, and theses</span>
             </a>
-            <a href="preview-shorts.html" role="menuitem" class="dd-item">
-              <span class="dd-title">Short Pieces</span>
-              <span class="dd-note">Research notes and briefs</span>
+            <a href="preview-shorts.html" class="dd-item">
+              <span class="dd-title">Briefs</span>
+              <span class="dd-note">Public-facing notes and analyses</span>
             </a>
-            <span class="dd-item disabled" role="menuitem" aria-disabled="true">
-              <span class="dd-title">Teaching</span>
-              <span class="dd-note">Coming soon</span>
-            </span>
           </div>
         </div>
         <a href="preview-cv.html">CV</a>
@@ -206,7 +222,7 @@
   </header>
 
   <section class="paper-hero">
-    <p class="breadcrumb"><a href="preview-papers.html">Work</a><span class="dot">·</span><span>Housing &amp; public health</span></p>
+    <p class="breadcrumb"><a href="preview-papers.html">Published Work</a><span class="dot">·</span><span>Housing &amp; public health</span></p>
     <p class="paper-eyebrow">Quasi-experiment <span class="sep">·</span> <span class="year">2021</span></p>
     <h2 class="paper-q">When states ended their eviction bans, <em>what happened to COVID-19?</em></h2>
     <p class="paper-byline"><strong>Sebastian Sandoval-Olascoaga</strong> · <strong>Atheendar S. Venkataramani</strong> · <strong>Mariana C. Arcaya</strong></p>
@@ -248,22 +264,22 @@
             <line class="c-grid" x1="60" y1="282.0" x2="260" y2="282.0"/>
             <line class="c-event" x1="170.6" y1="62" x2="170.6" y2="282"/>
             <path class="c-ci" d="M 65.0 191.5 L 65.0 191.5 L 79.1 191.5 L 93.1 181.2 L 107.2 191.5 L 121.3 163.9 L 135.4 184.5 L 149.4 191.5 L 163.5 193.8 L 177.6 191.5 L 191.7 188.0 L 205.7 169.0 L 219.8 160.7 L 233.9 154.6 L 248.0 148.9 L 255.0 154.6 L 255.0 197.6 L 248.0 193.8 L 233.9 200.7 L 219.8 200.7 L 205.7 204.0 L 191.7 231.8 L 177.6 234.0 L 163.5 241.1 L 149.4 243.6 L 135.4 234.0 L 121.3 228.5 L 107.2 257.2 L 93.1 250.1 L 79.1 250.1 L 65.0 239.9 Z"/>
-            <path stroke="#1F4F5A" stroke-width="2.0" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 65.0 212.7 L 79.1 218.3 L 93.1 210.0 L 107.2 221.2 L 121.3 190.8 L 135.4 204.8 L 149.4 216.4 L 163.5 217.3 L 177.6 210.9 L 191.7 209.1 L 205.7 183.9 L 219.8 179.9 L 233.9 174.9 L 248.0 169.6 L 255.0 174.9"/>
-            <circle cx="65.0" cy="212.7" r="2.4" fill="#1F4F5A"/>
-            <circle cx="79.1" cy="218.3" r="2.4" fill="#1F4F5A"/>
-            <circle cx="93.1" cy="210.0" r="2.4" fill="#1F4F5A"/>
-            <circle cx="107.2" cy="221.2" r="2.4" fill="#1F4F5A"/>
-            <circle cx="121.3" cy="190.8" r="2.4" fill="#1F4F5A"/>
-            <circle cx="135.4" cy="204.8" r="2.4" fill="#1F4F5A"/>
-            <circle cx="149.4" cy="216.4" r="2.4" fill="#1F4F5A"/>
-            <circle cx="163.5" cy="217.3" r="2.4" fill="#1F4F5A"/>
-            <circle cx="177.6" cy="210.9" r="2.4" fill="#1F4F5A"/>
-            <circle cx="191.7" cy="209.1" r="2.4" fill="#1F4F5A"/>
-            <circle cx="205.7" cy="183.9" r="2.4" fill="#1F4F5A"/>
-            <circle cx="219.8" cy="179.9" r="2.4" fill="#1F4F5A"/>
-            <circle cx="233.9" cy="174.9" r="2.4" fill="#1F4F5A"/>
-            <circle cx="248.0" cy="169.6" r="2.4" fill="#1F4F5A"/>
-            <circle cx="255.0" cy="174.9" r="3.8" fill="#1F4F5A"/>
+            <path stroke="var(--treat)" stroke-width="2.0" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 65.0 212.7 L 79.1 218.3 L 93.1 210.0 L 107.2 221.2 L 121.3 190.8 L 135.4 204.8 L 149.4 216.4 L 163.5 217.3 L 177.6 210.9 L 191.7 209.1 L 205.7 183.9 L 219.8 179.9 L 233.9 174.9 L 248.0 169.6 L 255.0 174.9"/>
+            <circle cx="65.0" cy="212.7" r="2.4" fill="var(--treat)"/>
+            <circle cx="79.1" cy="218.3" r="2.4" fill="var(--treat)"/>
+            <circle cx="93.1" cy="210.0" r="2.4" fill="var(--treat)"/>
+            <circle cx="107.2" cy="221.2" r="2.4" fill="var(--treat)"/>
+            <circle cx="121.3" cy="190.8" r="2.4" fill="var(--treat)"/>
+            <circle cx="135.4" cy="204.8" r="2.4" fill="var(--treat)"/>
+            <circle cx="149.4" cy="216.4" r="2.4" fill="var(--treat)"/>
+            <circle cx="163.5" cy="217.3" r="2.4" fill="var(--treat)"/>
+            <circle cx="177.6" cy="210.9" r="2.4" fill="var(--treat)"/>
+            <circle cx="191.7" cy="209.1" r="2.4" fill="var(--treat)"/>
+            <circle cx="205.7" cy="183.9" r="2.4" fill="var(--treat)"/>
+            <circle cx="219.8" cy="179.9" r="2.4" fill="var(--treat)"/>
+            <circle cx="233.9" cy="174.9" r="2.4" fill="var(--treat)"/>
+            <circle cx="248.0" cy="169.6" r="2.4" fill="var(--treat)"/>
+            <circle cx="255.0" cy="174.9" r="3.8" fill="var(--treat)"/>
             <text class="c-axislbl bold" x="255" y="166.9" text-anchor="end" font-size="11">HR 1.55</text>
             <line class="c-axis-line" x1="60" y1="282" x2="260" y2="282"/>
             <text class="c-axislbl" x="60" y="298">−15</text>
@@ -281,22 +297,22 @@
             <line class="c-grid" x1="280" y1="282.0" x2="480" y2="282.0"/>
             <line class="c-event" x1="390.6" y1="62" x2="390.6" y2="282"/>
             <path class="c-ci" d="M 285.0 169.0 L 285.0 169.0 L 299.1 181.2 L 313.1 181.2 L 327.2 183.2 L 341.3 154.6 L 355.4 184.5 L 369.4 188.0 L 383.5 181.2 L 397.6 181.2 L 411.7 191.5 L 425.7 161.8 L 439.8 158.1 L 453.9 148.9 L 468.0 144.8 L 475.0 144.8 L 475.0 184.5 L 468.0 193.8 L 453.9 193.8 L 439.8 201.5 L 425.7 203.2 L 411.7 247.5 L 397.6 239.9 L 383.5 236.3 L 369.4 243.6 L 355.4 237.5 L 341.3 212.7 L 327.2 246.2 L 313.1 254.3 L 299.1 257.2 L 285.0 224.3 Z"/>
-            <path stroke="#1F4F5A" stroke-width="2.0" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 285.0 193.8 L 299.1 214.5 L 313.1 211.8 L 327.2 213.6 L 341.3 179.9 L 355.4 207.4 L 369.4 216.4 L 383.5 209.1 L 397.6 209.1 L 411.7 216.4 L 425.7 181.2 L 439.8 178.6 L 453.9 170.1 L 468.0 166.2 L 475.0 154.1"/>
-            <circle cx="285.0" cy="193.8" r="2.4" fill="#1F4F5A"/>
-            <circle cx="299.1" cy="214.5" r="2.4" fill="#1F4F5A"/>
-            <circle cx="313.1" cy="211.8" r="2.4" fill="#1F4F5A"/>
-            <circle cx="327.2" cy="213.6" r="2.4" fill="#1F4F5A"/>
-            <circle cx="341.3" cy="179.9" r="2.4" fill="#1F4F5A"/>
-            <circle cx="355.4" cy="207.4" r="2.4" fill="#1F4F5A"/>
-            <circle cx="369.4" cy="216.4" r="2.4" fill="#1F4F5A"/>
-            <circle cx="383.5" cy="209.1" r="2.4" fill="#1F4F5A"/>
-            <circle cx="397.6" cy="209.1" r="2.4" fill="#1F4F5A"/>
-            <circle cx="411.7" cy="216.4" r="2.4" fill="#1F4F5A"/>
-            <circle cx="425.7" cy="181.2" r="2.4" fill="#1F4F5A"/>
-            <circle cx="439.8" cy="178.6" r="2.4" fill="#1F4F5A"/>
-            <circle cx="453.9" cy="170.1" r="2.4" fill="#1F4F5A"/>
-            <circle cx="468.0" cy="166.2" r="2.4" fill="#1F4F5A"/>
-            <circle cx="475.0" cy="154.1" r="3.8" fill="#1F4F5A"/>
+            <path stroke="var(--treat)" stroke-width="2.0" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 285.0 193.8 L 299.1 214.5 L 313.1 211.8 L 327.2 213.6 L 341.3 179.9 L 355.4 207.4 L 369.4 216.4 L 383.5 209.1 L 397.6 209.1 L 411.7 216.4 L 425.7 181.2 L 439.8 178.6 L 453.9 170.1 L 468.0 166.2 L 475.0 154.1"/>
+            <circle cx="285.0" cy="193.8" r="2.4" fill="var(--treat)"/>
+            <circle cx="299.1" cy="214.5" r="2.4" fill="var(--treat)"/>
+            <circle cx="313.1" cy="211.8" r="2.4" fill="var(--treat)"/>
+            <circle cx="327.2" cy="213.6" r="2.4" fill="var(--treat)"/>
+            <circle cx="341.3" cy="179.9" r="2.4" fill="var(--treat)"/>
+            <circle cx="355.4" cy="207.4" r="2.4" fill="var(--treat)"/>
+            <circle cx="369.4" cy="216.4" r="2.4" fill="var(--treat)"/>
+            <circle cx="383.5" cy="209.1" r="2.4" fill="var(--treat)"/>
+            <circle cx="397.6" cy="209.1" r="2.4" fill="var(--treat)"/>
+            <circle cx="411.7" cy="216.4" r="2.4" fill="var(--treat)"/>
+            <circle cx="425.7" cy="181.2" r="2.4" fill="var(--treat)"/>
+            <circle cx="439.8" cy="178.6" r="2.4" fill="var(--treat)"/>
+            <circle cx="453.9" cy="170.1" r="2.4" fill="var(--treat)"/>
+            <circle cx="468.0" cy="166.2" r="2.4" fill="var(--treat)"/>
+            <circle cx="475.0" cy="154.1" r="3.8" fill="var(--treat)"/>
             <text class="c-axislbl bold" x="475" y="146.1" text-anchor="end" font-size="11">HR 1.93</text>
             <line class="c-axis-line" x1="280" y1="282" x2="480" y2="282"/>
             <text class="c-axislbl" x="280" y="298">−15</text>
@@ -314,22 +330,22 @@
             <line class="c-grid" x1="500" y1="282.0" x2="700" y2="282.0"/>
             <line class="c-event" x1="610.6" y1="62" x2="610.6" y2="282"/>
             <path class="c-ci" d="M 505.0 184.5 L 505.0 184.5 L 519.1 181.2 L 533.1 165.0 L 547.2 174.9 L 561.3 169.0 L 575.4 169.0 L 589.4 184.5 L 603.5 191.5 L 617.6 191.5 L 631.7 184.5 L 645.7 171.9 L 659.8 148.9 L 673.9 137.1 L 688.0 100.5 L 695.0 100.5 L 695.0 169.0 L 688.0 154.6 L 673.9 178.0 L 659.8 191.5 L 645.7 219.3 L 631.7 235.2 L 617.6 241.1 L 603.5 248.8 L 589.4 239.9 L 575.4 224.3 L 561.3 221.2 L 547.2 228.5 L 533.1 221.2 L 519.1 273.0 L 505.0 248.8 Z"/>
-            <path stroke="#1F4F5A" stroke-width="2.0" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 505.0 217.3 L 519.1 229.6 L 533.1 189.4 L 547.2 199.9 L 561.3 187.3 L 575.4 192.3 L 589.4 213.6 L 603.5 224.3 L 617.6 216.4 L 631.7 210.9 L 645.7 193.0 L 659.8 170.1 L 673.9 158.7 L 688.0 128.1 L 695.0 131.9"/>
-            <circle cx="505.0" cy="217.3" r="2.4" fill="#1F4F5A"/>
-            <circle cx="519.1" cy="229.6" r="2.4" fill="#1F4F5A"/>
-            <circle cx="533.1" cy="189.4" r="2.4" fill="#1F4F5A"/>
-            <circle cx="547.2" cy="199.9" r="2.4" fill="#1F4F5A"/>
-            <circle cx="561.3" cy="187.3" r="2.4" fill="#1F4F5A"/>
-            <circle cx="575.4" cy="192.3" r="2.4" fill="#1F4F5A"/>
-            <circle cx="589.4" cy="213.6" r="2.4" fill="#1F4F5A"/>
-            <circle cx="603.5" cy="224.3" r="2.4" fill="#1F4F5A"/>
-            <circle cx="617.6" cy="216.4" r="2.4" fill="#1F4F5A"/>
-            <circle cx="631.7" cy="210.9" r="2.4" fill="#1F4F5A"/>
-            <circle cx="645.7" cy="193.0" r="2.4" fill="#1F4F5A"/>
-            <circle cx="659.8" cy="170.1" r="2.4" fill="#1F4F5A"/>
-            <circle cx="673.9" cy="158.7" r="2.4" fill="#1F4F5A"/>
-            <circle cx="688.0" cy="128.1" r="2.4" fill="#1F4F5A"/>
-            <circle cx="695.0" cy="131.9" r="3.8" fill="#1F4F5A"/>
+            <path stroke="var(--treat)" stroke-width="2.0" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 505.0 217.3 L 519.1 229.6 L 533.1 189.4 L 547.2 199.9 L 561.3 187.3 L 575.4 192.3 L 589.4 213.6 L 603.5 224.3 L 617.6 216.4 L 631.7 210.9 L 645.7 193.0 L 659.8 170.1 L 673.9 158.7 L 688.0 128.1 L 695.0 131.9"/>
+            <circle cx="505.0" cy="217.3" r="2.4" fill="var(--treat)"/>
+            <circle cx="519.1" cy="229.6" r="2.4" fill="var(--treat)"/>
+            <circle cx="533.1" cy="189.4" r="2.4" fill="var(--treat)"/>
+            <circle cx="547.2" cy="199.9" r="2.4" fill="var(--treat)"/>
+            <circle cx="561.3" cy="187.3" r="2.4" fill="var(--treat)"/>
+            <circle cx="575.4" cy="192.3" r="2.4" fill="var(--treat)"/>
+            <circle cx="589.4" cy="213.6" r="2.4" fill="var(--treat)"/>
+            <circle cx="603.5" cy="224.3" r="2.4" fill="var(--treat)"/>
+            <circle cx="617.6" cy="216.4" r="2.4" fill="var(--treat)"/>
+            <circle cx="631.7" cy="210.9" r="2.4" fill="var(--treat)"/>
+            <circle cx="645.7" cy="193.0" r="2.4" fill="var(--treat)"/>
+            <circle cx="659.8" cy="170.1" r="2.4" fill="var(--treat)"/>
+            <circle cx="673.9" cy="158.7" r="2.4" fill="var(--treat)"/>
+            <circle cx="688.0" cy="128.1" r="2.4" fill="var(--treat)"/>
+            <circle cx="695.0" cy="131.9" r="3.8" fill="var(--treat)"/>
             <text class="c-axislbl bold" x="695" y="123.9" text-anchor="end" font-size="11">HR 2.44</text>
             <line class="c-axis-line" x1="500" y1="282" x2="700" y2="282"/>
             <text class="c-axislbl" x="500" y="298">−15</text>
@@ -338,7 +354,7 @@
           </g>
           <!-- Panel D: CCI ≥ 3 -->
           <g>
-            <text class="c-panel-title" x="820" y="36" text-anchor="middle" fill="#1F4F5A">CCI ≥ 3</text>
+            <text class="c-panel-title" x="820" y="36" text-anchor="middle" fill="var(--treat)">CCI ≥ 3</text>
             <text class="c-panel-sub" x="820" y="50" text-anchor="middle">The medically vulnerable</text>
             <line class="c-grid" x1="720" y1="74.0" x2="920" y2="74.0"/>
             <line class="c-grid" x1="720" y1="129.6" x2="920" y2="129.6"/>
@@ -347,23 +363,23 @@
             <line class="c-grid" x1="720" y1="282.0" x2="920" y2="282.0"/>
             <line class="c-event" x1="830.6" y1="62" x2="830.6" y2="282"/>
             <path class="c-ci" d="M 725.0 183.2 L 725.0 183.2 L 739.1 191.5 L 753.1 173.1 L 767.2 165.0 L 781.3 158.1 L 795.4 174.9 L 809.4 181.2 L 823.5 181.2 L 837.6 199.1 L 851.7 199.1 L 865.7 174.9 L 879.8 148.9 L 893.9 127.8 L 908.0 99.2 L 915.0 101.7 L 915.0 167.8 L 908.0 158.1 L 893.9 181.2 L 879.8 199.1 L 865.7 231.8 L 851.7 257.2 L 837.6 273.0 L 823.5 241.1 L 809.4 239.9 L 795.4 237.5 L 781.3 221.2 L 767.2 221.2 L 753.1 250.1 L 739.1 273.0 L 725.0 251.5 Z"/>
-            <path stroke="#1F4F5A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 725.0 217.3 L 739.1 231.8 L 753.1 210.0 L 767.2 190.1 L 781.3 185.9 L 795.4 207.4 L 809.4 211.8 L 823.5 212.7 L 837.6 234.0 L 851.7 228.5 L 865.7 199.1 L 879.8 174.9 L 893.9 154.6 L 908.0 127.8 L 915.0 135.1"/>
-            <circle cx="725.0" cy="217.3" r="2.4" fill="#1F4F5A"/>
-            <circle cx="739.1" cy="231.8" r="2.4" fill="#1F4F5A"/>
-            <circle cx="753.1" cy="210.0" r="2.4" fill="#1F4F5A"/>
-            <circle cx="767.2" cy="190.1" r="2.4" fill="#1F4F5A"/>
-            <circle cx="781.3" cy="185.9" r="2.4" fill="#1F4F5A"/>
-            <circle cx="795.4" cy="207.4" r="2.4" fill="#1F4F5A"/>
-            <circle cx="809.4" cy="211.8" r="2.4" fill="#1F4F5A"/>
-            <circle cx="823.5" cy="212.7" r="2.4" fill="#1F4F5A"/>
-            <circle cx="837.6" cy="234.0" r="2.4" fill="#1F4F5A"/>
-            <circle cx="851.7" cy="228.5" r="2.4" fill="#1F4F5A"/>
-            <circle cx="865.7" cy="199.1" r="2.4" fill="#1F4F5A"/>
-            <circle cx="879.8" cy="174.9" r="2.4" fill="#1F4F5A"/>
-            <circle cx="893.9" cy="154.6" r="2.4" fill="#1F4F5A"/>
-            <circle cx="908.0" cy="127.8" r="2.4" fill="#1F4F5A"/>
-            <circle cx="915.0" cy="135.1" r="3.8" fill="#1F4F5A"/>
-            <circle cx="915.0" cy="135.1" r="8" fill="none" stroke="#1F4F5A" stroke-width="1.2" opacity="0.4"/>
+            <path stroke="var(--treat)" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 725.0 217.3 L 739.1 231.8 L 753.1 210.0 L 767.2 190.1 L 781.3 185.9 L 795.4 207.4 L 809.4 211.8 L 823.5 212.7 L 837.6 234.0 L 851.7 228.5 L 865.7 199.1 L 879.8 174.9 L 893.9 154.6 L 908.0 127.8 L 915.0 135.1"/>
+            <circle cx="725.0" cy="217.3" r="2.4" fill="var(--treat)"/>
+            <circle cx="739.1" cy="231.8" r="2.4" fill="var(--treat)"/>
+            <circle cx="753.1" cy="210.0" r="2.4" fill="var(--treat)"/>
+            <circle cx="767.2" cy="190.1" r="2.4" fill="var(--treat)"/>
+            <circle cx="781.3" cy="185.9" r="2.4" fill="var(--treat)"/>
+            <circle cx="795.4" cy="207.4" r="2.4" fill="var(--treat)"/>
+            <circle cx="809.4" cy="211.8" r="2.4" fill="var(--treat)"/>
+            <circle cx="823.5" cy="212.7" r="2.4" fill="var(--treat)"/>
+            <circle cx="837.6" cy="234.0" r="2.4" fill="var(--treat)"/>
+            <circle cx="851.7" cy="228.5" r="2.4" fill="var(--treat)"/>
+            <circle cx="865.7" cy="199.1" r="2.4" fill="var(--treat)"/>
+            <circle cx="879.8" cy="174.9" r="2.4" fill="var(--treat)"/>
+            <circle cx="893.9" cy="154.6" r="2.4" fill="var(--treat)"/>
+            <circle cx="908.0" cy="127.8" r="2.4" fill="var(--treat)"/>
+            <circle cx="915.0" cy="135.1" r="3.8" fill="var(--treat)"/>
+            <circle cx="915.0" cy="135.1" r="8" fill="none" stroke="var(--treat)" stroke-width="1.2" opacity="0.4"/>
             <text class="c-callout-num" x="915" y="123.1" text-anchor="end">HR 2.36</text>
             <text class="c-callout-lbl" x="915" y="139.1" text-anchor="end">at week 12</text>
             <line class="c-axis-line" x1="720" y1="282" x2="920" y2="282"/>
@@ -531,7 +547,7 @@
       <p class="copy">© 2026 Sebastian Olascoaga</p>
       <nav class="footlinks">
         <a href="preview.html">Home</a>
-        <a href="preview-papers.html">Work</a>
+        <a href="preview-papers.html">Research</a>
         <a href="preview-cv.html">CV</a>
         <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
@@ -545,5 +561,17 @@
 document.querySelector('.cite-copy')?.addEventListener('click',function(){var t=document.querySelector('.cite-text')?.innerText||'';if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){var btn=document.querySelector('.cite-copy');var orig=btn.innerHTML;btn.innerHTML='Copied ✓';setTimeout(function(){btn.innerHTML=orig;},1600);});}});
 </script>
 <script>document.querySelectorAll(".theme-toggle").forEach(function(b){b.addEventListener("click",function(){var r=document.documentElement;var c=r.getAttribute("data-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var n=c==="dark"?"light":"dark";r.setAttribute("data-theme",n);localStorage.setItem("theme",n);});});</script>
+<script>
+(function(){
+  var item=document.querySelector(".nav-item"); if(!item) return;
+  var btn=item.querySelector(".nav-trigger"); if(!btn) return;
+  function set(open){ btn.setAttribute("aria-expanded", open?"true":"false"); item.classList.toggle("open", open); }
+  btn.addEventListener("click", function(){ set(btn.getAttribute("aria-expanded")!=="true"); });
+  item.addEventListener("focusin", function(){ set(true); });
+  item.addEventListener("focusout", function(e){ if(!item.contains(e.relatedTarget)) set(false); });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && item.classList.contains("open")){ set(false); btn.focus(); } });
+  document.addEventListener("click", function(e){ if(!item.contains(e.target)) set(false); });
+})();
+</script>
 </body>
 </html>

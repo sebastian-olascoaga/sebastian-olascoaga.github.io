@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Sebastian Olascoaga</title>
 <meta name="description" content="Sebastian Olascoaga. Field experiments and evaluations on public questions." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Sebastian Olascoaga" />
+<meta property="og:title" content="Sebastian Olascoaga" />
+<meta property="og:description" content="Sebastian Olascoaga. Field experiments and evaluations on public questions." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Sebastian Olascoaga" />
+<meta name="twitter:description" content="Sebastian Olascoaga. Field experiments and evaluations on public questions." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -42,6 +50,8 @@
     }
   }
   *{box-sizing:border-box;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  :focus:not(:focus-visible){outline:none;}
   html{-webkit-text-size-adjust:100%;}
   body{
     margin:0; background:var(--paper); color:var(--text);
@@ -142,35 +152,6 @@
   .about strong{color:var(--ink); font-weight:500;}
   .about em{font-style:italic; color:var(--ink);}
 
-  /* RIGHT NOW */
-  .now{
-    margin:48px 0 0;
-    padding:28px 32px;
-    background:var(--paper-tint);
-    border-left:3px solid var(--accent);
-    border-radius:0 2px 2px 0;
-  }
-  .now-head{
-    display:flex; align-items:baseline; justify-content:space-between;
-    gap:18px; margin:0 0 14px;
-  }
-  .now-label{
-    font-family:var(--sans); font-size:11.5px; font-weight:600;
-    letter-spacing:0.2em; text-transform:uppercase;
-    color:var(--accent); margin:0;
-  }
-  .now-when{
-    font-family:var(--sans); font-size:11.5px; color:var(--muted);
-    letter-spacing:0.04em; font-style:italic;
-  }
-  .now p{
-    font-family:var(--serif);
-    font-size:17px; line-height:1.55; color:var(--text);
-    font-variation-settings:"opsz" 16;
-    max-width:58ch; margin:0;
-  }
-  .now p em{font-style:italic; color:var(--ink);}
-
   /* SELECTED WORK (right column) */
   .selected{margin:0;}
   .selected-head{
@@ -250,7 +231,6 @@
     .head-grid{grid-template-columns:1fr; gap:18px;}
     .hero{padding:48px 0 40px;}
     .landing-body{padding-top:40px; gap:48px;}
-    .now{padding:22px 22px;}
     .upd{grid-template-columns:1fr; gap:6px;}
     .upd-date{text-align:left;}
     .upd-day, .upd-year{display:inline; font-size:12px; color:var(--muted); margin-right:6px;}
@@ -280,7 +260,7 @@
     transition:border-color .15s ease, background .15s ease;
   }
   .contact-form input::placeholder, .contact-form textarea::placeholder{color:var(--hint); font-style:italic;}
-  .contact-form input:focus, .contact-form textarea:focus{outline:none; border-color:var(--accent); background:var(--paper);}
+  .contact-form input:focus, .contact-form textarea:focus{border-color:var(--accent); background:var(--paper);}
   .contact-form textarea{min-height:140px; resize:vertical; font-family:var(--sans);}
   .contact-send{
     grid-column:1 / -1; margin-top:6px;
@@ -290,6 +270,11 @@
     transition:background .15s ease, color .15s ease;
   }
   .contact-send:hover{background:var(--ink);}
+  .contact-send:disabled{opacity:0.55; cursor:default;}
+  .contact-feedback{grid-column:1 / -1; margin:6px 0 0; font-family:var(--serif); font-size:17px; line-height:1.55; color:var(--text);}
+  .contact-feedback strong{color:var(--ink); font-weight:600;}
+  .contact-feedback.error{font-family:var(--sans); font-size:14px; color:var(--muted);}
+  .contact-feedback.error a{color:var(--accent); border-bottom:1px solid var(--accent); text-decoration:none;}
   @media (max-width:640px){
     .contact{margin-top:64px; padding-top:40px;}
     .contact-form{grid-template-columns:1fr;}
@@ -300,8 +285,10 @@
   /* WORK DROPDOWN */
   .nav-item{position:relative;} .nav-item::after{content:"";position:absolute;top:100%;left:0;right:0;height:14px;} header{position:relative;z-index:200;}
   .nav-item .caret{display:inline-block; font-size:0.7em; margin-left:3px; position:relative; top:-1px; opacity:0.7; transition:transform .18s ease;}
-  .nav-item:hover .caret, .nav-item:focus-within .caret{transform:rotate(180deg);}
-  .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
+  .nav-item:hover .caret, .nav-item:focus-within .caret, .nav-item.open .caret{transform:rotate(180deg);}
+    .nav-trigger{margin:0; background:none; border:0; border-bottom:1px solid transparent; font:inherit; color:var(--muted); cursor:pointer; padding:0 0 3px 0; display:inline-flex; align-items:center; transition:color .15s ease, border-color .15s ease;}
+  .nav-trigger.here{color:var(--ink); border-bottom-color:var(--accent);}
+  .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger, .nav-item.open .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
   .nav-dropdown{
     position:absolute; top:100%; left:-14px;
     min-width:248px; padding:8px 0;
@@ -311,7 +298,7 @@
     transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.25s;
     z-index:100;
   }
-  .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown{
+  .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown, .nav-item.open .nav-dropdown{
     opacity:1; visibility:visible; transform:translateY(0); transition-delay:0s;
   }
   .nav-dropdown .dd-item{
@@ -321,14 +308,22 @@
     transition:background .12s ease, color .12s ease;
   }
   .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{
-    background:var(--paper-tint); color:var(--accent); outline:none; border:none;
+    background:var(--paper-tint); color:var(--accent); border:none;
   }
-  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;} .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
-  .nav-dropdown .dd-item.disabled:hover{background:transparent; color:var(--hint);}
+  .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
   .dd-title{display:block; font-size:14px; font-weight:500;}
   .dd-note{display:block; font-size:11.5px; color:var(--muted); margin-top:2px; font-style:italic;}
-  .dd-item.disabled .dd-note{color:var(--hint);}
-  @media (max-width:640px){.nav-dropdown, .nav-item .caret{display:none;}}
+  @media (max-width:640px){
+    .nav-item .nav-trigger, .nav-item .caret, .nav-item::after{display:none;}
+    .nav-item{position:static;}
+    .nav-dropdown{position:static; display:inline-flex; flex-wrap:wrap; gap:8px 26px; min-width:0; opacity:1; visibility:visible; transform:none; transition:none; background:none; border:none; box-shadow:none; padding:0;}
+    .nav-dropdown .dd-item{padding:0 0 3px 0; border-bottom:1px solid transparent; background:none; color:var(--muted);}
+    .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{background:none; color:var(--ink); border-bottom-color:var(--accent);}
+    .nav-dropdown a.dd-item[aria-current="page"]{background:none;}
+    .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent);}
+    .nav-dropdown .dd-note{display:none;}
+    .nav-dropdown .dd-title{font-size:13.5px; font-weight:400;}
+  }
 </style>
 </head>
 <body>
@@ -345,20 +340,16 @@
       <nav class="nav">
         <a href="preview.html" class="here">Home</a>
         <div class="nav-item">
-          <a href="preview-papers.html" class="nav-trigger">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
-          <div class="nav-dropdown" role="menu">
-            <a href="preview-papers.html" role="menuitem" class="dd-item">
+          <button type="button" class="nav-trigger" aria-expanded="false" aria-haspopup="true">Research <span class="caret" aria-hidden="true">&#x25BE;</span></button>
+          <div class="nav-dropdown">
+            <a href="preview-papers.html" class="dd-item">
               <span class="dd-title">Published Work</span>
               <span class="dd-note">Papers, working papers, and theses</span>
             </a>
-            <a href="preview-shorts.html" role="menuitem" class="dd-item">
-              <span class="dd-title">Short Pieces</span>
-              <span class="dd-note">Research notes and briefs</span>
+            <a href="preview-shorts.html" class="dd-item">
+              <span class="dd-title">Briefs</span>
+              <span class="dd-note">Public-facing notes and analyses</span>
             </a>
-            <span class="dd-item disabled" role="menuitem" aria-disabled="true">
-              <span class="dd-title">Teaching</span>
-              <span class="dd-note">Coming soon</span>
-            </span>
           </div>
         </div>
         <a href="preview-cv.html">CV</a>
@@ -462,7 +453,7 @@
       <p class="copy">© 2026 Sebastian Olascoaga</p>
       <nav class="footlinks">
         <a href="preview.html">Home</a>
-        <a href="preview-papers.html">Work</a>
+        <a href="preview-papers.html">Research</a>
         <a href="preview-cv.html">CV</a>
         <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
@@ -473,5 +464,44 @@
 
 </div>
 <script>document.querySelectorAll(".theme-toggle").forEach(function(b){b.addEventListener("click",function(){var r=document.documentElement;var c=r.getAttribute("data-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var n=c==="dark"?"light":"dark";r.setAttribute("data-theme",n);localStorage.setItem("theme",n);});});</script>
+<script>
+(function(){
+  var item=document.querySelector(".nav-item"); if(!item) return;
+  var btn=item.querySelector(".nav-trigger"); if(!btn) return;
+  function set(open){ btn.setAttribute("aria-expanded", open?"true":"false"); item.classList.toggle("open", open); }
+  btn.addEventListener("click", function(){ set(btn.getAttribute("aria-expanded")!=="true"); });
+  item.addEventListener("focusin", function(){ set(true); });
+  item.addEventListener("focusout", function(e){ if(!item.contains(e.relatedTarget)) set(false); });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && item.classList.contains("open")){ set(false); btn.focus(); } });
+  document.addEventListener("click", function(e){ if(!item.contains(e.target)) set(false); });
+})();
+</script>
+<script>
+(function(){
+  var form=document.querySelector(".contact-form"); if(!form) return;
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var btn=form.querySelector(".contact-send");
+    var old=btn.textContent;
+    btn.disabled=true; btn.textContent="Sending...";
+    var prevErr=form.querySelector(".contact-feedback.error");
+    if(prevErr) prevErr.remove();
+    fetch("https://formsubmit.co/ajax/sebastian.olascoaga@gmail.com", {
+      method:"POST",
+      headers:{"Accept":"application/json"},
+      body:new FormData(form)
+    }).then(function(r){ if(!r.ok) throw new Error("bad status"); return r.json(); })
+    .then(function(){
+      form.innerHTML='<p class="contact-feedback" role="status"><strong>Thanks, your message is on its way.</strong> Sebastian will be in touch.</p>';
+    }).catch(function(){
+      btn.disabled=false; btn.textContent=old;
+      var p=document.createElement("p");
+      p.className="contact-feedback error"; p.setAttribute("role","status");
+      p.innerHTML='Something went wrong sending that. Please email <a href="mailto:sebastian.olascoaga@gmail.com">sebastian.olascoaga@gmail.com</a> directly.';
+      btn.parentNode.insertBefore(p, btn);
+    });
+  });
+})();
+</script>
 </body>
 </html>

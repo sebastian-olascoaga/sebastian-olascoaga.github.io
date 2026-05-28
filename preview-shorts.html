@@ -3,8 +3,16 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Short Pieces · Sebastian Olascoaga</title>
+<title>Briefs · Sebastian Olascoaga</title>
 <meta name="description" content="Research notes, briefs, and findings from work at the City of Boston, Redfin, and elsewhere." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Sebastian Olascoaga" />
+<meta property="og:title" content="Briefs · Sebastian Olascoaga" />
+<meta property="og:description" content="Research notes, briefs, and findings from work at the City of Boston, Redfin, and elsewhere." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Briefs · Sebastian Olascoaga" />
+<meta name="twitter:description" content="Research notes, briefs, and findings from work at the City of Boston, Redfin, and elsewhere." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -42,6 +50,10 @@
     }
   }
   *{box-sizing:border-box;}
+  :focus-visible{outline:2px solid var(--treat); outline-offset:2px;}
+  :focus:not(:focus-visible){outline:none;}
+  /* Briefs section: teal is the section accent */
+  body{--accent:var(--treat); --accent-soft:var(--treat-soft);}
   html{-webkit-text-size-adjust:100%;}
   body{
     margin:0; background:var(--paper); color:var(--text);
@@ -123,25 +135,8 @@
     box-shadow:0 10px 28px rgba(20,20,20,0.08);
   }
 
-  .pc-img{
-    background:var(--paper-tint);
-    aspect-ratio:3 / 2;
-    padding:30px 32px;
-    border-bottom:1px solid var(--hair);
-    display:flex; align-items:stretch;
-  }
-  .pc-img svg{width:100%; height:100%; display:block; overflow:visible;}
-
-  /* card-image chart styles */
-  .ti-eye{font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; fill:var(--muted);}
-  .ti-lbl{font-family:var(--sans); font-size:12.5px; fill:var(--text);}
-  .ti-lbl.accent{fill:var(--accent); font-weight:500;}
-  .ti-val{font-family:var(--sans); font-size:14px; font-weight:600; fill:var(--ink); font-variant-numeric:tabular-nums;}
-  .ti-val.accent{fill:var(--accent);}
-  .ti-axis{font-family:var(--sans); font-size:10.5px; fill:var(--muted);}
-
   .pc-body{
-    padding:24px 28px 26px;
+    padding:26px 28px 28px;
     display:flex; flex-direction:column; flex:1;
   }
   .pc-meta-top{
@@ -164,7 +159,7 @@
 
   .pc-q{
     font-family:var(--serif); font-weight:500; color:var(--ink);
-    font-size:clamp(20px,2vw,24px); line-height:1.22;
+    font-size:clamp(21px,2.1vw,25px); line-height:1.22;
     font-variation-settings:"opsz" 72;
     letter-spacing:-0.005em; margin:0 0 12px;
   }
@@ -217,7 +212,6 @@
     .head-grid{grid-template-columns:1fr; gap:18px;}
     header{padding-top:40px;}
     main{padding-top:36px;}
-    .pc-img{padding:22px 22px;}
     .pc-body{padding:22px 22px 22px;}
     .foot-grid{grid-template-columns:1fr; gap:22px;}
   }
@@ -227,8 +221,10 @@
   /* WORK DROPDOWN */
   .nav-item{position:relative;} .nav-item::after{content:"";position:absolute;top:100%;left:0;right:0;height:14px;} header{position:relative;z-index:200;}
   .nav-item .caret{display:inline-block; font-size:0.7em; margin-left:3px; position:relative; top:-1px; opacity:0.7; transition:transform .18s ease;}
-  .nav-item:hover .caret, .nav-item:focus-within .caret{transform:rotate(180deg);}
-  .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
+  .nav-item:hover .caret, .nav-item:focus-within .caret, .nav-item.open .caret{transform:rotate(180deg);}
+    .nav-trigger{margin:0; background:none; border:0; border-bottom:1px solid transparent; font:inherit; color:var(--muted); cursor:pointer; padding:0 0 3px 0; display:inline-flex; align-items:center; transition:color .15s ease, border-color .15s ease;}
+  .nav-trigger.here{color:var(--ink); border-bottom-color:var(--accent);}
+  .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger, .nav-item.open .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
   .nav-dropdown{
     position:absolute; top:100%; left:-14px;
     min-width:248px; padding:8px 0;
@@ -238,7 +234,7 @@
     transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.25s;
     z-index:100;
   }
-  .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown{
+  .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown, .nav-item.open .nav-dropdown{
     opacity:1; visibility:visible; transform:translateY(0); transition-delay:0s;
   }
   .nav-dropdown .dd-item{
@@ -248,14 +244,22 @@
     transition:background .12s ease, color .12s ease;
   }
   .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{
-    background:var(--paper-tint); color:var(--accent); outline:none; border:none;
+    background:var(--paper-tint); color:var(--accent); border:none;
   }
-  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;} .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
-  .nav-dropdown .dd-item.disabled:hover{background:transparent; color:var(--hint);}
+  .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
   .dd-title{display:block; font-size:14px; font-weight:500;}
   .dd-note{display:block; font-size:11.5px; color:var(--muted); margin-top:2px; font-style:italic;}
-  .dd-item.disabled .dd-note{color:var(--hint);}
-  @media (max-width:640px){.nav-dropdown, .nav-item .caret{display:none;}}
+  @media (max-width:640px){
+    .nav-item .nav-trigger, .nav-item .caret, .nav-item::after{display:none;}
+    .nav-item{position:static;}
+    .nav-dropdown{position:static; display:inline-flex; flex-wrap:wrap; gap:8px 26px; min-width:0; opacity:1; visibility:visible; transform:none; transition:none; background:none; border:none; box-shadow:none; padding:0;}
+    .nav-dropdown .dd-item{padding:0 0 3px 0; border-bottom:1px solid transparent; background:none; color:var(--muted);}
+    .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{background:none; color:var(--ink); border-bottom-color:var(--accent);}
+    .nav-dropdown a.dd-item[aria-current="page"]{background:none;}
+    .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent);}
+    .nav-dropdown .dd-note{display:none;}
+    .nav-dropdown .dd-title{font-size:13.5px; font-weight:400;}
+  }
 </style>
 <style>
   /* SECTION TITLE BLOCK */
@@ -292,7 +296,6 @@
     padding:48px 0 0; margin:0;
   }
   .shorts-gallery.is-empty + .empty-msg{display:block;}
-  .shorts-gallery .pc-img{aspect-ratio:2 / 1; padding:24px 28px;}
 
   /* FORMAT LABEL (content-type tag at the top of every card) */
   .format-label{font-family:var(--sans); font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; padding:11px 28px 10px; border-bottom:1px solid var(--hair); color:var(--treat); background:var(--paper);}
@@ -309,7 +312,6 @@
   .shorts-gallery .pc-q em{font-style:normal; color:var(--ink);}
   .shorts-gallery .paper-card:hover{border-color:var(--treat); box-shadow:0 10px 28px rgba(31,79,90,0.10);}
   .shorts-gallery .pc-meta .arrow{color:var(--treat);}
-  .shorts-gallery .ti-lbl.accent{fill:var(--treat);}
   @media (max-width:880px){
     .shorts-gallery{grid-template-columns:1fr;}
     .filter-row{gap:6px;}
@@ -330,20 +332,16 @@
       <nav class="nav">
         <a href="preview.html">Home</a>
         <div class="nav-item">
-          <a href="preview-papers.html" class="nav-trigger here">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
-          <div class="nav-dropdown" role="menu">
-            <a href="preview-papers.html" role="menuitem" class="dd-item">
+          <button type="button" class="nav-trigger here" aria-expanded="false" aria-haspopup="true">Research <span class="caret" aria-hidden="true">&#x25BE;</span></button>
+          <div class="nav-dropdown">
+            <a href="preview-papers.html" class="dd-item">
               <span class="dd-title">Published Work</span>
               <span class="dd-note">Papers, working papers, and theses</span>
             </a>
-            <a href="preview-shorts.html" role="menuitem" class="dd-item" aria-current="page">
-              <span class="dd-title">Short Pieces</span>
-              <span class="dd-note">Research notes and briefs</span>
+            <a href="preview-shorts.html" class="dd-item" aria-current="page">
+              <span class="dd-title">Briefs</span>
+              <span class="dd-note">Public-facing notes and analyses</span>
             </a>
-            <span class="dd-item disabled" role="menuitem" aria-disabled="true">
-              <span class="dd-title">Teaching</span>
-              <span class="dd-note">Coming soon</span>
-            </span>
           </div>
         </div>
         <a href="preview-cv.html">CV</a>
@@ -358,14 +356,14 @@
 
     <!-- SECTION TITLE BLOCK -->
     <section class="page-intro reveal d2">
-      <p class="page-eyebrow">Short Pieces</p>
+      <p class="page-eyebrow">Briefs</p>
       <h2 class="page-title">Research notes and briefs published at the <em>City of Boston</em>, <em>Redfin News</em>, and elsewhere.</h2>
       <p class="page-meta">9 entries <span style="color:var(--hint);margin:0 4px;">·</span> 2021–2025 <span style="color:var(--hint);margin:0 4px;">·</span> public-facing analyses, not peer-reviewed.</p>
     </section>
 
     <!-- FILTER ROWS -->
     <div class="filter-set reveal d2">
-      <div class="filter-row" role="tablist" aria-label="Filter by venue">
+      <div class="filter-row" role="tablist" aria-label="Filter by venue" data-single="true">
         <span class="filter-row-label">Venue</span>
         <button class="chip chip-all" type="button" data-tag="all" aria-pressed="true">All</button>
         <button class="chip" type="button" data-tag="redfin" aria-pressed="false">Redfin</button>
@@ -386,26 +384,6 @@
     <div class="gallery shorts-gallery reveal d3">
 
       <a class="paper-card" data-tags="boston generative-ai public-sector" href="preview-short-boston-genai-survey.html"><div class="format-label">Research note</div>
-        <div class="pc-img">
-          <svg viewBox="0 0 540 270" preserveAspectRatio="xMidYMid meet">
-            <text x="0" y="18" class="ti-eye">City of Boston · employee gen-AI survey · 2025</text>
-
-            <!-- LEFT: big number -->
-            <text x="0" y="138" font-size="88" font-family="Source Serif 4, Georgia, serif" fill="var(--treat)" font-weight="600" letter-spacing="-0.02em">78%</text>
-
-            <!-- RIGHT: explanation -->
-            <text x="270" y="90" class="ti-lbl">of surveyed City of Boston employees</text>
-            <text x="270" y="112" class="ti-lbl">wanted formal generative-AI training.</text>
-            <text x="270" y="140" class="ti-lbl accent" font-weight="600">About half "very interested."</text>
-
-            <!-- separator across full width -->
-            <line x1="0" y1="178" x2="540" y2="178" stroke="rgba(20,20,20,0.16)"/>
-
-            <!-- bottom stats, full width single lines -->
-            <text x="0" y="208" class="ti-axis">60% had tried gen AI · 25% using it weekly at work.</text>
-            <text x="0" y="232" class="ti-axis" font-weight="600">Top concerns: inaccuracy 68.5% · security 57.6% · data privacy 50.6%.</text>
-          </svg>
-        </div>
         <div class="pc-body">
           <div class="pc-meta-top">
             <span class="venue-chip boston">City of Boston</span>
@@ -425,26 +403,6 @@
       </a>
 
       <a class="paper-card" data-tags="redfin housing climate" href="preview-short-redfin-flood-disclosure.html"><div class="format-label">Research note</div>
-        <div class="pc-img">
-          <svg viewBox="0 0 540 270" preserveAspectRatio="xMidYMid meet">
-            <text x="0" y="18" class="ti-eye">Flood-risk disclosure RCT · 17.5M users</text>
-
-            <!-- LEFT: big number -->
-            <text x="0" y="138" font-size="88" font-family="Source Serif 4, Georgia, serif" fill="var(--treat)" font-weight="600" letter-spacing="-0.02em">57%</text>
-
-            <!-- RIGHT: explanation -->
-            <text x="270" y="90" class="ti-lbl">lower flood-risk scores on homes</text>
-            <text x="270" y="112" class="ti-lbl">treated buyers placed offers on,</text>
-            <text x="270" y="140" class="ti-lbl accent" font-weight="600">vs the control group.</text>
-
-            <!-- separator across full width -->
-            <line x1="0" y1="178" x2="540" y2="178" stroke="rgba(20,20,20,0.16)"/>
-
-            <!-- bottom stats, full width single lines -->
-            <text x="0" y="208" class="ti-axis">3-month RCT, Oct 2020–Jan 2021 · partnered with USC, NBER, MIT.</text>
-            <text x="0" y="232" class="ti-axis" font-weight="600">Search risk also shifted: 12.4% lower by week 9.</text>
-          </svg>
-        </div>
         <div class="pc-body">
           <div class="pc-meta-top">
             <span class="venue-chip redfin">Redfin News</span>
@@ -465,26 +423,6 @@
       </a>
 
       <a class="paper-card" data-tags="redfin housing climate" href="preview-short-redfin-drought-migration.html"><div class="format-label">Research note</div>
-        <div class="pc-img">
-          <svg viewBox="0 0 540 270" preserveAspectRatio="xMidYMid meet">
-            <text x="0" y="18" class="ti-eye">Drought vs migration · Q2 2022</text>
-
-            <!-- LEFT: big number -->
-            <text x="0" y="138" font-size="88" font-family="Source Serif 4, Georgia, serif" fill="var(--treat)" font-weight="600" letter-spacing="-0.02em">74%</text>
-
-            <!-- RIGHT: explanation -->
-            <text x="270" y="90" class="ti-lbl">of severe-drought metros had</text>
-            <text x="270" y="112" class="ti-lbl">net inflows of Redfin users in Q2 2022.</text>
-            <text x="270" y="140" class="ti-lbl accent" font-weight="600">25 of 34 metros</text>
-
-            <!-- separator across full width -->
-            <line x1="0" y1="178" x2="540" y2="178" stroke="rgba(20,20,20,0.16)"/>
-
-            <!-- bottom stats, full width single lines -->
-            <text x="0" y="208" class="ti-axis">$17T in U.S. homes (≈25M properties) sat in intense drought in August 2022.</text>
-            <text x="0" y="232" class="ti-axis" font-weight="600">↑ 42% from $12T (14M properties) in August 2021.</text>
-          </svg>
-        </div>
         <div class="pc-body">
           <div class="pc-meta-top">
             <span class="venue-chip redfin">Redfin News</span>
@@ -504,26 +442,6 @@
       </a>
 
       <a class="paper-card" data-tags="redfin housing" href="preview-short-redfin-cancellations.html"><div class="format-label">Research note</div>
-        <div class="pc-img">
-          <svg viewBox="0 0 540 270" preserveAspectRatio="xMidYMid meet">
-            <text x="0" y="18" class="ti-eye">Home-purchase cancellations · July 2022</text>
-
-            <!-- LEFT: big number (smaller font-size for the longer 16.1% glyph) -->
-            <text x="0" y="138" font-size="80" font-family="Source Serif 4, Georgia, serif" fill="var(--treat)" font-weight="600" letter-spacing="-0.02em">16.1%</text>
-
-            <!-- RIGHT: explanation (label shifted to x=230 to clear the longer number) -->
-            <text x="270" y="90" class="ti-lbl">of U.S. home-purchase agreements</text>
-            <text x="270" y="112" class="ti-lbl">fell through in July 2022.</text>
-            <text x="270" y="140" class="ti-lbl accent" font-weight="600">≈63,000 cancellations.</text>
-
-            <!-- separator across full width -->
-            <line x1="0" y1="178" x2="540" y2="178" stroke="rgba(20,20,20,0.16)"/>
-
-            <!-- bottom stats, full width single lines -->
-            <text x="0" y="208" class="ti-axis">Highest rate since pandemic onset · up from 15% (June), 12.5% (YoY).</text>
-            <text x="0" y="232" class="ti-axis" font-weight="600">Jacksonville led the metros at 29.3% · 6 of top 10 in Florida.</text>
-          </svg>
-        </div>
         <div class="pc-body">
           <div class="pc-meta-top">
             <span class="venue-chip redfin">Redfin News</span>
@@ -541,26 +459,6 @@
       </a>
 
       <a class="paper-card" data-tags="redfin housing" href="preview-short-redfin-stale-inventory.html"><div class="format-label">Research note</div>
-        <div class="pc-img">
-          <svg viewBox="0 0 540 270" preserveAspectRatio="xMidYMid meet">
-            <text x="0" y="18" class="ti-eye">Stale housing inventory · July 2022</text>
-
-            <!-- LEFT: big number (smaller font-size for the longer 61.2% glyph) -->
-            <text x="0" y="138" font-size="80" font-family="Source Serif 4, Georgia, serif" fill="var(--treat)" font-weight="600" letter-spacing="-0.02em">61.2%</text>
-
-            <!-- RIGHT: explanation (label shifted to x=230 to clear the longer number) -->
-            <text x="270" y="90" class="ti-lbl">of U.S. for-sale homes sat 30+ days</text>
-            <text x="270" y="112" class="ti-lbl">without going under contract.</text>
-            <text x="270" y="140" class="ti-lbl accent" font-weight="600">Up from 54.4% in July 2021.</text>
-
-            <!-- separator across full width -->
-            <line x1="0" y1="178" x2="540" y2="178" stroke="rgba(20,20,20,0.16)"/>
-
-            <!-- bottom stats, full width single lines -->
-            <text x="0" y="208" class="ti-axis">First YoY jump in stale inventory since pandemic onset (April 2020).</text>
-            <text x="0" y="232" class="ti-axis" font-weight="600">Oakland +60.7% · Phoenix +54.5% · Austin +50.9% led the metros.</text>
-          </svg>
-        </div>
         <div class="pc-body">
           <div class="pc-meta-top">
             <span class="venue-chip redfin">Redfin News</span>
@@ -578,26 +476,6 @@
       </a>
 
       <a class="paper-card" data-tags="redfin housing climate" href="preview-short-redfin-wildfires.html"><div class="format-label">Research note</div>
-        <div class="pc-img">
-          <svg viewBox="0 0 540 270" preserveAspectRatio="xMidYMid meet">
-            <text x="0" y="18" class="ti-eye">California wildfires · home prices, 3 years post-fire</text>
-
-            <!-- LEFT: big number -->
-            <text x="0" y="138" font-size="88" font-family="Source Serif 4, Georgia, serif" fill="var(--treat)" font-weight="600" letter-spacing="-0.02em">21%</text>
-
-            <!-- RIGHT: explanation -->
-            <text x="270" y="90" class="ti-lbl">price growth in burned California areas</text>
-            <text x="270" y="112" class="ti-lbl">over the 3 years post-fire,</text>
-            <text x="270" y="140" class="ti-lbl accent" font-weight="600">vs 33% in surrounding areas.</text>
-
-            <!-- separator across full width -->
-            <line x1="0" y1="178" x2="540" y2="178" stroke="rgba(20,20,20,0.16)"/>
-
-            <!-- bottom stats, full width single lines -->
-            <text x="0" y="208" class="ti-axis">Sales fell 43% in year 1; new construction surged 595% as builders rebuilt.</text>
-            <text x="0" y="232" class="ti-axis" font-weight="600">≈$628B of California housing stock sits in high-fire-risk areas.</text>
-          </svg>
-        </div>
         <div class="pc-body">
           <div class="pc-meta-top">
             <span class="venue-chip redfin">Redfin News</span>
@@ -617,26 +495,6 @@
       </a>
 
       <a class="paper-card" data-tags="redfin housing climate" href="preview-short-redfin-climate-migration.html"><div class="format-label">Research note</div>
-        <div class="pc-img">
-          <svg viewBox="0 0 540 270" preserveAspectRatio="xMidYMid meet">
-            <text x="0" y="18" class="ti-eye">Climate risk &amp; migration · 2016–2020</text>
-
-            <!-- LEFT: big number (smaller font-size for the longer +4.7% glyph) -->
-            <text x="0" y="138" font-size="80" font-family="Source Serif 4, Georgia, serif" fill="var(--treat)" font-weight="600" letter-spacing="-0.02em">+4.7%</text>
-
-            <!-- RIGHT: explanation (label shifted to x=230 to clear the longer number) -->
-            <text x="270" y="90" class="ti-lbl">average population growth from net</text>
-            <text x="270" y="112" class="ti-lbl">migration in heat-risk counties,</text>
-            <text x="270" y="140" class="ti-lbl accent" font-weight="600">and positive across all 5 risk categories.</text>
-
-            <!-- separator across full width -->
-            <line x1="0" y1="178" x2="540" y2="178" stroke="rgba(20,20,20,0.16)"/>
-
-            <!-- bottom stats, full width single lines -->
-            <text x="0" y="208" class="ti-axis">Heat +4.7% · Drought +3.5% · Fire +3% · Flood +1.9% · Storm +0.4%.</text>
-            <text x="0" y="232" class="ti-axis" font-weight="600">Low-risk counties declined ~1% on average. 50 top-risk counties per type.</text>
-          </svg>
-        </div>
         <div class="pc-body">
           <div class="pc-meta-top">
             <span class="venue-chip redfin">Redfin News</span>
@@ -656,26 +514,6 @@
       </a>
 
       <a class="paper-card" data-tags="redfin housing inequality" href="preview-short-redfin-eviction-moratorium.html"><div class="format-label">Research note</div>
-        <div class="pc-img">
-          <svg viewBox="0 0 540 270" preserveAspectRatio="xMidYMid meet">
-            <text x="0" y="18" class="ti-eye">Eviction moratorium · end-of-2021 projections</text>
-
-            <!-- LEFT: big number (smaller font-size for the longer 10.2% glyph) -->
-            <text x="0" y="138" font-size="80" font-family="Source Serif 4, Georgia, serif" fill="var(--treat)" font-weight="600" letter-spacing="-0.02em">10.2%</text>
-
-            <!-- RIGHT: explanation -->
-            <text x="270" y="90" class="ti-lbl">projected rise in South Carolina rental</text>
-            <text x="270" y="112" class="ti-lbl">vacancies if 1-in-5 at-risk renters vacated.</text>
-            <text x="270" y="140" class="ti-lbl accent" font-weight="600">Highest projection nationally.</text>
-
-            <!-- separator across full width -->
-            <line x1="0" y1="178" x2="540" y2="178" stroke="rgba(20,20,20,0.16)"/>
-
-            <!-- bottom stats, full width single lines -->
-            <text x="0" y="208" class="ti-axis">7.3% of SC renters reported "very likely" eviction · 6× the 1.2% national rate.</text>
-            <text x="0" y="232" class="ti-axis" font-weight="600">&lt; $100K of $272M federal rental aid distributed by SC by end of June 2021.</text>
-          </svg>
-        </div>
         <div class="pc-body">
           <div class="pc-meta-top">
             <span class="venue-chip redfin">Redfin News</span>
@@ -695,26 +533,6 @@
       </a>
 
       <a class="paper-card" data-tags="redfin housing climate" href="preview-short-redfin-wildfire-risk.html"><div class="format-label">Research note</div>
-        <div class="pc-img">
-          <svg viewBox="0 0 540 270" preserveAspectRatio="xMidYMid meet">
-            <text x="0" y="18" class="ti-eye">Wildfire risk · Western U.S. states · 2021</text>
-
-            <!-- LEFT: big number (smaller font-size for the longer 39.4% glyph) -->
-            <text x="0" y="138" font-size="80" font-family="Source Serif 4, Georgia, serif" fill="var(--treat)" font-weight="600" letter-spacing="-0.02em">39.4%</text>
-
-            <!-- RIGHT: explanation -->
-            <text x="270" y="90" class="ti-lbl">of Utah homes face high fire risk,</text>
-            <text x="270" y="112" class="ti-lbl">the largest share of any Western state.</text>
-            <text x="270" y="140" class="ti-lbl accent" font-weight="600">411,052 properties · $219B in value.</text>
-
-            <!-- separator across full width -->
-            <line x1="0" y1="178" x2="540" y2="178" stroke="rgba(20,20,20,0.16)"/>
-
-            <!-- bottom stats, full width single lines -->
-            <text x="0" y="208" class="ti-axis">Colorado 19% · Idaho 14.4% · California 6.7% (but $628B in property value).</text>
-            <text x="0" y="232" class="ti-axis" font-weight="600">Three Utah counties exceed 94% of homes at high risk (Rich, Summit, Wasatch).</text>
-          </svg>
-        </div>
         <div class="pc-body">
           <div class="pc-meta-top">
             <span class="venue-chip redfin">Redfin News</span>
@@ -744,7 +562,7 @@
       <p class="copy">© 2026 Sebastian Olascoaga</p>
       <nav class="footlinks">
         <a href="preview.html">Home</a>
-        <a href="preview-papers.html">Work</a>
+        <a href="preview-papers.html">Research</a>
         
         <a href="preview-cv.html">CV</a>
         <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -809,6 +627,7 @@
       if (ch === allChip) return;
       ch.setAttribute('aria-pressed', fromHash.indexOf(ch.dataset.tag) >= 0 ? 'true' : 'false');
     });
+    enforceSingleSelect();
     applyFilter();
   }
 
@@ -820,14 +639,45 @@
         });
       } else {
         var cur = ch.getAttribute('aria-pressed') === 'true';
+        var row = ch.closest('.filter-row');
+        if (row && row.dataset.single === 'true'){
+          Array.prototype.forEach.call(row.querySelectorAll('.chip'), function(c){
+            if (c !== allChip) c.setAttribute('aria-pressed', 'false');
+          });
+        }
         ch.setAttribute('aria-pressed', cur ? 'false' : 'true');
       }
       applyFilter();
     });
   });
 
+  // Enforce single-select rows after hash-driven init
+  function enforceSingleSelect(){
+    var rows = document.querySelectorAll('.filter-row[data-single="true"]');
+    Array.prototype.forEach.call(rows, function(row){
+      var pressed = row.querySelectorAll('.chip[aria-pressed="true"]');
+      // skip the chip-all marker
+      var actives = Array.prototype.filter.call(pressed, function(c){ return c !== allChip; });
+      if (actives.length > 1){
+        for (var i = 1; i < actives.length; i++) actives[i].setAttribute('aria-pressed', 'false');
+      }
+    });
+  }
+
   setFromHash();
   window.addEventListener('hashchange', setFromHash);
+})();
+</script>
+<script>
+(function(){
+  var item=document.querySelector(".nav-item"); if(!item) return;
+  var btn=item.querySelector(".nav-trigger"); if(!btn) return;
+  function set(open){ btn.setAttribute("aria-expanded", open?"true":"false"); item.classList.toggle("open", open); }
+  btn.addEventListener("click", function(){ set(btn.getAttribute("aria-expanded")!=="true"); });
+  item.addEventListener("focusin", function(){ set(true); });
+  item.addEventListener("focusout", function(e){ if(!item.contains(e.relatedTarget)) set(false); });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && item.classList.contains("open")){ set(false); btn.focus(); } });
+  document.addEventListener("click", function(e){ if(!item.contains(e.target)) set(false); });
 })();
 </script>
 </body>

@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CV · Sebastian Olascoaga</title>
 <meta name="description" content="Curriculum vitae of Sebastian Olascoaga." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Sebastian Olascoaga" />
+<meta property="og:title" content="CV · Sebastian Olascoaga" />
+<meta property="og:description" content="Curriculum vitae of Sebastian Olascoaga." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="CV · Sebastian Olascoaga" />
+<meta name="twitter:description" content="Curriculum vitae of Sebastian Olascoaga." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -42,6 +50,8 @@
     }
   }
   *{box-sizing:border-box;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  :focus:not(:focus-visible){outline:none;}
   html{-webkit-text-size-adjust:100%;}
   body{
     margin:0; background:var(--paper); color:var(--text);
@@ -271,8 +281,10 @@
   /* WORK DROPDOWN */
   .nav-item{position:relative;} .nav-item::after{content:"";position:absolute;top:100%;left:0;right:0;height:14px;} header{position:relative;z-index:200;}
   .nav-item .caret{display:inline-block; font-size:0.7em; margin-left:3px; position:relative; top:-1px; opacity:0.7; transition:transform .18s ease;}
-  .nav-item:hover .caret, .nav-item:focus-within .caret{transform:rotate(180deg);}
-  .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
+  .nav-item:hover .caret, .nav-item:focus-within .caret, .nav-item.open .caret{transform:rotate(180deg);}
+    .nav-trigger{margin:0; background:none; border:0; border-bottom:1px solid transparent; font:inherit; color:var(--muted); cursor:pointer; padding:0 0 3px 0; display:inline-flex; align-items:center; transition:color .15s ease, border-color .15s ease;}
+  .nav-trigger.here{color:var(--ink); border-bottom-color:var(--accent);}
+  .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger, .nav-item.open .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
   .nav-dropdown{
     position:absolute; top:100%; left:-14px;
     min-width:248px; padding:8px 0;
@@ -282,7 +294,7 @@
     transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.25s;
     z-index:100;
   }
-  .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown{
+  .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown, .nav-item.open .nav-dropdown{
     opacity:1; visibility:visible; transform:translateY(0); transition-delay:0s;
   }
   .nav-dropdown .dd-item{
@@ -292,14 +304,22 @@
     transition:background .12s ease, color .12s ease;
   }
   .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{
-    background:var(--paper-tint); color:var(--accent); outline:none; border:none;
+    background:var(--paper-tint); color:var(--accent); border:none;
   }
-  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;} .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
-  .nav-dropdown .dd-item.disabled:hover{background:transparent; color:var(--hint);}
+  .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
   .dd-title{display:block; font-size:14px; font-weight:500;}
   .dd-note{display:block; font-size:11.5px; color:var(--muted); margin-top:2px; font-style:italic;}
-  .dd-item.disabled .dd-note{color:var(--hint);}
-  @media (max-width:640px){.nav-dropdown, .nav-item .caret{display:none;}}
+  @media (max-width:640px){
+    .nav-item .nav-trigger, .nav-item .caret, .nav-item::after{display:none;}
+    .nav-item{position:static;}
+    .nav-dropdown{position:static; display:inline-flex; flex-wrap:wrap; gap:8px 26px; min-width:0; opacity:1; visibility:visible; transform:none; transition:none; background:none; border:none; box-shadow:none; padding:0;}
+    .nav-dropdown .dd-item{padding:0 0 3px 0; border-bottom:1px solid transparent; background:none; color:var(--muted);}
+    .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{background:none; color:var(--ink); border-bottom-color:var(--accent);}
+    .nav-dropdown a.dd-item[aria-current="page"]{background:none;}
+    .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent);}
+    .nav-dropdown .dd-note{display:none;}
+    .nav-dropdown .dd-title{font-size:13.5px; font-weight:400;}
+  }
 </style>
 </head>
 <body class="cv-page">
@@ -316,20 +336,16 @@
       <nav class="nav">
         <a href="preview.html">Home</a>
         <div class="nav-item">
-          <a href="preview-papers.html" class="nav-trigger">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
-          <div class="nav-dropdown" role="menu">
-            <a href="preview-papers.html" role="menuitem" class="dd-item">
+          <button type="button" class="nav-trigger" aria-expanded="false" aria-haspopup="true">Research <span class="caret" aria-hidden="true">&#x25BE;</span></button>
+          <div class="nav-dropdown">
+            <a href="preview-papers.html" class="dd-item">
               <span class="dd-title">Published Work</span>
               <span class="dd-note">Papers, working papers, and theses</span>
             </a>
-            <a href="preview-shorts.html" role="menuitem" class="dd-item">
-              <span class="dd-title">Short Pieces</span>
-              <span class="dd-note">Research notes and briefs</span>
+            <a href="preview-shorts.html" class="dd-item">
+              <span class="dd-title">Briefs</span>
+              <span class="dd-note">Public-facing notes and analyses</span>
             </a>
-            <span class="dd-item disabled" role="menuitem" aria-disabled="true">
-              <span class="dd-title">Teaching</span>
-              <span class="dd-note">Coming soon</span>
-            </span>
           </div>
         </div>
         <a href="preview-cv.html" class="here">CV</a>
@@ -361,7 +377,7 @@
       <p class="copy">© 2026 Sebastian Olascoaga</p>
       <nav class="footlinks">
         <a href="preview.html">Home</a>
-        <a href="preview-papers.html">Work</a>
+        <a href="preview-papers.html">Research</a>
         <a href="preview-cv.html">CV</a>
         <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
@@ -372,5 +388,17 @@
 
 </div>
 <script>document.querySelectorAll(".theme-toggle").forEach(function(b){b.addEventListener("click",function(){var r=document.documentElement;var c=r.getAttribute("data-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var n=c==="dark"?"light":"dark";r.setAttribute("data-theme",n);localStorage.setItem("theme",n);});});</script>
+<script>
+(function(){
+  var item=document.querySelector(".nav-item"); if(!item) return;
+  var btn=item.querySelector(".nav-trigger"); if(!btn) return;
+  function set(open){ btn.setAttribute("aria-expanded", open?"true":"false"); item.classList.toggle("open", open); }
+  btn.addEventListener("click", function(){ set(btn.getAttribute("aria-expanded")!=="true"); });
+  item.addEventListener("focusin", function(){ set(true); });
+  item.addEventListener("focusout", function(e){ if(!item.contains(e.relatedTarget)) set(false); });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && item.classList.contains("open")){ set(false); btn.focus(); } });
+  document.addEventListener("click", function(e){ if(!item.contains(e.target)) set(false); });
+})();
+</script>
 </body>
 </html>

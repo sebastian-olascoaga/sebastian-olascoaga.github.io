@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Published Work · Sebastian Olascoaga</title>
 <meta name="description" content="Sebastian Olascoaga. Field experiments and evaluations on public questions." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Sebastian Olascoaga" />
+<meta property="og:title" content="Published Work · Sebastian Olascoaga" />
+<meta property="og:description" content="Sebastian Olascoaga. Field experiments and evaluations on public questions." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Published Work · Sebastian Olascoaga" />
+<meta name="twitter:description" content="Sebastian Olascoaga. Field experiments and evaluations on public questions." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -42,6 +50,8 @@
     }
   }
   *{box-sizing:border-box;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  :focus:not(:focus-visible){outline:none;}
   html{-webkit-text-size-adjust:100%;}
   body{
     margin:0; background:var(--paper); color:var(--text);
@@ -133,9 +143,6 @@
     display:grid; grid-template-columns:repeat(2, 1fr);
     gap:32px;
   }
-  .gallery.solo{ display:flex; justify-content:flex-start; }
-  .gallery.solo .paper-card{ width:calc(50% - 16px); }
-  @media (max-width:880px){ .gallery.solo .paper-card{ width:100%; } }
 
   .paper-card{
     display:flex; flex-direction:column;
@@ -150,8 +157,10 @@
     transform:translateY(-3px);
     box-shadow:0 10px 28px rgba(20,20,20,0.08);
   }
-  .paper-card.no-link{cursor:default;}
+  .paper-card.no-link{cursor:default; border-style:dashed;}
   .paper-card.no-link:hover{border-color:var(--hair); transform:none; box-shadow:none;}
+  .paper-card.no-link .format-label{color:var(--muted);}
+  .paper-card.no-link .pc-img{opacity:0.6;}
 
   /* FORMAT LABEL (content-type tag at the top of every card) */
   .format-label{font-family:var(--sans); font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; padding:11px 28px 10px; border-bottom:1px solid var(--hair); color:var(--accent); background:var(--paper);}
@@ -230,58 +239,6 @@
   }
   .paper-card:hover .arrow{transform:translateX(4px);}
 
-  /* "in progress" categories shown as compact strip */
-  .upcoming{
-    display:grid; grid-template-columns:repeat(2, 1fr); gap:24px;
-    margin:0 0 56px;
-  }
-  .upcoming-card{
-    padding:24px 26px;
-    border:1px dashed var(--hair); border-radius:2px;
-    text-decoration:none; color:inherit;
-    transition:border-color .2s ease, background .2s ease;
-  }
-  .upcoming-card:hover{border-color:var(--accent); background:var(--paper-tint);}
-  .upcoming-eye{
-    font-family:var(--sans); font-size:10px; font-weight:600;
-    letter-spacing:0.18em; text-transform:uppercase;
-    color:var(--muted); margin:0 0 8px;
-  }
-  .upcoming-title{
-    font-family:var(--serif); font-weight:500; color:var(--ink);
-    font-size:19px; line-height:1.3;
-    font-variation-settings:"opsz" 36;
-    margin:0 0 8px; letter-spacing:-0.003em;
-  }
-  .upcoming-title em{font-style:italic;}
-  .upcoming-note{
-    font-family:var(--sans); font-size:12.5px; color:var(--muted);
-    line-height:1.5;
-  }
-
-  /* notes & news */
-  .notes-strip{margin:80px 0 0; padding:32px 0 0; border-top:1px solid var(--hair);}
-  .notes-strip h2{
-    font-family:var(--sans); font-size:11.5px; font-weight:600;
-    letter-spacing:0.18em; text-transform:uppercase;
-    color:var(--muted); margin:0 0 22px;
-    display:flex; align-items:baseline; gap:14px;
-  }
-  .notes-strip h2 .all{margin-left:auto; font-size:12.5px; font-weight:400; letter-spacing:0.04em; text-transform:none; color:var(--muted);}
-  .notes-strip h2 .all a{color:var(--muted); text-decoration:none; border-bottom:1px solid var(--hair);}
-  .notes-strip h2 .all a:hover{color:var(--accent); border-bottom-color:var(--accent);}
-  .notes-list{list-style:none; padding:0; margin:0;}
-  .notes-list li{
-    display:grid; grid-template-columns:110px 80px 1fr;
-    gap:18px; padding:11px 0; border-bottom:1px solid var(--hair);
-    font-size:15px; line-height:1.5; align-items:baseline;
-  }
-  .notes-list li:last-child{border-bottom:none;}
-  .notes-list .when{font-family:var(--sans); font-size:12px; color:var(--muted); letter-spacing:0.04em; font-variant-numeric:tabular-nums;}
-  .notes-list .kind{font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent);}
-  .notes-list .what{color:var(--text);}
-  .notes-list .what em{font-style:italic; color:var(--ink);}
-
   /* footer */
   footer{margin-top:96px; padding:48px 0 96px; border-top:1px solid var(--hair);}
   .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; align-items:flex-end;}
@@ -302,7 +259,6 @@
 
   @media (max-width:880px){
     .gallery{grid-template-columns:1fr; gap:24px;}
-    .upcoming{grid-template-columns:1fr; gap:16px;}
   }
   @media (max-width:640px){
     .wrap{padding:0 22px;}
@@ -312,8 +268,6 @@
     main{padding-top:36px;}
     .pc-img{padding:22px 22px;}
     .pc-body{padding:22px 22px 22px;}
-    .notes-list li{grid-template-columns:1fr; gap:2px;}
-    .notes-list .when, .notes-list .kind{display:inline; margin-right:8px;}
     .foot-grid{grid-template-columns:1fr; gap:22px;}
   }
 </style>
@@ -322,8 +276,10 @@
   /* WORK DROPDOWN */
   .nav-item{position:relative;} .nav-item::after{content:"";position:absolute;top:100%;left:0;right:0;height:14px;} header{position:relative;z-index:200;}
   .nav-item .caret{display:inline-block; font-size:0.7em; margin-left:3px; position:relative; top:-1px; opacity:0.7; transition:transform .18s ease;}
-  .nav-item:hover .caret, .nav-item:focus-within .caret{transform:rotate(180deg);}
-  .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
+  .nav-item:hover .caret, .nav-item:focus-within .caret, .nav-item.open .caret{transform:rotate(180deg);}
+    .nav-trigger{margin:0; background:none; border:0; border-bottom:1px solid transparent; font:inherit; color:var(--muted); cursor:pointer; padding:0 0 3px 0; display:inline-flex; align-items:center; transition:color .15s ease, border-color .15s ease;}
+  .nav-trigger.here{color:var(--ink); border-bottom-color:var(--accent);}
+  .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger, .nav-item.open .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
   .nav-dropdown{
     position:absolute; top:100%; left:-14px;
     min-width:248px; padding:8px 0;
@@ -333,7 +289,7 @@
     transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.25s;
     z-index:100;
   }
-  .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown{
+  .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown, .nav-item.open .nav-dropdown{
     opacity:1; visibility:visible; transform:translateY(0); transition-delay:0s;
   }
   .nav-dropdown .dd-item{
@@ -343,14 +299,22 @@
     transition:background .12s ease, color .12s ease;
   }
   .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{
-    background:var(--paper-tint); color:var(--accent); outline:none; border:none;
+    background:var(--paper-tint); color:var(--accent); border:none;
   }
-  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;} .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
-  .nav-dropdown .dd-item.disabled:hover{background:transparent; color:var(--hint);}
+  .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
   .dd-title{display:block; font-size:14px; font-weight:500;}
   .dd-note{display:block; font-size:11.5px; color:var(--muted); margin-top:2px; font-style:italic;}
-  .dd-item.disabled .dd-note{color:var(--hint);}
-  @media (max-width:640px){.nav-dropdown, .nav-item .caret{display:none;}}
+  @media (max-width:640px){
+    .nav-item .nav-trigger, .nav-item .caret, .nav-item::after{display:none;}
+    .nav-item{position:static;}
+    .nav-dropdown{position:static; display:inline-flex; flex-wrap:wrap; gap:8px 26px; min-width:0; opacity:1; visibility:visible; transform:none; transition:none; background:none; border:none; box-shadow:none; padding:0;}
+    .nav-dropdown .dd-item{padding:0 0 3px 0; border-bottom:1px solid transparent; background:none; color:var(--muted);}
+    .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{background:none; color:var(--ink); border-bottom-color:var(--accent);}
+    .nav-dropdown a.dd-item[aria-current="page"]{background:none;}
+    .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent);}
+    .nav-dropdown .dd-note{display:none;}
+    .nav-dropdown .dd-title{font-size:13.5px; font-weight:400;}
+  }
 </style>
 <style>
   /* WORK FILTER */
@@ -361,7 +325,7 @@
   .page-title em{font-style:italic; color:var(--accent);}
   .page-meta{font-family:var(--sans); font-size:13px; color:var(--muted); letter-spacing:0.04em; margin:0;}
   .page-meta em{font-style:italic; color:var(--text);}
-  /* FILTER (two labeled rows: Topic / Method) — mirrors the parallel architecture on Short Pieces */
+  /* FILTER (two labeled rows: Topic / Method) — mirrors the parallel architecture on Briefs */
   .filter-set{display:flex; flex-direction:column; gap:10px; margin:32px 0 40px;}
   .filter-row{display:flex; align-items:center; flex-wrap:wrap; gap:8px;}
   .filter-row-label{font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); margin-right:14px; min-width:64px;}
@@ -385,8 +349,6 @@
   .work-gallery.is-empty + .empty-msg{display:block;}
   @media (max-width:880px){
     .work-gallery{grid-template-columns:1fr;}
-    .filter-bar{gap:6px;}
-    .filter-bar .chip{font-size:12px; padding:6px 12px;}
   }
 </style>
 </head>
@@ -403,20 +365,16 @@
       <nav class="nav">
         <a href="preview.html">Home</a>
         <div class="nav-item">
-          <a href="preview-papers.html" class="nav-trigger here">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
-          <div class="nav-dropdown" role="menu">
-            <a href="preview-papers.html" role="menuitem" class="dd-item" aria-current="page">
+          <button type="button" class="nav-trigger here" aria-expanded="false" aria-haspopup="true">Research <span class="caret" aria-hidden="true">&#x25BE;</span></button>
+          <div class="nav-dropdown">
+            <a href="preview-papers.html" class="dd-item" aria-current="page">
               <span class="dd-title">Published Work</span>
               <span class="dd-note">Papers, working papers, and theses</span>
             </a>
-            <a href="preview-shorts.html" role="menuitem" class="dd-item">
-              <span class="dd-title">Short Pieces</span>
-              <span class="dd-note">Research notes and briefs</span>
+            <a href="preview-shorts.html" class="dd-item">
+              <span class="dd-title">Briefs</span>
+              <span class="dd-note">Public-facing notes and analyses</span>
             </a>
-            <span class="dd-item disabled" role="menuitem" aria-disabled="true">
-              <span class="dd-title">Teaching</span>
-              <span class="dd-note">Coming soon</span>
-            </span>
           </div>
         </div>
         <a href="preview-cv.html">CV</a>
@@ -433,7 +391,7 @@
     <section class="page-intro reveal d2">
       <p class="page-eyebrow">Published Work</p>
       <h2 class="page-title">Peer-reviewed papers, working papers, and theses across housing, climate, public sector, and inequality.</h2>
-      <p class="page-meta">9 entries <span style="color:var(--hint);margin:0 4px;">·</span> 2015–present <span style="color:var(--hint);margin:0 4px;">·</span> Published as <em>Sandoval-Olascoaga</em>.</p>
+      <p class="page-meta">7 entries <span style="color:var(--hint);margin:0 4px;">·</span> 2015–present <span style="color:var(--hint);margin:0 4px;">·</span> Published as <em>Sandoval-Olascoaga</em>.</p>
     </section>
 
     <!-- FILTER (two labeled rows: Topic / Method) -->
@@ -443,8 +401,6 @@
         <button class="chip chip-all" type="button" data-tag="all" aria-pressed="true">All</button>
         <button class="chip" type="button" data-tag="housing" aria-pressed="false">Housing</button>
         <button class="chip" type="button" data-tag="climate" aria-pressed="false">Climate</button>
-        <button class="chip" type="button" data-tag="public-sector" aria-pressed="false">Public sector</button>
-        <button class="chip" type="button" data-tag="generative-ai" aria-pressed="false">Generative AI</button>
         <button class="chip" type="button" data-tag="public-health" aria-pressed="false">Public health</button>
         <button class="chip" type="button" data-tag="inequality" aria-pressed="false">Inequality</button>
       </div>
@@ -489,13 +445,13 @@
               <circle cx="400" cy="175" r="3" class="ti-dot-treat"/>
               <circle cx="450" cy="175" r="3" class="ti-dot-treat"/>
               <circle cx="500" cy="204" r="4.5" class="ti-dot-treat"/>
-              <circle cx="500" cy="204" r="9" fill="none" stroke="#1F4F5A" stroke-width="1" opacity="0.4"/>
+              <circle cx="500" cy="204" r="9" fill="none" stroke="var(--treat)" stroke-width="1" opacity="0.4"/>
 
               <!-- Endpoint callout -->
               <text x="502" y="148" text-anchor="end" class="ti-delta">−12.4%</text>
 
               <!-- X-axis line + ticks -->
-              <line x1="50" y1="260" x2="500" y2="260" stroke="rgba(20,20,20,0.18)"/>
+              <line x1="50" y1="260" x2="500" y2="260" stroke="var(--rule)"/>
               <text x="50"  y="278" class="ti-axis">Wk 0</text>
               <text x="275" y="278" text-anchor="middle" class="ti-axis">Weeks since entering experiment</text>
               <text x="500" y="278" text-anchor="end" class="ti-axis">Wk 9</text>
@@ -527,7 +483,7 @@
               <text x="0" y="22" class="ti-eye">Flood penalty by neighborhood trajectory · 8.1M home sales</text>
 
               <!-- zero / baseline line -->
-              <line x1="60" y1="140" x2="440" y2="140" stroke="rgba(20,20,20,0.18)"/>
+              <line x1="60" y1="140" x2="440" y2="140" stroke="var(--rule)"/>
               <text x="54" y="144" text-anchor="end" class="ti-axis" font-weight="600">0%</text>
 
               <!-- gridlines -->
@@ -540,21 +496,21 @@
               <text x="206" y="92" class="ti-axis">Flood</text>
 
               <!-- Growing-population tracts: dip, then partial recovery -->
-              <path class="ti-line-ctrl ti-redraw" stroke="#B3AEA8" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M60,142 L100,140 L140,142 L180,140 L200,138 L240,155 L280,195 L320,245 L360,282 L390,255 L420,210 L440,205"/>
-              <circle cx="360" cy="282" r="3.5" fill="#B3AEA8"/>
-              <circle cx="420" cy="210" r="4.5" fill="#B3AEA8"/>
+              <path class="ti-line-ctrl ti-redraw" stroke="var(--counter)" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M60,142 L100,140 L140,142 L180,140 L200,138 L240,155 L280,195 L320,245 L360,282 L390,255 L420,210 L440,205"/>
+              <circle cx="360" cy="282" r="3.5" fill="var(--counter)"/>
+              <circle cx="420" cy="210" r="4.5" fill="var(--counter)"/>
               <text x="446" y="214" font-size="11" class="ti-axis" font-weight="600">−8.7% growing</text>
 
               <!-- Shrinking-population tracts: keeps falling -->
               <path class="ti-line-treat ti-redraw" stroke-width="2.6" d="M60,142 L100,140 L140,141 L180,140 L200,138 L240,160 L280,178 L320,205 L360,232 L390,250 L420,260 L440,266"/>
               <circle class="ti-dot-treat" cx="300" cy="178" r="3"/>
               <circle class="ti-dot-treat" cx="440" cy="266" r="6"/>
-              <circle cx="440" cy="266" r="11" fill="none" stroke="#1F4F5A" stroke-width="1.2" opacity="0.4"/>
-              <text x="446" y="270" font-size="13" fill="#1F4F5A" font-weight="700" font-family="Inter,sans-serif">−15%</text>
+              <circle cx="440" cy="266" r="11" fill="none" stroke="var(--treat)" stroke-width="1.2" opacity="0.4"/>
+              <text x="446" y="270" font-size="13" fill="var(--treat)" font-weight="700" font-family="Inter,sans-serif">−15%</text>
               <text x="446" y="286" font-size="11" class="ti-axis" font-weight="600">shrinking, still falling</text>
 
               <!-- x-axis labels -->
-              <line x1="60" y1="310" x2="440" y2="310" stroke="rgba(20,20,20,0.15)"/>
+              <line x1="60" y1="310" x2="440" y2="310" stroke="var(--rule)"/>
               <text x="60"  y="328" class="ti-axis">−7y</text>
               <text x="200" y="328" text-anchor="middle" class="ti-axis">0</text>
               <text x="440" y="328" text-anchor="end" class="ti-axis">+11y</text>
@@ -586,12 +542,12 @@
               <text x="400" y="48" text-anchor="middle" class="ti-axis" font-weight="600">With flood risk</text>
 
               <!-- Zero line -->
-              <line x1="100" y1="240" x2="500" y2="240" stroke="rgba(20,20,20,0.18)"/>
+              <line x1="100" y1="240" x2="500" y2="240" stroke="var(--rule)"/>
               <text x="92" y="244" text-anchor="end" class="ti-axis" font-weight="600">0%</text>
 
               <!-- Vertical column axes (faint) -->
-              <line x1="160" y1="60" x2="160" y2="300" stroke="rgba(20,20,20,0.10)"/>
-              <line x1="400" y1="60" x2="400" y2="300" stroke="rgba(20,20,20,0.10)"/>
+              <line x1="160" y1="60" x2="160" y2="300" stroke="var(--hair)"/>
+              <line x1="400" y1="60" x2="400" y2="300" stroke="var(--hair)"/>
 
               <!-- Row 1: Any RP composite. +14.02 → +12.47, -1.54pp -->
               <path class="ti-line-ctrl ti-redraw" d="M160,72 L400,90"/>
@@ -611,9 +567,9 @@
               <path class="ti-line-treat ti-redraw" stroke-width="2.6" d="M160,171 L400,257"/>
               <circle class="ti-dot-treat" cx="160" cy="171" r="5"/>
               <circle class="ti-dot-treat" cx="400" cy="257" r="6"/>
-              <circle cx="400" cy="257" r="11" fill="none" stroke="#1F4F5A" stroke-width="1.2" opacity="0.4"/>
-              <text x="148" y="175" text-anchor="end" font-size="11.5" fill="#1F4F5A" font-weight="600" font-family="Inter,sans-serif">+5.76%</text>
-              <text x="412" y="261" font-size="13" fill="#1F4F5A" font-weight="700" font-family="Inter,sans-serif">−1.42%</text>
+              <circle cx="400" cy="257" r="11" fill="none" stroke="var(--treat)" stroke-width="1.2" opacity="0.4"/>
+              <text x="148" y="175" text-anchor="end" font-size="11.5" fill="var(--treat)" font-weight="600" font-family="Inter,sans-serif">+5.76%</text>
+              <text x="412" y="261" font-size="13" fill="var(--treat)" font-weight="700" font-family="Inter,sans-serif">−1.42%</text>
               <text x="412" y="278" font-size="11" class="ti-lbl accent" font-weight="600">5-yr RP · −7.19pp</text>
 
               <!-- Caption -->
@@ -644,38 +600,38 @@
 
               <!-- Row 1: CCI = 0, HR 1.55 [1.22, 1.91] -->
               <text x="0" y="115" class="ti-lbl" font-size="15">CCI 0</text>
-              <line class="ti-redraw" x1="181" y1="110" x2="277" y2="110" stroke="#B3AEA8" stroke-width="1.6"/>
-              <line x1="181" y1="103" x2="181" y2="117" stroke="#B3AEA8" stroke-width="1.6"/>
-              <line x1="277" y1="103" x2="277" y2="117" stroke="#B3AEA8" stroke-width="1.6"/>
+              <line class="ti-redraw" x1="181" y1="110" x2="277" y2="110" stroke="var(--counter)" stroke-width="1.6"/>
+              <line x1="181" y1="103" x2="181" y2="117" stroke="var(--counter)" stroke-width="1.6"/>
+              <line x1="277" y1="103" x2="277" y2="117" stroke="var(--counter)" stroke-width="1.6"/>
               <circle class="ti-dot-ctrl" cx="227" cy="110" r="5"/>
               <text x="289" y="115" font-size="13" class="ti-axis">1.55</text>
 
               <!-- Row 2: CCI = 1, HR 1.93 [1.40, 2.12] -->
               <text x="0" y="165" class="ti-lbl" font-size="15">CCI 1</text>
-              <line class="ti-redraw" x1="206" y1="160" x2="307" y2="160" stroke="#B3AEA8" stroke-width="1.6"/>
-              <line x1="206" y1="153" x2="206" y2="167" stroke="#B3AEA8" stroke-width="1.6"/>
-              <line x1="307" y1="153" x2="307" y2="167" stroke="#B3AEA8" stroke-width="1.6"/>
+              <line class="ti-redraw" x1="206" y1="160" x2="307" y2="160" stroke="var(--counter)" stroke-width="1.6"/>
+              <line x1="206" y1="153" x2="206" y2="167" stroke="var(--counter)" stroke-width="1.6"/>
+              <line x1="307" y1="153" x2="307" y2="167" stroke="var(--counter)" stroke-width="1.6"/>
               <circle class="ti-dot-ctrl" cx="280" cy="160" r="5"/>
               <text x="319" y="165" font-size="13" class="ti-axis">1.93</text>
 
               <!-- Row 3: CCI = 2, HR 2.44 [1.64, 3.39] -->
               <text x="0" y="215" class="ti-lbl" font-size="15">CCI 2</text>
-              <line class="ti-redraw" x1="240" y1="210" x2="485" y2="210" stroke="#1F4F5A" stroke-width="1.8"/>
-              <line x1="240" y1="203" x2="240" y2="217" stroke="#1F4F5A" stroke-width="1.8"/>
-              <line x1="485" y1="203" x2="485" y2="217" stroke="#1F4F5A" stroke-width="1.8"/>
+              <line class="ti-redraw" x1="240" y1="210" x2="485" y2="210" stroke="var(--treat)" stroke-width="1.8"/>
+              <line x1="240" y1="203" x2="240" y2="217" stroke="var(--treat)" stroke-width="1.8"/>
+              <line x1="485" y1="203" x2="485" y2="217" stroke="var(--treat)" stroke-width="1.8"/>
               <circle class="ti-dot-treat" cx="352" cy="210" r="5"/>
               <text x="497" y="215" font-size="13" class="ti-axis">2.44</text>
 
               <!-- Row 4: CCI ≥ 3, HR 2.36 [1.67, 3.34] · headline gradient -->
               <text x="0" y="265" class="ti-lbl accent" font-size="15">CCI ≥ 3</text>
-              <line class="ti-redraw" x1="244" y1="260" x2="478" y2="260" stroke="#1F4F5A" stroke-width="2"/>
-              <line x1="244" y1="252" x2="244" y2="268" stroke="#1F4F5A" stroke-width="2"/>
-              <line x1="478" y1="252" x2="478" y2="268" stroke="#1F4F5A" stroke-width="2"/>
+              <line class="ti-redraw" x1="244" y1="260" x2="478" y2="260" stroke="var(--treat)" stroke-width="2"/>
+              <line x1="244" y1="252" x2="244" y2="268" stroke="var(--treat)" stroke-width="2"/>
+              <line x1="478" y1="252" x2="478" y2="268" stroke="var(--treat)" stroke-width="2"/>
               <circle class="ti-dot-treat" cx="340" cy="260" r="6.5"/>
-              <text x="490" y="265" font-size="14" font-weight="600" fill="#1F4F5A" font-family="Inter,sans-serif">HR 2.36</text>
+              <text x="490" y="265" font-size="14" font-weight="600" fill="var(--treat)" font-family="Inter,sans-serif">HR 2.36</text>
 
               <!-- HR axis -->
-              <line x1="80" y1="290" x2="500" y2="290" stroke="rgba(20,20,20,0.15)"/>
+              <line x1="80" y1="290" x2="500" y2="290" stroke="var(--rule)"/>
               <text x="80"  y="308" class="ti-axis">0.5</text>
               <text x="150" y="308" text-anchor="middle" class="ti-axis">1.0</text>
               <text x="290" y="308" text-anchor="middle" class="ti-axis">2.0</text>
@@ -710,10 +666,10 @@
               <text x="65" y="278" text-anchor="end" class="ti-axis">0</text>
 
               <!-- Gridlines -->
-              <line x1="75" y1="95"  x2="500" y2="95"  stroke="rgba(20,20,20,0.08)"/>
-              <line x1="75" y1="155" x2="500" y2="155" stroke="rgba(20,20,20,0.08)"/>
-              <line x1="75" y1="215" x2="500" y2="215" stroke="rgba(20,20,20,0.08)"/>
-              <line x1="75" y1="275" x2="500" y2="275" stroke="rgba(20,20,20,0.18)"/>
+              <line x1="75" y1="95"  x2="500" y2="95"  stroke="var(--hair)"/>
+              <line x1="75" y1="155" x2="500" y2="155" stroke="var(--hair)"/>
+              <line x1="75" y1="215" x2="500" y2="215" stroke="var(--hair)"/>
+              <line x1="75" y1="275" x2="500" y2="275" stroke="var(--rule)"/>
 
               <!-- 2008 bar (gray): 8.9% × 15 px/pp = 133.5; top y = 275 - 133.5 = 141.5 -->
               <rect class="ti-bar-ctrl" x="130" y="142" width="120" height="133"/>
@@ -754,9 +710,9 @@
               <text x="0" y="22" class="ti-eye">Housing under shocks · PhD dissertation, three chapters</text>
 
               <!-- gridlines -->
-              <line x1="0" y1="110" x2="540" y2="110" stroke="rgba(20,20,20,0.16)"/>
-              <line x1="0" y1="190" x2="540" y2="190" stroke="rgba(20,20,20,0.08)"/>
-              <line x1="0" y1="270" x2="540" y2="270" stroke="rgba(20,20,20,0.08)"/>
+              <line x1="0" y1="110" x2="540" y2="110" stroke="var(--rule)"/>
+              <line x1="0" y1="190" x2="540" y2="190" stroke="var(--hair)"/>
+              <line x1="0" y1="270" x2="540" y2="270" stroke="var(--hair)"/>
 
               <!-- y-axis labels -->
               <text x="0" y="104" class="ti-axis">$0</text>
@@ -784,7 +740,7 @@
 
               <!-- endpoint emphasis -->
               <circle class="ti-dot-treat" cx="540" cy="290" r="5"/>
-              <circle cx="540" cy="290" r="11" fill="none" stroke="#1F4F5A" stroke-width="1.2" opacity="0.4"/>
+              <circle cx="540" cy="290" r="11" fill="none" stroke="var(--treat)" stroke-width="1.2" opacity="0.4"/>
 
               <!-- callout (positioned left of the emphasis ring) -->
               <text x="520" y="272" text-anchor="end"><tspan class="ti-val accent">−$23,412</tspan></text>
@@ -851,7 +807,7 @@
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">City of Boston's first RCT · two-arm design</text>
 
-              <rect x="0" y="80" width="240" height="80" fill="var(--paper)" stroke="rgba(20,20,20,0.18)" rx="2"/>
+              <rect x="0" y="80" width="240" height="80" fill="var(--paper)" stroke="var(--rule)" rx="2"/>
               <text x="120" y="115" text-anchor="middle" class="ti-lbl">Control</text>
               <text x="120" y="140" text-anchor="middle" font-size="11" fill="var(--muted)">standard workflow</text>
 
@@ -859,10 +815,10 @@
               <text x="420" y="115" text-anchor="middle" class="ti-lbl accent">Treatment</text>
               <text x="420" y="140" text-anchor="middle" font-size="11" fill="var(--accent)">with BidBot (RAG)</text>
 
-              <line x1="120" y1="170" x2="120" y2="220" stroke="rgba(20,20,20,0.30)" stroke-dasharray="3 3"/>
-              <line x1="420" y1="170" x2="420" y2="220" stroke="rgba(20,20,20,0.30)" stroke-dasharray="3 3"/>
+              <line x1="120" y1="170" x2="120" y2="220" stroke="var(--rule)" stroke-dasharray="3 3"/>
+              <line x1="420" y1="170" x2="420" y2="220" stroke="var(--rule)" stroke-dasharray="3 3"/>
 
-              <rect x="0" y="230" width="540" height="60" fill="var(--paper-tint)" stroke="rgba(20,20,20,0.10)" rx="2"/>
+              <rect x="0" y="230" width="540" height="60" fill="var(--paper-tint)" stroke="var(--hair)" rx="2"/>
               <text x="270" y="258" text-anchor="middle" class="ti-lbl">Outcome: solicitation quality &amp; cycle time</text>
               <text x="270" y="278" text-anchor="middle" font-size="11" fill="var(--muted)">results pending</text>
             </svg>
@@ -886,17 +842,17 @@
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Enterprise GenAI · output, adoption, impact</text>
 
-              <rect x="0" y="70" width="160" height="60" fill="var(--paper)" stroke="rgba(20,20,20,0.16)" rx="2"/>
+              <rect x="0" y="70" width="160" height="60" fill="var(--paper)" stroke="var(--rule)" rx="2"/>
               <text x="80" y="105" text-anchor="middle" class="ti-lbl">Claude</text>
-              <rect x="190" y="70" width="160" height="60" fill="var(--paper)" stroke="rgba(20,20,20,0.16)" rx="2"/>
+              <rect x="190" y="70" width="160" height="60" fill="var(--paper)" stroke="var(--rule)" rx="2"/>
               <text x="270" y="105" text-anchor="middle" class="ti-lbl">Gemini</text>
-              <rect x="380" y="70" width="160" height="60" fill="var(--paper)" stroke="rgba(20,20,20,0.16)" rx="2"/>
+              <rect x="380" y="70" width="160" height="60" fill="var(--paper)" stroke="var(--rule)" rx="2"/>
               <text x="460" y="98" text-anchor="middle" class="ti-lbl">in-house</text>
               <text x="460" y="118" text-anchor="middle" class="ti-lbl">RAG</text>
 
-              <line x1="80" y1="140" x2="80" y2="180" stroke="rgba(20,20,20,0.30)" stroke-dasharray="3 3"/>
-              <line x1="270" y1="140" x2="270" y2="180" stroke="rgba(20,20,20,0.30)" stroke-dasharray="3 3"/>
-              <line x1="460" y1="140" x2="460" y2="180" stroke="rgba(20,20,20,0.30)" stroke-dasharray="3 3"/>
+              <line x1="80" y1="140" x2="80" y2="180" stroke="var(--rule)" stroke-dasharray="3 3"/>
+              <line x1="270" y1="140" x2="270" y2="180" stroke="var(--rule)" stroke-dasharray="3 3"/>
+              <line x1="460" y1="140" x2="460" y2="180" stroke="var(--rule)" stroke-dasharray="3 3"/>
 
               <rect x="0" y="190" width="540" height="60" fill="var(--accent-soft)" stroke="var(--accent)" rx="2"/>
               <text x="270" y="218" text-anchor="middle" class="ti-lbl accent">Evaluation pipeline</text>
@@ -930,7 +886,7 @@
       <p class="copy">© 2026 Sebastian Olascoaga</p>
       <nav class="footlinks">
         <a href="preview.html">Home</a>
-        <a href="preview-papers.html">Work</a>
+        <a href="preview-papers.html">Research</a>
         <a href="preview-cv.html">CV</a>
         <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
@@ -1012,6 +968,18 @@
     });
   }
   applyFilter();
+})();
+</script>
+<script>
+(function(){
+  var item=document.querySelector(".nav-item"); if(!item) return;
+  var btn=item.querySelector(".nav-trigger"); if(!btn) return;
+  function set(open){ btn.setAttribute("aria-expanded", open?"true":"false"); item.classList.toggle("open", open); }
+  btn.addEventListener("click", function(){ set(btn.getAttribute("aria-expanded")!=="true"); });
+  item.addEventListener("focusin", function(){ set(true); });
+  item.addEventListener("focusout", function(e){ if(!item.contains(e.relatedTarget)) set(false); });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && item.classList.contains("open")){ set(false); btn.focus(); } });
+  document.addEventListener("click", function(e){ if(!item.contains(e.target)) set(false); });
 })();
 </script>
 </body>
