@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);--serif:"Source Serif 4",Georgia,serif;--sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
-  @media (prefers-color-scheme: dark){:root{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}}
+  :root{--paper:#FBFBFB;--paper-tint:#F4F4F4;--paper-deep:#E8E8E8;--ink:#1A1916;--text:#38342F;--muted:#6D6862;--hint:#8F8B85;--hair:rgba(20,20,20,0.10);--rule:rgba(20,20,20,0.18);--counter:#B3AEA8;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.10);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.12);--serif:"Source Serif 4",Georgia,serif;--sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+  @media (prefers-color-scheme: dark){:root{--paper:#15110D;--paper-tint:#1F1A14;--paper-deep:#2A241D;--ink:#F7F3EE;--text:#DDD3C5;--muted:#999186;--hint:#6E6760;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#7A726B;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.14);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.16);}}
   *{box-sizing:border-box;}html{-webkit-text-size-adjust:100%;}
   body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;}
   a{color:inherit;}.num{font-variant-numeric:tabular-nums;}
@@ -104,8 +104,8 @@
   @media (max-width:640px){.wrap{padding:0 22px;}.head-grid{grid-template-columns:1fr;gap:18px;}header.site{padding-top:32px;}.paper-hero{padding:40px 0 28px;}.hero-chart{padding:24px 18px 18px;}.foot-grid{grid-template-columns:1fr;gap:22px;}.stat-strip{grid-template-columns:1fr;gap:16px;}}
 
   /* bar comparison chart styles */
-  .bc-grid{stroke:rgba(42,30,21,0.08);stroke-width:1;}
-  .bc-axis{stroke:rgba(42,30,21,0.22);stroke-width:1;}
+  .bc-grid{stroke:rgba(20,20,20,0.08);stroke-width:1;}
+  .bc-axis{stroke:rgba(20,20,20,0.18);stroke-width:1;}
   .bc-country{font-family:var(--sans);font-size:13.5px;fill:var(--text);}
   .bc-country.bold{font-weight:600;fill:var(--ink);}
   .bc-bar{fill:var(--counter);}
@@ -114,10 +114,10 @@
   .bc-val.heavy{fill:var(--accent);}
   .bc-xlbl{font-family:var(--sans);font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums;}
 </style>
-<style>:root[data-theme="dark"]{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}:root[data-theme="light"]{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
+<style>:root[data-theme="dark"]{--paper:#15110D;--paper-tint:#1F1A14;--paper-deep:#2A241D;--ink:#F7F3EE;--text:#DDD3C5;--muted:#999186;--hint:#6E6760;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#7A726B;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.14);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.16);}:root[data-theme="light"]{--paper:#FBFBFB;--paper-tint:#F4F4F4;--paper-deep:#E8E8E8;--ink:#1A1916;--text:#38342F;--muted:#6D6862;--hint:#8F8B85;--hair:rgba(20,20,20,0.10);--rule:rgba(20,20,20,0.18);--counter:#B3AEA8;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.10);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.12);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
 <style>
   /* WORK DROPDOWN */
-  .nav-item{position:relative;}
+  .nav-item{position:relative;} .nav-item::after{content:"";position:absolute;top:100%;left:0;right:0;height:14px;} header{position:relative;z-index:200;}
   .nav-item .caret{display:inline-block; font-size:0.7em; margin-left:3px; position:relative; top:-1px; opacity:0.7; transition:transform .18s ease;}
   .nav-item:hover .caret, .nav-item:focus-within .caret{transform:rotate(180deg);}
   .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
@@ -127,7 +127,7 @@
     background:var(--paper); border:1px solid var(--hair);
     box-shadow:0 12px 32px rgba(0,0,0,0.18);
     opacity:0; visibility:hidden; transform:translateY(-4px);
-    transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.12s;
+    transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.25s;
     z-index:100;
   }
   .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown{
@@ -142,7 +142,7 @@
   .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{
     background:var(--paper-tint); color:var(--accent); outline:none; border:none;
   }
-  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;}
+  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;} .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
   .nav-dropdown .dd-item.disabled:hover{background:transparent; color:var(--hint);}
   .dd-title{display:block; font-size:14px; font-weight:500;}
   .dd-note{display:block; font-size:11.5px; color:var(--muted); margin-top:2px; font-style:italic;}
@@ -161,16 +161,16 @@
       <nav class="nav">
         <a href="preview.html">Home</a>
         <div class="nav-item">
-          <a href="preview-papers.html" class="nav-trigger">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
+          <a href="preview-papers.html" class="nav-trigger here">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
           <div class="nav-dropdown" role="menu">
-            <a href="preview-papers.html" role="menuitem" class="dd-item">
+            <a href="preview-papers.html" role="menuitem" class="dd-item" aria-current="page">
               <span class="dd-title">Published Work</span>
               <span class="dd-note">Papers, working papers, and theses</span>
             </a>
-            <span class="dd-item disabled" role="menuitem" aria-disabled="true">
+            <a href="preview-shorts.html" role="menuitem" class="dd-item">
               <span class="dd-title">Short Pieces</span>
-              <span class="dd-note">Coming soon</span>
-            </span>
+              <span class="dd-note">Research notes and briefs</span>
+            </a>
             <span class="dd-item disabled" role="menuitem" aria-disabled="true">
               <span class="dd-title">Teaching</span>
               <span class="dd-note">Coming soon</span>
@@ -193,7 +193,7 @@
     <span class="paper-status"><span class="dot"></span>Summa Cum Laude - Paris School of Economics</span>
   </section>
 
-  <p class="lead">When the official statistics said Mexico's Gini was falling, the country's tax microdata told a different story. Once you correct for systematic under-reporting, the <strong>top 1% holds 13.6%</strong> of national income. The <strong>top 0.001%</strong> (roughly 709 people in a country of 112 million) earns an average of <strong>$30.5 million PPP a year</strong>. Mexico's inverted Pareto coefficient sits "at the same level as the USA and UK of the 1920s."</p>
+  <p class="lead">Mexico's official Gini fell between 2008 and 2012. Once the tax microdata is corrected for systematic under-reporting, concentration at the top rose over the same period. The <strong>top 1% holds 13.6%</strong> of national income. The <strong>top 0.001%</strong> (roughly 709 people in a country of 112 million) earns an average of <strong>$30.5 million PPP a year</strong>. Mexico's inverted Pareto coefficient sits "at the same level as the USA and UK of the 1920s."</p>
 
 
 
@@ -293,7 +293,7 @@
 
       <section class="sec">
         <p class="kicker">The puzzle</p>
-        <h2>Mexico's official inequality numbers were falling at exactly the moment the very top was pulling further away.</h2>
+        <h2>Mexico's Gini fell from 2008 to 2012. Top-fractile income shares climbed over the same years.</h2>
         <p>By 2013, Mexico's official Gini coefficient had fallen from 0.59 to roughly 0.49, the kind of trend that featured in international reports celebrating Latin America's "inequality improvements" of the early 21st century. The household-survey infrastructure those Ginis rest on (ENIGH and its peers) was doing what household surveys do. It was undercounting the top.</p>
         <p>This thesis asked whether, with access to the full set of Mexican personal-income tax microdata, you could see the part of the distribution that surveys cannot. The methodological challenge is harder than it sounds. In a country with substantial tax noncompliance, even the tax data do not tell the truth at face value. You need to know how much, and where, taxpayers are inflating their deductions and understating their income.</p>
       </section>
@@ -307,7 +307,7 @@
 
       <section class="sec">
         <p class="kicker">What it shows</p>
-        <h2>Static concentration plus low mobility. Locked in.</h2>
+        <h2>Concentration at the top is static, and the same individuals hold those positions across years.</h2>
         <p><strong>Top shares.</strong> After adjustment, the top 1% holds <strong>13.2% (2009) rising to 13.6% (2012)</strong> of national income. Top 0.01%, <strong>3.2% in 2012</strong>. Top 0.001%, <strong>1.7% in 2012</strong> (peak 1.85% in 2011). Definition matters dramatically. The 2012 top 1% share is <strong>10.2% (Net) vs 13.6% (Adjusted) vs 19.5% (Revenue)</strong>. The revenue measure puts Mexico above nearly every country in the WTID except Colombia.</p>
         <p><strong>Growth capture.</strong> Of all real income growth in Mexico 2009 to 2012, the top 1% captured <strong>8%</strong>, the top 0.1% captured <strong>5%</strong>, the top 0.01% captured <strong>3%</strong>, and the top 0.001% captured <strong>2%</strong>. Real income growth <em>within</em> the top 0.001% was <strong>+40.8%</strong> in three years.</p>
         <p><strong>International standing.</strong> Mexico's top 0.01% share is <strong>3.5× Spain's, 2.70× France's, 1.73× Uruguay's, and 1.04× the United States'.</strong> The inverted Pareto coefficient at P99.99 reaches <strong>3.89 in 2011</strong>. "At the same level of the 1920s of the USA and the UK," in the thesis's own words.</p>
@@ -327,26 +327,26 @@
           <!-- Legend strip across the top -->
           <g font-family="Inter,sans-serif" font-size="11.5">
             <rect x="80"  y="22" width="12" height="12" fill="#6B1F2D"/>
-            <text x="98"  y="32" fill="#403228">Salaries &amp; wages</text>
+            <text x="98"  y="32" fill="#38342F">Salaries &amp; wages</text>
 
-            <rect x="220" y="22" width="12" height="12" fill="#C9BFAE" stroke="rgba(42,30,21,0.16)"/>
-            <text x="238" y="32" fill="#403228">Self-employment</text>
+            <rect x="220" y="22" width="12" height="12" fill="#BEB9B2" stroke="rgba(20,20,20,0.16)"/>
+            <text x="238" y="32" fill="#38342F">Self-employment</text>
 
-            <rect x="358" y="22" width="12" height="12" fill="#8B6F50"/>
-            <text x="376" y="32" fill="#403228">Business</text>
+            <rect x="358" y="22" width="12" height="12" fill="#756E66"/>
+            <text x="376" y="32" fill="#38342F">Business</text>
 
-            <rect x="450" y="22" width="12" height="12" fill="#A89A82"/>
-            <text x="468" y="32" fill="#403228">Rents</text>
+            <rect x="450" y="22" width="12" height="12" fill="#B3AEA8"/>
+            <text x="468" y="32" fill="#38342F">Rents</text>
 
             <rect x="518" y="22" width="12" height="12" fill="#1F4F5A"/>
-            <text x="536" y="32" fill="#403228">Capital income</text>
+            <text x="536" y="32" fill="#38342F">Capital income</text>
 
-            <rect x="650" y="22" width="12" height="12" fill="#DDD8CB" stroke="rgba(42,30,21,0.16)"/>
-            <text x="668" y="32" fill="#403228">Other</text>
+            <rect x="650" y="22" width="12" height="12" fill="#E8E8E8" stroke="rgba(20,20,20,0.16)"/>
+            <text x="668" y="32" fill="#38342F">Other</text>
           </g>
 
           <!-- Y-axis labels -->
-          <g font-family="Inter,sans-serif" font-size="11" fill="#6A553E">
+          <g font-family="Inter,sans-serif" font-size="11" fill="#6D6862">
             <text x="74" y="74"  text-anchor="end">100%</text>
             <text x="74" y="148" text-anchor="end">75%</text>
             <text x="74" y="225" text-anchor="end">50%</text>
@@ -359,22 +359,22 @@
           <path fill="#6B1F2D" d="M 80 380 L 80 113.4 L 197 156.8 L 313 200.2 L 430 256.0 L 547 308.7 L 663 324.2 L 780 361.4 L 780 380 Z"/>
 
           <!-- Self-employment -->
-          <path fill="#C9BFAE" d="M 80 113.4 L 80 104.1 L 197 144.4 L 313 187.8 L 430 240.5 L 547 293.2 L 663 311.8 L 780 355.2 L 780 361.4 L 663 324.2 L 547 308.7 L 430 256.0 L 313 200.2 L 197 156.8 Z"/>
+          <path fill="#BEB9B2" d="M 80 113.4 L 80 104.1 L 197 144.4 L 313 187.8 L 430 240.5 L 547 293.2 L 663 311.8 L 780 355.2 L 780 361.4 L 663 324.2 L 547 308.7 L 430 256.0 L 313 200.2 L 197 156.8 Z"/>
 
           <!-- Business -->
-          <path fill="#8B6F50" d="M 80 104.1 L 80 76.8 L 197 107.2 L 313 119.6 L 430 147.5 L 547 168.27 L 663 212.6 L 780 306.84 L 780 355.2 L 663 311.8 L 547 293.2 L 430 240.5 L 313 187.8 L 197 144.4 Z"/>
+          <path fill="#756E66" d="M 80 104.1 L 80 76.8 L 197 107.2 L 313 119.6 L 430 147.5 L 547 168.27 L 663 212.6 L 780 306.84 L 780 355.2 L 663 311.8 L 547 293.2 L 430 240.5 L 313 187.8 L 197 144.4 Z"/>
 
           <!-- Rents -->
-          <path fill="#A89A82" d="M 80 76.8 L 80 73.7 L 197 101.0 L 313 113.4 L 430 138.2 L 547 158.97 L 663 203.3 L 780 303.74 L 780 306.84 L 663 212.6 L 547 168.27 L 430 147.5 L 313 119.6 L 197 107.2 Z"/>
+          <path fill="#B3AEA8" d="M 80 76.8 L 80 73.7 L 197 101.0 L 313 113.4 L 430 138.2 L 547 158.97 L 663 203.3 L 780 303.74 L 780 306.84 L 663 212.6 L 547 168.27 L 430 147.5 L 313 119.6 L 197 107.2 Z"/>
 
           <!-- Capital -->
           <path fill="#1F4F5A" d="M 80 73.7 L 80 70.6 L 197 76.2 L 313 76.2 L 430 76.2 L 547 78.37 L 663 79.3 L 780 71.24 L 780 303.74 L 663 203.3 L 547 158.97 L 430 138.2 L 313 113.4 L 197 101.0 Z"/>
 
           <!-- Other -->
-          <path fill="#DDD8CB" d="M 80 70.6 L 80 70 L 780 70 L 780 71.24 L 663 79.3 L 547 78.37 L 430 76.2 L 313 76.2 L 197 76.2 Z"/>
+          <path fill="#E8E8E8" d="M 80 70.6 L 80 70 L 780 70 L 780 71.24 L 663 79.3 L 547 78.37 L 430 76.2 L 313 76.2 L 197 76.2 Z"/>
 
           <!-- Inline annotations on the three paper-verified anchor points -->
-          <g font-family="Inter,sans-serif" fill="#F4F2EC">
+          <g font-family="Inter,sans-serif" fill="#FBFBFB">
             <text x="92"  y="246" font-size="20" font-weight="700">86%</text>
             <text x="92"  y="262" font-size="11" opacity="0.92">salaries · top 1-0.5%</text>
 
@@ -386,10 +386,10 @@
           </g>
 
           <!-- X-axis baseline -->
-          <line x1="80" y1="380" x2="780" y2="380" stroke="rgba(42,30,21,0.22)"/>
+          <line x1="80" y1="380" x2="780" y2="380" stroke="rgba(20,20,20,0.18)"/>
 
           <!-- X-axis fractile labels -->
-          <g font-family="Inter,sans-serif" font-size="10.5" fill="#6A553E">
+          <g font-family="Inter,sans-serif" font-size="10.5" fill="#6D6862">
             <text x="80"  y="398" text-anchor="middle">1-0.5%</text>
             <text x="197" y="398" text-anchor="middle">0.5-0.1%</text>
             <text x="313" y="398" text-anchor="middle">0.1-0.05%</text>
@@ -399,7 +399,7 @@
             <text x="780" y="398" text-anchor="middle">0.001%</text>
           </g>
 
-          <text x="430" y="424" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#6A553E">Top income fractile (left = bottom of the top 1%; right = the richest 0.001%)</text>
+          <text x="430" y="424" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#6D6862">Top income fractile (left = bottom of the top 1%; right = the richest 0.001%)</text>
         </svg>
 
         <p class="hero-chart-source"><strong>Source:</strong> Sandoval Olascoaga (2015), <em>The Distribution of Top Incomes in Mexico</em>, Figure 14 · 2012 tax data adjusted with 2009 Economic Census · Estimates before income tax and excluding capital gains · Three paper-verified anchor points (86% salaries at the 1-0.5% fractile, 40.3% business at the 0.01-0.005% fractile, 75% capital at the top 0.001%) sit on top of band shapes interpolated between bins</p>

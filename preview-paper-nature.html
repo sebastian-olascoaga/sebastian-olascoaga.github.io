@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Integrating flood risk into future population projections. Sebastian Olascoaga</title>
-<meta name="description" content="When you integrate high-resolution flood risk into U.S. population projections, neighborhoods that look like growth stories on the standard map flip to decline." />
+<meta name="description" content="Integrating high-resolution flood risk into U.S. population projections flips the most flood-exposed blocks from projected growth (+5.76%) to projected decline (−1.42%) over 30 years." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);--serif:"Source Serif 4",Georgia,serif;--sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
-  @media (prefers-color-scheme: dark){:root{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}}
+  :root{--paper:#FBFBFB;--paper-tint:#F4F4F4;--paper-deep:#E8E8E8;--ink:#1A1916;--text:#38342F;--muted:#6D6862;--hint:#8F8B85;--hair:rgba(20,20,20,0.10);--rule:rgba(20,20,20,0.18);--counter:#B3AEA8;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.10);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.12);--serif:"Source Serif 4",Georgia,serif;--sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+  @media (prefers-color-scheme: dark){:root{--paper:#15110D;--paper-tint:#1F1A14;--paper-deep:#2A241D;--ink:#F7F3EE;--text:#DDD3C5;--muted:#999186;--hint:#6E6760;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#7A726B;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.14);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.16);}}
   *{box-sizing:border-box;}html{-webkit-text-size-adjust:100%;}
   body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;}
   a{color:inherit;}.num{font-variant-numeric:tabular-nums;}
@@ -131,18 +131,16 @@
   .sc-line.heavy{stroke:var(--accent);stroke-width:3;}
   .sc-dot{fill:var(--counter);}
   .sc-dot.heavy{fill:var(--accent);}
-  .sc-swing{font-family:var(--serif);font-size:14px;font-weight:600;fill:var(--accent);font-variant-numeric:tabular-nums;font-variation-settings:"opsz" 24;}
-  .sc-swing-lbl{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;fill:var(--accent);}
-  .sc-axis{stroke:rgba(42,30,21,0.22);stroke-width:1;}
-  .sc-grid{stroke:rgba(42,30,21,0.08);stroke-width:1;}
-  .sc-zero{stroke:rgba(42,30,21,0.32);stroke-width:1;}
+  .sc-axis{stroke:rgba(20,20,20,0.18);stroke-width:1;}
+  .sc-grid{stroke:rgba(20,20,20,0.08);stroke-width:1;}
+  .sc-zero{stroke:rgba(20,20,20,0.32);stroke-width:1;}
   .sc-y-lbl{font-family:var(--sans);font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums;}
   .sc-y-lbl.zero{font-weight:600;fill:var(--ink);}
 </style>
-<style>:root[data-theme="dark"]{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}:root[data-theme="light"]{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
+<style>:root[data-theme="dark"]{--paper:#15110D;--paper-tint:#1F1A14;--paper-deep:#2A241D;--ink:#F7F3EE;--text:#DDD3C5;--muted:#999186;--hint:#6E6760;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#7A726B;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.14);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.16);}:root[data-theme="light"]{--paper:#FBFBFB;--paper-tint:#F4F4F4;--paper-deep:#E8E8E8;--ink:#1A1916;--text:#38342F;--muted:#6D6862;--hint:#8F8B85;--hair:rgba(20,20,20,0.10);--rule:rgba(20,20,20,0.18);--counter:#B3AEA8;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.10);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.12);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
 <style>
   /* WORK DROPDOWN */
-  .nav-item{position:relative;}
+  .nav-item{position:relative;} .nav-item::after{content:"";position:absolute;top:100%;left:0;right:0;height:14px;} header{position:relative;z-index:200;}
   .nav-item .caret{display:inline-block; font-size:0.7em; margin-left:3px; position:relative; top:-1px; opacity:0.7; transition:transform .18s ease;}
   .nav-item:hover .caret, .nav-item:focus-within .caret{transform:rotate(180deg);}
   .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
@@ -152,7 +150,7 @@
     background:var(--paper); border:1px solid var(--hair);
     box-shadow:0 12px 32px rgba(0,0,0,0.18);
     opacity:0; visibility:hidden; transform:translateY(-4px);
-    transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.12s;
+    transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.25s;
     z-index:100;
   }
   .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown{
@@ -167,7 +165,7 @@
   .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{
     background:var(--paper-tint); color:var(--accent); outline:none; border:none;
   }
-  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;}
+  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;} .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
   .nav-dropdown .dd-item.disabled:hover{background:transparent; color:var(--hint);}
   .dd-title{display:block; font-size:14px; font-weight:500;}
   .dd-note{display:block; font-size:11.5px; color:var(--muted); margin-top:2px; font-style:italic;}
@@ -186,16 +184,16 @@
       <nav class="nav">
         <a href="preview.html">Home</a>
         <div class="nav-item">
-          <a href="preview-papers.html" class="nav-trigger">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
+          <a href="preview-papers.html" class="nav-trigger here">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
           <div class="nav-dropdown" role="menu">
-            <a href="preview-papers.html" role="menuitem" class="dd-item">
+            <a href="preview-papers.html" role="menuitem" class="dd-item" aria-current="page">
               <span class="dd-title">Published Work</span>
               <span class="dd-note">Papers, working papers, and theses</span>
             </a>
-            <span class="dd-item disabled" role="menuitem" aria-disabled="true">
+            <a href="preview-shorts.html" role="menuitem" class="dd-item">
               <span class="dd-title">Short Pieces</span>
-              <span class="dd-note">Coming soon</span>
-            </span>
+              <span class="dd-note">Research notes and briefs</span>
+            </a>
             <span class="dd-item disabled" role="menuitem" aria-disabled="true">
               <span class="dd-title">Teaching</span>
               <span class="dd-note">Coming soon</span>
@@ -218,7 +216,7 @@
     <span class="paper-status"><span class="dot"></span>Published - Nature Communications</span>
   </section>
 
-  <p class="lead">When you integrate <strong>high-resolution flood risk</strong> into U.S. population projections, the blocks most exposed to <em>frequent</em> flooding flip from a <strong>+5.76% projected growth</strong> to a <strong>−1.42% loss</strong> over 30 years. Standard demographic forecasts assume those blocks will keep growing. The 2000–2020 empirical relationship between flood exposure and population change implies otherwise.</p>
+  <p class="lead">Integrating <strong>high-resolution flood risk</strong> into U.S. population projections flips the blocks most exposed to <em>frequent</em> flooding from a <strong>+5.76% projected growth</strong> to a <strong>−1.42% loss</strong> over 30 years. The standard SSP2 baseline holds those blocks on a continued-growth trajectory. The 2000–2020 empirical relationship between flood exposure and population change does not support that trajectory.</p>
 
 
 
@@ -228,7 +226,7 @@
       <!-- HERO CHART: Slope chart - baseline vs adjusted growth by return period -->
       <figure class="hero-chart">
         <p class="hero-chart-eye">The swing nobody is forecasting for</p>
-        <h3 class="hero-chart-title">Standard population projections expect every flood-exposed block to grow. Climate-adjusted projections disagree most sharply where flooding is most frequent.</h3>
+        <h3 class="hero-chart-title">Adding observed flood-population dynamics to the SSP2 baseline turns the most flood-exposed blocks from net growth to net decline.</h3>
         <p class="hero-chart-sub">Each line connects the same set of relatively flood-exposed U.S. Census blocks under two scenarios. The SSP2 baseline is on the left (the official forecast). The climate-adjusted forecast is on the right, integrating empirically estimated flood-population responses. The 5-year return period (the most frequent flooding) produces the largest demographic swing.</p>
 
         <svg viewBox="0 0 920 460" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="nc-title">
@@ -264,9 +262,9 @@
           <circle class="sc-dot" cx="280" cy="100" r="5"/>
           <circle class="sc-dot" cx="640" cy="118" r="5"/>
           <text class="sc-val pos" x="270" y="105" text-anchor="end">+14.02%</text>
-          <text class="sc-val pos" x="650" y="123">+12.47%</text>
-          <text class="sc-row-sub" x="685" y="123" font-size="10.5">Any RP exposure</text>
-          <text class="sc-row-sub" x="685" y="137" font-size="10.5" fill="var(--accent)">−1.54pp</text>
+          <text class="sc-val pos" x="665" y="123">+12.47%</text>
+          <text class="sc-row-sub" x="720" y="123" font-size="10.5">Any RP exposure</text>
+          <text class="sc-row-sub" x="720" y="137" font-size="10.5" fill="var(--accent)">−1.54 pp swing</text>
 
           <!-- =========== 20-year RP =========== -->
           <!-- baseline +9.95% → adjusted +8.55%, swing -1.40pp -->
@@ -274,9 +272,9 @@
           <circle class="sc-dot" cx="280" cy="148" r="5"/>
           <circle class="sc-dot" cx="640" cy="165" r="5"/>
           <text class="sc-val pos" x="270" y="152" text-anchor="end">+9.95%</text>
-          <text class="sc-val pos" x="650" y="170">+8.55%</text>
-          <text class="sc-row-sub" x="685" y="170" font-size="10.5">20-yr RP</text>
-          <text class="sc-row-sub" x="685" y="184" font-size="10.5" fill="var(--accent)">−1.40pp</text>
+          <text class="sc-val pos" x="665" y="170">+8.55%</text>
+          <text class="sc-row-sub" x="720" y="170" font-size="10.5">20-yr RP</text>
+          <text class="sc-row-sub" x="720" y="184" font-size="10.5" fill="var(--accent)">−1.40 pp swing</text>
 
           <!-- =========== 5-year RP. THE WOW =========== -->
           <!-- baseline +5.76% → adjusted -1.42%, swing -7.19pp -->
@@ -285,18 +283,10 @@
           <circle class="sc-dot heavy" cx="640" cy="285" r="7"/>
           <circle cx="640" cy="285" r="14" fill="none" stroke="#1F4F5A" stroke-width="1.2" opacity="0.4"/>
           <text class="sc-val pos" x="270" y="205" text-anchor="end" font-weight="600" fill="#1F4F5A">+5.76%</text>
-          <text class="sc-val neg" x="650" y="290">−1.42%</text>
-          <text class="sc-row-sub" x="685" y="290" font-size="11" fill="var(--accent)" font-weight="600">5-yr RP</text>
-          <text class="sc-row-sub" x="685" y="304" font-size="11" fill="var(--accent)" font-weight="600">most frequent flooding</text>
-
-          <!-- vertical swing bracket showing the magnitude (from baseline level to adjusted level on the right) -->
-          <line x1="666" y1="200" x2="666" y2="285" stroke="#1F4F5A" stroke-width="1.4" opacity="0.7"/>
-          <line x1="662" y1="200" x2="670" y2="200" stroke="#1F4F5A" stroke-width="1.4" opacity="0.7"/>
-          <line x1="662" y1="285" x2="670" y2="285" stroke="#1F4F5A" stroke-width="1.4" opacity="0.7"/>
-
-          <!-- swing callout to the right of the bracket -->
-          <text class="sc-swing-lbl" x="678" y="238" text-anchor="start">SWING</text>
-          <text class="sc-swing" x="678" y="258" text-anchor="start">−7.19 pp</text>
+          <text class="sc-val neg" x="665" y="290">−1.42%</text>
+          <text class="sc-row-sub" x="720" y="290" font-size="11" fill="var(--accent)" font-weight="600">5-yr RP</text>
+          <text class="sc-row-sub" x="720" y="304" font-size="11" fill="var(--accent)" font-weight="600">most frequent flooding</text>
+          <text class="sc-row-sub" x="720" y="320" font-size="11.5" fill="var(--accent)" font-weight="700">−7.19 pp swing</text>
 
           <!-- x-axis baselines -->
           <line class="sc-axis" x1="270" y1="360" x2="290" y2="360"/>
@@ -320,7 +310,7 @@
         <p class="kicker">Why it matters</p>
         <h2>Population projections assume flood risk does not change where Americans live.</h2>
         <p>Almost every demographic projection in active use treats flood exposure as exogenous to population. County-level Census Bureau forecasts, SSP scenarios feeding IPCC integrated assessment models, and state-level planning forecasts all hold population spatially fixed and treat the flood line as the only variable.</p>
-        <p>The 23-year empirical record from 2000 to 2023 contradicts that assumption. Where flood exposure is sufficiently concentrated, people leave (or never arrive). This paper asks whether that relationship can be measured precisely enough to incorporate into the projections, producing a forecast that accounts for climate exposure at high spatial resolution.</p>
+        <p>From 2000 to 2023, the most flood-exposed blocks lost population. Where flood exposure is sufficiently concentrated, people leave, or never arrive. This paper asks whether that relationship can be measured precisely enough to incorporate into the projections, producing a forecast that accounts for climate exposure at high spatial resolution.</p>
       </section>
 
       <section class="sec">

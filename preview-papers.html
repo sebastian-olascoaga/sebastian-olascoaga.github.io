@@ -10,35 +10,35 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F4F2EC;
-    --paper-tint:#EBE8E0;
-    --paper-deep:#DDD8CB;
-    --ink:#2A1E15;
-    --text:#403228;
-    --muted:#6A553E;
-    --hint:#A89A82;
-    --hair:rgba(42,30,21,0.12);
-    --rule:rgba(42,30,21,0.22);
-    --counter:#A89A82;
+    --paper:#FBFBFB;
+    --paper-tint:#F4F4F4;
+    --paper-deep:#E8E8E8;
+    --ink:#1A1916;
+    --text:#38342F;
+    --muted:#6D6862;
+    --hint:#8F8B85;
+    --hair:rgba(20,20,20,0.10);
+    --rule:rgba(20,20,20,0.18);
+    --counter:#B3AEA8;
     --accent:#6B1F2D;
-    --accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);
+    --accent-soft:rgba(107,31,45,0.10);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.12);
     --serif:"Source Serif 4",Georgia,serif;
     --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --paper:#1A1410;
-      --paper-tint:#251D17;
-      --paper-deep:#33281F;
-      --ink:#F5EFE4;
-      --text:#DDD2BF;
-      --muted:#9C8A72;
-      --hint:#6F6051;
+      --paper:#15110D;
+      --paper-tint:#1F1A14;
+      --paper-deep:#2A241D;
+      --ink:#F7F3EE;
+      --text:#DDD3C5;
+      --muted:#999186;
+      --hint:#6E6760;
       --hair:rgba(245,239,228,0.10);
       --rule:rgba(245,239,228,0.20);
-      --counter:#6F6051;
+      --counter:#7A726B;
       --accent:#C9685A;
-      --accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);
+      --accent-soft:rgba(201,104,90,0.14);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.16);
     }
   }
   *{box-sizing:border-box;}
@@ -148,10 +148,17 @@
   .paper-card:hover{
     border-color:var(--accent);
     transform:translateY(-3px);
-    box-shadow:0 10px 28px rgba(42,30,21,0.08);
+    box-shadow:0 10px 28px rgba(20,20,20,0.08);
   }
   .paper-card.no-link{cursor:default;}
   .paper-card.no-link:hover{border-color:var(--hair); transform:none; box-shadow:none;}
+
+  /* FORMAT LABEL (content-type tag at the top of every card) */
+  .format-label{font-family:var(--sans); font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; padding:11px 28px 10px; border-bottom:1px solid var(--hair); color:var(--accent); background:var(--paper);}
+
+  /* CARD CROSS-LINK (small label noting a sibling version of the same work) */
+  .card-crosslink{font-family:var(--sans); font-size:11.5px; color:var(--muted); letter-spacing:0.02em; margin:0 0 14px; padding-top:10px; border-top:1px dashed var(--hair); font-style:italic;}
+  .card-crosslink strong{color:var(--accent); font-weight:600; text-transform:uppercase; font-size:9.5px; letter-spacing:0.18em; font-style:normal; margin-right:6px;}
 
   .pc-img{
     background:var(--paper-tint);
@@ -310,10 +317,10 @@
     .foot-grid{grid-template-columns:1fr; gap:22px;}
   }
 </style>
-<style>:root[data-theme="dark"]{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}:root[data-theme="light"]{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
+<style>:root[data-theme="dark"]{--paper:#15110D;--paper-tint:#1F1A14;--paper-deep:#2A241D;--ink:#F7F3EE;--text:#DDD3C5;--muted:#999186;--hint:#6E6760;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#7A726B;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.14);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.16);}:root[data-theme="light"]{--paper:#FBFBFB;--paper-tint:#F4F4F4;--paper-deep:#E8E8E8;--ink:#1A1916;--text:#38342F;--muted:#6D6862;--hint:#8F8B85;--hair:rgba(20,20,20,0.10);--rule:rgba(20,20,20,0.18);--counter:#B3AEA8;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.10);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.12);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
 <style>
   /* WORK DROPDOWN */
-  .nav-item{position:relative;}
+  .nav-item{position:relative;} .nav-item::after{content:"";position:absolute;top:100%;left:0;right:0;height:14px;} header{position:relative;z-index:200;}
   .nav-item .caret{display:inline-block; font-size:0.7em; margin-left:3px; position:relative; top:-1px; opacity:0.7; transition:transform .18s ease;}
   .nav-item:hover .caret, .nav-item:focus-within .caret{transform:rotate(180deg);}
   .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
@@ -323,7 +330,7 @@
     background:var(--paper); border:1px solid var(--hair);
     box-shadow:0 12px 32px rgba(0,0,0,0.18);
     opacity:0; visibility:hidden; transform:translateY(-4px);
-    transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.12s;
+    transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.25s;
     z-index:100;
   }
   .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown{
@@ -338,7 +345,7 @@
   .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{
     background:var(--paper-tint); color:var(--accent); outline:none; border:none;
   }
-  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;}
+  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;} .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
   .nav-dropdown .dd-item.disabled:hover{background:transparent; color:var(--hint);}
   .dd-title{display:block; font-size:14px; font-weight:500;}
   .dd-note{display:block; font-size:11.5px; color:var(--muted); margin-top:2px; font-style:italic;}
@@ -347,17 +354,27 @@
 </style>
 <style>
   /* WORK FILTER */
-  .filter-bar{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 40px;}
-  .filter-bar .chip{
+  /* SECTION TITLE BLOCK */
+  .page-intro{padding:40px 0 28px; margin:0 0 8px; border-bottom:1px solid var(--ink);}
+  .page-eyebrow{font-family:var(--sans); font-size:11.5px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); margin:0 0 18px;}
+  .page-title{font-family:var(--serif); font-weight:500; color:var(--ink); font-size:clamp(28px,3.4vw,40px); line-height:1.12; font-variation-settings:"opsz" 72; letter-spacing:-0.012em; margin:0 0 16px; max-width:54ch;}
+  .page-title em{font-style:italic; color:var(--accent);}
+  .page-meta{font-family:var(--sans); font-size:13px; color:var(--muted); letter-spacing:0.04em; margin:0;}
+  .page-meta em{font-style:italic; color:var(--text);}
+  /* FILTER (two labeled rows: Topic / Method) — mirrors the parallel architecture on Short Pieces */
+  .filter-set{display:flex; flex-direction:column; gap:10px; margin:32px 0 40px;}
+  .filter-row{display:flex; align-items:center; flex-wrap:wrap; gap:8px;}
+  .filter-row-label{font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); margin-right:14px; min-width:64px;}
+  .filter-row .chip{
     font-family:var(--sans); font-size:13px;
     color:var(--text); background:transparent;
     border:1px solid var(--hair); border-radius:2px;
     padding:7px 14px; cursor:pointer; letter-spacing:0.02em;
     transition:background .15s ease, border-color .15s ease, color .15s ease;
   }
-  .filter-bar .chip:hover{background:var(--paper-tint); border-color:var(--rule);}
-  .filter-bar .chip[aria-pressed="true"]{background:var(--accent); color:var(--paper); border-color:var(--accent);}
-  .filter-bar .chip-all{margin-right:4px;}
+  .filter-row .chip:hover{background:var(--paper-tint); border-color:var(--rule);}
+  .filter-row .chip[aria-pressed="true"]{background:var(--accent); color:var(--paper); border-color:var(--accent);}
+  .filter-row .chip-all{margin-right:4px;}
   .paper-card.is-hidden{display:none;}
   .empty-msg{
     display:none;
@@ -383,20 +400,19 @@
         <h1 class="name"><a href="preview.html">Sebastian Olascoaga</a></h1>
         <p class="role sans"><strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong></p>
       </div>
-      <p class="tagline">Projects across housing, climate, public sector, and generative AI. Filter by topic or method, or browse all. Published as <em>Sandoval-Olascoaga</em>.</p>
       <nav class="nav">
         <a href="preview.html">Home</a>
         <div class="nav-item">
           <a href="preview-papers.html" class="nav-trigger here">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
           <div class="nav-dropdown" role="menu">
-            <a href="preview-papers.html" role="menuitem" class="dd-item">
+            <a href="preview-papers.html" role="menuitem" class="dd-item" aria-current="page">
               <span class="dd-title">Published Work</span>
               <span class="dd-note">Papers, working papers, and theses</span>
             </a>
-            <span class="dd-item disabled" role="menuitem" aria-disabled="true">
+            <a href="preview-shorts.html" role="menuitem" class="dd-item">
               <span class="dd-title">Short Pieces</span>
-              <span class="dd-note">Coming soon</span>
-            </span>
+              <span class="dd-note">Research notes and briefs</span>
+            </a>
             <span class="dd-item disabled" role="menuitem" aria-disabled="true">
               <span class="dd-title">Teaching</span>
               <span class="dd-note">Coming soon</span>
@@ -413,22 +429,35 @@
 
   <main>
 
-    <!-- FILTER BAR -->
-    <div class="filter-bar reveal d2" role="tablist" aria-label="Filter work by tag">
-      <button class="chip chip-all" type="button" data-tag="all" aria-pressed="true">All</button>
-      <button class="chip" type="button" data-tag="housing" aria-pressed="false">Housing</button>
-      <button class="chip" type="button" data-tag="climate" aria-pressed="false">Climate</button>
-      <button class="chip" type="button" data-tag="public-sector" aria-pressed="false">Public sector</button>
-      <button class="chip" type="button" data-tag="generative-ai" aria-pressed="false">Generative AI</button>
-      <button class="chip" type="button" data-tag="public-health" aria-pressed="false">Public health</button>
-      <button class="chip" type="button" data-tag="inequality" aria-pressed="false">Inequality</button>
-      <button class="chip" type="button" data-tag="field-experiment" aria-pressed="false">Field Experiment</button>
-      <button class="chip" type="button" data-tag="quasi-experiment" aria-pressed="false">Quasi-experiment</button>
+    <!-- SECTION TITLE BLOCK -->
+    <section class="page-intro reveal d2">
+      <p class="page-eyebrow">Published Work</p>
+      <h2 class="page-title">Peer-reviewed papers, working papers, and theses across housing, climate, public sector, and inequality.</h2>
+      <p class="page-meta">9 entries <span style="color:var(--hint);margin:0 4px;">·</span> 2015–present <span style="color:var(--hint);margin:0 4px;">·</span> Published as <em>Sandoval-Olascoaga</em>.</p>
+    </section>
+
+    <!-- FILTER (two labeled rows: Topic / Method) -->
+    <div class="filter-set reveal d2">
+      <div class="filter-row" role="tablist" aria-label="Filter by topic">
+        <span class="filter-row-label">Topic</span>
+        <button class="chip chip-all" type="button" data-tag="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-tag="housing" aria-pressed="false">Housing</button>
+        <button class="chip" type="button" data-tag="climate" aria-pressed="false">Climate</button>
+        <button class="chip" type="button" data-tag="public-sector" aria-pressed="false">Public sector</button>
+        <button class="chip" type="button" data-tag="generative-ai" aria-pressed="false">Generative AI</button>
+        <button class="chip" type="button" data-tag="public-health" aria-pressed="false">Public health</button>
+        <button class="chip" type="button" data-tag="inequality" aria-pressed="false">Inequality</button>
+      </div>
+      <div class="filter-row" role="tablist" aria-label="Filter by method">
+        <span class="filter-row-label">Method</span>
+        <button class="chip" type="button" data-tag="field-experiment" aria-pressed="false">Field experiment</button>
+        <button class="chip" type="button" data-tag="quasi-experiment" aria-pressed="false">Quasi-experiment</button>
+      </div>
     </div>
 
     <!-- GALLERY -->
     <div class="gallery work-gallery reveal d3">
-        <a class="paper-card" data-tags="housing climate field-experiment" href="preview-paper.html">
+        <a class="paper-card" data-tags="housing climate field-experiment" href="preview-paper.html"><div class="format-label">Working paper · R&amp;R AER</div>
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Flood-risk disclosure · field experiment</text>
@@ -466,7 +495,7 @@
               <text x="502" y="148" text-anchor="end" class="ti-delta">−12.4%</text>
 
               <!-- X-axis line + ticks -->
-              <line x1="50" y1="260" x2="500" y2="260" stroke="rgba(42,30,21,0.22)"/>
+              <line x1="50" y1="260" x2="500" y2="260" stroke="rgba(20,20,20,0.18)"/>
               <text x="50"  y="278" class="ti-axis">Wk 0</text>
               <text x="275" y="278" text-anchor="middle" class="ti-axis">Weeks since entering experiment</text>
               <text x="500" y="278" text-anchor="end" class="ti-axis">Wk 9</text>
@@ -478,6 +507,7 @@
           </div>
           <div class="pc-body">
             <h3 class="pc-q">Does showing buyers a home's flood risk change <em>what they buy?</em></h3>
+            <p class="card-crosslink"><strong>Press version</strong>Redfin News, September 2022.</p>
             <div class="pc-meta">
               <span class="left">
                 <span class="year">2024</span>
@@ -491,13 +521,13 @@
           </div>
         </a>
 
-        <a class="paper-card" data-tags="housing climate quasi-experiment" href="preview-paper-frontiers.html">
+        <a class="paper-card" data-tags="housing climate quasi-experiment" href="preview-paper-frontiers.html"><div class="format-label">Peer-reviewed paper</div>
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Flood penalty by neighborhood trajectory · 8.1M home sales</text>
 
               <!-- zero / baseline line -->
-              <line x1="60" y1="140" x2="440" y2="140" stroke="rgba(42,30,21,0.22)"/>
+              <line x1="60" y1="140" x2="440" y2="140" stroke="rgba(20,20,20,0.18)"/>
               <text x="54" y="144" text-anchor="end" class="ti-axis" font-weight="600">0%</text>
 
               <!-- gridlines -->
@@ -510,9 +540,9 @@
               <text x="206" y="92" class="ti-axis">Flood</text>
 
               <!-- Growing-population tracts: dip, then partial recovery -->
-              <path class="ti-line-ctrl ti-redraw" stroke="#A89A82" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M60,142 L100,140 L140,142 L180,140 L200,138 L240,155 L280,195 L320,245 L360,282 L390,255 L420,210 L440,205"/>
-              <circle cx="360" cy="282" r="3.5" fill="#A89A82"/>
-              <circle cx="420" cy="210" r="4.5" fill="#A89A82"/>
+              <path class="ti-line-ctrl ti-redraw" stroke="#B3AEA8" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M60,142 L100,140 L140,142 L180,140 L200,138 L240,155 L280,195 L320,245 L360,282 L390,255 L420,210 L440,205"/>
+              <circle cx="360" cy="282" r="3.5" fill="#B3AEA8"/>
+              <circle cx="420" cy="210" r="4.5" fill="#B3AEA8"/>
               <text x="446" y="214" font-size="11" class="ti-axis" font-weight="600">−8.7% growing</text>
 
               <!-- Shrinking-population tracts: keeps falling -->
@@ -524,7 +554,7 @@
               <text x="446" y="286" font-size="11" class="ti-axis" font-weight="600">shrinking, still falling</text>
 
               <!-- x-axis labels -->
-              <line x1="60" y1="310" x2="440" y2="310" stroke="rgba(42,30,21,0.15)"/>
+              <line x1="60" y1="310" x2="440" y2="310" stroke="rgba(20,20,20,0.15)"/>
               <text x="60"  y="328" class="ti-axis">−7y</text>
               <text x="200" y="328" text-anchor="middle" class="ti-axis">0</text>
               <text x="440" y="328" text-anchor="end" class="ti-axis">+11y</text>
@@ -546,7 +576,7 @@
           </div>
         </a>
 
-        <a class="paper-card" data-tags="housing climate quasi-experiment" href="preview-paper-nature.html">
+        <a class="paper-card" data-tags="housing climate quasi-experiment" href="preview-paper-nature.html"><div class="format-label">Peer-reviewed paper</div>
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Flood-adjusted population projection · 30 years</text>
@@ -556,12 +586,12 @@
               <text x="400" y="48" text-anchor="middle" class="ti-axis" font-weight="600">With flood risk</text>
 
               <!-- Zero line -->
-              <line x1="100" y1="240" x2="500" y2="240" stroke="rgba(42,30,21,0.22)"/>
+              <line x1="100" y1="240" x2="500" y2="240" stroke="rgba(20,20,20,0.18)"/>
               <text x="92" y="244" text-anchor="end" class="ti-axis" font-weight="600">0%</text>
 
               <!-- Vertical column axes (faint) -->
-              <line x1="160" y1="60" x2="160" y2="300" stroke="rgba(42,30,21,0.12)"/>
-              <line x1="400" y1="60" x2="400" y2="300" stroke="rgba(42,30,21,0.12)"/>
+              <line x1="160" y1="60" x2="160" y2="300" stroke="rgba(20,20,20,0.10)"/>
+              <line x1="400" y1="60" x2="400" y2="300" stroke="rgba(20,20,20,0.10)"/>
 
               <!-- Row 1: Any RP composite. +14.02 → +12.47, -1.54pp -->
               <path class="ti-line-ctrl ti-redraw" d="M160,72 L400,90"/>
@@ -603,7 +633,7 @@
           </div>
         </a>
 
-        <a class="paper-card" data-tags="housing public-health quasi-experiment" href="preview-paper-jama.html">
+        <a class="paper-card" data-tags="housing public-health quasi-experiment" href="preview-paper-jama.html"><div class="format-label">Peer-reviewed paper</div>
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Eviction moratoria × COVID-19 hazard ratio</text>
@@ -614,17 +644,17 @@
 
               <!-- Row 1: CCI = 0, HR 1.55 [1.22, 1.91] -->
               <text x="0" y="115" class="ti-lbl" font-size="15">CCI 0</text>
-              <line class="ti-redraw" x1="181" y1="110" x2="277" y2="110" stroke="#A89A82" stroke-width="1.6"/>
-              <line x1="181" y1="103" x2="181" y2="117" stroke="#A89A82" stroke-width="1.6"/>
-              <line x1="277" y1="103" x2="277" y2="117" stroke="#A89A82" stroke-width="1.6"/>
+              <line class="ti-redraw" x1="181" y1="110" x2="277" y2="110" stroke="#B3AEA8" stroke-width="1.6"/>
+              <line x1="181" y1="103" x2="181" y2="117" stroke="#B3AEA8" stroke-width="1.6"/>
+              <line x1="277" y1="103" x2="277" y2="117" stroke="#B3AEA8" stroke-width="1.6"/>
               <circle class="ti-dot-ctrl" cx="227" cy="110" r="5"/>
               <text x="289" y="115" font-size="13" class="ti-axis">1.55</text>
 
               <!-- Row 2: CCI = 1, HR 1.93 [1.40, 2.12] -->
               <text x="0" y="165" class="ti-lbl" font-size="15">CCI 1</text>
-              <line class="ti-redraw" x1="206" y1="160" x2="307" y2="160" stroke="#A89A82" stroke-width="1.6"/>
-              <line x1="206" y1="153" x2="206" y2="167" stroke="#A89A82" stroke-width="1.6"/>
-              <line x1="307" y1="153" x2="307" y2="167" stroke="#A89A82" stroke-width="1.6"/>
+              <line class="ti-redraw" x1="206" y1="160" x2="307" y2="160" stroke="#B3AEA8" stroke-width="1.6"/>
+              <line x1="206" y1="153" x2="206" y2="167" stroke="#B3AEA8" stroke-width="1.6"/>
+              <line x1="307" y1="153" x2="307" y2="167" stroke="#B3AEA8" stroke-width="1.6"/>
               <circle class="ti-dot-ctrl" cx="280" cy="160" r="5"/>
               <text x="319" y="165" font-size="13" class="ti-axis">1.93</text>
 
@@ -645,7 +675,7 @@
               <text x="490" y="265" font-size="14" font-weight="600" fill="#1F4F5A" font-family="Inter,sans-serif">HR 2.36</text>
 
               <!-- HR axis -->
-              <line x1="80" y1="290" x2="500" y2="290" stroke="rgba(42,30,21,0.15)"/>
+              <line x1="80" y1="290" x2="500" y2="290" stroke="rgba(20,20,20,0.15)"/>
               <text x="80"  y="308" class="ti-axis">0.5</text>
               <text x="150" y="308" text-anchor="middle" class="ti-axis">1.0</text>
               <text x="290" y="308" text-anchor="middle" class="ti-axis">2.0</text>
@@ -668,7 +698,7 @@
           </div>
         </a>
 
-        <a class="paper-card" data-tags="public-health inequality" href="preview-paper-phn.html">
+        <a class="paper-card" data-tags="public-health inequality" href="preview-paper-phn.html"><div class="format-label">Peer-reviewed paper</div>
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Severely food-insecure Mexicans · 2008 vs 2010</text>
@@ -680,10 +710,10 @@
               <text x="65" y="278" text-anchor="end" class="ti-axis">0</text>
 
               <!-- Gridlines -->
-              <line x1="75" y1="95"  x2="500" y2="95"  stroke="rgba(42,30,21,0.08)"/>
-              <line x1="75" y1="155" x2="500" y2="155" stroke="rgba(42,30,21,0.08)"/>
-              <line x1="75" y1="215" x2="500" y2="215" stroke="rgba(42,30,21,0.08)"/>
-              <line x1="75" y1="275" x2="500" y2="275" stroke="rgba(42,30,21,0.22)"/>
+              <line x1="75" y1="95"  x2="500" y2="95"  stroke="rgba(20,20,20,0.08)"/>
+              <line x1="75" y1="155" x2="500" y2="155" stroke="rgba(20,20,20,0.08)"/>
+              <line x1="75" y1="215" x2="500" y2="215" stroke="rgba(20,20,20,0.08)"/>
+              <line x1="75" y1="275" x2="500" y2="275" stroke="rgba(20,20,20,0.18)"/>
 
               <!-- 2008 bar (gray): 8.9% × 15 px/pp = 133.5; top y = 275 - 133.5 = 141.5 -->
               <rect class="ti-bar-ctrl" x="130" y="142" width="120" height="133"/>
@@ -718,32 +748,56 @@
           </div>
         </a>
 
-        <a class="paper-card" data-tags="housing inequality climate quasi-experiment public-health" href="preview-thesis-phd.html">
+        <a class="paper-card" data-tags="housing inequality climate quasi-experiment public-health" href="preview-thesis-phd.html"><div class="format-label">Doctoral thesis</div>
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
-              <text x="0" y="22" class="ti-eye">Tornadoes as shocks · property values, 9 years out</text>
+              <text x="0" y="22" class="ti-eye">Housing under shocks · PhD dissertation, three chapters</text>
 
-              <line x1="0" y1="110" x2="540" y2="110" stroke="rgba(42,30,21,0.16)"/>
+              <!-- gridlines -->
+              <line x1="0" y1="110" x2="540" y2="110" stroke="rgba(20,20,20,0.16)"/>
+              <line x1="0" y1="190" x2="540" y2="190" stroke="rgba(20,20,20,0.08)"/>
+              <line x1="0" y1="270" x2="540" y2="270" stroke="rgba(20,20,20,0.08)"/>
+
+              <!-- y-axis labels -->
               <text x="0" y="104" class="ti-axis">$0</text>
+              <text x="0" y="184" class="ti-axis">−$10k</text>
+              <text x="0" y="264" class="ti-axis">−$20k</text>
 
-              <line class="ti-ref" x1="160" y1="70" x2="160" y2="310"/>
+              <!-- event line -->
+              <line class="ti-ref" x1="160" y1="70" x2="160" y2="300"/>
               <text x="170" y="90" class="ti-axis">Tornado</text>
+              <text x="170" y="104" font-size="9.5" fill="var(--hint)" font-family="Inter,sans-serif">Chapter II · climate shock</text>
 
+              <!-- estimate line: flat pre-event, post-event divergence, no recovery -->
               <path class="ti-line-treat ti-redraw" d="M0,108 L40,110 L80,108 L120,110 L160,110 L200,145 L240,180 L280,215 L320,245 L360,265 L400,278 L440,285 L480,288 L540,290"/>
 
+              <!-- dots along the path -->
               <circle class="ti-dot-treat" cx="160" cy="110" r="3"/>
+              <circle class="ti-dot-treat" cx="200" cy="145" r="2.4"/>
+              <circle class="ti-dot-treat" cx="240" cy="180" r="2.4"/>
+              <circle class="ti-dot-treat" cx="280" cy="215" r="2.4"/>
+              <circle class="ti-dot-treat" cx="320" cy="245" r="2.4"/>
+              <circle class="ti-dot-treat" cx="360" cy="265" r="2.4"/>
+              <circle class="ti-dot-treat" cx="400" cy="278" r="2.4"/>
+              <circle class="ti-dot-treat" cx="440" cy="285" r="2.4"/>
+              <circle class="ti-dot-treat" cx="480" cy="288" r="2.4"/>
+
+              <!-- endpoint emphasis -->
               <circle class="ti-dot-treat" cx="540" cy="290" r="5"/>
+              <circle cx="540" cy="290" r="11" fill="none" stroke="#1F4F5A" stroke-width="1.2" opacity="0.4"/>
 
-              <text x="538" y="282" text-anchor="end"><tspan class="ti-val accent">−$23,412</tspan></text>
-              <text x="538" y="312" text-anchor="end" class="ti-axis">by year 8 · no recovery</text>
+              <!-- callout (positioned left of the emphasis ring) -->
+              <text x="520" y="272" text-anchor="end"><tspan class="ti-val accent">−$23,412</tspan></text>
+              <text x="520" y="318" text-anchor="end" class="ti-axis">by year 8 · no recovery</text>
 
+              <!-- x-axis labels -->
               <text x="0"   y="345" class="ti-axis">−5y</text>
               <text x="160" y="345" text-anchor="middle" class="ti-axis">0</text>
               <text x="540" y="345" text-anchor="end" class="ti-axis">+9y</text>
             </svg>
           </div>
           <div class="pc-body">
-            <h3 class="pc-q">What happens to a neighborhood <em>after a shock?</em></h3>
+            <h3 class="pc-q">How does housing respond to climate, public-health, and speculation <em>shocks?</em></h3>
             <div class="pc-meta">
               <span class="left">
                 <span class="year">2023</span>
@@ -755,26 +809,26 @@
           </div>
         </a>
 
-        <a class="paper-card" data-tags="inequality" href="preview-thesis-master.html">
+        <a class="paper-card" data-tags="inequality" href="preview-thesis-master.html"><div class="format-label">Master&#39;s thesis</div>
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
-              <text x="0" y="22" class="ti-eye">Top 0.01% income share · 2012 · Mexico vs developed economies</text>
+              <text x="0" y="22" class="ti-eye">Top 0.01% income share · 2011 · Mexico vs peers</text>
 
               <text x="0" y="78" class="ti-lbl accent">Mexico</text>
               <rect class="ti-bar-treat" x="0" y="90" width="480" height="32"/>
-              <text x="500" y="113" text-anchor="end"><tspan class="ti-val accent">3.20%</tspan></text>
+              <text x="500" y="113" text-anchor="end"><tspan class="ti-val accent">3.00%</tspan></text>
 
               <text x="0" y="156" class="ti-lbl">United States</text>
               <rect class="ti-bar-ctrl" x="0" y="168" width="462" height="32"/>
-              <text x="500" y="191" text-anchor="end" class="ti-val">3.08%</text>
+              <text x="500" y="191" text-anchor="end" class="ti-val">2.89%</text>
 
               <text x="0" y="234" class="ti-lbl">France</text>
               <rect class="ti-bar-ctrl" x="0" y="246" width="178" height="32"/>
-              <text x="500" y="269" text-anchor="end" class="ti-val">1.19%</text>
+              <text x="500" y="269" text-anchor="end" class="ti-val">1.11%</text>
 
               <text x="0" y="312" class="ti-lbl">Spain</text>
-              <rect class="ti-bar-ctrl" x="0" y="324" width="137" height="32"/>
-              <text x="500" y="347" text-anchor="end" class="ti-val">0.91%</text>
+              <rect class="ti-bar-ctrl" x="0" y="324" width="138" height="32"/>
+              <text x="500" y="347" text-anchor="end" class="ti-val">0.86%</text>
             </svg>
           </div>
           <div class="pc-body">
@@ -792,12 +846,12 @@
           </div>
         </a>
 
-        <div class="paper-card no-link" data-tags="public-sector generative-ai field-experiment">
+        <div class="paper-card no-link" data-tags="public-sector generative-ai field-experiment"><div class="format-label">Work in progress</div>
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">City of Boston's first RCT · two-arm design</text>
 
-              <rect x="0" y="80" width="240" height="80" fill="var(--paper)" stroke="rgba(42,30,21,0.18)" rx="2"/>
+              <rect x="0" y="80" width="240" height="80" fill="var(--paper)" stroke="rgba(20,20,20,0.18)" rx="2"/>
               <text x="120" y="115" text-anchor="middle" class="ti-lbl">Control</text>
               <text x="120" y="140" text-anchor="middle" font-size="11" fill="var(--muted)">standard workflow</text>
 
@@ -805,10 +859,10 @@
               <text x="420" y="115" text-anchor="middle" class="ti-lbl accent">Treatment</text>
               <text x="420" y="140" text-anchor="middle" font-size="11" fill="var(--accent)">with BidBot (RAG)</text>
 
-              <line x1="120" y1="170" x2="120" y2="220" stroke="rgba(42,30,21,0.30)" stroke-dasharray="3 3"/>
-              <line x1="420" y1="170" x2="420" y2="220" stroke="rgba(42,30,21,0.30)" stroke-dasharray="3 3"/>
+              <line x1="120" y1="170" x2="120" y2="220" stroke="rgba(20,20,20,0.30)" stroke-dasharray="3 3"/>
+              <line x1="420" y1="170" x2="420" y2="220" stroke="rgba(20,20,20,0.30)" stroke-dasharray="3 3"/>
 
-              <rect x="0" y="230" width="540" height="60" fill="var(--paper-tint)" stroke="rgba(42,30,21,0.10)" rx="2"/>
+              <rect x="0" y="230" width="540" height="60" fill="var(--paper-tint)" stroke="rgba(20,20,20,0.10)" rx="2"/>
               <text x="270" y="258" text-anchor="middle" class="ti-lbl">Outcome: solicitation quality &amp; cycle time</text>
               <text x="270" y="278" text-anchor="middle" font-size="11" fill="var(--muted)">results pending</text>
             </svg>
@@ -827,22 +881,22 @@
           </div>
         </div>
 
-        <div class="paper-card no-link" data-tags="public-sector generative-ai">
+        <div class="paper-card no-link" data-tags="public-sector generative-ai"><div class="format-label">Work in progress</div>
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
               <text x="0" y="22" class="ti-eye">Enterprise GenAI · output, adoption, impact</text>
 
-              <rect x="0" y="70" width="160" height="60" fill="var(--paper)" stroke="rgba(42,30,21,0.16)" rx="2"/>
+              <rect x="0" y="70" width="160" height="60" fill="var(--paper)" stroke="rgba(20,20,20,0.16)" rx="2"/>
               <text x="80" y="105" text-anchor="middle" class="ti-lbl">Claude</text>
-              <rect x="190" y="70" width="160" height="60" fill="var(--paper)" stroke="rgba(42,30,21,0.16)" rx="2"/>
+              <rect x="190" y="70" width="160" height="60" fill="var(--paper)" stroke="rgba(20,20,20,0.16)" rx="2"/>
               <text x="270" y="105" text-anchor="middle" class="ti-lbl">Gemini</text>
-              <rect x="380" y="70" width="160" height="60" fill="var(--paper)" stroke="rgba(42,30,21,0.16)" rx="2"/>
+              <rect x="380" y="70" width="160" height="60" fill="var(--paper)" stroke="rgba(20,20,20,0.16)" rx="2"/>
               <text x="460" y="98" text-anchor="middle" class="ti-lbl">in-house</text>
               <text x="460" y="118" text-anchor="middle" class="ti-lbl">RAG</text>
 
-              <line x1="80" y1="140" x2="80" y2="180" stroke="rgba(42,30,21,0.30)" stroke-dasharray="3 3"/>
-              <line x1="270" y1="140" x2="270" y2="180" stroke="rgba(42,30,21,0.30)" stroke-dasharray="3 3"/>
-              <line x1="460" y1="140" x2="460" y2="180" stroke="rgba(42,30,21,0.30)" stroke-dasharray="3 3"/>
+              <line x1="80" y1="140" x2="80" y2="180" stroke="rgba(20,20,20,0.30)" stroke-dasharray="3 3"/>
+              <line x1="270" y1="140" x2="270" y2="180" stroke="rgba(20,20,20,0.30)" stroke-dasharray="3 3"/>
+              <line x1="460" y1="140" x2="460" y2="180" stroke="rgba(20,20,20,0.30)" stroke-dasharray="3 3"/>
 
               <rect x="0" y="190" width="540" height="60" fill="var(--accent-soft)" stroke="var(--accent)" rx="2"/>
               <text x="270" y="218" text-anchor="middle" class="ti-lbl accent">Evaluation pipeline</text>
@@ -865,71 +919,9 @@
           </div>
         </div>
 
-        <div class="paper-card no-link" data-tags="public-sector quasi-experiment">
-          <div class="pc-img">
-            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
-              <text x="0" y="22" class="ti-eye">Boston Fare-Free Bus pilot · 23.8M boardings (2016–25)</text>
-
-              <text x="0" y="78" class="ti-axis">0</text>
-              <text x="540" y="78" text-anchor="end" class="ti-axis">23.8M boardings</text>
-              <rect class="ti-bar-ctrl" x="0" y="90" width="540" height="44"/>
-              <rect class="ti-bar-treat" x="0" y="90" width="115" height="44"/>
-
-              <line x1="115" y1="90" x2="115" y2="180" stroke="var(--accent)" stroke-width="1.2"/>
-              <text x="120" y="170" font-size="18" fill="var(--accent)" font-weight="500" font-family="Source Serif 4, Georgia, serif">21.3%  (5.1M)</text>
-              <text x="120" y="190" font-size="11" fill="var(--muted)">program-attributable boardings</text>
-
-              <text x="0" y="270" class="ti-axis">$2.4M–$3.6M projected MBTA renegotiation savings</text>
-              <text x="0" y="295" class="ti-axis">City of Boston · supports the ongoing MBTA negotiation</text>
-            </svg>
-          </div>
-          <div class="pc-body">
-            <h3 class="pc-q">How much of the fare-free bus ridership <em>is the program actually causing?</em></h3>
-            <div class="pc-meta">
-              <span class="left">
-                <span class="year">2024</span>
-                <span class="dot">·</span>
-                <span>City of Boston · MBTA</span>
-                <span class="dot">·</span>
-                <span class="pill">Internal report</span>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="paper-card no-link" data-tags="housing public-sector quasi-experiment">
-          <div class="pc-img">
-            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
-              <text x="0" y="22" class="ti-eye">Proactive Rental Inspection Ordinance · coverage gap</text>
-
-              <text x="0" y="140" font-size="86" font-family="Source Serif 4, Georgia, serif" fill="var(--accent)" font-weight="600">~27%</text>
-              <text x="0" y="180" class="ti-lbl">~50,000 rental units</text>
-              <text x="0" y="205" class="ti-axis">never registered with the inspection system</text>
-
-              <text x="0" y="265" class="ti-axis">Boston rental stock</text>
-              <rect x="0" y="275" width="540" height="22" fill="var(--paper-tint)" stroke="rgba(42,30,21,0.10)"/>
-              <rect x="0" y="275" width="146" height="22" fill="var(--accent-soft)" stroke="var(--accent)"/>
-              <text x="0" y="320" class="ti-axis">unregistered, outside the ordinance</text>
-              <text x="540" y="320" text-anchor="end" class="ti-axis">total units</text>
-            </svg>
-          </div>
-          <div class="pc-body">
-            <h3 class="pc-q">How many rental units <em>fall outside the system meant to regulate them?</em></h3>
-            <div class="pc-meta">
-              <span class="left">
-                <span class="year">2025</span>
-                <span class="dot">·</span>
-                <span>City of Boston</span>
-                <span class="dot">·</span>
-                <span class="pill">In progress</span>
-              </span>
-            </div>
-          </div>
-        </div>
-
     </div>
 
-    <p class="empty-msg">No projects match this filter.</p>
+    <p class="empty-msg" role="status" aria-live="polite">No projects match this filter.</p>
 
   </main>
 
@@ -952,10 +944,10 @@
 <script>
 (function(){
   var gallery = document.querySelector('.work-gallery');
-  var chips = document.querySelectorAll('.filter-bar .chip');
+  var chips = document.querySelectorAll('.filter-row .chip');
   if (!gallery || !chips.length) return;
   var cards = gallery.querySelectorAll('.paper-card');
-  var allChip = document.querySelector('.filter-bar .chip-all');
+  var allChip = document.querySelector('.filter-row .chip-all');
   var validTags = {};
   Array.prototype.forEach.call(chips, function(c){ if (c !== allChip) validTags[c.dataset.tag] = true; });
 

@@ -10,19 +10,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F4F2EC; --paper-tint:#EBE8E0; --paper-deep:#DDD8CB;
-    --ink:#2A1E15; --text:#403228; --muted:#6A553E; --hint:#A89A82;
-    --hair:rgba(42,30,21,0.12); --rule:rgba(42,30,21,0.22); --counter:#A89A82;
-    --accent:#6B1F2D; --accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);
+    --paper:#FBFBFB; --paper-tint:#F4F4F4; --paper-deep:#E8E8E8;
+    --ink:#1A1916; --text:#38342F; --muted:#6D6862; --hint:#8F8B85;
+    --hair:rgba(20,20,20,0.10); --rule:rgba(20,20,20,0.18); --counter:#B3AEA8;
+    --accent:#6B1F2D; --accent-soft:rgba(107,31,45,0.10);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.12);
     --serif:"Source Serif 4",Georgia,serif;
     --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --paper:#1A1410; --paper-tint:#251D17; --paper-deep:#33281F;
-      --ink:#F5EFE4; --text:#DDD2BF; --muted:#9C8A72; --hint:#6F6051;
-      --hair:rgba(245,239,228,0.10); --rule:rgba(245,239,228,0.20); --counter:#6F6051;
-      --accent:#C9685A; --accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);
+      --paper:#15110D; --paper-tint:#1F1A14; --paper-deep:#2A241D;
+      --ink:#F7F3EE; --text:#DDD3C5; --muted:#999186; --hint:#6E6760;
+      --hair:rgba(245,239,228,0.10); --rule:rgba(245,239,228,0.20); --counter:#7A726B;
+      --accent:#C9685A; --accent-soft:rgba(201,104,90,0.14);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.16);
     }
   }
   *{box-sizing:border-box;}
@@ -82,9 +82,9 @@
   .hero-chart-source strong{color:var(--muted); font-weight:500;}
 
   /* Chart SVG styles */
-  .c-axis-line{stroke:rgba(42,30,21,0.22); stroke-width:1;}
-  .c-grid{stroke:rgba(42,30,21,0.08); stroke-width:1;}
-  .c-zero{stroke:rgba(42,30,21,0.32); stroke-width:1;}
+  .c-axis-line{stroke:rgba(20,20,20,0.18); stroke-width:1;}
+  .c-grid{stroke:rgba(20,20,20,0.08); stroke-width:1;}
+  .c-zero{stroke:rgba(20,20,20,0.32); stroke-width:1;}
   .c-event{stroke:var(--ink); stroke-width:1; stroke-dasharray:3 3;}
   .c-control{stroke:var(--counter); stroke-width:2; fill:none; stroke-linecap:round; stroke-linejoin:round;}
   .c-treat{stroke:var(--treat); stroke-width:2.5; fill:none; stroke-linecap:round; stroke-linejoin:round;}
@@ -201,10 +201,10 @@
   @media (max-width:980px){.paper-body{grid-template-columns:1fr; gap:32px;} .paper-side{position:static; margin-top:0;} .related-grid{grid-template-columns:1fr; gap:16px;}}
   @media (max-width:640px){.wrap{padding:0 22px;} .head-grid{grid-template-columns:1fr; gap:18px;} header.site{padding-top:32px;} .paper-hero{padding:40px 0 28px;} .hero-chart{padding:24px 18px 18px;} .foot-grid{grid-template-columns:1fr; gap:22px;} .stat-strip{grid-template-columns:1fr; gap:16px;}}
 </style>
-<style>:root[data-theme="dark"]{--paper:#1A1410;--paper-tint:#251D17;--paper-deep:#33281F;--ink:#F5EFE4;--text:#DDD2BF;--muted:#9C8A72;--hint:#6F6051;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#6F6051;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.18);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.20);}:root[data-theme="light"]{--paper:#F4F2EC;--paper-tint:#EBE8E0;--paper-deep:#DDD8CB;--ink:#2A1E15;--text:#403228;--muted:#6A553E;--hint:#A89A82;--hair:rgba(42,30,21,0.12);--rule:rgba(42,30,21,0.22);--counter:#A89A82;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.14);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.14);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
+<style>:root[data-theme="dark"]{--paper:#15110D;--paper-tint:#1F1A14;--paper-deep:#2A241D;--ink:#F7F3EE;--text:#DDD3C5;--muted:#999186;--hint:#6E6760;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#7A726B;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.14);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.16);}:root[data-theme="light"]{--paper:#FBFBFB;--paper-tint:#F4F4F4;--paper-deep:#E8E8E8;--ink:#1A1916;--text:#38342F;--muted:#6D6862;--hint:#8F8B85;--hair:rgba(20,20,20,0.10);--rule:rgba(20,20,20,0.18);--counter:#B3AEA8;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.10);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.12);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
 <style>
   /* WORK DROPDOWN */
-  .nav-item{position:relative;}
+  .nav-item{position:relative;} .nav-item::after{content:"";position:absolute;top:100%;left:0;right:0;height:14px;} header{position:relative;z-index:200;}
   .nav-item .caret{display:inline-block; font-size:0.7em; margin-left:3px; position:relative; top:-1px; opacity:0.7; transition:transform .18s ease;}
   .nav-item:hover .caret, .nav-item:focus-within .caret{transform:rotate(180deg);}
   .nav-item:hover .nav-trigger, .nav-item:focus-within .nav-trigger{color:var(--ink); border-bottom-color:var(--accent);}
@@ -214,7 +214,7 @@
     background:var(--paper); border:1px solid var(--hair);
     box-shadow:0 12px 32px rgba(0,0,0,0.18);
     opacity:0; visibility:hidden; transform:translateY(-4px);
-    transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.12s;
+    transition:opacity .18s ease, transform .18s ease, visibility .18s; transition-delay:.25s;
     z-index:100;
   }
   .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown{
@@ -229,7 +229,7 @@
   .nav-dropdown a.dd-item:hover, .nav-dropdown a.dd-item:focus{
     background:var(--paper-tint); color:var(--accent); outline:none; border:none;
   }
-  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;}
+  .nav-dropdown .dd-item.disabled{color:var(--hint); cursor:default;} .nav-dropdown a.dd-item[aria-current="page"]{background:var(--paper-tint);} .nav-dropdown a.dd-item[aria-current="page"] .dd-title{color:var(--accent); font-weight:600;}
   .nav-dropdown .dd-item.disabled:hover{background:transparent; color:var(--hint);}
   .dd-title{display:block; font-size:14px; font-weight:500;}
   .dd-note{display:block; font-size:11.5px; color:var(--muted); margin-top:2px; font-style:italic;}
@@ -250,16 +250,16 @@
       <nav class="nav">
         <a href="preview.html">Home</a>
         <div class="nav-item">
-          <a href="preview-papers.html" class="nav-trigger">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
+          <a href="preview-papers.html" class="nav-trigger here">Work <span class="caret" aria-hidden="true">&#x25BE;</span></a>
           <div class="nav-dropdown" role="menu">
-            <a href="preview-papers.html" role="menuitem" class="dd-item">
+            <a href="preview-papers.html" role="menuitem" class="dd-item" aria-current="page">
               <span class="dd-title">Published Work</span>
               <span class="dd-note">Papers, working papers, and theses</span>
             </a>
-            <span class="dd-item disabled" role="menuitem" aria-disabled="true">
+            <a href="preview-shorts.html" role="menuitem" class="dd-item">
               <span class="dd-title">Short Pieces</span>
-              <span class="dd-note">Coming soon</span>
-            </span>
+              <span class="dd-note">Research notes and briefs</span>
+            </a>
             <span class="dd-item disabled" role="menuitem" aria-disabled="true">
               <span class="dd-title">Teaching</span>
               <span class="dd-note">Coming soon</span>
@@ -290,7 +290,7 @@
 
       <!-- HERO CHART: Event-study NYT style -->
       <figure class="hero-chart">
-        <h3 class="hero-chart-title">When the flood score appears, search behavior bends, and keeps bending</h3>
+        <h3 class="hero-chart-title">Treated users shift toward lower-flood-risk homes after seeing the score, and the gap with controls keeps widening.</h3>
         <p class="hero-chart-sub">Weekly difference between treated and control users, in the flood-risk score of homes they searched for. The treatment cohort had been searching homes in high-risk areas before the experiment.</p>
 
         <svg viewBox="0 0 880 460" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="ev-title">
@@ -391,7 +391,7 @@
       <section class="sec">
         <p class="kicker">Why it matters</p>
         <h2>Flood risk is rewriting where Americans can safely live. The housing market hasn't been pricing it.</h2>
-        <p>Flood risk in the United States is rising. But housing markets have historically been quiet about it. Buyers often don't know what they're buying, lenders don't always price it, and home prices in exposed neighborhoods don't reliably reflect the science of where the water is going.</p>
+        <p>Flood risk in the United States is rising. Housing prices in exposed neighborhoods do not reliably reflect that risk. Buyers often don't know what they're buying, lenders don't always price it, and home prices don't track the science of where the water is going.</p>
         <p>The standard policy lever is mandated disclosure, which requires sellers to tell buyers about risk. This experiment tested a weaker but more deployable cousin. <em>Just show people the number</em>, at the moment they're choosing. If buyers act on it, disclosure has bite. If they don't, the policy needs reinforcement elsewhere.</p>
       </section>
 
@@ -399,7 +399,7 @@
         <p class="kicker">How we did it</p>
         <h2>A natural field experiment on Redfin's live platform.</h2>
         <p>From October 12, 2020 through January 3, 2021, Redfin ran an unannounced randomization on its platform. Treatment users saw a <strong>First Street Foundation Flood Factor score (1–10)</strong> on every property page they viewed; control users saw the standard listing. The primary analysis sample is the <strong>roughly 964,000 registered users</strong> with pre-experiment search histories. Sellers, agents, and users were unaware of the experiment. The information was just <em>there</em>.</p>
-        <p>We tracked the same individuals across every step of the funnel (search, tour, offer, close) and linked the platform behavior to MLS transactions. Identification rests on three estimators. An average-treatment difference-in-differences. A conditional-average-treatment-effect interacted with each user's baseline search risk-category. And a dynamic event-study. Standard errors clustered at the user level, with Romano-Wolf multiple-testing corrections (1,000 bootstrap resamples for search, 3,000 for offers). The hedonic price analysis uses random variation in the share of treated viewers per listing as an exogenous exposure measure, a Crépon-style design applied to homes rather than labor markets.</p>
+        <p>We tracked the same individuals across every step of the funnel (search, tour, offer, close) and linked the platform behavior to MLS transactions. Identification rests on three estimators: an average-treatment difference-in-differences, a conditional-average-treatment-effect interacted with each user's baseline search risk-category, and a dynamic event-study. Standard errors clustered at the user level, with Romano-Wolf multiple-testing corrections (1,000 bootstrap resamples for search, 3,000 for offers). The hedonic price analysis uses random variation in the share of treated viewers per listing as an exogenous exposure measure, a Crépon-style design applied to homes rather than labor markets.</p>
       </section>
 
       <section class="sec">
@@ -508,6 +508,12 @@
           <li><strong>~400M</strong> property views</li>
           <li>First Street Foundation Flood Factor</li>
           <li>MLS transaction records</li>
+        </ul>
+      </div>
+      <div class="side-group">
+        <p class="side-label">Press version</p>
+        <ul class="side-list">
+          <li><a href="preview-short-redfin-flood-disclosure.html">Redfin News, September 2022 ↗</a></li>
         </ul>
       </div>
       <div class="side-group">
