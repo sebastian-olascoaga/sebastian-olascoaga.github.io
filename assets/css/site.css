@@ -124,7 +124,7 @@ body.t-gallery header{padding:40px 0 0; border-bottom:none;}
 .dd-note{display:block; font-size:11.5px; color:var(--muted); margin-top:2px; font-style:italic;}
 
 /* ---- Theme toggle ---- */
-.theme-toggle{background:none; border:0; border-bottom:1px solid transparent; cursor:pointer; font:inherit; color:var(--muted); padding:0 0 3px 0; display:inline-flex; align-items:baseline; gap:6px; transition:color .15s ease, border-color .15s ease;}
+.theme-toggle{margin-left:auto; background:none; border:0; border-bottom:1px solid transparent; cursor:pointer; font:inherit; color:var(--muted); padding:0 0 3px 0; display:inline-flex; align-items:baseline; gap:6px; transition:color .15s ease, border-color .15s ease;}
 .theme-toggle:hover{color:var(--ink); border-bottom-color:var(--accent);}
 .theme-toggle .tt-icon{font-size:1.05em; line-height:1; display:inline-block; transition:transform .25s ease; position:relative; top:1px;}
 .theme-toggle:hover .tt-icon{transform:rotate(30deg);}
