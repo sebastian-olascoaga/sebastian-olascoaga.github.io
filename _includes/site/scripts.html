@@ -1,0 +1,55 @@
+<script>document.querySelectorAll(".theme-toggle").forEach(function(b){b.addEventListener("click",function(){var r=document.documentElement;var c=r.getAttribute("data-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var n=c==="dark"?"light":"dark";r.setAttribute("data-theme",n);localStorage.setItem("theme",n);});});</script>
+<script>
+(function(){
+  var item=document.querySelector(".nav-item"); if(!item) return;
+  var btn=item.querySelector(".nav-trigger"); if(!btn) return;
+  function set(open){ btn.setAttribute("aria-expanded", open?"true":"false"); item.classList.toggle("open", open); }
+  btn.addEventListener("click", function(){ set(btn.getAttribute("aria-expanded")!=="true"); });
+  item.addEventListener("focusin", function(){ set(true); });
+  item.addEventListener("focusout", function(e){ if(!item.contains(e.relatedTarget)) set(false); });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && item.classList.contains("open")){ set(false); btn.focus(); } });
+  document.addEventListener("click", function(e){ if(!item.contains(e.target)) set(false); });
+})();
+</script>
+<script>
+document.querySelector('.cite-copy')?.addEventListener('click', function(){
+  var t = document.querySelector('.cite-text')?.innerText || '';
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(t).then(function(){
+      var btn = document.querySelector('.cite-copy');
+      var orig = btn.innerHTML;
+      btn.innerHTML = 'Copied ✓';
+      setTimeout(function(){ btn.innerHTML = orig; }, 1600);
+    });
+  }
+});
+</script>
+{%- if page.contact_form %}
+<script>
+(function(){
+  var form=document.querySelector(".contact-form"); if(!form) return;
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var btn=form.querySelector(".contact-send");
+    var old=btn.textContent;
+    btn.disabled=true; btn.textContent="Sending...";
+    var prevErr=form.querySelector(".contact-feedback.error");
+    if(prevErr) prevErr.remove();
+    fetch("https://formsubmit.co/ajax/sebastian.olascoaga@gmail.com", {
+      method:"POST",
+      headers:{"Accept":"application/json"},
+      body:new FormData(form)
+    }).then(function(r){ if(!r.ok) throw new Error("bad status"); return r.json(); })
+    .then(function(){
+      form.innerHTML='<p class="contact-feedback" role="status"><strong>Thanks, your message is on its way.</strong> Sebastian will be in touch.</p>';
+    }).catch(function(){
+      btn.disabled=false; btn.textContent=old;
+      var p=document.createElement("p");
+      p.className="contact-feedback error"; p.setAttribute("role","status");
+      p.innerHTML='Something went wrong sending that. Please email <a href="mailto:sebastian.olascoaga@gmail.com">sebastian.olascoaga@gmail.com</a> directly.';
+      btn.parentNode.insertBefore(p, btn);
+    });
+  });
+})();
+</script>
+{%- endif %}

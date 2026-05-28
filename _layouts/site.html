@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include site/head.html %}
+</head>
+<body class="t-{{ page.pagetype | default: 'home' }}{% if page.body_class %} {{ page.body_class }}{% endif %}">
+<div class="wrap">
+{% include site/nav.html %}
+{{ content }}
+{% include site/footer.html %}
+</div>
+{% include site/scripts.html %}
+</body>
+</html>

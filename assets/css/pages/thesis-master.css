@@ -1,0 +1,13 @@
+/* thesis-master */
+
+.pull-quote{font-family:var(--serif);font-style:italic;font-variation-settings:"opsz" 36;font-size:clamp(20px,2.2vw,24px);line-height:1.4;color:var(--ink);padding:24px 0 24px 24px;border-left:3px solid var(--accent);margin:32px 0;max-width:50ch;}
+.pull-quote-cite{display:block;font-family:var(--sans);font-style:normal;font-size:12px;color:var(--muted);letter-spacing:0.04em;margin-top:14px;}
+.bc-grid{stroke:var(--hair);stroke-width:1;}
+.bc-axis{stroke:var(--rule);stroke-width:1;}
+.bc-country{font-family:var(--sans);font-size:13.5px;fill:var(--text);}
+.bc-country.bold{font-weight:600;fill:var(--ink);}
+.bc-bar{fill:var(--counter);}
+.bc-bar.heavy{fill:var(--treat);}
+.bc-val{font-family:var(--serif);font-size:16px;font-weight:600;fill:var(--ink);font-variant-numeric:tabular-nums;font-variation-settings:"opsz" 24;}
+.bc-val.heavy{fill:var(--accent);}
+.bc-xlbl{font-family:var(--sans);font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums;}

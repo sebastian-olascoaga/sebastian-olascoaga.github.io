@@ -1,0 +1,94 @@
+/* research-gallery */
+
+.wrap-tight{max-width:760px; margin:0 auto; padding:0 40px;}
+.tagline{
+    font-family:var(--serif); font-style:italic;
+    font-variation-settings:"opsz" 36;
+    font-size:clamp(16px,1.7vw,18px); line-height:1.45;
+    color:var(--text); max-width:48ch;
+    margin:0; padding-top:6px;
+  }
+.category{margin:0 0 64px;}
+.category-head{
+    display:flex; align-items:baseline; justify-content:space-between;
+    gap:24px; padding-bottom:18px;
+    border-bottom:1px solid var(--ink);
+    margin:0 0 36px;
+  }
+.category-label{
+    font-family:var(--sans); font-size:12px; font-weight:600;
+    letter-spacing:0.22em; text-transform:uppercase; color:var(--ink);
+  }
+.category-count{
+    font-family:var(--sans); font-size:12px; color:var(--muted);
+    letter-spacing:0.06em; font-variant-numeric:tabular-nums;
+  }
+.category-blurb{
+    font-family:var(--serif); font-size:18px; line-height:1.5;
+    color:var(--text); max-width:62ch;
+    font-style:italic; font-variation-settings:"opsz" 24;
+    margin:0 0 36px; font-weight:400;
+  }
+.paper-card.no-link{cursor:default; border-style:dashed;}
+.paper-card.no-link:hover{border-color:var(--hair); transform:none; box-shadow:none;}
+.paper-card.no-link .format-label{color:var(--muted);}
+.paper-card.no-link .pc-img{opacity:0.6;}
+.format-label{font-family:var(--sans); font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; padding:11px 28px 10px; border-bottom:1px solid var(--hair); color:var(--accent); background:var(--paper);}
+.card-crosslink strong{color:var(--accent); font-weight:600; text-transform:uppercase; font-size:9.5px; letter-spacing:0.18em; font-style:normal; margin-right:6px;}
+.pc-img{
+    background:var(--paper-tint);
+    aspect-ratio:3 / 2;
+    padding:30px 32px;
+    border-bottom:1px solid var(--hair);
+    display:flex; align-items:stretch;
+  }
+.pc-img svg{width:100%; height:100%; display:block; overflow:visible;}
+.ti-eye{font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; fill:var(--muted);}
+.ti-lbl{font-family:var(--sans); font-size:12.5px; fill:var(--text);}
+.ti-lbl.accent{fill:var(--accent); font-weight:500;}
+.ti-val{font-family:var(--sans); font-size:14px; font-weight:600; fill:var(--ink); font-variant-numeric:tabular-nums;}
+.ti-val.accent{fill:var(--accent);}
+.ti-delta{font-family:var(--sans); font-size:12px; font-weight:600; fill:var(--accent);}
+.ti-axis{font-family:var(--sans); font-size:10.5px; fill:var(--muted);}
+.ti-bar-ctrl{fill:var(--counter); transition:transform .35s ease;}
+.ti-bar-treat{fill:var(--treat); transition:transform .35s ease;}
+.ti-line-ctrl{stroke:var(--counter); stroke-width:1.8; fill:none;}
+.ti-line-treat{stroke:var(--treat); stroke-width:2.2; fill:none; stroke-linecap:round; stroke-linejoin:round;}
+.ti-dash{stroke-dasharray:5 4;}
+.ti-band{fill:var(--treat-soft);}
+.ti-ref{stroke:var(--hair); stroke-dasharray:3 3;}
+.ti-dot-ctrl{fill:var(--counter);}
+.ti-dot-treat{fill:var(--treat);}
+.paper-card:hover .ti-bar-ctrl{transform:scaleX(1.015); transform-origin:left center;}
+.paper-card:hover .ti-bar-treat{transform:scaleX(1.03); transform-origin:left center;}
+.paper-card .ti-redraw{
+    stroke-dasharray:800; stroke-dashoffset:0;
+  }
+.paper-card:hover .ti-redraw{animation:redraw 1.2s cubic-bezier(.2,.7,.2,1);}
+@keyframes redraw{from{stroke-dashoffset:800;} to{stroke-dashoffset:0;}}
+.pc-q{
+    font-family:var(--serif); font-weight:500; color:var(--ink);
+    font-size:clamp(21px,2.1vw,25px); line-height:1.22;
+    font-variation-settings:"opsz" 72;
+    letter-spacing:-0.005em; margin:0 0 18px; flex:1;
+  }
+.pc-meta .year{color:var(--ink); font-weight:500; font-variant-numeric:tabular-nums;}
+.pc-meta em{font-style:italic; color:var(--text);}
+.pc-meta .pill{
+    color:var(--accent); font-weight:600;
+    letter-spacing:0.05em;
+    font-size:11px;
+  }
+@media (max-width:640px){
+  .wrap-tight{padding:0 22px;}
+  main{padding-top:36px;}
+  .pc-img{padding:22px 22px;}
+  .pc-body{padding:22px 22px 22px;}
+}
+.page-eyebrow{font-family:var(--sans); font-size:11.5px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); margin:0 0 18px;}
+.page-title em{font-style:italic; color:var(--accent);}
+.filter-row-label{font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); margin-right:14px; min-width:64px;}
+.work-gallery.is-empty + .empty-msg{display:block;}
+@media (max-width:880px){
+  .work-gallery{grid-template-columns:1fr;}
+}

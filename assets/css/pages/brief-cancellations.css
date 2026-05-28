@@ -1,0 +1,10 @@
+/* brief-cancellations */
+
+.sec{margin:0 0 0;}
+.pull-quote{font-family:var(--serif);font-style:italic;font-variation-settings:"opsz" 36;font-size:clamp(20px,2.2vw,24px);line-height:1.4;color:var(--ink);padding:24px 0 24px 24px;border-left:3px solid var(--accent);margin:40px 0 32px;max-width:62ch;}
+.pull-quote-cite{display:block;font-family:var(--sans);font-style:normal;font-size:12px;color:var(--muted);letter-spacing:0.04em;margin-top:14px;}
+.cta-out{display:inline-flex;align-items:baseline;gap:10px;font-family:var(--sans);font-size:14.5px;font-weight:600;color:var(--paper);background:var(--accent);padding:14px 26px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;transition:background .15s ease,transform .15s ease;margin:32px 0 8px;}
+@media (max-width:640px){
+  .paper-hero{padding:40px 0 28px;}
+  .hero-chart{padding:24px 18px 18px;}
+}

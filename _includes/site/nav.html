@@ -1,0 +1,29 @@
+<header class="reveal d1">
+  <div class="head-grid">
+    <div class="name-block">
+      <h1 class="name"><a href="{{ '/' | relative_url }}">Sebastian Olascoaga</a></h1>
+      <p class="role"><strong>City of Boston</strong> <span class="dot">·</span> <strong>MIT</strong></p>
+    </div>
+    <nav class="nav">
+      <a href="{{ '/' | relative_url }}"{% if page.nav == 'home' %} class="here"{% endif %}>Home</a>
+      <div class="nav-item">
+        <button type="button" class="nav-trigger{% if page.nav == 'research' %} here{% endif %}" aria-expanded="false" aria-haspopup="true">Research <span class="caret" aria-hidden="true">&#x25BE;</span></button>
+        <div class="nav-dropdown">
+          <a href="{{ '/research/' | relative_url }}" class="dd-item"{% if page.subnav == 'papers' %} aria-current="page"{% endif %}>
+            <span class="dd-title">Published Work</span>
+            <span class="dd-note">Papers, working papers, and theses</span>
+          </a>
+          <a href="{{ '/briefs/' | relative_url }}" class="dd-item"{% if page.subnav == 'briefs' %} aria-current="page"{% endif %}>
+            <span class="dd-title">Briefs</span>
+            <span class="dd-note">Public-facing notes and analyses</span>
+          </a>
+        </div>
+      </div>
+      <a href="{{ '/teaching/' | relative_url }}"{% if page.nav == 'teaching' %} class="here"{% endif %}>Teaching</a>
+      <a href="{{ '/cv/' | relative_url }}"{% if page.nav == 'cv' %} class="here"{% endif %}>CV</a>
+      <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+      <a href="{{ '/' | relative_url }}#contact">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark"><span class="tt-icon">◐</span><span class="tt-label"><span class="tt-when-light">Dark mode</span><span class="tt-when-dark">Light mode</span></span></button>
+    </nav>
+  </div>
+</header>
