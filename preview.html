@@ -61,7 +61,7 @@
   a{color:inherit;}
   .num{font-variant-numeric:tabular-nums;}
 
-  .wrap{max-width:1200px; margin:0 auto; padding:0 40px;}
+  .wrap{max-width:1440px; margin:0 auto; padding:0 40px;}
 
   /* HEADER */
   header.site{
@@ -102,7 +102,7 @@
 
   /* HERO (spans full width of container) */
   .hero{
-    padding:64px 0 56px;
+    padding:36px 0 56px;
     border-bottom:1px solid var(--hair);
   }
   .hero p{
@@ -132,7 +132,7 @@
     gap:80px; align-items:start;
     padding:56px 0 0;
   }
-  .landing-main{min-width:0; max-width:680px;}
+  .landing-main{min-width:0; max-width:860px;}
   .landing-side{min-width:0;}
 
   /* ABOUT */
@@ -204,7 +204,7 @@
   .sw-all:hover{color:var(--ink); border-bottom-color:var(--ink);}
 
   /* footer */
-  footer{margin-top:96px; padding:48px 0 96px; border-top:1px solid var(--hair);}
+  footer{margin-top:80px; padding:48px 0 64px; border-top:1px solid var(--hair);}
   .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; align-items:flex-end;}
   .foot-note{
     font-family:var(--serif); font-size:14px; color:var(--muted);
@@ -221,7 +221,7 @@
   .d1{animation-delay:.04s}.d2{animation-delay:.14s}.d3{animation-delay:.24s}.d4{animation-delay:.34s}.d5{animation-delay:.44s}
   @media (prefers-reduced-motion: reduce){.reveal{opacity:1; transform:none; animation:none;}}
 
-  @media (max-width:900px){
+  @media (max-width:880px){
     .landing-body{grid-template-columns:1fr; gap:64px;}
     .landing-side{order:2;}
   }
@@ -242,7 +242,7 @@
 <style>:root[data-theme="dark"]{--paper:#15110D;--paper-tint:#1F1A14;--paper-deep:#2A241D;--ink:#F7F3EE;--text:#DDD3C5;--muted:#999186;--hint:#6E6760;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#7A726B;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.14);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.16);}:root[data-theme="light"]{--paper:#FBFBFB;--paper-tint:#F4F4F4;--paper-deep:#E8E8E8;--ink:#1A1916;--text:#38342F;--muted:#6D6862;--hint:#8F8B85;--hair:rgba(20,20,20,0.10);--rule:rgba(20,20,20,0.18);--counter:#B3AEA8;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.10);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.12);}.theme-toggle{background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;font:inherit;color:var(--muted);padding:0 0 3px 0;display:inline-flex;align-items:baseline;gap:6px;transition:color .15s ease,border-color .15s ease;}.theme-toggle:hover{color:var(--ink);border-bottom-color:var(--accent);}.pub-as{margin-left:14px;font-size:11.5px;color:var(--hint);letter-spacing:0.04em;}.pub-as em{font-style:italic;color:var(--muted);}.theme-toggle .tt-icon{font-size:1.05em;line-height:1;display:inline-block;transition:transform .25s ease;position:relative;top:1px;}.theme-toggle:hover .tt-icon{transform:rotate(30deg);}.tt-when-dark{display:none;}.tt-when-light{display:inline;}:root[data-theme="dark"] .tt-when-light{display:none;}:root[data-theme="dark"] .tt-when-dark{display:inline;}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tt-when-light{display:none;}:root:not([data-theme="light"]) .tt-when-dark{display:inline;}}</style><script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
 <style>
   /* CONTACT */
-  .contact{margin:88px 0 0; padding:56px 0 0; border-top:1px solid var(--hair); text-align:center;}
+  .contact{margin:56px 0 0; padding:40px 0 0; border-top:1px solid var(--hair); text-align:center;}
   .contact-label{font-family:var(--sans); font-size:11.5px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin:0 0 18px;}
   .contact-lede{font-family:var(--serif); font-size:18px; line-height:1.6; color:var(--text); max-width:62ch; margin:0 auto 36px;}
   .contact-lede a{color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent); padding-bottom:1px; transition:color .15s ease, border-color .15s ease;}
@@ -352,6 +352,7 @@
             </a>
           </div>
         </div>
+        <a href="preview-teaching.html">Teaching</a>
         <a href="preview-cv.html">CV</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
         <a href="preview.html#contact">Contact</a>
@@ -376,7 +377,7 @@
         <p>Sebastian Olascoaga serves as the <strong>Director of Research and Evaluation for the City of Boston</strong> and is a <strong>Research Affiliate at MIT</strong>. He established and now leads the City's evaluation unit, which conducts impact evaluations, representative surveys, and economic analyses that inform budget and policy decisions across major city programs and services. His team also equips city departments with predictive and causal research tools to act on challenges from housing and public health to climate resilience and operations.</p>
         <p>Before Boston, he was a research fellow at <strong>Redfin</strong> running consumer-platform experiments, a visiting health-economist fellow at <strong>OptumLabs</strong>, Director of Economic Policy at <strong>Mexico's Federal Treasury</strong>, and a researcher at the <strong>OECD</strong> in Paris.</p>
         <p>Sebastian holds a <strong>PhD in Urban Economics and Policy</strong> from MIT, an <strong>MA in Applied Economics</strong> from the Paris School of Economics, and a <strong>BA in Economics</strong> from CIDE. His research has been covered in <em>The New York Times</em>, Bloomberg, NPR Marketplace, and MIT News, and published in <em>JAMA Network Open</em>, <em>Nature Communications</em>, NBER, <em>Frontiers in Environmental Economics</em>, and <em>Public Health Nutrition</em>.</p>
-        <p>In his free time you can find him at Fenway rooting for the Red Sox, rock climbing in New England, or searching for fresh waves in the Atlantic.</p>
+        <p>In his free time he's at Fenway rooting for the Red Sox, rock climbing in New England, or searching for fresh waves in the Atlantic.</p>
       </section>
 
     </main>
@@ -392,12 +393,6 @@
           <p class="sw-eye">NBER w33119 <span class="sw-sep">·</span> R&amp;R, <em>American Economic Review</em></p>
           <h3 class="sw-title">Flood-risk disclosure on a real-estate platform</h3>
           <p class="sw-find">Treated high-risk buyers placed offers on homes with <strong>57% lower flood scores</strong> than controls.</p>
-        </a>
-
-        <a class="sw-row" href="preview-paper-frontiers.html">
-          <p class="sw-eye"><em>Frontiers in Environmental Economics</em></p>
-          <h3 class="sw-title">Flood risk and property value changes</h3>
-          <p class="sw-find">Flood-exposed properties lose <strong>18.9% of value</strong> 12 years after exposure, across 8.1M U.S. sales.</p>
         </a>
 
         <a class="sw-row" href="preview-paper-nature.html">
@@ -454,6 +449,7 @@
       <nav class="footlinks">
         <a href="preview.html">Home</a>
         <a href="preview-papers.html">Research</a>
+        <a href="preview-teaching.html">Teaching</a>
         <a href="preview-cv.html">CV</a>
         <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>

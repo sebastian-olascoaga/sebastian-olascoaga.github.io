@@ -35,7 +35,7 @@
   .nav{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 24px;font-family:var(--sans);font-size:13px;color:var(--muted);grid-column:1 / -1;}
   .nav a{text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:color .15s ease,border-color .15s ease;}
   .nav a:hover,.nav a.here{color:var(--ink);border-bottom-color:var(--accent);}
-  .paper-hero{padding:64px 0 40px;}
+  .paper-hero{padding:36px 0 40px;}
   .breadcrumb{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:0.04em;margin:0 0 28px;}
   .breadcrumb a{text-decoration:none;border-bottom:1px solid var(--hair);transition:border-color .15s ease,color .15s ease;}
   .breadcrumb a:hover{color:var(--accent);border-bottom-color:var(--accent);}
@@ -116,7 +116,7 @@
   .rel-q{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:17px;line-height:1.25;font-variation-settings:"opsz" 36;margin:0 0 12px;letter-spacing:-0.005em;}
   .rel-q em{font-style:italic;}.rel-meta{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:0.04em;}
   .rel-meta em{font-style:italic;color:var(--text);}
-  footer{margin-top:80px;padding:48px 0 96px;border-top:1px solid var(--hair);}
+  footer{margin-top:80px;padding:48px 0 64px;border-top:1px solid var(--hair);}
   .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; align-items:flex-end;}
   .foot-note{font-size:14px;color:var(--muted);max-width:48ch;line-height:1.55;font-style:italic;font-family:var(--serif);font-variation-settings:"opsz" 16;}
   .footlinks{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--sans);font-size:13px;color:var(--muted);}
@@ -195,6 +195,7 @@
             </a>
           </div>
         </div>
+        <a href="preview-teaching.html">Teaching</a>
         <a href="preview-cv.html">CV</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
         <a href="preview.html#contact">Contact</a>
@@ -208,7 +209,7 @@
     <p class="paper-eyebrow">Event study · 8M transactions <span class="sep">·</span> <span class="year">2025</span></p>
     <h2 class="paper-q">When a flood hits a shrinking neighborhood, <em>home prices never recover.</em></h2>
     <p class="paper-byline"><strong>Sebastian Sandoval-Olascoaga</strong> · <strong>Evelyn Shu</strong> · <strong>Jeremy Porter</strong></p>
-    <span class="paper-status"><span class="dot"></span>Published - Frontiers in Environmental Economics</span>
+    <span class="paper-status"><span class="dot"></span>Published · Frontiers in Environmental Economics</span>
   </section>
 
   <p class="lead">A home that would have sold for $1,000,000 absent a flood sells for <strong>$811,000 twelve years later</strong>, a $189,000 penalty that deepens over time. The penalty is permanent only in shrinking neighborhoods. In growing ones, the discount partially recovers to <strong>−8.7% by year 11</strong>. In declining ones, it keeps deepening to <strong>−15%</strong> over the same horizon.</p>
@@ -220,7 +221,6 @@
     <main class="paper-main">
       <!-- HERO CHART: Figure 2 — pooled event study with 95% CI band -->
       <figure class="hero-chart">
-        <p class="hero-chart-eye">Figure 2 · The persistent penalty</p>
         <h3 class="hero-chart-title">A flood-exposure penalty that keeps deepening for over a decade.</h3>
         <p class="hero-chart-sub">Sun–Abraham (2021) event-study estimator on a repeated-sales panel of 8,148,080 U.S. residential transactions (LightBox, 2000–2020). The dot at year −1 is the reference period. After exposure, sale prices per square foot fall steadily relative to non-flooded controls, reaching <strong>−18.9%</strong> by year 12. Pre-trends are flat (joint test p = 0.6).</p>
 
@@ -250,7 +250,7 @@
           <text class="c-anno-sub" x="326" y="116">Flood event</text>
 
           <!-- 95% CI band (upper bound left→right, then lower bound right→left, closed) -->
-          <path fill="rgba(31,79,90,0.12)" d="M 80 118 L 120 125 L 160 117 L 200 122 L 240 124 L 280 121 L 320 140 L 360 123 L 400 125 L 440 131 L 480 135 L 520 153 L 560 175 L 600 198 L 640 221 L 680 245 L 720 269 L 760 287 L 800 292 L 840 286 L 840 372 L 800 378 L 760 371 L 720 351 L 680 325 L 640 299 L 600 272 L 560 245 L 520 217 L 480 195 L 440 185 L 400 175 L 360 167 L 320 140 L 280 161 L 240 164 L 200 162 L 160 157 L 120 165 L 80 158 Z"/>
+          <path fill="var(--treat-soft)" d="M 80 118 L 120 125 L 160 117 L 200 122 L 240 124 L 280 121 L 320 140 L 360 123 L 400 125 L 440 131 L 480 135 L 520 153 L 560 175 L 600 198 L 640 221 L 680 245 L 720 269 L 760 287 L 800 292 L 840 286 L 840 372 L 800 378 L 760 371 L 720 351 L 680 325 L 640 299 L 600 272 L 560 245 L 520 217 L 480 195 L 440 185 L 400 175 L 360 167 L 320 140 L 280 161 L 240 164 L 200 162 L 160 157 L 120 165 L 80 158 Z"/>
 
           <!-- estimate line -->
           <path stroke="var(--treat)" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M 80 138 L 120 145 L 160 137 L 200 142 L 240 144 L 280 141 L 320 140 L 360 145 L 400 150 L 440 158 L 480 165 L 520 185 L 560 210 L 600 235 L 640 260 L 680 285 L 720 310 L 760 329 L 800 335 L 840 329"/>
@@ -330,7 +330,7 @@
       <section class="sec">
         <p class="kicker">What we found</p>
         <h2>A 19% penalty after 12 years, which splits in two by neighborhood demographics.</h2>
-        <p><strong>Pooled.</strong> Three years after a flood, properties sell for <strong>2.5% less</strong> than identical non-flooded properties (p = 0.0001). By <strong>year 10, the gap is 18.9%</strong> (p &lt; 0.0001). On a million-dollar home, that is a <strong>$189,000 penalty</strong>. And it is still deepening.</p>
+        <p><strong>Pooled.</strong> Three years after a flood, properties sell for <strong>2.5% less</strong> than identical non-flooded properties (p = 0.0001). By <strong>year 12, the gap is 18.9%</strong> (p &lt; 0.0001). On a million-dollar home, that is a <strong>$189,000 penalty</strong>. And it is still deepening.</p>
         <p><strong>Split by population trajectory.</strong> In growing tracts, prices dip to <strong>−17.8% at year 8</strong>, then partially recover to <strong>−8.7% by year 11</strong>. In shrinking tracts, prices fall to <strong>−4.8% by year 5</strong> and continue down to <strong>−15% by year 11</strong>, with no rebound. The penalty is permanent <em>only where housing demand is also retreating</em>.</p>
         <p><strong>Even before the flood.</strong> Growing-population tracts saw prices rise <strong>+3.05% per year faster</strong> than shrinking ones (2001 to 2022, statistically significant every year except during the Financial Crisis). The gap widened to <strong>+5.8% by 2022</strong>. Climate exposure compounds a demographic divergence that was already present before the flood.</p>
         <p><strong>The fiscal echo.</strong> The nationwide elasticity of property-tax revenue to sale prices is <strong>0.71</strong> (p = 0.001). A 1% price decline implies a 0.71% revenue decline. Twelve years after a flood, projected impacts on total county taxes range from <strong>2.7% to 24.5%</strong> (mean 12.1%). At the upper bound, that is <strong>32.3% of total county salary and wages</strong>, or <strong>21.83% of education expenditure</strong>. The same shrinking communities that face the deepest price penalty lose the most fiscal capacity to adapt.</p>
@@ -420,6 +420,7 @@
       <nav class="footlinks">
         <a href="preview.html">Home</a>
         <a href="preview-papers.html">Research</a>
+        <a href="preview-teaching.html">Teaching</a>
         <a href="preview-cv.html">CV</a>
         <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>

@@ -37,7 +37,7 @@
   .nav{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 24px;font-family:var(--sans);font-size:13px;color:var(--muted);grid-column:1 / -1;}
   .nav a{text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:color .15s ease,border-color .15s ease;}
   .nav a:hover,.nav a.here{color:var(--ink);border-bottom-color:var(--accent);}
-  .paper-hero{padding:64px 0 40px;}
+  .paper-hero{padding:36px 0 40px;}
   .breadcrumb{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:0.04em;margin:0 0 28px;}
   .breadcrumb a{text-decoration:none;border-bottom:1px solid var(--hair);transition:border-color .15s ease,color .15s ease;}
   .breadcrumb a:hover{color:var(--accent);border-bottom-color:var(--accent);}
@@ -62,7 +62,16 @@
   .hero-chart-eye{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;}
   .hero-chart-title{font-family:var(--serif);font-size:clamp(20px,2.2vw,24px);line-height:1.18;font-weight:500;color:var(--ink);font-variation-settings:"opsz" 48;letter-spacing:-0.005em;margin:0 0 8px;}
   .hero-chart-sub{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 28px;}
-  .hero-chart svg{width:100%;height:auto;display:block;overflow:visible;}
+  .hero-fig{margin:0;}
+  .hero-fig-top{display:flex;align-items:center;gap:clamp(28px,4vw,52px);flex-wrap:wrap;}
+  .hf-num{font-family:var(--serif);font-weight:600;color:var(--treat);font-size:clamp(64px,8.5vw,120px);line-height:0.86;letter-spacing:-0.02em;font-variation-settings:"opsz" 60;margin:0;flex:0 0 auto;}
+  .hf-say{flex:1 1 340px;min-width:0;}
+  .hf-lead{font-family:var(--serif);font-size:clamp(18px,1.6vw,21px);line-height:1.35;font-weight:500;color:var(--ink);font-variation-settings:"opsz" 36;margin:0 0 10px;}
+  .hf-emph{font-family:var(--serif);font-size:clamp(18px,1.6vw,21px);line-height:1.35;font-weight:600;color:var(--treat);font-variation-settings:"opsz" 36;margin:0;}
+  .hf-stats{margin:24px 0 0;padding:18px 0 0;border-top:1px solid var(--hair);}
+  .hf-stat{font-family:var(--sans);font-size:13px;color:var(--muted);letter-spacing:0.02em;line-height:1.55;margin:0;}
+  .hf-stat + .hf-stat{margin-top:5px;}
+  .hf-stat strong{color:var(--ink);font-weight:600;}
   .hero-chart-source{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair);font-family:var(--sans);font-size:11.5px;color:var(--hint);letter-spacing:0.02em;}
   .hero-chart-source strong{color:var(--muted);font-weight:500;}
   .sec{margin:0 0 0;}
@@ -88,7 +97,7 @@
   .venue-chip.redfin{color:var(--treat);border-color:var(--treat);}
   .venue-chip.boston{color:var(--accent);border-color:var(--accent);}
     /* SHORT PIECE SECTION SIGNATURE (teal extends from the gallery into the click-through) */ .paper-eyebrow{color:var(--treat);} .paper-status{color:var(--treat); border-color:var(--treat);} .paper-status .dot{background:var(--treat);} .paper-status:hover{background:var(--treat); color:var(--paper);} .paper-status:hover .dot{background:var(--paper);} .paper-q em{font-style:normal;} .lead strong{color:var(--treat);} .hero-chart-eye{color:var(--treat);} .cta-out{background:var(--treat);} .pull-quote{border-left-color:var(--treat);} .breadcrumb a:hover{color:var(--treat); border-bottom-color:var(--treat);} .side-list li a:hover{color:var(--treat); border-bottom-color:var(--treat);} .topic-tag{display:inline-block;font-family:var(--sans);font-size:11.5px;color:var(--muted);padding:3px 9px;border:1px solid var(--hair);border-radius:2px;margin-right:6px;margin-bottom:4px;}
-  footer{margin-top:80px;padding:48px 0 96px;border-top:1px solid var(--hair);}
+  footer{margin-top:80px;padding:48px 0 64px;border-top:1px solid var(--hair);}
   .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; align-items:flex-end;}
   .footlinks{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--sans);font-size:13px;color:var(--muted);}
   .footlinks a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s ease,color .15s ease;}
@@ -149,6 +158,7 @@
             </a>
           </div>
         </div>
+        <a href="preview-teaching.html">Teaching</a>
         <a href="preview-cv.html">CV</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
         <a href="preview.html#contact">Contact</a>
@@ -162,10 +172,10 @@
     <p class="paper-eyebrow">Published at Redfin News <span class="sep">·</span> <span class="year">August 2022</span></p>
     <h2 class="paper-q">16.1% of U.S. home-purchase agreements fell through in July 2022, the highest rate <em>since the pandemic onset.</em></h2>
     <p class="paper-byline"><strong>Lily Katz</strong> · <strong>Sandoval-Olascoaga</strong></p>
-    <a class="paper-status" href="https://www.redfin.com/news/home-purchases-fall-through-july-2022/" target="_blank" rel="noopener noreferrer"><span class="dot"></span>Originally published - Redfin News <span class="ext">↗</span></a>
+    <a class="paper-status" href="https://www.redfin.com/news/home-purchases-fall-through-july-2022/" target="_blank" rel="noopener noreferrer"><span class="dot"></span>Originally published · Redfin News <span class="ext">↗</span></a>
   </section>
 
-  <p class="lead">In July 2022, <strong>16.1%</strong> of U.S. home-purchase agreements fell through, about <strong>63,000 cancellations</strong> across 93 metropolitan areas. That's the highest rate since the pandemic onset, up from <strong>15%</strong> in June and <strong>12.5%</strong> a year earlier. <strong>Six of the top ten cancellation metros were in Florida</strong>, led by Jacksonville at <strong>29.3%</strong>.</p>
+  <p class="lead">In July 2022, <strong>16.1%</strong> of U.S. home-purchase agreements fell through, about <strong>63,000 cancellations</strong> across 93 metropolitan areas. That's the highest rate since the pandemic onset, up from <strong>15%</strong> in June and <strong>12.5%</strong> a year earlier. <strong>6 of the top 10 cancellation metros were in Florida</strong>, led by Jacksonville at <strong>29.3%</strong>.</p>
 
   <div class="paper-body">
 
@@ -175,24 +185,19 @@
         <h3 class="hero-chart-title">Buyers regained leverage as mortgage rates crossed 5% and inventory grew.</h3>
         <p class="hero-chart-sub">Share of home-purchase agreements that fell through in a given month, U.S. average across 93 metropolitan areas with at least 1,000 pending sales in July. Excludes the pandemic-onset months of March and April 2020, when the housing market briefly paused.</p>
 
-        <svg viewBox="0 0 920 240" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="ca-title">
-          <title id="ca-title">Sixteen point one percent of U.S. home-purchase agreements fell through in July 2022, the highest rate since the pandemic onset.</title>
-
-          <!-- big number, left aligned -->
-          <text x="0" y="140" font-family="Source Serif 4, Georgia, serif" font-size="140" font-weight="600" fill="var(--treat)" font-variation-settings="'opsz' 60" letter-spacing="-0.02em">16.1%</text>
-
-          <!-- right-side compact explanation in serif -->
-          <text x="400" y="78" font-family="Source Serif 4, Georgia, serif" font-size="19" fill="var(--ink)" font-variation-settings="'opsz' 36" font-weight="500">of U.S. home-purchase agreements</text>
-          <text x="400" y="102" font-family="Source Serif 4, Georgia, serif" font-size="19" fill="var(--ink)" font-variation-settings="'opsz' 36" font-weight="500">fell through in July 2022.</text>
-          <text x="400" y="138" font-family="Source Serif 4, Georgia, serif" font-size="19" fill="var(--accent)" font-variation-settings="'opsz' 36" font-weight="600">≈63,000 cancellations across 93 metros.</text>
-
-          <!-- separator -->
-          <line x1="0" y1="172" x2="920" y2="172" stroke="var(--hair)"/>
-
-          <!-- bottom row -->
-          <text x="0" y="200" font-family="Inter, sans-serif" font-size="13" fill="var(--muted)" letter-spacing="0.02em"><tspan font-weight="600">UP FROM 15% (JUNE)</tspan><tspan dx="10">and 12.5% a year earlier. Highest rate since pandemic-onset March–April 2020.</tspan></text>
-          <text x="0" y="222" font-family="Inter, sans-serif" font-size="13" fill="var(--muted)" letter-spacing="0.02em"><tspan font-weight="600">JACKSONVILLE 29.3%</tspan><tspan dx="10">led the metros · 6 of the top 10 cancellation metros were in Florida.</tspan></text>
-        </svg>
+        <div class="hero-fig">
+          <div class="hero-fig-top">
+            <p class="hf-num">16.1%</p>
+            <div class="hf-say">
+              <p class="hf-lead">of U.S. home-purchase agreements fell through in July 2022.</p>
+              <p class="hf-emph">≈63,000 cancellations across 93 metros.</p>
+            </div>
+          </div>
+          <div class="hf-stats">
+            <p class="hf-stat"><strong>UP FROM 15% (JUNE)</strong> and 12.5% a year earlier. Highest rate since pandemic-onset March–April 2020.</p>
+            <p class="hf-stat"><strong>JACKSONVILLE 29.3%</strong> led the metros · 6 of the top 10 cancellation metros were in Florida.</p>
+          </div>
+        </div>
 
         <p class="hero-chart-source"><strong>Source:</strong> Katz &amp; Sandoval-Olascoaga (2022), Redfin News · Redfin analysis of MLS data on home-purchase agreements that fell out of contract during a given month · sample: 93 U.S. metropolitan areas with at least 1,000 pending home sales in July 2022 · data is subject to revision as later-closing transactions update.</p>
       </figure>
@@ -242,6 +247,7 @@
       <nav class="footlinks">
         <a href="preview.html">Home</a>
         <a href="preview-papers.html">Research</a>
+        <a href="preview-teaching.html">Teaching</a>
         
         <a href="preview-cv.html">CV</a>
         <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>

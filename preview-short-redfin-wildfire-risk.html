@@ -37,7 +37,7 @@
   .nav{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 24px;font-family:var(--sans);font-size:13px;color:var(--muted);grid-column:1 / -1;}
   .nav a{text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:color .15s ease,border-color .15s ease;}
   .nav a:hover,.nav a.here{color:var(--ink);border-bottom-color:var(--accent);}
-  .paper-hero{padding:64px 0 40px;}
+  .paper-hero{padding:36px 0 40px;}
   .breadcrumb{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:0.04em;margin:0 0 28px;}
   .breadcrumb a{text-decoration:none;border-bottom:1px solid var(--hair);transition:border-color .15s ease,color .15s ease;}
   .breadcrumb a:hover{color:var(--accent);border-bottom-color:var(--accent);}
@@ -62,7 +62,16 @@
   .hero-chart-eye{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;}
   .hero-chart-title{font-family:var(--serif);font-size:clamp(20px,2.2vw,24px);line-height:1.18;font-weight:500;color:var(--ink);font-variation-settings:"opsz" 48;letter-spacing:-0.005em;margin:0 0 8px;}
   .hero-chart-sub{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 28px;}
-  .hero-chart svg{width:100%;height:auto;display:block;overflow:visible;}
+  .hero-fig{margin:0;}
+  .hero-fig-top{display:flex;align-items:center;gap:clamp(28px,4vw,52px);flex-wrap:wrap;}
+  .hf-num{font-family:var(--serif);font-weight:600;color:var(--treat);font-size:clamp(64px,8.5vw,120px);line-height:0.86;letter-spacing:-0.02em;font-variation-settings:"opsz" 60;margin:0;flex:0 0 auto;}
+  .hf-say{flex:1 1 340px;min-width:0;}
+  .hf-lead{font-family:var(--serif);font-size:clamp(18px,1.6vw,21px);line-height:1.35;font-weight:500;color:var(--ink);font-variation-settings:"opsz" 36;margin:0 0 10px;}
+  .hf-emph{font-family:var(--serif);font-size:clamp(18px,1.6vw,21px);line-height:1.35;font-weight:600;color:var(--treat);font-variation-settings:"opsz" 36;margin:0;}
+  .hf-stats{margin:24px 0 0;padding:18px 0 0;border-top:1px solid var(--hair);}
+  .hf-stat{font-family:var(--sans);font-size:13px;color:var(--muted);letter-spacing:0.02em;line-height:1.55;margin:0;}
+  .hf-stat + .hf-stat{margin-top:5px;}
+  .hf-stat strong{color:var(--ink);font-weight:600;}
   .hero-chart-source{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair);font-family:var(--sans);font-size:11.5px;color:var(--hint);letter-spacing:0.02em;}
   .hero-chart-source strong{color:var(--muted);font-weight:500;}
   .sec{margin:0 0 0;}
@@ -86,7 +95,7 @@
   .venue-chip.redfin{color:var(--treat);border-color:var(--treat);}
   .venue-chip.boston{color:var(--accent);border-color:var(--accent);}
     /* SHORT PIECE SECTION SIGNATURE (teal extends from the gallery into the click-through) */ .paper-eyebrow{color:var(--treat);} .paper-status{color:var(--treat); border-color:var(--treat);} .paper-status .dot{background:var(--treat);} .paper-status:hover{background:var(--treat); color:var(--paper);} .paper-status:hover .dot{background:var(--paper);} .paper-q em{font-style:normal;} .lead strong{color:var(--treat);} .hero-chart-eye{color:var(--treat);} .cta-out{background:var(--treat);} .pull-quote{border-left-color:var(--treat);} .breadcrumb a:hover{color:var(--treat); border-bottom-color:var(--treat);} .side-list li a:hover{color:var(--treat); border-bottom-color:var(--treat);} .topic-tag{display:inline-block;font-family:var(--sans);font-size:11.5px;color:var(--muted);padding:3px 9px;border:1px solid var(--hair);border-radius:2px;margin-right:6px;margin-bottom:4px;}
-  footer{margin-top:80px;padding:48px 0 96px;border-top:1px solid var(--hair);}
+  footer{margin-top:80px;padding:48px 0 64px;border-top:1px solid var(--hair);}
   .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; align-items:flex-end;}
   .footlinks{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--sans);font-size:13px;color:var(--muted);}
   .footlinks a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s ease,color .15s ease;}
@@ -147,6 +156,7 @@
             </a>
           </div>
         </div>
+        <a href="preview-teaching.html">Teaching</a>
         <a href="preview-cv.html">CV</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
         <a href="preview.html#contact">Contact</a>
@@ -160,7 +170,7 @@
     <p class="paper-eyebrow">Published at Redfin News <span class="sep">·</span> <span class="year">June 2021</span></p>
     <h2 class="paper-q">39.4% of Utah homes face high fire risk, the largest share <em>of any Western U.S. state analyzed.</em></h2>
     <p class="paper-byline"><strong>Lily Katz</strong> · <strong>Sandoval-Olascoaga</strong> · <strong>Sheharyar Bokhari</strong></p>
-    <a class="paper-status" href="https://www.redfin.com/news/wildfire-real-estate-risk-2021/" target="_blank" rel="noopener noreferrer"><span class="dot"></span>Originally published - Redfin News <span class="ext">↗</span></a>
+    <a class="paper-status" href="https://www.redfin.com/news/wildfire-real-estate-risk-2021/" target="_blank" rel="noopener noreferrer"><span class="dot"></span>Originally published · Redfin News <span class="ext">↗</span></a>
   </section>
 
   <p class="lead">In a 2021 analysis of eight Western U.S. states, <strong>39.4%</strong> of Utah homes (<strong>411,052</strong> properties, worth <strong>$219 billion</strong>) sat in high-fire-risk areas, the largest share by far. Colorado followed at <strong>19%</strong> and Idaho at <strong>14.4%</strong>. California had a smaller share (<strong>6.7%</strong>), but its larger and more expensive housing stock put <strong>$628 billion</strong> of property value at high fire risk, the largest dollar exposure in the West.</p>
@@ -173,24 +183,19 @@
         <h3 class="hero-chart-title">Utah outranked every other Western state on share of homes at high fire risk.</h3>
         <p class="hero-chart-sub">Share of homes in high, very high, or extreme fire-risk categories per ClimateCheck's MC2 vegetation-model classification. Eight contiguous Western U.S. states with sufficient data (Arizona, California, Colorado, Idaho, Nevada, Oregon, Utah, Washington). Montana, New Mexico, and Wyoming were excluded for data coverage.</p>
 
-        <svg viewBox="0 0 920 240" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="wr-title">
-          <title id="wr-title">39.4 percent of Utah homes face high fire risk, the largest share among the eight Western U.S. states analyzed.</title>
-
-          <!-- big number, left aligned -->
-          <text x="0" y="140" font-family="Source Serif 4, Georgia, serif" font-size="140" font-weight="600" fill="var(--treat)" font-variation-settings="'opsz' 60" letter-spacing="-0.02em">39.4%</text>
-
-          <!-- right-side compact explanation in serif -->
-          <text x="400" y="78" font-family="Source Serif 4, Georgia, serif" font-size="19" fill="var(--ink)" font-variation-settings="'opsz' 36" font-weight="500">of Utah homes face high fire risk,</text>
-          <text x="400" y="102" font-family="Source Serif 4, Georgia, serif" font-size="19" fill="var(--ink)" font-variation-settings="'opsz' 36" font-weight="500">the largest share of any Western U.S. state.</text>
-          <text x="400" y="138" font-family="Source Serif 4, Georgia, serif" font-size="19" fill="var(--accent)" font-variation-settings="'opsz' 36" font-weight="600">411,052 properties · $219 billion in value.</text>
-
-          <!-- separator -->
-          <line x1="0" y1="172" x2="920" y2="172" stroke="var(--hair)"/>
-
-          <!-- bottom row -->
-          <text x="0" y="200" font-family="Inter, sans-serif" font-size="13" fill="var(--muted)" letter-spacing="0.02em"><tspan font-weight="600">COLORADO 19% · IDAHO 14.4% · OREGON 8.5% · NEVADA 7.4% · CALIFORNIA 6.7%</tspan></text>
-          <text x="0" y="222" font-family="Inter, sans-serif" font-size="13" fill="var(--muted)" letter-spacing="0.02em"><tspan font-weight="600">CALIFORNIA $628B</tspan><tspan dx="10">in property value at high fire risk, the largest dollar exposure in the West.</tspan></text>
-        </svg>
+        <div class="hero-fig">
+          <div class="hero-fig-top">
+            <p class="hf-num">39.4%</p>
+            <div class="hf-say">
+              <p class="hf-lead">of Utah homes face high fire risk, the largest share of any Western U.S. state.</p>
+              <p class="hf-emph">411,052 properties · $219 billion in value.</p>
+            </div>
+          </div>
+          <div class="hf-stats">
+            <p class="hf-stat"><strong>COLORADO 19% · IDAHO 14.4% · OREGON 8.5% · NEVADA 7.4% · CALIFORNIA 6.7%</strong></p>
+            <p class="hf-stat"><strong>CALIFORNIA $628B</strong> in property value at high fire risk, the largest dollar exposure in the West.</p>
+          </div>
+        </div>
 
         <p class="hero-chart-source"><strong>Source:</strong> Katz, Sandoval-Olascoaga &amp; Bokhari (2021), Redfin News · ClimateCheck fire-risk classifications (MC2 dynamic global vegetation model) as of March 31, 2021 · Redfin Estimates for property values as of June 25, 2021 · counties with at least 150 properties at high fire risk included in county-level tables · "high fire risk" defined as the union of high, very high, and extreme ClimateCheck categories.</p>
       </figure>
@@ -248,6 +253,7 @@
       <nav class="footlinks">
         <a href="preview.html">Home</a>
         <a href="preview-papers.html">Research</a>
+        <a href="preview-teaching.html">Teaching</a>
         
         <a href="preview-cv.html">CV</a>
         <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>

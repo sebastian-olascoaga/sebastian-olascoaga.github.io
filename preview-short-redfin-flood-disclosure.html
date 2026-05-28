@@ -37,7 +37,7 @@
   .nav{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 24px;font-family:var(--sans);font-size:13px;color:var(--muted);grid-column:1 / -1;}
   .nav a{text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:color .15s ease,border-color .15s ease;}
   .nav a:hover,.nav a.here{color:var(--ink);border-bottom-color:var(--accent);}
-  .paper-hero{padding:64px 0 40px;}
+  .paper-hero{padding:36px 0 40px;}
   .breadcrumb{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:0.04em;margin:0 0 28px;}
   .breadcrumb a{text-decoration:none;border-bottom:1px solid var(--hair);transition:border-color .15s ease,color .15s ease;}
   .breadcrumb a:hover{color:var(--accent);border-bottom-color:var(--accent);}
@@ -62,7 +62,16 @@
   .hero-chart-eye{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;}
   .hero-chart-title{font-family:var(--serif);font-size:clamp(20px,2.2vw,24px);line-height:1.18;font-weight:500;color:var(--ink);font-variation-settings:"opsz" 48;letter-spacing:-0.005em;margin:0 0 8px;}
   .hero-chart-sub{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 28px;}
-  .hero-chart svg{width:100%;height:auto;display:block;overflow:visible;}
+  .hero-fig{margin:0;}
+  .hero-fig-top{display:flex;align-items:center;gap:clamp(28px,4vw,52px);flex-wrap:wrap;}
+  .hf-num{font-family:var(--serif);font-weight:600;color:var(--treat);font-size:clamp(64px,8.5vw,120px);line-height:0.86;letter-spacing:-0.02em;font-variation-settings:"opsz" 60;margin:0;flex:0 0 auto;}
+  .hf-say{flex:1 1 340px;min-width:0;}
+  .hf-lead{font-family:var(--serif);font-size:clamp(18px,1.6vw,21px);line-height:1.35;font-weight:500;color:var(--ink);font-variation-settings:"opsz" 36;margin:0 0 10px;}
+  .hf-emph{font-family:var(--serif);font-size:clamp(18px,1.6vw,21px);line-height:1.35;font-weight:600;color:var(--treat);font-variation-settings:"opsz" 36;margin:0;}
+  .hf-stats{margin:24px 0 0;padding:18px 0 0;border-top:1px solid var(--hair);}
+  .hf-stat{font-family:var(--sans);font-size:13px;color:var(--muted);letter-spacing:0.02em;line-height:1.55;margin:0;}
+  .hf-stat + .hf-stat{margin-top:5px;}
+  .hf-stat strong{color:var(--ink);font-weight:600;}
   .hero-chart-source{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair);font-family:var(--sans);font-size:11.5px;color:var(--hint);letter-spacing:0.02em;}
   .hero-chart-source strong{color:var(--muted);font-weight:500;}
   .sec{margin:0 0 0;}
@@ -88,7 +97,7 @@
   .venue-chip.redfin{color:var(--treat);border-color:var(--treat);}
   .venue-chip.boston{color:var(--accent);border-color:var(--accent);}
     /* SHORT PIECE SECTION SIGNATURE (teal extends from the gallery into the click-through) */ .paper-eyebrow{color:var(--treat);} .paper-status{color:var(--treat); border-color:var(--treat);} .paper-status .dot{background:var(--treat);} .paper-status:hover{background:var(--treat); color:var(--paper);} .paper-status:hover .dot{background:var(--paper);} .paper-q em{font-style:normal;} .lead strong{color:var(--treat);} .hero-chart-eye{color:var(--treat);} .cta-out{background:var(--treat);} .pull-quote{border-left-color:var(--treat);} .breadcrumb a:hover{color:var(--treat); border-bottom-color:var(--treat);} .side-list li a:hover{color:var(--treat); border-bottom-color:var(--treat);} .topic-tag{display:inline-block;font-family:var(--sans);font-size:11.5px;color:var(--muted);padding:3px 9px;border:1px solid var(--hair);border-radius:2px;margin-right:6px;margin-bottom:4px;}
-  footer{margin-top:80px;padding:48px 0 96px;border-top:1px solid var(--hair);}
+  footer{margin-top:80px;padding:48px 0 64px;border-top:1px solid var(--hair);}
   .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; align-items:flex-end;}
   .footlinks{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--sans);font-size:13px;color:var(--muted);}
   .footlinks a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s ease,color .15s ease;}
@@ -149,6 +158,7 @@
             </a>
           </div>
         </div>
+        <a href="preview-teaching.html">Teaching</a>
         <a href="preview-cv.html">CV</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
         <a href="preview.html#contact">Contact</a>
@@ -162,7 +172,7 @@
     <p class="paper-eyebrow">Published at Redfin News <span class="sep">·</span> <span class="year">September 2022</span></p>
     <h2 class="paper-q">Buyers who saw flood-risk scores placed offers on homes with <em>57% lower flood risk.</em></h2>
     <p class="paper-byline"><strong>Lily Katz</strong> · <strong>Daryl Fairweather</strong> · <strong>Sandoval-Olascoaga</strong></p>
-    <a class="paper-status" href="https://www.redfin.com/news/redfin-users-interact-with-flood-risk-data/" target="_blank" rel="noopener noreferrer"><span class="dot"></span>Originally published - Redfin News <span class="ext">↗</span></a>
+    <a class="paper-status" href="https://www.redfin.com/news/redfin-users-interact-with-flood-risk-data/" target="_blank" rel="noopener noreferrer"><span class="dot"></span>Originally published · Redfin News <span class="ext">↗</span></a>
   </section>
 
   <p class="lead">A 3-month randomized controlled trial of <strong>17.5 million</strong> Redfin.com users tested whether seeing property-level flood-risk scores changed buying behavior. Treated users who had been browsing high-flood-risk listings before the experiment placed offers on homes with <strong>57% lower flood-risk scores</strong> than the control group. By week nine, treated users were also searching homes with <strong>12.4% lower</strong> flood risk than controls.</p>
@@ -175,24 +185,19 @@
         <h3 class="hero-chart-title">Treated buyers placed offers on homes with substantially lower flood-risk than controls.</h3>
         <p class="hero-chart-sub">Randomized at the user level across all U.S. metros where Redfin operated (excluding MT, WY, ND, SD). Treatment cohort saw First Street Foundation's Flood Factor scores on listing pages; control did not. Effect measured on the cohort of users whose pre-experiment browsing history concentrated in high-flood-risk listings.</p>
 
-        <svg viewBox="0 0 920 240" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="fd-title">
-          <title id="fd-title">Treated high-risk buyers placed offers on homes with 57 percent lower flood-risk scores than the control group.</title>
-
-          <!-- big number, left aligned -->
-          <text x="0" y="140" font-family="Source Serif 4, Georgia, serif" font-size="140" font-weight="600" fill="var(--treat)" font-variation-settings="'opsz' 60" letter-spacing="-0.02em">57%</text>
-
-          <!-- right-side compact explanation in serif -->
-          <text x="300" y="78" font-family="Source Serif 4, Georgia, serif" font-size="19" fill="var(--ink)" font-variation-settings="'opsz' 36" font-weight="500">lower flood-risk scores on the homes</text>
-          <text x="300" y="102" font-family="Source Serif 4, Georgia, serif" font-size="19" fill="var(--ink)" font-variation-settings="'opsz' 36" font-weight="500">treated buyers placed offers on,</text>
-          <text x="300" y="138" font-family="Source Serif 4, Georgia, serif" font-size="19" fill="var(--accent)" font-variation-settings="'opsz' 36" font-weight="600">vs the control group (n = 17.5M).</text>
-
-          <!-- separator -->
-          <line x1="0" y1="172" x2="920" y2="172" stroke="var(--hair)"/>
-
-          <!-- bottom row -->
-          <text x="0" y="200" font-family="Inter, sans-serif" font-size="13" fill="var(--muted)" letter-spacing="0.02em"><tspan font-weight="600">3-MONTH RCT</tspan><tspan dx="10">Oct 2020 – Jan 2021, partnered with USC, NBER, and MIT.</tspan></text>
-          <text x="0" y="222" font-family="Inter, sans-serif" font-size="13" fill="var(--muted)" letter-spacing="0.02em"><tspan font-weight="600">↓ 12.4%</tspan><tspan dx="10">in search-behavior flood-risk for the treated cohort by week 9.</tspan></text>
-        </svg>
+        <div class="hero-fig">
+          <div class="hero-fig-top">
+            <p class="hf-num">57%</p>
+            <div class="hf-say">
+              <p class="hf-lead">lower flood-risk scores on the homes treated buyers placed offers on,</p>
+              <p class="hf-emph">vs the control group (n = 17.5M).</p>
+            </div>
+          </div>
+          <div class="hf-stats">
+            <p class="hf-stat"><strong>3-MONTH RCT</strong> Oct 2020 – Jan 2021, partnered with USC, NBER, and MIT.</p>
+            <p class="hf-stat"><strong>↓ 12.4%</strong> in search-behavior flood-risk for the treated cohort by week 9.</p>
+          </div>
+        </div>
 
         <p class="hero-chart-source"><strong>Source:</strong> Katz, Fairweather &amp; Sandoval-Olascoaga (2022), Redfin News · randomized controlled trial on 17.5M Redfin.com users, Oct 12 2020 – Jan 3 2021 · Flood Factor risk scores from the First Street Foundation, scaled 1 (minimal) to 10 (extreme), representing the probability of flooding over a 30-year mortgage · standard errors clustered at the user level · 95% confidence level · academic version under revision at the <em>American Economic Review</em> (Sandoval-Olascoaga et al., 2024, NBER w33119).</p>
       </figure>
@@ -255,6 +260,7 @@
       <nav class="footlinks">
         <a href="preview.html">Home</a>
         <a href="preview-papers.html">Research</a>
+        <a href="preview-teaching.html">Teaching</a>
         
         <a href="preview-cv.html">CV</a>
         <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>

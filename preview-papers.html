@@ -115,7 +115,7 @@
   .nav a:hover, .nav a.here{color:var(--ink); border-bottom-color:var(--accent);}
 
   /* GALLERY SECTION (papers, organized by thread) */
-  main{padding:48px 0 0;}
+  main{padding:36px 0 0;}
 
   .category{margin:0 0 64px;}
   .category-head{
@@ -240,7 +240,7 @@
   .paper-card:hover .arrow{transform:translateX(4px);}
 
   /* footer */
-  footer{margin-top:96px; padding:48px 0 96px; border-top:1px solid var(--hair);}
+  footer{margin-top:80px; padding:48px 0 64px; border-top:1px solid var(--hair);}
   .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; align-items:flex-end;}
   .foot-note{font-size:14.5px; color:var(--muted); max-width:48ch; line-height:1.55; font-style:italic;}
   .footlinks{display:flex; flex-wrap:wrap; gap:6px 22px; font-family:var(--sans); font-size:13px; color:var(--muted);}
@@ -319,9 +319,9 @@
 <style>
   /* WORK FILTER */
   /* SECTION TITLE BLOCK */
-  .page-intro{padding:40px 0 28px; margin:0 0 8px; border-bottom:1px solid var(--ink);}
+  .page-intro{padding:0 0 28px; margin:0 0 8px; border-bottom:1px solid var(--ink);}
   .page-eyebrow{font-family:var(--sans); font-size:11.5px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); margin:0 0 18px;}
-  .page-title{font-family:var(--serif); font-weight:500; color:var(--ink); font-size:clamp(28px,3.4vw,40px); line-height:1.12; font-variation-settings:"opsz" 72; letter-spacing:-0.012em; margin:0 0 16px; max-width:54ch;}
+  .page-title{font-family:var(--serif); font-weight:500; color:var(--ink); font-size:clamp(28px,3.4vw,40px); line-height:1.12; font-variation-settings:"opsz" 72; letter-spacing:-0.012em; margin:0 0 16px; max-width:none;}
   .page-title em{font-style:italic; color:var(--accent);}
   .page-meta{font-family:var(--sans); font-size:13px; color:var(--muted); letter-spacing:0.04em; margin:0;}
   .page-meta em{font-style:italic; color:var(--text);}
@@ -377,6 +377,7 @@
             </a>
           </div>
         </div>
+        <a href="preview-teaching.html">Teaching</a>
         <a href="preview-cv.html">CV</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
         <a href="preview.html#contact">Contact</a>
@@ -471,61 +472,6 @@
                 <span>NBER w33119</span>
                 <span class="dot">·</span>
                 <span class="pill">R&amp;R, AER</span>
-              </span>
-              <span class="arrow">→</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="paper-card" data-tags="housing climate quasi-experiment" href="preview-paper-frontiers.html"><div class="format-label">Peer-reviewed paper</div>
-          <div class="pc-img">
-            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
-              <text x="0" y="22" class="ti-eye">Flood penalty by neighborhood trajectory · 8.1M home sales</text>
-
-              <!-- zero / baseline line -->
-              <line x1="60" y1="140" x2="440" y2="140" stroke="var(--rule)"/>
-              <text x="54" y="144" text-anchor="end" class="ti-axis" font-weight="600">0%</text>
-
-              <!-- gridlines -->
-              <text x="54" y="184" text-anchor="end" class="ti-axis">−5%</text>
-              <text x="54" y="224" text-anchor="end" class="ti-axis">−10%</text>
-              <text x="54" y="264" text-anchor="end" class="ti-axis">−15%</text>
-
-              <!-- event marker at year 0 -->
-              <line class="ti-ref" x1="200" y1="80" x2="200" y2="300"/>
-              <text x="206" y="92" class="ti-axis">Flood</text>
-
-              <!-- Growing-population tracts: dip, then partial recovery -->
-              <path class="ti-line-ctrl ti-redraw" stroke="var(--counter)" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M60,142 L100,140 L140,142 L180,140 L200,138 L240,155 L280,195 L320,245 L360,282 L390,255 L420,210 L440,205"/>
-              <circle cx="360" cy="282" r="3.5" fill="var(--counter)"/>
-              <circle cx="420" cy="210" r="4.5" fill="var(--counter)"/>
-              <text x="446" y="214" font-size="11" class="ti-axis" font-weight="600">−8.7% growing</text>
-
-              <!-- Shrinking-population tracts: keeps falling -->
-              <path class="ti-line-treat ti-redraw" stroke-width="2.6" d="M60,142 L100,140 L140,141 L180,140 L200,138 L240,160 L280,178 L320,205 L360,232 L390,250 L420,260 L440,266"/>
-              <circle class="ti-dot-treat" cx="300" cy="178" r="3"/>
-              <circle class="ti-dot-treat" cx="440" cy="266" r="6"/>
-              <circle cx="440" cy="266" r="11" fill="none" stroke="var(--treat)" stroke-width="1.2" opacity="0.4"/>
-              <text x="446" y="270" font-size="13" fill="var(--treat)" font-weight="700" font-family="Inter,sans-serif">−15%</text>
-              <text x="446" y="286" font-size="11" class="ti-axis" font-weight="600">shrinking, still falling</text>
-
-              <!-- x-axis labels -->
-              <line x1="60" y1="310" x2="440" y2="310" stroke="var(--rule)"/>
-              <text x="60"  y="328" class="ti-axis">−7y</text>
-              <text x="200" y="328" text-anchor="middle" class="ti-axis">0</text>
-              <text x="440" y="328" text-anchor="end" class="ti-axis">+11y</text>
-
-              <!-- Caption -->
-              <text x="0" y="350" class="ti-axis">Same shock. Two stories. Permanent loss only where population shrinks.</text>
-            </svg>
-          </div>
-          <div class="pc-body">
-            <h3 class="pc-q">When a flood hits a shrinking neighborhood, <em>home prices never recover.</em></h3>
-            <div class="pc-meta">
-              <span class="left">
-                <span class="year">2025</span>
-                <span class="dot">·</span>
-                <span><em>Frontiers in Environmental Economics</em></span>
               </span>
               <span class="arrow">→</span>
             </div>
@@ -654,6 +600,60 @@
           </div>
         </a>
 
+        <a class="paper-card" data-tags="housing climate quasi-experiment" href="preview-paper-frontiers.html"><div class="format-label">Peer-reviewed paper</div>
+          <div class="pc-img">
+            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="22" class="ti-eye">Flood penalty by neighborhood trajectory · 8.1M home sales</text>
+
+              <!-- zero / baseline line -->
+              <line x1="60" y1="140" x2="440" y2="140" stroke="var(--rule)"/>
+              <text x="54" y="144" text-anchor="end" class="ti-axis" font-weight="600">0%</text>
+
+              <!-- gridlines -->
+              <text x="54" y="184" text-anchor="end" class="ti-axis">−5%</text>
+              <text x="54" y="224" text-anchor="end" class="ti-axis">−10%</text>
+              <text x="54" y="264" text-anchor="end" class="ti-axis">−15%</text>
+
+              <!-- event marker at year 0 -->
+              <line class="ti-ref" x1="200" y1="80" x2="200" y2="300"/>
+              <text x="206" y="92" class="ti-axis">Flood</text>
+
+              <!-- Growing-population tracts: dip, then partial recovery -->
+              <path class="ti-line-ctrl ti-redraw" stroke="var(--counter)" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M60,142 L100,140 L140,142 L180,140 L200,138 L240,155 L280,195 L320,245 L360,282 L390,255 L420,210 L440,205"/>
+              <circle cx="360" cy="282" r="3.5" fill="var(--counter)"/>
+              <circle cx="420" cy="210" r="4.5" fill="var(--counter)"/>
+              <text x="446" y="214" font-size="11" class="ti-axis" font-weight="600">−8.7% growing</text>
+
+              <!-- Shrinking-population tracts: keeps falling -->
+              <path class="ti-line-treat ti-redraw" stroke-width="2.6" d="M60,142 L100,140 L140,141 L180,140 L200,138 L240,160 L280,178 L320,205 L360,232 L390,250 L420,260 L440,266"/>
+              <circle class="ti-dot-treat" cx="440" cy="266" r="6"/>
+              <circle cx="440" cy="266" r="11" fill="none" stroke="var(--treat)" stroke-width="1.2" opacity="0.4"/>
+              <text x="446" y="270" font-size="13" fill="var(--treat)" font-weight="700" font-family="Inter,sans-serif">−15%</text>
+              <text x="446" y="286" font-size="11" class="ti-axis" font-weight="600">shrinking, still falling</text>
+
+              <!-- x-axis labels -->
+              <line x1="60" y1="310" x2="440" y2="310" stroke="var(--rule)"/>
+              <text x="60"  y="328" class="ti-axis">−7y</text>
+              <text x="200" y="328" text-anchor="middle" class="ti-axis">0</text>
+              <text x="440" y="328" text-anchor="end" class="ti-axis">+11y</text>
+
+              <!-- Caption -->
+              <text x="0" y="350" class="ti-axis">Prices recover where the population grows, and keep falling where it shrinks.</text>
+            </svg>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-q">When a flood hits a shrinking neighborhood, <em>home prices never recover.</em></h3>
+            <div class="pc-meta">
+              <span class="left">
+                <span class="year">2025</span>
+                <span class="dot">·</span>
+                <span><em>Frontiers in Environmental Economics</em></span>
+              </span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </a>
+
         <a class="paper-card" data-tags="public-health inequality" href="preview-paper-phn.html"><div class="format-label">Peer-reviewed paper</div>
           <div class="pc-img">
             <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
@@ -772,19 +772,19 @@
 
               <text x="0" y="78" class="ti-lbl accent">Mexico</text>
               <rect class="ti-bar-treat" x="0" y="90" width="480" height="32"/>
-              <text x="500" y="113" text-anchor="end"><tspan class="ti-val accent">3.00%</tspan></text>
+              <text x="490" y="113"><tspan class="ti-val accent">3.00%</tspan></text>
 
               <text x="0" y="156" class="ti-lbl">United States</text>
               <rect class="ti-bar-ctrl" x="0" y="168" width="462" height="32"/>
-              <text x="500" y="191" text-anchor="end" class="ti-val">2.89%</text>
+              <text x="472" y="191" class="ti-val">2.89%</text>
 
               <text x="0" y="234" class="ti-lbl">France</text>
               <rect class="ti-bar-ctrl" x="0" y="246" width="178" height="32"/>
-              <text x="500" y="269" text-anchor="end" class="ti-val">1.11%</text>
+              <text x="188" y="269" class="ti-val">1.11%</text>
 
               <text x="0" y="312" class="ti-lbl">Spain</text>
               <rect class="ti-bar-ctrl" x="0" y="324" width="138" height="32"/>
-              <text x="500" y="347" text-anchor="end" class="ti-val">0.86%</text>
+              <text x="148" y="347" class="ti-val">0.86%</text>
             </svg>
           </div>
           <div class="pc-body">
@@ -802,79 +802,6 @@
           </div>
         </a>
 
-        <div class="paper-card no-link" data-tags="public-sector generative-ai field-experiment"><div class="format-label">Work in progress</div>
-          <div class="pc-img">
-            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
-              <text x="0" y="22" class="ti-eye">City of Boston's first RCT · two-arm design</text>
-
-              <rect x="0" y="80" width="240" height="80" fill="var(--paper)" stroke="var(--rule)" rx="2"/>
-              <text x="120" y="115" text-anchor="middle" class="ti-lbl">Control</text>
-              <text x="120" y="140" text-anchor="middle" font-size="11" fill="var(--muted)">standard workflow</text>
-
-              <rect x="300" y="80" width="240" height="80" fill="var(--accent-soft)" stroke="var(--accent)" rx="2"/>
-              <text x="420" y="115" text-anchor="middle" class="ti-lbl accent">Treatment</text>
-              <text x="420" y="140" text-anchor="middle" font-size="11" fill="var(--accent)">with BidBot (RAG)</text>
-
-              <line x1="120" y1="170" x2="120" y2="220" stroke="var(--rule)" stroke-dasharray="3 3"/>
-              <line x1="420" y1="170" x2="420" y2="220" stroke="var(--rule)" stroke-dasharray="3 3"/>
-
-              <rect x="0" y="230" width="540" height="60" fill="var(--paper-tint)" stroke="var(--hair)" rx="2"/>
-              <text x="270" y="258" text-anchor="middle" class="ti-lbl">Outcome: solicitation quality &amp; cycle time</text>
-              <text x="270" y="278" text-anchor="middle" font-size="11" fill="var(--muted)">results pending</text>
-            </svg>
-          </div>
-          <div class="pc-body">
-            <h3 class="pc-q">Can a Retrieval-Augmented Generation assistant help procurement staff <em>write better solicitations?</em></h3>
-            <div class="pc-meta">
-              <span class="left">
-                <span class="year">2024–25</span>
-                <span class="dot">·</span>
-                <span>City of Boston × HKS × HBS</span>
-                <span class="dot">·</span>
-                <span class="pill">Working paper</span>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="paper-card no-link" data-tags="public-sector generative-ai"><div class="format-label">Work in progress</div>
-          <div class="pc-img">
-            <svg viewBox="0 0 540 360" preserveAspectRatio="xMidYMid meet">
-              <text x="0" y="22" class="ti-eye">Enterprise GenAI · output, adoption, impact</text>
-
-              <rect x="0" y="70" width="160" height="60" fill="var(--paper)" stroke="var(--rule)" rx="2"/>
-              <text x="80" y="105" text-anchor="middle" class="ti-lbl">Claude</text>
-              <rect x="190" y="70" width="160" height="60" fill="var(--paper)" stroke="var(--rule)" rx="2"/>
-              <text x="270" y="105" text-anchor="middle" class="ti-lbl">Gemini</text>
-              <rect x="380" y="70" width="160" height="60" fill="var(--paper)" stroke="var(--rule)" rx="2"/>
-              <text x="460" y="98" text-anchor="middle" class="ti-lbl">in-house</text>
-              <text x="460" y="118" text-anchor="middle" class="ti-lbl">RAG</text>
-
-              <line x1="80" y1="140" x2="80" y2="180" stroke="var(--rule)" stroke-dasharray="3 3"/>
-              <line x1="270" y1="140" x2="270" y2="180" stroke="var(--rule)" stroke-dasharray="3 3"/>
-              <line x1="460" y1="140" x2="460" y2="180" stroke="var(--rule)" stroke-dasharray="3 3"/>
-
-              <rect x="0" y="190" width="540" height="60" fill="var(--accent-soft)" stroke="var(--accent)" rx="2"/>
-              <text x="270" y="218" text-anchor="middle" class="ti-lbl accent">Evaluation pipeline</text>
-              <text x="270" y="240" text-anchor="middle" font-size="11" fill="var(--accent)">classifies anonymized prompts into structured outputs</text>
-
-              <text x="270" y="305" text-anchor="middle" class="ti-axis">Output quality · Adoption · Operational impact</text>
-            </svg>
-          </div>
-          <div class="pc-body">
-            <h3 class="pc-q">How do you evaluate enterprise GenAI <em>inside a city government?</em></h3>
-            <div class="pc-meta">
-              <span class="left">
-                <span class="year">2024–present</span>
-                <span class="dot">·</span>
-                <span>City of Boston</span>
-                <span class="dot">·</span>
-                <span class="pill">In production</span>
-              </span>
-            </div>
-          </div>
-        </div>
-
     </div>
 
     <p class="empty-msg" role="status" aria-live="polite">No projects match this filter.</p>
@@ -887,6 +814,7 @@
       <nav class="footlinks">
         <a href="preview.html">Home</a>
         <a href="preview-papers.html">Research</a>
+        <a href="preview-teaching.html">Teaching</a>
         <a href="preview-cv.html">CV</a>
         <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>

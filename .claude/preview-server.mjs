@@ -4,7 +4,7 @@ import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = "/Users/seb/Documents/GitHub/sebastian-olascoaga.github.io/.claude/worktrees/charming-heisenberg-2fdf70";
-const port = 8765;
+const port = process.env.PORT || 8765;
 
 const types = {
   ".html": "text/html; charset=utf-8",
