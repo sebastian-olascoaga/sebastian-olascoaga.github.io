@@ -53,7 +53,7 @@ es:
   urls:
     home: "/es/"
     research: "/research/"   # no Spanish version (yet) — falls back to English
-    briefs: "/briefs/"        # no Spanish version (yet) — falls back to English
+    briefs: "/es/briefs/"
     teaching: "/es/teaching/"
     cv: "/es/cv/"
     contact: "/es/#contact"
