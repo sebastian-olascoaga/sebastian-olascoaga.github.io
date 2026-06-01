@@ -4,13 +4,13 @@
   <div class="foot-grid">
     <p class="copy">{{ t.footer.copy }}</p>
     <nav class="footlinks">
-      <a href="{{ '/' | relative_url }}">{{ t.footer.home }}</a>
-      <a href="{{ '/research/' | relative_url }}">{{ t.footer.research }}</a>
-      <a href="{{ '/teaching/' | relative_url }}">{{ t.footer.teaching }}</a>
-      <a href="{{ '/cv/' | relative_url }}">{{ t.footer.cv }}</a>
+      <a href="{{ t.urls.home | relative_url }}">{{ t.footer.home }}</a>
+      <a href="{{ t.urls.research | relative_url }}">{{ t.footer.research }}</a>
+      <a href="{{ t.urls.teaching | relative_url }}">{{ t.footer.teaching }}</a>
+      <a href="{{ t.urls.cv | relative_url }}">{{ t.footer.cv }}</a>
       <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">{{ t.footer.linkedin }}</a>
       <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">{{ t.footer.scholar }}</a>
-      <a href="{{ '/' | relative_url }}#contact">{{ t.footer.contact }}</a>
+      <a href="{{ t.urls.contact | relative_url }}">{{ t.footer.contact }}</a>
     </nav>
   </div>
 </footer>

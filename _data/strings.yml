@@ -6,6 +6,13 @@ en:
   role:
     boston: "City of Boston"
     mit: "MIT"
+  urls:
+    home: "/"
+    research: "/research/"
+    briefs: "/briefs/"
+    teaching: "/teaching/"
+    cv: "/cv/"
+    contact: "/#contact"
   nav:
     home: "Home"
     research: "Research"
@@ -43,6 +50,13 @@ es:
   role:
     boston: "Ciudad de Boston"
     mit: "MIT"
+  urls:
+    home: "/es/"
+    research: "/research/"   # no Spanish version (yet) — falls back to English
+    briefs: "/briefs/"        # no Spanish version (yet) — falls back to English
+    teaching: "/es/teaching/"
+    cv: "/es/cv/"
+    contact: "/es/#contact"
   nav:
     home: "Inicio"
     research: "Investigación"
