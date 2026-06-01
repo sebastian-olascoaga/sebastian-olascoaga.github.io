@@ -24,15 +24,22 @@ document.querySelector('.cite-copy')?.addEventListener('click', function(){
   }
 });
 </script>
-{%- if page.contact_form %}
+{%- if page.contact_form -%}
+{%- assign cur_lang = page.lang | default: 'en' -%}
+{%- assign tcj = site.data.strings[cur_lang].contact_js -%}
 <script>
 (function(){
   var form=document.querySelector(".contact-form"); if(!form) return;
+  var T = {
+    sending: {{ tcj.sending | jsonify }},
+    successHTML: {{ tcj.success_html | jsonify }},
+    errorHTML: {{ tcj.error_html | jsonify }}
+  };
   form.addEventListener("submit", function(e){
     e.preventDefault();
     var btn=form.querySelector(".contact-send");
     var old=btn.textContent;
-    btn.disabled=true; btn.textContent="Sending...";
+    btn.disabled=true; btn.textContent=T.sending;
     var prevErr=form.querySelector(".contact-feedback.error");
     if(prevErr) prevErr.remove();
     fetch("https://formsubmit.co/ajax/sebastian.olascoaga@gmail.com", {
@@ -41,12 +48,12 @@ document.querySelector('.cite-copy')?.addEventListener('click', function(){
       body:new FormData(form)
     }).then(function(r){ if(!r.ok) throw new Error("bad status"); return r.json(); })
     .then(function(){
-      form.innerHTML='<p class="contact-feedback" role="status"><strong>Thanks, your message is on its way.</strong> Sebastian will be in touch.</p>';
+      form.innerHTML='<p class="contact-feedback" role="status">'+T.successHTML+'</p>';
     }).catch(function(){
       btn.disabled=false; btn.textContent=old;
       var p=document.createElement("p");
       p.className="contact-feedback error"; p.setAttribute("role","status");
-      p.innerHTML='Something went wrong sending that. Please email <a href="mailto:sebastian.olascoaga@gmail.com">sebastian.olascoaga@gmail.com</a> directly.';
+      p.innerHTML=T.errorHTML;
       btn.parentNode.insertBefore(p, btn);
     });
   });

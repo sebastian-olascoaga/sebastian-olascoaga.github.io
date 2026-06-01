@@ -1,14 +1,16 @@
+{%- assign cur_lang = page.lang | default: 'en' -%}
+{%- assign t = site.data.strings[cur_lang] -%}
 <footer>
   <div class="foot-grid">
-    <p class="copy">© 2026 Sebastian Olascoaga</p>
+    <p class="copy">{{ t.footer.copy }}</p>
     <nav class="footlinks">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/research/' | relative_url }}">Research</a>
-      <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
-      <a href="{{ '/cv/' | relative_url }}">CV</a>
-      <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
-      <a href="{{ '/' | relative_url }}#contact">Contact</a>
+      <a href="{{ '/' | relative_url }}">{{ t.footer.home }}</a>
+      <a href="{{ '/research/' | relative_url }}">{{ t.footer.research }}</a>
+      <a href="{{ '/teaching/' | relative_url }}">{{ t.footer.teaching }}</a>
+      <a href="{{ '/cv/' | relative_url }}">{{ t.footer.cv }}</a>
+      <a href="https://www.linkedin.com/in/sebastianolascoaga/" target="_blank" rel="noopener noreferrer">{{ t.footer.linkedin }}</a>
+      <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">{{ t.footer.scholar }}</a>
+      <a href="{{ '/' | relative_url }}#contact">{{ t.footer.contact }}</a>
     </nav>
   </div>
 </footer>

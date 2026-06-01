@@ -1,0 +1,76 @@
+# Shared UI strings for the site chrome (nav, footer, theme toggle, contact form JS).
+# Page-body content lives in the page sources themselves, not here.
+
+en:
+  name: "Sebastian Olascoaga"
+  role:
+    boston: "City of Boston"
+    mit: "MIT"
+  nav:
+    home: "Home"
+    research: "Research"
+    teaching: "Teaching"
+    cv: "CV"
+    scholar: "Scholar"
+    contact: "Contact"
+  dropdown:
+    papers_title: "Published Work"
+    papers_note: "Papers, working papers, and theses"
+    briefs_title: "Briefs"
+    briefs_note: "Public-facing notes and analyses"
+  theme:
+    aria: "Toggle theme"
+    title: "Toggle light/dark"
+    dark: "Dark mode"
+    light: "Light mode"
+  footer:
+    home: "Home"
+    research: "Research"
+    teaching: "Teaching"
+    cv: "CV"
+    linkedin: "LinkedIn"
+    scholar: "Scholar"
+    contact: "Contact"
+    copy: "© 2026 Sebastian Olascoaga"
+  alt_lang_label: "Español"
+  contact_js:
+    sending: "Sending..."
+    success_html: "<strong>Thanks, your message is on its way.</strong> Sebastian will be in touch."
+    error_html: "Something went wrong sending that. Please email <a href=\"mailto:sebastian.olascoaga@gmail.com\">sebastian.olascoaga@gmail.com</a> directly."
+
+es:
+  name: "Sebastián Olascoaga"
+  role:
+    boston: "Ciudad de Boston"
+    mit: "MIT"
+  nav:
+    home: "Inicio"
+    research: "Investigación"
+    teaching: "Docencia"
+    cv: "CV"
+    scholar: "Scholar"
+    contact: "Contacto"
+  dropdown:
+    papers_title: "Trabajos publicados"
+    papers_note: "Artículos, papers de trabajo y tesis"
+    briefs_title: "Notas"
+    briefs_note: "Notas y análisis para el público general"
+  theme:
+    aria: "Cambiar tema"
+    title: "Alternar claro/oscuro"
+    dark: "Modo oscuro"
+    light: "Modo claro"
+  footer:
+    home: "Inicio"
+    research: "Investigación"
+    teaching: "Docencia"
+    cv: "CV"
+    linkedin: "LinkedIn"
+    scholar: "Scholar"
+    contact: "Contacto"
+    copy: "© 2026 Sebastián Olascoaga"
+  alt_lang_label: "English"
+  contact_js:
+    sending: "Enviando..."
+    success_html: "<strong>Gracias, tu mensaje está en camino.</strong> Sebastián te escribirá."
+    error_html: "Algo salió mal al enviar el mensaje. Escríbele directamente a <a href=\"mailto:sebastian.olascoaga@gmail.com\">sebastian.olascoaga@gmail.com</a>."
