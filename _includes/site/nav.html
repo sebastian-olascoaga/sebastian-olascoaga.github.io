@@ -7,6 +7,12 @@
       <h1 class="name"><a href="{{ t.urls.home | relative_url }}">{{ t.name }}</a></h1>
       <p class="role"><strong>{{ t.role.boston }}</strong> <span class="dot">·</span> <strong>{{ t.role.mit }}</strong></p>
     </div>
+    <div class="nav-utilities">
+      {%- if page.alt_lang_url %}
+      <a class="lang-link" href="{{ page.alt_lang_url | relative_url }}" hreflang="{{ alt_lang_code }}" lang="{{ alt_lang_code }}">{{ t.alt_lang_label }}</a>
+      {%- endif %}
+      <button class="theme-toggle" type="button" aria-label="{{ t.theme.aria }}" title="{{ t.theme.title }}"><span class="tt-icon">◐</span><span class="tt-label"><span class="tt-when-light">{{ t.theme.dark }}</span><span class="tt-when-dark">{{ t.theme.light }}</span></span></button>
+    </div>
     <nav class="nav">
       <a href="{{ t.urls.home | relative_url }}"{% if page.nav == 'home' %} class="here"{% endif %}>{{ t.nav.home }}</a>
       <div class="nav-item">
@@ -26,12 +32,6 @@
       <a href="{{ t.urls.cv | relative_url }}"{% if page.nav == 'cv' %} class="here"{% endif %}>{{ t.nav.cv }}</a>
       <a href="https://scholar.google.com/citations?user=gTzz3UAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">{{ t.nav.scholar }}</a>
       <a href="{{ t.urls.contact | relative_url }}">{{ t.nav.contact }}</a>
-      <div class="nav-utilities">
-        {%- if page.alt_lang_url %}
-        <a class="lang-link" href="{{ page.alt_lang_url | relative_url }}" hreflang="{{ alt_lang_code }}" lang="{{ alt_lang_code }}">{{ t.alt_lang_label }}</a>
-        {%- endif %}
-        <button class="theme-toggle" type="button" aria-label="{{ t.theme.aria }}" title="{{ t.theme.title }}"><span class="tt-icon">◐</span><span class="tt-label"><span class="tt-when-light">{{ t.theme.dark }}</span><span class="tt-when-dark">{{ t.theme.light }}</span></span></button>
-      </div>
     </nav>
   </div>
 </header>

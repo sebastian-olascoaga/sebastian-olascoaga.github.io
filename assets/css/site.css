@@ -66,8 +66,15 @@ a{color:inherit;}
 header{position:relative; z-index:200; padding:56px 0 32px; border-bottom:1px solid var(--hair);}
 body.t-detail header{padding:40px 0 32px;}
 body.t-gallery header{padding:40px 0 0; border-bottom:none;}
-.head-grid{display:grid; grid-template-columns:auto 1fr; gap:16px 48px; align-items:start;}
-.name-block{min-width:0;}
+.head-grid{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  grid-template-areas:
+    "name utils"
+    "nav  nav";
+  gap:16px 48px; align-items:start;
+}
+.name-block{grid-area:name; min-width:0;}
 .name{
   font-family:var(--serif); font-weight:500; color:var(--ink);
   font-size:clamp(28px,3.6vw,34px); line-height:1.06;
@@ -79,10 +86,10 @@ body.t-gallery header{padding:40px 0 0; border-bottom:none;}
 .role .dot{color:var(--hint); margin:0 6px;}
 .role strong{color:var(--ink); font-weight:500;}
 .nav{
+  grid-area:nav;
   margin-top:20px;
   display:flex; flex-wrap:wrap; gap:8px 26px;
   font-family:var(--sans); font-size:13.5px; color:var(--muted);
-  grid-column:1 / -1;
 }
 .nav a{
   text-decoration:none; padding-bottom:3px;
@@ -124,7 +131,7 @@ body.t-gallery header{padding:40px 0 0; border-bottom:none;}
 .dd-note{display:block; font-size:11.5px; color:var(--muted); margin-top:2px; font-style:italic;}
 
 /* ---- Theme toggle ---- */
-.nav-utilities{margin-left:auto; display:inline-flex; align-items:baseline; gap:26px;}
+.nav-utilities{grid-area:utils; justify-self:end; align-self:end; display:inline-flex; align-items:baseline; gap:26px; font-family:var(--sans); font-size:13.5px; color:var(--muted);}
 .lang-link{text-decoration:none;}
 .theme-toggle{background:none; border:0; border-bottom:1px solid transparent; cursor:pointer; font:inherit; color:var(--muted); padding:0 0 3px 0; display:inline-flex; align-items:baseline; gap:6px; transition:color .15s ease, border-color .15s ease;}
 .theme-toggle:hover{color:var(--ink); border-bottom-color:var(--accent);}
@@ -160,7 +167,8 @@ footer{margin-top:80px; padding:48px 0 64px; border-top:1px solid var(--hair);}
 @media (max-width:640px){
   .wrap{padding:0 22px;}
   header{padding-top:40px;}
-  .head-grid{grid-template-columns:1fr; gap:18px;}
+  .head-grid{grid-template-columns:1fr; grid-template-areas:"name" "utils" "nav"; gap:14px;}
+  .nav-utilities{justify-self:end; align-self:auto;}
   .foot-grid{grid-template-columns:1fr; gap:22px;}
   .nav-item .nav-trigger, .nav-item .caret, .nav-item::after{display:none;}
   .nav-item{position:static;}
