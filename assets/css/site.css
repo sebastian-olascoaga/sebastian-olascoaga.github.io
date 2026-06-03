@@ -167,8 +167,8 @@ footer{margin-top:80px; padding:48px 0 64px; border-top:1px solid var(--hair);}
 @media (max-width:640px){
   .wrap{padding:0 22px;}
   header{padding-top:40px;}
-  .head-grid{grid-template-columns:1fr; grid-template-areas:"name" "utils" "nav"; gap:14px;}
-  .nav-utilities{justify-self:end; align-self:auto;}
+  .head-grid{grid-template-columns:1fr; grid-template-areas:"utils" "name" "nav"; gap:14px;}
+  .nav-utilities{justify-self:end; align-self:auto; font-size:12px; gap:18px;}
   .foot-grid{grid-template-columns:1fr; gap:22px;}
   .nav-item .nav-trigger, .nav-item .caret, .nav-item::after{display:none;}
   .nav-item{position:static;}
