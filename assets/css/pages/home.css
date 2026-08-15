@@ -146,7 +146,7 @@
 @media (max-width:640px){
   .hero{padding:48px 0 40px;}
   .landing-body{padding-top:40px; gap:48px;}
-  .about-photo{float:none; width:100%; max-width:260px; margin:0 0 24px;}
+  .about-photo{width:132px; margin:4px 0 12px 18px;}
   .contact{margin-top:64px; padding-top:40px;}
   .contact-form{grid-template-columns:1fr;}
   .contact-lede{margin-bottom:28px;}
