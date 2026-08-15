@@ -22,7 +22,6 @@
 .lead{font-family:var(--serif);font-size:clamp(22px,2.4vw,26px);line-height:1.38;font-variation-settings:"opsz" 36;color:var(--ink);font-weight:400;margin:40px 0 44px;letter-spacing:-0.005em;}
 .lead strong{font-weight:600;color:var(--accent);}
 .hero-chart{margin:0 0 48px;padding:40px 36px 28px;background:var(--paper-tint);border:1px solid var(--hair);border-radius:2px;}
-.hero-chart-eye{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;}
 .hero-chart-title{font-family:var(--serif);font-size:clamp(20px,2.2vw,24px);line-height:1.18;font-weight:500;color:var(--ink);font-variation-settings:"opsz" 48;letter-spacing:-0.005em;margin:0 0 8px;}
 .hero-chart-sub{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 28px;}
 .hero-fig{margin:0;}
@@ -63,7 +62,6 @@
 .paper-status:hover{background:var(--treat); color:var(--paper);}
 .paper-q em{font-style:normal;}
 .lead strong{color:var(--treat);}
-.hero-chart-eye{color:var(--treat);}
 .cta-out{background:var(--treat);}
 .pull-quote{border-left-color:var(--treat);}
 .breadcrumb a:hover{color:var(--treat); border-bottom-color:var(--treat);}
