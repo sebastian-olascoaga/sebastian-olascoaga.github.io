@@ -22,7 +22,7 @@
   --treat:#1F4F5A;
   --treat-soft:rgba(31,79,90,0.12);
   --serif:"Source Serif 4",Georgia,serif;
-  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --sans:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme: dark){
   :root{
