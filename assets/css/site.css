@@ -157,11 +157,8 @@ footer{margin-top:80px; padding:48px 0 64px; border-top:1px solid var(--hair);}
 .footlinks a:hover{color:var(--ink); border-bottom-color:var(--accent);}
 .copy{font-family:var(--sans); font-size:11.5px; color:var(--hint); letter-spacing:0.06em; margin:0;}
 
-/* ---- Reveal animation ---- */
-.reveal{opacity:0; transform:translateY(8px); animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards;}
-@keyframes rise{to{opacity:1; transform:none;}}
-.d1{animation-delay:.04s}.d2{animation-delay:.14s}.d3{animation-delay:.24s}.d4{animation-delay:.34s}.d5{animation-delay:.44s}
-@media (prefers-reduced-motion: reduce){.reveal{opacity:1; transform:none; animation:none;}}
+/* Reveal animation removed: content renders static on load.
+   The .reveal / .d1-.d5 classes remain in the markup but are inert. */
 
 /* ---- Responsive chrome ---- */
 @media (max-width:640px){
