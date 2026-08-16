@@ -7,7 +7,7 @@
 
 /* ---- Design tokens ---- */
 :root{
-  --paper:#FBFBFB;
+  --paper:#FCFCFC;
   --paper-tint:#F4F4F4;
   --paper-deep:#E8E8E8;
   --ink:#1A1916;
@@ -36,14 +36,14 @@
     --hair:rgba(245,239,228,0.10);
     --rule:rgba(245,239,228,0.20);
     --counter:#7A726B;
-    --accent:#C9685A;
-    --accent-soft:rgba(201,104,90,0.14);
+    --accent:#C96578;
+    --accent-soft:rgba(201,101,120,0.14);
     --treat:#7AB8C2;
     --treat-soft:rgba(122,184,194,0.16);
   }
 }
-:root[data-theme="dark"]{--paper:#15110D;--paper-tint:#1F1A14;--paper-deep:#2A241D;--ink:#F7F3EE;--text:#DDD3C5;--muted:#999186;--hint:#6E6760;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#7A726B;--accent:#C9685A;--accent-soft:rgba(201,104,90,0.14);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.16);}
-:root[data-theme="light"]{--paper:#FBFBFB;--paper-tint:#F4F4F4;--paper-deep:#E8E8E8;--ink:#1A1916;--text:#38342F;--muted:#6D6862;--hint:#8F8B85;--hair:rgba(20,20,20,0.10);--rule:rgba(20,20,20,0.18);--counter:#B3AEA8;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.10);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.12);}
+:root[data-theme="dark"]{--paper:#15110D;--paper-tint:#1F1A14;--paper-deep:#2A241D;--ink:#F7F3EE;--text:#DDD3C5;--muted:#999186;--hint:#6E6760;--hair:rgba(245,239,228,0.10);--rule:rgba(245,239,228,0.20);--counter:#7A726B;--accent:#C96578;--accent-soft:rgba(201,101,120,0.14);--treat:#7AB8C2;--treat-soft:rgba(122,184,194,0.16);}
+:root[data-theme="light"]{--paper:#FCFCFC;--paper-tint:#F4F4F4;--paper-deep:#E8E8E8;--ink:#1A1916;--text:#38342F;--muted:#6D6862;--hint:#8F8B85;--hair:rgba(20,20,20,0.10);--rule:rgba(20,20,20,0.18);--counter:#B3AEA8;--accent:#6B1F2D;--accent-soft:rgba(107,31,45,0.10);--treat:#1F4F5A;--treat-soft:rgba(31,79,90,0.12);}
 
 /* Section accent: Briefs use teal as the accent */
 body.accent-teal{--accent:var(--treat); --accent-soft:var(--treat-soft);}
