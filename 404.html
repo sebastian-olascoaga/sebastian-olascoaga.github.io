@@ -1,0 +1,40 @@
+---
+layout: site
+permalink: /404.html
+lang: en
+pagetype: detail
+og_type: website
+page_title: "Page not found · Sebastian Olascoaga"
+heading: "Page not found"
+description: "This page doesn't exist. The link may be broken, or the page may have moved."
+sitemap: false
+---
+
+  <section class="nf">
+    <p class="nf-code">404</p>
+    <h1 class="nf-title" data-en="This page doesn&rsquo;t exist." data-es="Esta p&aacute;gina no existe.">This page doesn&rsquo;t exist.</h1>
+    <p class="nf-body" data-en="The link may be broken, or the page may have moved. These pages are here:" data-es="El enlace puede estar roto, o la p&aacute;gina pudo haber cambiado de lugar. Estas p&aacute;ginas s&iacute; est&aacute;n:">The link may be broken, or the page may have moved. These pages are here:</p>
+    <nav class="nf-links">
+      <a href="{{ '/' | relative_url }}" data-en="Home" data-es="Inicio" data-href-es="/es/">Home</a>
+      <a href="{{ '/research/' | relative_url }}" data-en="Research" data-es="Investigaci&oacute;n">Research</a>
+      <a href="{{ '/briefs/' | relative_url }}" data-en="Briefs" data-es="Notas" data-href-es="/es/briefs/">Briefs</a>
+      <a href="{{ '/teaching/' | relative_url }}" data-en="Teaching" data-es="Docencia" data-href-es="/es/teaching/">Teaching</a>
+      <a href="{{ '/cv/' | relative_url }}" data-en="CV" data-es="CV" data-href-es="/es/cv/">CV</a>
+      <a href="{{ '/#contact' | relative_url }}" data-en="Contact" data-es="Contacto" data-href-es="/es/#contact">Contact</a>
+    </nav>
+  </section>
+
+<script>
+(function(){
+  if (location.pathname.indexOf('/es/') !== 0) return;
+  document.documentElement.lang = 'es';
+  document.title = 'Página no encontrada · Sebastián Olascoaga';
+  var nodes = document.querySelectorAll('[data-es]');
+  for (var i = 0; i < nodes.length; i++) {
+    var n = nodes[i];
+    n.innerHTML = n.getAttribute('data-es');
+    var h = n.getAttribute('data-href-es');
+    if (h) n.setAttribute('href', h);
+  }
+})();
+</script>

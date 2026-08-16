@@ -148,6 +148,16 @@ body.t-gallery header{padding:40px 0 0; border-bottom:none;}
 .pub-as{margin-left:14px; font-size:11.5px; color:var(--hint); letter-spacing:0.04em;}
 .pub-as em{font-style:italic; color:var(--muted);}
 
+/* ---- Not found (404) ---- */
+.nf{padding:88px 0 112px; max-width:60ch;}
+.nf-code{font-family:var(--sans); font-size:11.5px; font-weight:600; letter-spacing:0.2em; color:var(--accent); margin:0 0 18px;}
+.nf-title{font-family:var(--serif); font-weight:500; color:var(--ink); font-size:clamp(30px,4vw,42px); line-height:1.15; margin:0 0 18px; font-variation-settings:"opsz" 60;}
+.nf-body{font-size:17px; line-height:1.65; color:var(--text); margin:0 0 32px;}
+.nf-links{display:flex; flex-wrap:wrap; gap:10px 28px; font-family:var(--sans); font-size:14.5px;}
+.nf-links a{text-decoration:none; color:var(--muted); border-bottom:1px solid transparent; padding-bottom:3px; transition:color .15s ease, border-color .15s ease;}
+.nf-links a:hover{color:var(--ink); border-bottom-color:var(--accent);}
+@media (max-width:640px){.nf{padding:56px 0 72px;}}
+
 /* ---- Footer ---- */
 footer{margin-top:80px; padding:48px 0 64px; border-top:1px solid var(--hair);}
 .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; align-items:flex-end;}
