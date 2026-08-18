@@ -55,6 +55,7 @@ document.querySelector('.cite-copy')?.addEventListener('click', function(){
       p.className="contact-feedback error"; p.setAttribute("role","status");
       p.innerHTML=T.errorHTML;
       btn.parentNode.insertBefore(p, btn);
+      if(window.wireMailLinks) window.wireMailLinks(p);
     });
   });
 })();
@@ -74,5 +75,25 @@ document.querySelector('.cite-copy')?.addEventListener('click', function(){
   s.src = "//gc.zgo.at/count.js";
   s.setAttribute("data-goatcounter", "https://olascoaga.goatcounter.com/count");
   document.head.appendChild(s);
+})();
+</script>
+
+{%- comment -%}
+  Assemble mailto: links at runtime so the address is not sitting in the
+  HTML source for scrapers. Falls back to readable "[at]" text without JS.
+  Re-runnable so links injected later (contact-form error) also get wired.
+{%- endcomment -%}
+<script>
+(function(){
+  function wire(root){
+    (root || document).querySelectorAll("a.mail[data-u][data-d]").forEach(function(a){
+      var addr = a.getAttribute("data-u") + String.fromCharCode(64) + a.getAttribute("data-d");
+      a.setAttribute("href", "mail" + "to:" + addr);
+      a.textContent = addr;
+      a.removeAttribute("data-u"); a.removeAttribute("data-d");
+    });
+  }
+  wire(document);
+  window.wireMailLinks = wire;
 })();
 </script>

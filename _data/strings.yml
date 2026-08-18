@@ -43,7 +43,7 @@ en:
   contact_js:
     sending: "Sending..."
     success_html: "<strong>Thanks, your message is on its way.</strong> Sebastian will be in touch."
-    error_html: "Something went wrong sending that. Please email <a href=\"mailto:sebastian.olascoaga@gmail.com\">sebastian.olascoaga@gmail.com</a> directly."
+    error_html: "Something went wrong sending that. Please email <a class=\"mail\" data-u=\"sebastian.olascoaga\" data-d=\"gmail.com\">sebastian.olascoaga [at] gmail.com</a> directly."
 
 es:
   name: "Sebastián Olascoaga"
@@ -87,4 +87,4 @@ es:
   contact_js:
     sending: "Enviando..."
     success_html: "<strong>Gracias, tu mensaje está en camino.</strong> Sebastián te escribirá."
-    error_html: "Algo salió mal al enviar el mensaje. Escríbele directamente a <a href=\"mailto:sebastian.olascoaga@gmail.com\">sebastian.olascoaga@gmail.com</a>."
+    error_html: "Algo salió mal al enviar el mensaje. Escríbele directamente a <a class=\"mail\" data-u=\"sebastian.olascoaga\" data-d=\"gmail.com\">sebastian.olascoaga [at] gmail.com</a>."
