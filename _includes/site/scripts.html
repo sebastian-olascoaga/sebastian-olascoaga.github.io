@@ -60,3 +60,19 @@ document.querySelector('.cite-copy')?.addEventListener('click', function(){
 })();
 </script>
 {%- endif %}
+
+{%- comment -%}
+  GoatCounter analytics. Cookie-less, no personal data, no consent banner needed.
+  Guarded so it never counts local preview traffic.
+{%- endcomment -%}
+<script>
+(function(){
+  var h = location.hostname;
+  if (h === "localhost" || h === "127.0.0.1" || h === "" || h.indexOf(".local") > -1) return;
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "//gc.zgo.at/count.js";
+  s.setAttribute("data-goatcounter", "https://olascoaga.goatcounter.com/count");
+  document.head.appendChild(s);
+})();
+</script>
