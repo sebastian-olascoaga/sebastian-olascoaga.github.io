@@ -63,11 +63,12 @@
 </script>
 {%- endif %}
 <!-- No webfonts. The site is set in Helvetica, already resident on the machine. -->
-<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+{%- assign cssv = site.time | date: '%s' -%}
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ cssv }}">
 {%- if page.template_css %}
-<link rel="stylesheet" href="{{ '/assets/css/pages/' | append: page.template_css | append: '.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/pages/' | append: page.template_css | append: '.css' | relative_url }}?v={{ cssv }}">
 {%- endif %}
 {%- if page.page_css %}
-<link rel="stylesheet" href="{{ '/assets/css/pages/' | append: page.page_css | append: '.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/pages/' | append: page.page_css | append: '.css' | relative_url }}?v={{ cssv }}">
 {%- endif %}
 <script>(function(){var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);})();</script>
