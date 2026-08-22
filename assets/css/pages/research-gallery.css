@@ -72,7 +72,7 @@
     font-size:var(--t-micro); padding:3px 7px; white-space:nowrap;
   }
 @media (max-width:640px){
-  main{padding-top:calc(var(--u)*4);}
+  main{padding-top:calc(var(--u)*3);}
   .pc-img{padding:calc(var(--u)*3);}
   .pc-body{padding:calc(var(--u)*3);}
 }

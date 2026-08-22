@@ -1,12 +1,12 @@
 /* teaching */
 
-main{padding:calc(var(--u)*5) 0 0;}
+main{padding:calc(var(--u)*4) 0 0;}
 .page-intro{padding:0 0 calc(var(--u)*3); margin:0 0 calc(var(--u)); border-bottom:var(--rule-heavy);}
 .page-eyebrow{font-family:var(--sans); font-size:var(--t-label); font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin:0 0 calc(var(--u)*2.5);}
 .page-title{font-family:var(--sans); font-weight:700; color:var(--ink); font-size:var(--t-h2); line-height:0.98; letter-spacing:-0.038em; margin:0 0 calc(var(--u)*2); max-width:26ch;}
 .page-title em{font-style:normal; color:var(--accent);}
 .page-meta{font-family:var(--sans); font-size:var(--t-label); font-weight:500; color:var(--muted); letter-spacing:0.14em; text-transform:uppercase; margin:0;}
-.courses{margin:calc(var(--u)*6) 0 0; list-style:none; padding:0;}
+.courses{margin:0; list-style:none; padding:0;}
 .course{padding:calc(var(--u)*4) 0; border-bottom:var(--rule-hair);}
 .course:first-child{padding-top:0;}
 .course:last-child{border-bottom:none;}
@@ -14,7 +14,6 @@ main{padding:calc(var(--u)*5) 0 0;}
 .course-title{font-family:var(--sans); font-weight:700; color:var(--ink); font-size:var(--t-h3); line-height:1.06; letter-spacing:-0.032em; margin:0 0 calc(var(--u)*1.5);}
 .course-desc{font-family:var(--sans); font-size:var(--t-body); line-height:1.5; color:var(--text); margin:0; max-width:62ch;}
 @media (max-width:640px){
-  main{padding-top:calc(var(--u)*4);}
-  .courses{margin-top:calc(var(--u)*4);}
+  main{padding-top:calc(var(--u)*3);}
   .course{padding:calc(var(--u)*3) 0;}
 }

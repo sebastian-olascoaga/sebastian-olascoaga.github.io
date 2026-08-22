@@ -2,7 +2,7 @@
 
 .sans{font-family:var(--sans); font-feature-settings:"ss01";}
 .tagline em{color:var(--accent); font-style:normal; font-weight:700;}
-main{padding:calc(var(--u)*5) 0 0;}
+main{padding:calc(var(--u)*4) 0 0;}
 .gallery{
     display:grid; grid-template-columns:repeat(2, minmax(0,1fr));
     gap:var(--gutter);
@@ -38,7 +38,7 @@ main{padding:calc(var(--u)*5) 0 0;}
 .page-title{font-family:var(--sans); font-weight:700; color:var(--ink); font-size:var(--t-h2); line-height:0.98; letter-spacing:-0.038em; margin:0 0 calc(var(--u)*2); max-width:none;}
 .page-meta{font-family:var(--sans); font-size:var(--t-label); font-weight:500; color:var(--muted); letter-spacing:0.14em; text-transform:uppercase; margin:0;}
 .page-meta em{font-style:normal; color:var(--ink); font-weight:700;}
-.filter-set{display:flex; flex-direction:column; gap:calc(var(--u)*1.5); margin:calc(var(--u)*5) 0 calc(var(--u)*5);}
+.filter-set{display:flex; flex-direction:column; gap:calc(var(--u)*1.5); margin:0 0 calc(var(--u)*5);}
 .filter-row{display:flex; align-items:center; flex-wrap:wrap; gap:8px;}
 .filter-row .chip{
     font-family:var(--sans); font-size:var(--t-label); font-weight:500;
