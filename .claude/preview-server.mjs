@@ -3,7 +3,10 @@ import { readFile, stat } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = "/Users/seb/Documents/GitHub/sebastian-olascoaga.github.io/.claude/worktrees/charming-heisenberg-2fdf70";
+// Serve the built Jekyll output of whichever checkout this script lives in.
+// Resolves relative to this file, so it works in the main repo and in any worktree.
+const here = fileURLToPath(new URL(".", import.meta.url));
+const root = process.env.PREVIEW_ROOT || normalize(join(here, "..", "_site"));
 const port = process.env.PORT || 8765;
 
 const types = {

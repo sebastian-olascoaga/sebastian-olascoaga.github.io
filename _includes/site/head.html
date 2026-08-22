@@ -62,9 +62,7 @@
 }
 </script>
 {%- endif %}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- No webfonts. The site is set in Helvetica, already resident on the machine. -->
 <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 {%- if page.template_css %}
 <link rel="stylesheet" href="{{ '/assets/css/pages/' | append: page.template_css | append: '.css' | relative_url }}">
