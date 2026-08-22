@@ -49,6 +49,12 @@
   --rule-heavy:2px solid var(--ink);
 
   /* Grid */
+  /* Two widths the article obeys. --article is the eight-column body
+     column, matching .paper-main exactly. --measure is the prose column
+     inside it, in rem so a 28px heading and 16px body align on the same
+     right edge rather than each resolving its own ch. */
+  --article:calc((100% - 11 * var(--gutter)) / 12 * 8 + 7 * var(--gutter));
+  --measure:36rem;
   --wrap:1280px;
   --gutter:22px;
   --edge:34px;
