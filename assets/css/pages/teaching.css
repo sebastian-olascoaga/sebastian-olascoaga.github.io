@@ -7,13 +7,26 @@ main{padding:calc(var(--u)*4) 0 0;}
 .page-title em{font-style:normal; color:var(--accent);}
 .page-meta{font-family:var(--sans); font-size:var(--t-label); font-weight:500; color:var(--muted); letter-spacing:0.14em; text-transform:uppercase; margin:0;}
 .courses{margin:0; list-style:none; padding:0;}
-.course{padding:calc(var(--u)*4) 0; border-bottom:var(--rule-hair);}
+.course{
+  display:grid; grid-template-columns:repeat(12, minmax(0,1fr));
+  gap:0 var(--gutter); align-items:start;
+  padding:calc(var(--u)*4) 0; border-bottom:var(--rule-hair);
+}
+.course-role{grid-column:1 / -1;}
+.course-title{grid-column:1 / 5;}
+.course-desc{grid-column:5 / 13;}
 .course:first-child{padding-top:0;}
 .course:last-child{border-bottom:none;}
 .course-role{font-family:var(--sans); font-size:var(--t-label); font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); margin:0 0 calc(var(--u)*1.5);}
-.course-title{font-family:var(--sans); font-weight:700; color:var(--ink); font-size:var(--t-h3); line-height:1.06; letter-spacing:-0.032em; margin:0 0 calc(var(--u)*1.5);}
-.course-desc{font-family:var(--sans); font-size:var(--t-body); line-height:1.5; color:var(--text); margin:0; max-width:62ch;}
+.course-title{font-family:var(--sans); font-weight:700; color:var(--ink); font-size:var(--t-h3); line-height:1.04; letter-spacing:-0.032em; margin:0;}
+/* The description column is 801px wide. At 16px that is 91 characters,
+   well past a comfortable measure, so the type steps up to bring the
+   line back to ~69 characters while the row still fills the width. */
+.course-desc{font-family:var(--sans); font-size:var(--t-lead); line-height:1.36; letter-spacing:-0.014em; color:var(--text); margin:0; padding-top:2px;}
 @media (max-width:640px){
   main{padding-top:calc(var(--u)*3);}
+  .course{grid-template-columns:1fr; gap:calc(var(--u)*1.5) 0;}
+  .course-role, .course-title, .course-desc{grid-column:1 / -1;}
+  .course-desc{padding-top:0; font-size:var(--t-body); line-height:1.5; letter-spacing:-0.005em;}
   .course{padding:calc(var(--u)*3) 0;}
 }
