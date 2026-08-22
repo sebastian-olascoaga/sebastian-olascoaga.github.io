@@ -1,6 +1,7 @@
 {%- assign cur_lang = page.lang | default: 'en' -%}
 {%- assign t = site.data.strings[cur_lang] -%}
 {%- assign alt_lang_code = 'es' -%}{%- if cur_lang == 'es' -%}{%- assign alt_lang_code = 'en' -%}{%- endif -%}
+<a class="skip" href="#main">{{ t.skip }}</a>
 <header class="reveal d1">
   <div class="head-grid">
     <div class="name-block">

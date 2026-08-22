@@ -13,6 +13,7 @@ en:
     teaching: "/teaching/"
     cv: "/cv/"
     contact: "/#contact"
+  skip: "Skip to content"
   nav:
     home: "Home"
     research: "Research"
@@ -57,6 +58,7 @@ es:
     teaching: "/es/teaching/"
     cv: "/es/cv/"
     contact: "/es/#contact"
+  skip: "Saltar al contenido"
   nav:
     home: "Inicio"
     research: "Investigación"
